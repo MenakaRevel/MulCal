@@ -1,0 +1,144 @@
+#----------------------------------------------
+# Raven Input file
+# by BasinMaker Vxx
+#----------------------------------------------
+:GriddedForcing           RUNOFF
+    :ForcingType          PRECIP
+    :FileNameNC           ./forcing/GEM-HYDRO_aggregated_runoff.nc
+    :VarNameNC            runoff
+    :DimNamesNC           rlon rlat time      # must be in the order of (x,y,t)
+    :LinearTransform      24.0     0.0        # unit conversion
+    :RedirectToFile       ./forcing/GriddedForcings.txt
+:EndGriddedForcing
+ 
+:GriddedForcing           RECHARGE
+    :ForcingType          RECHARGE
+    :FileNameNC           ./forcing/GEM-HYDRO_aggregated_recharge.nc
+    :VarNameNC            recharge
+    :DimNamesNC           rlon rlat time      # must be in the order of (x,y,t)
+    :LinearTransform      24.0     0.0        # unit conversion
+    :RedirectToFile       ./forcing/GriddedForcings.txt
+:EndGriddedForcing
+ 
+:GriddedForcing           Averagetemp
+    :ForcingType          TEMP_AVE
+    :FileNameNC           ./forcing/GEM-HYDRO_aggregated_recharge.nc
+    :VarNameNC            recharge
+    :DimNamesNC           rlon rlat time      # must be in the order of (x,y,t)
+    :LinearTransform      24.0     0.0        # unit conversion
+    :RedirectToFile       ./forcing/GriddedForcings.txt
+:EndGriddedForcing
+ 
+ 
+
+# Streamflow  
+:RedirectToFile    ./obs/02KA015_discharge.rvt  
+:RedirectToFile    ./obs/02KC018_discharge.rvt  
+:RedirectToFile    ./obs/02KC015_discharge.rvt  
+:RedirectToFile    ./obs/02LB032_discharge.rvt  
+:RedirectToFile    ./obs/02LB033_discharge.rvt  
+:RedirectToFile    ./obs/02LB008_discharge.rvt  
+:RedirectToFile    ./obs/02LB018_discharge.rvt  
+:RedirectToFile    ./obs/02MC028_discharge.rvt  
+:RedirectToFile    ./obs/02MC036_discharge.rvt  
+:RedirectToFile    ./obs/02MC026_discharge.rvt  
+:RedirectToFile    ./obs/02LB013_discharge.rvt  
+:RedirectToFile    ./obs/02KF015_discharge.rvt  
+:RedirectToFile    ./obs/02LB020_discharge.rvt  
+:RedirectToFile    ./obs/02MC001_discharge.rvt  
+:RedirectToFile    ./obs/02LB022_discharge.rvt  
+:RedirectToFile    ./obs/02MC027_discharge.rvt  
+:RedirectToFile    ./obs/02LB009_discharge.rvt  
+:RedirectToFile    ./obs/02MC030_discharge.rvt  
+:RedirectToFile    ./obs/02LB031_discharge.rvt  
+:RedirectToFile    ./obs/02LB017_discharge.rvt  
+:RedirectToFile    ./obs/02KF010_discharge.rvt  
+:RedirectToFile    ./obs/02LB007_discharge.rvt  
+:RedirectToFile    ./obs/02LA024_discharge.rvt  
+:RedirectToFile    ./obs/02MB010_discharge.rvt  
+:RedirectToFile    ./obs/02MB006_discharge.rvt  
+:RedirectToFile    ./obs/02LB006_discharge.rvt  
+:RedirectToFile    ./obs/02LA007_discharge.rvt  
+:RedirectToFile    ./obs/02KF011_discharge.rvt  
+:RedirectToFile    ./obs/02KF018_discharge.rvt  
+:RedirectToFile    ./obs/02KF017_discharge.rvt
+
+### Streamflow Weight
+##:RedirectToFile     ./obs/02KA015_discharge_weight.rvt
+##:RedirectToFile     ./obs/02KC018_discharge_weight.rvt
+##:RedirectToFile     ./obs/02KC015_discharge_weight.rvt
+##:RedirectToFile     ./obs/02LB032_discharge_weight.rvt
+##:RedirectToFile     ./obs/02LB033_discharge_weight.rvt
+##:RedirectToFile     ./obs/02LB008_discharge_weight.rvt
+##:RedirectToFile     ./obs/02LB018_discharge_weight.rvt
+##:RedirectToFile     ./obs/02MC028_discharge_weight.rvt
+##:RedirectToFile     ./obs/02MC036_discharge_weight.rvt
+##:RedirectToFile     ./obs/02MC026_discharge_weight.rvt
+##:RedirectToFile     ./obs/02LB013_discharge_weight.rvt
+##:RedirectToFile     ./obs/02KF015_discharge_weight.rvt
+##:RedirectToFile     ./obs/02LB020_discharge_weight.rvt
+##:RedirectToFile     ./obs/02MC001_discharge_weight.rvt
+##:RedirectToFile     ./obs/02LB022_discharge_weight.rvt
+##:RedirectToFile     ./obs/02MC027_discharge_weight.rvt
+##:RedirectToFile     ./obs/02LB009_discharge_weight.rvt
+##:RedirectToFile     ./obs/02MC030_discharge_weight.rvt
+##:RedirectToFile     ./obs/02LB031_discharge_weight.rvt
+##:RedirectToFile     ./obs/02LB017_discharge_weight.rvt
+##:RedirectToFile     ./obs/02KF010_discharge_weight.rvt
+##:RedirectToFile     ./obs/02LB007_discharge_weight.rvt
+##:RedirectToFile     ./obs/02LA024_discharge_weight.rvt
+##:RedirectToFile     ./obs/02MB010_discharge_weight.rvt
+##:RedirectToFile     ./obs/02MB006_discharge_weight.rvt
+##:RedirectToFile     ./obs/02LB006_discharge_weight.rvt
+##:RedirectToFile     ./obs/02LA007_discharge_weight.rvt
+##:RedirectToFile     ./obs/02KF011_discharge_weight.rvt
+##:RedirectToFile     ./obs/02KF018_discharge_weight.rvt
+##:RedirectToFile     ./obs/02KF017_discharge_weight.rvt
+
+# River Water Level  
+:RedirectToFile    ./obs/02LA027_level.rvt  
+:RedirectToFile    ./obs/02LA026_level.rvt
+
+### River Water Level Weight
+##:RedirectToFile     ./obs/02LA027_level_weight.rvt
+##:RedirectToFile     ./obs/02LA026_level_weight.rvt
+
+# Reservoir Stage  
+:RedirectToFile    ./obs/02MC037_level.rvt  
+:RedirectToFile    ./obs/02KF020_level.rvt  
+:RedirectToFile    ./obs/NorthDepot_level.rvt  
+:RedirectToFile    ./obs/LittleCauchon_level.rvt  
+:RedirectToFile    ./obs/Radiant_level.rvt  
+:RedirectToFile    ./obs/Cedar_level.rvt  
+:RedirectToFile    ./obs/Narrowbag_level.rvt  
+:RedirectToFile    ./obs/Hogan_level.rvt  
+:RedirectToFile    ./obs/Charles_level.rvt  
+:RedirectToFile    ./obs/LaMuir_level.rvt  
+:RedirectToFile    ./obs/Burntroot_level.rvt  
+:RedirectToFile    ./obs/Loontail_level.rvt  
+:RedirectToFile    ./obs/Timberwolf_level.rvt  
+:RedirectToFile    ./obs/Hambone_level.rvt  
+:RedirectToFile    ./obs/Lilypond_level.rvt  
+:RedirectToFile    ./obs/Lavieille_level.rvt  
+:RedirectToFile    ./obs/Grand_level.rvt  
+:RedirectToFile    ./obs/Animoosh_level.rvt
+
+### Reservoir Stage Weight
+##:RedirectToFile     ./obs/02MC037_level_weight.rvt
+##:RedirectToFile     ./obs/02KF020_level_weight.rvt
+##:RedirectToFile     ./obs/NorthDepot_level_weight.rvt
+##:RedirectToFile     ./obs/LittleCauchon_level_weight.rvt
+##:RedirectToFile     ./obs/Radiant_level_weight.rvt
+##:RedirectToFile     ./obs/Cedar_level_weight.rvt
+##:RedirectToFile     ./obs/Narrowbag_level_weight.rvt
+##:RedirectToFile     ./obs/Hogan_level_weight.rvt
+##:RedirectToFile     ./obs/Charles_level_weight.rvt
+##:RedirectToFile     ./obs/LaMuir_level_weight.rvt
+##:RedirectToFile     ./obs/Burntroot_level_weight.rvt
+##:RedirectToFile     ./obs/Loontail_level_weight.rvt
+##:RedirectToFile     ./obs/Timberwolf_level_weight.rvt
+##:RedirectToFile     ./obs/Hambone_level_weight.rvt
+##:RedirectToFile     ./obs/Lilypond_level_weight.rvt
+##:RedirectToFile     ./obs/Lavieille_level_weight.rvt
+##:RedirectToFile     ./obs/Grand_level_weight.rvt
+##:RedirectToFile     ./obs/Animoosh_level_weight.rvt

@@ -1,0 +1,2868 @@
+#----------------------------------------------
+# This is a Raven HRU rvh input file generated
+# by BasinMaker v2.0
+#----------------------------------------------
+:SubBasins
+  :Attributes   NAME  DOWNSTREAM_ID       PROFILE REACH_LENGTH  GAUGED
+  :Units        none           none          none           km    none
+  26007852     sub26007852     26007851     Chn_ZERO_LENGTH     ZERO-     1
+  26006754     sub26006754     26001375     Chn_ZERO_LENGTH     ZERO-     1
+  26005633     sub26005633     26004781     Chn_ZERO_LENGTH     ZERO-     1
+  26007572     sub26007572     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26006773     sub26006773     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26007385     sub26007385     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26006855     sub26006855     26004593     Chn_ZERO_LENGTH     ZERO-     1
+  26006757     sub26006757     26001438     Chn_ZERO_LENGTH     ZERO-     1
+  26007000     sub26007000     26006988     Chn_ZERO_LENGTH     ZERO-     1
+  26007571     sub26007571     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26006356     sub26006356     26006618     Chn_ZERO_LENGTH     ZERO-     1
+  26006759     sub26006759     26001389     Chn_ZERO_LENGTH     ZERO-     1
+  26007667     sub26007667     26007668     Chn_ZERO_LENGTH     ZERO-     1
+  26006516     sub26006516     26000827     Chn_ZERO_LENGTH     ZERO-     1
+  26005718     sub26005718     26004749     Chn_ZERO_LENGTH     ZERO-     1
+  26005642     sub26005642     26006734     Chn_ZERO_LENGTH     ZERO-     1
+  26007668     sub26007668     26007663     Chn_ZERO_LENGTH     ZERO-     1
+  26007219     sub26007219     26004855     Chn_ZERO_LENGTH     ZERO-     1
+  26006760     sub26006760     26001390     Chn_ZERO_LENGTH     ZERO-     1
+  26007627     sub26007627     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26007214     sub26007214     26002184     Chn_ZERO_LENGTH     ZERO-     0
+  26007636     sub26007636     26004686     Chn_ZERO_LENGTH     ZERO-     0
+  26002686     sub26002686     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26007854     sub26007854     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26004167     sub26004167     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26009161     sub26009161     26001701     Chn_ZERO_LENGTH     ZERO-     1
+  26008978     sub26008978     26001615     Chn_ZERO_LENGTH     ZERO-     1
+  26008926     sub26008926     26001024     Chn_ZERO_LENGTH     ZERO-     1
+  26008594     sub26008594     26002451     Chn_ZERO_LENGTH     ZERO-     1
+  26006135     sub26006135     26004672     Chn_ZERO_LENGTH     ZERO-     1
+  26004191     sub26004191     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26003558     sub26003558     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26003497     sub26003497     26003480     Chn_ZERO_LENGTH     ZERO-     1
+  26008367     sub26008367     26003036     Chn_ZERO_LENGTH     ZERO-     1
+  26001761     sub26001761     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26006899     sub26006899     26001932     Chn_ZERO_LENGTH     ZERO-     1
+  26001729     sub26001729     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26005875     sub26005875     26004960     Chn_ZERO_LENGTH     ZERO-     0
+  26006051     sub26006051     26002516     Chn_ZERO_LENGTH     ZERO-     0
+  26001803     sub26001803     -1     Chn_ZERO_LENGTH     ZERO-     1
+  26004001     sub26004001     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26007663     sub26007663     26004419     Chn_ZERO_LENGTH     ZERO-     1
+  26003271     sub26003271     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26009013     sub26009013     26000804     Chn_ZERO_LENGTH     ZERO-     1
+  26002634     sub26002634     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26007521     sub26007521     26004026     Chn_ZERO_LENGTH     ZERO-     0
+  26006470     sub26006470     26000811     Chn_ZERO_LENGTH     ZERO-     1
+  26006467     sub26006467     26000815     Chn_ZERO_LENGTH     ZERO-     0
+  26004009     sub26004009     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26005832     sub26005832     26005862     Chn_ZERO_LENGTH     ZERO-     0
+  26006271     sub26006271     26004646     Chn_ZERO_LENGTH     ZERO-     0
+  26003010     sub26003010     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26005745     sub26005745     26005350     Chn_ZERO_LENGTH     ZERO-     0
+  26003572     sub26003572     -1     Chn_ZERO_LENGTH     ZERO-     1
+  26006962     sub26006962     26001998     Chn_ZERO_LENGTH     ZERO-     0
+  26003006     sub26003006     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26007005     sub26007005     26005055     Chn_ZERO_LENGTH     ZERO-     1
+  26005644     sub26005644     26005308     Chn_ZERO_LENGTH     ZERO-     0
+  26003012     sub26003012     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26004453     sub26004453     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26007041     sub26007041     26004924     Chn_ZERO_LENGTH     ZERO-     0
+  26004169     sub26004169     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26005820     sub26005820     26005124     Chn_ZERO_LENGTH     ZERO-     0
+  26004419     sub26004419     -1     Chn_26004419         2.3498     0
+  26005397     sub26005397     26005919     Chn_ZERO_LENGTH     ZERO-     1
+  26009124     sub26009124     26001189     Chn_ZERO_LENGTH     ZERO-     1
+  26004026     sub26004026     26004007     Chn_26004026         1.8055     0
+  26002598     sub26002598     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26003084     sub26003084     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26005817     sub26005817     26005903     Chn_ZERO_LENGTH     ZERO-     1
+  26006474     sub26006474     26000817     Chn_ZERO_LENGTH     ZERO-     0
+  26003016     sub26003016     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26001723     sub26001723     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26004450     sub26004450     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26000203     sub26000203     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26005350     sub26005350     26005761     Chn_26005350         1.8458     0
+  26006880     sub26006880     26001893     Chn_ZERO_LENGTH     ZERO-     0
+  26003273     sub26003273     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26006434     sub26006434     26005226     Chn_ZERO_LENGTH     ZERO-     0
+  26006313     sub26006313     26000590     Chn_ZERO_LENGTH     ZERO-     0
+  26002617     sub26002617     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26007850     sub26007850     26000212     Chn_ZERO_LENGTH     ZERO-     1
+  26005308     sub26005308     26006723     Chn_26005308         0.7988     0
+  26005305     sub26005305     26000030     Chn_ZERO_LENGTH     ZERO-     1
+  26003871     sub26003871     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26001605     sub26001605     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26003311     sub26003311     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26002602     sub26002602     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26006739     sub26006739     26005233     Chn_ZERO_LENGTH     ZERO-     0
+  26000301     sub26000301     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26000224     sub26000224     26004799     Chn_ZERO_LENGTH     ZERO-     1
+  26000297     sub26000297     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26000295     sub26000295     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26006621     sub26006621     26004991     Chn_ZERO_LENGTH     ZERO-     0
+  26006152     sub26006152     26000415     Chn_ZERO_LENGTH     ZERO-     1
+  26005665     sub26005665     26006723     Chn_ZERO_LENGTH     ZERO-     0
+  26007747     sub26007747     26003417     Chn_ZERO_LENGTH     ZERO-     1
+  26003561     sub26003561     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26007039     sub26007039     26002074     Chn_ZERO_LENGTH     ZERO-     0
+  26006172     sub26006172     26004811     Chn_ZERO_LENGTH     ZERO-     0
+  26002615     sub26002615     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26003590     sub26003590     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26005684     sub26005684     26001262     Chn_ZERO_LENGTH     ZERO-     1
+  26005841     sub26005841     26005051     Chn_ZERO_LENGTH     ZERO-     0
+  26002074     sub26002074     26004624     Chn_26002074         1.6285     0
+  26001773     sub26001773     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26005233     sub26005233     26006723     Chn_26005233         1.4610     0
+  26005226     sub26005226     26006422     Chn_26005226         2.1107     0
+  26005927     sub26005927     26005224     Chn_ZERO_LENGTH     ZERO-     1
+  26005224     sub26005224     26005930     Chn_26005224         0.2473     0
+  26000201     sub26000201     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26005922     sub26005922     26000223     Chn_ZERO_LENGTH     ZERO-     0
+  26004173     sub26004173     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26005912     sub26005912     26001690     Chn_ZERO_LENGTH     ZERO-     1
+  26001653     sub26001653     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26000217     sub26000217     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26003983     sub26003983     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26005890     sub26005890     26000116     Chn_ZERO_LENGTH     ZERO-     0
+  26007207     sub26007207     26005140     Chn_ZERO_LENGTH     ZERO-     0
+  26003585     sub26003585     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26002573     sub26002573     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26006973     sub26006973     26005098     Chn_ZERO_LENGTH     ZERO-     0
+  26006080     sub26006080     26004934     Chn_ZERO_LENGTH     ZERO-     0
+  26000218     sub26000218     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26006358     sub26006358     26000591     Chn_ZERO_LENGTH     ZERO-     0
+  26002879     sub26002879     26002820     Chn_ZERO_LENGTH     ZERO-     1
+  26006159     sub26006159     26004958     Chn_ZERO_LENGTH     ZERO-     0
+  26002594     sub26002594     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26006347     sub26006347     26000582     Chn_ZERO_LENGTH     ZERO-     0
+  26001262     sub26001262     26004561     Chn_26001262         1.2115     0
+  26003281     sub26003281     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26006141     sub26006141     26000411     Chn_ZERO_LENGTH     ZERO-     0
+  26003353     sub26003353     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26005140     sub26005140     26007192     Chn_26005140         1.0512     0
+  26002582     sub26002582     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26002604     sub26002604     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26003867     sub26003867     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26003548     sub26003548     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26005976     sub26005976     26005081     Chn_ZERO_LENGTH     ZERO-     0
+  26004444     sub26004444     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26001690     sub26001690     26001643     Chn_26001690         2.1428     0
+  26003976     sub26003976     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26003014     sub26003014     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26006025     sub26006025     26002506     Chn_ZERO_LENGTH     ZERO-     0
+  26003384     sub26003384     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26000300     sub26000300     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26005703     sub26005703     26004937     Chn_ZERO_LENGTH     ZERO-     1
+  26005124     sub26005124     26005827     Chn_26005124         5.4101     0
+  26005924     sub26005924     26007834     Chn_ZERO_LENGTH     ZERO-     1
+  26000180     sub26000180     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26003008     sub26003008     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26003303     sub26003303     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26003003     sub26003003     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26002999     sub26002999     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26001772     sub26001772     26001793     Chn_ZERO_LENGTH     ZERO-     1
+  26005098     sub26005098     26006960     Chn_26005098         0.7170     0
+  26004165     sub26004165     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26001438     sub26001438     26001409     Chn_ZERO_LENGTH     ZERO-     0
+  26005821     sub26005821     26004927     Chn_ZERO_LENGTH     ZERO-     0
+  26000215     sub26000215     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26006688     sub26006688     26001092     Chn_ZERO_LENGTH     ZERO-     0
+  26005704     sub26005704     26004943     Chn_ZERO_LENGTH     ZERO-     0
+  26000216     sub26000216     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26004171     sub26004171     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26007305     sub26007305     26004864     Chn_ZERO_LENGTH     ZERO-     0
+  26000196     sub26000196     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26005081     sub26005081     26005960     Chn_26005081         1.8904     0
+  26001815     sub26001815     -1     Chn_ZERO_LENGTH     ZERO-     1
+  26006394     sub26006394     26000706     Chn_ZERO_LENGTH     ZERO-     0
+  26006658     sub26006658     26000997     Chn_ZERO_LENGTH     ZERO-     0
+  26005055     sub26005055     26006971     Chn_26005055         4.5868     0
+  26001024     sub26001024     26001000     Chn_26001024         4.7026     0
+  26005652     sub26005652     26001095     Chn_ZERO_LENGTH     ZERO-     0
+  26001998     sub26001998     26004612     Chn_26001998         3.2862     0
+  26006916     sub26006916     26004954     Chn_ZERO_LENGTH     ZERO-     0
+  26000411     sub26000411     26004539     Chn_26000411         4.3113     0
+  26006948     sub26006948     26005046     Chn_ZERO_LENGTH     ZERO-     0
+  26005051     sub26005051     26005860     Chn_26005051         2.4055     0
+  26005046     sub26005046     26006946     Chn_26005046         0.5121     0
+  26005044     sub26005044     26006655     Chn_ZERO_LENGTH     ZERO-     1
+  26001514     sub26001514     26001533     Chn_ZERO_LENGTH     ZERO-     1
+  26007242     sub26007242     26004786     Chn_ZERO_LENGTH     ZERO-     0
+  26000030     sub26000030     26004697     Chn_26000030         3.2613     0
+  26006968     sub26006968     26004735     Chn_ZERO_LENGTH     ZERO-     0
+  26003521     sub26003521     26007763     Chn_ZERO_LENGTH     ZERO-     1
+  26007511     sub26007511     26007740     Chn_ZERO_LENGTH     ZERO-     0
+  26000817     sub26000817     26000846     Chn_26000817         4.7574     0
+  26004189     sub26004189     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26006061     sub26006061     26004886     Chn_ZERO_LENGTH     ZERO-     1
+  26006671     sub26006671     26001034     Chn_ZERO_LENGTH     ZERO-     0
+  26005777     sub26005777     26005696     Chn_ZERO_LENGTH     ZERO-     0
+  26006281     sub26006281     26000578     Chn_ZERO_LENGTH     ZERO-     0
+  26003869     sub26003869     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26003700     sub26003700     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26007366     sub26007366     26004938     Chn_ZERO_LENGTH     ZERO-     0
+  26007708     sub26007708     26003339     Chn_ZERO_LENGTH     ZERO-     1
+  26003339     sub26003339     -1     Chn_26003339         0.1024     0
+  26007740     sub26007740     26004925     Chn_26007740         0.9591     1
+  26007040     sub26007040     26004982     Chn_ZERO_LENGTH     ZERO-     0
+  26000241     sub26000241     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26000212     sub26000212     26007851     Chn_26000212         5.9711     0
+  26004991     sub26004991     26006585     Chn_26004991         6.6066     0
+  26001893     sub26001893     26004144     Chn_26001893         3.0616     0
+  26004982     sub26004982     26007045     Chn_26004982         1.0915     0
+  26003417     sub26003417     26003397     Chn_26003417         4.9935     0
+  26006539     sub26006539     26004861     Chn_ZERO_LENGTH     ZERO-     1
+  26000582     sub26000582     26000577     Chn_26000582         4.2650     0
+  26003580     sub26003580     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26001607     sub26001607     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26006531     sub26006531     26004952     Chn_ZERO_LENGTH     ZERO-     1
+  26001034     sub26001034     26004489     Chn_26001034         1.7310     0
+  26004183     sub26004183     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26006980     sub26006980     26004871     Chn_ZERO_LENGTH     ZERO-     0
+  26007847     sub26007847     26004956     Chn_ZERO_LENGTH     ZERO-     1
+  26004238     sub26004238     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26005843     sub26005843     26004853     Chn_ZERO_LENGTH     ZERO-     0
+  26007227     sub26007227     26002261     Chn_ZERO_LENGTH     ZERO-     0
+  26004960     sub26004960     26005815     Chn_26004960         4.6271     0
+  26004958     sub26004958     26006167     Chn_26004958         5.1174     0
+  26002516     sub26002516     26004656     Chn_26002516         4.2804     0
+  26007836     sub26007836     26004950     Chn_ZERO_LENGTH     ZERO-     1
+  26004956     sub26004956     26005911     Chn_26004956         0.4594     0
+  26006946     sub26006946     26004856     Chn_ZERO_LENGTH     ZERO-     1
+  26001187     sub26001187     26001179     Chn_ZERO_LENGTH     ZERO-     1
+  26006436     sub26006436     26004921     Chn_ZERO_LENGTH     ZERO-     0
+  26004954     sub26004954     26006918     Chn_26004954         3.0689     0
+  26004952     sub26004952     26006509     Chn_26004952         1.4207     0
+  26001092     sub26001092     26001078     Chn_26001092         5.3977     0
+  26004950     sub26004950     26005789     Chn_26004950         0.7740     0
+  26004005     sub26004005     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26004943     sub26004943     26005681     Chn_26004943         1.0564     0
+  26003686     sub26003686     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26006989     sub26006989     26004928     Chn_ZERO_LENGTH     ZERO-     0
+  26000591     sub26000591     26004636     Chn_26000591         5.3720     0
+  26004938     sub26004938     26007379     Chn_26004938         2.5846     0
+  26004937     sub26004937     26005693     Chn_26004937         0.6943     0
+  26006935     sub26006935     26004909     Chn_ZERO_LENGTH     ZERO-     0
+  26007647     sub26007647     26004790     Chn_ZERO_LENGTH     ZERO-     0
+  26001701     sub26001701     26007828     Chn_26001701         8.7709     0
+  26004934     sub26004934     26006054     Chn_26004934         4.5226     0
+  26006214     sub26006214     26000519     Chn_ZERO_LENGTH     ZERO-     0
+  26005827     sub26005827     26005815     Chn_ZERO_LENGTH     ZERO-     0
+  26002412     sub26002412     26004738     Chn_ZERO_LENGTH     ZERO-     1
+  26004928     sub26004928     26006988     Chn_26004928         1.4082     0
+  26004925     sub26004925     26007510     Chn_26004925         1.6358     1
+  26004924     sub26004924     26006017     Chn_26004924         8.6415     0
+  26004921     sub26004921     26006453     Chn_26004921         1.3140     0
+  26007595     sub26007595     26004218     Chn_ZERO_LENGTH     ZERO-     0
+  26006971     sub26006971     26004915     Chn_ZERO_LENGTH     ZERO-     1
+  26004915     sub26004915     26006966     Chn_26004915         0.1024     0
+  26005929     sub26005929     26000239     Chn_ZERO_LENGTH     ZERO-     1
+  26007502     sub26007502     26003062     Chn_ZERO_LENGTH     ZERO-     0
+  26006472     sub26006472     26006466     Chn_ZERO_LENGTH     ZERO-     0
+  26003933     sub26003933     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26000827     sub26000827     26004611     Chn_ZERO_LENGTH     ZERO-     0
+  26007549     sub26007549     26004054     Chn_ZERO_LENGTH     ZERO-     0
+  26000706     sub26000706     26000623     Chn_26000706         2.1582     0
+  26006573     sub26006573     26003183     Chn_ZERO_LENGTH     ZERO-     0
+  26004927     sub26004927     26005901     Chn_26004927         6.7275     1
+  26007664     sub26007664     26004907     Chn_ZERO_LENGTH     ZERO-     0
+  26004909     sub26004909     26007268     Chn_26004909         2.6498     0
+  26007652     sub26007652     26004282     Chn_ZERO_LENGTH     ZERO-     0
+  26004907     sub26004907     26007386     Chn_26004907         0.3021     0
+  26003036     sub26003036     -1     Chn_26003036         6.5681     0
+  26007163     sub26007163     26002637     Chn_ZERO_LENGTH     ZERO-     0
+  26006423     sub26006423     26004676     Chn_ZERO_LENGTH     ZERO-     1
+  26003183     sub26003183     26004640     Chn_26003183         0.8215     0
+  26007693     sub26007693     26003737     Chn_ZERO_LENGTH     ZERO-     1
+  26007391     sub26007391     26004428     Chn_ZERO_LENGTH     ZERO-     0
+  26005822     sub26005822     26005846     Chn_ZERO_LENGTH     ZERO-     1
+  26005860     sub26005860     26004844     Chn_ZERO_LENGTH     ZERO-     0
+  26001753     sub26001753     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26003947     sub26003947     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26004886     sub26004886     26006071     Chn_26004886         5.4341     0
+  26006555     sub26006555     26000873     Chn_ZERO_LENGTH     ZERO-     1
+  26007727     sub26007727     26003368     Chn_ZERO_LENGTH     ZERO-     1
+  26003368     sub26003368     26007704     Chn_26003368         0.3746     0
+  26000815     sub26000815     26007820     Chn_26000815         7.0121     0
+  26005911     sub26005911     26007848     Chn_ZERO_LENGTH     ZERO-     1
+  26006400     sub26006400     26000619     Chn_ZERO_LENGTH     ZERO-     1
+  26005790     sub26005790     26000057     Chn_ZERO_LENGTH     ZERO-     0
+  26003401     sub26003401     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26004054     sub26004054     26004631     Chn_26004054         1.2870     0
+  26004871     sub26004871     26006940     Chn_26004871         2.2898     0
+  26007152     sub26007152     26004628     Chn_ZERO_LENGTH     ZERO-     0
+  26006079     sub26006079     26002138     Chn_ZERO_LENGTH     ZERO-     0
+  26007248     sub26007248     26004822     Chn_ZERO_LENGTH     ZERO-     0
+  26005913     sub26005913     26004760     Chn_ZERO_LENGTH     ZERO-     0
+  26000116     sub26000116     26005858     Chn_26000116         4.0868     0
+  26007743     sub26007743     26003399     Chn_ZERO_LENGTH     ZERO-     1
+  26006913     sub26006913     26004803     Chn_ZERO_LENGTH     ZERO-     0
+  26000223     sub26000223     26004799     Chn_26000223         6.8784     0
+  26005930     sub26005930     26005934     Chn_ZERO_LENGTH     ZERO-     1
+  26004437     sub26004437     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26001833     sub26001833     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26004864     sub26004864     26007321     Chn_26004864         2.5298     0
+  26006399     sub26006399     26000705     Chn_ZERO_LENGTH     ZERO-     0
+  26004861     sub26004861     26006726     Chn_26004861         3.5043     0
+  26001058     sub26001058     26001002     Chn_ZERO_LENGTH     ZERO-     1
+  26006294     sub26006294     26000592     Chn_ZERO_LENGTH     ZERO-     0
+  26002506     sub26002506     26004488     Chn_26002506         5.8841     0
+  26000519     sub26000519     26007816     Chn_26000519         6.3457     0
+  26000705     sub26000705     26000623     Chn_26000705         1.7455     0
+  26007042     sub26007042     26004819     Chn_ZERO_LENGTH     ZERO-     0
+  26004856     sub26004856     26006947     Chn_26004856         5.9111     0
+  26004855     sub26004855     26007169     Chn_ZERO_LENGTH     ZERO-     0
+  26004853     sub26004853     26005847     Chn_26004853         8.7173     0
+  26007510     sub26007510     26004830     Chn_ZERO_LENGTH     ZERO-     1
+  26003737     sub26003737     26007691     Chn_26003737         3.4829     0
+  26001783     sub26001783     26007782     Chn_ZERO_LENGTH     ZERO-     1
+  26004195     sub26004195     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26007120     sub26007120     26004818     Chn_ZERO_LENGTH     ZERO-     0
+  26002699     sub26002699     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26007395     sub26007395     26004440     Chn_ZERO_LENGTH     ZERO-     1
+  26000804     sub26000804     26000826     Chn_26000804         9.1030     0
+  26004440     sub26004440     26004439     Chn_26004440         0.2473     0
+  26004213     sub26004213     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26004844     sub26004844     26005903     Chn_26004844         2.8568     0
+  26003399     sub26003399     -1     Chn_26003399         1.4888     0
+  26006466     sub26006466     26000756     Chn_ZERO_LENGTH     ZERO-     1
+  26006455     sub26006455     26004831     Chn_ZERO_LENGTH     ZERO-     1
+  26006683     sub26006683     26004838     Chn_ZERO_LENGTH     ZERO-     1
+  26007367     sub26007367     26007383     Chn_ZERO_LENGTH     ZERO-     0
+  26004838     sub26004838     26006682     Chn_26004838         0.2846     0
+  26001689     sub26001689     26001643     Chn_ZERO_LENGTH     ZERO-     1
+  26004831     sub26004831     26006457     Chn_26004831         1.7382     0
+  26003885     sub26003885     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26000057     sub26000057     26004626     Chn_26000057         3.8201     0
+  26004830     sub26004830     26007509     Chn_26004830         3.9835     1
+  26005643     sub26005643     26001221     Chn_ZERO_LENGTH     ZERO-     0
+  26000873     sub26000873     26000847     Chn_26000873         4.8235     0
+  26004822     sub26004822     26007251     Chn_26004822         5.9368     0
+  26006682     sub26006682     26001028     Chn_ZERO_LENGTH     ZERO-     1
+  26004819     sub26004819     26007052     Chn_26004819         2.3519     0
+  26003974     sub26003974     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26007477     sub26007477     26002837     Chn_ZERO_LENGTH     ZERO-     0
+  26004818     sub26004818     26007154     Chn_26004818         0.4894     0
+  26003567     sub26003567     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26005693     sub26005693     26004766     Chn_ZERO_LENGTH     ZERO-     0
+  26004811     sub26004811     26006167     Chn_26004811        12.4753     0
+  26000714     sub26000714     26004782     Chn_ZERO_LENGTH     ZERO-     1
+  26006211     sub26006211     26004802     Chn_ZERO_LENGTH     ZERO-     1
+  26006960     sub26006960     26004773     Chn_ZERO_LENGTH     ZERO-     0
+  26001189     sub26001189     26001179     Chn_26001189         6.1387     0
+  26006807     sub26006807     26004800     Chn_ZERO_LENGTH     ZERO-     0
+  26001221     sub26001221     26001219     Chn_26001221         2.3198     0
+  26000811     sub26000811     26004531     Chn_26000811         9.2479     0
+  26000199     sub26000199     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26004803     sub26004803     26006905     Chn_26004803         3.6504     0
+  26005919     sub26005919     26001702     Chn_ZERO_LENGTH     ZERO-     1
+  26004802     sub26004802     26006183     Chn_26004802         0.8991     0
+  26007509     sub26007509     26007714     Chn_ZERO_LENGTH     ZERO-     1
+  26004800     sub26004800     26006800     Chn_26004800         1.0637     0
+  26005761     sub26005761     26004791     Chn_ZERO_LENGTH     ZERO-     1
+  26004799     sub26004799     26005931     Chn_26004799         1.7112     0
+  26007714     sub26007714     26003776     Chn_26007714         0.5443     1
+  26003776     sub26003776     26007707     Chn_26003776         1.8076     0
+  26007782     sub26007782     26007769     Chn_26007782         1.7485     1
+  26005862     sub26005862     26005864     Chn_26005862        10.7015     0
+  26004193     sub26004193     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26002138     sub26002138     26004629     Chn_26002138         7.5366     0
+  26006453     sub26006453     26004734     Chn_ZERO_LENGTH     ZERO-     0
+  26004791     sub26004791     26005696     Chn_26004791         3.9680     0
+  26003293     sub26003293     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26004790     sub26004790     26007603     Chn_26004790         9.5967     0
+  26003566     sub26003566     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26000997     sub26000997     26001001     Chn_26000997        10.5661     0
+  26005934     sub26005934     26000253     Chn_ZERO_LENGTH     ZERO-     1
+  26004786     sub26004786     26007278     Chn_26004786         5.4911     0
+  26001699     sub26001699     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26000756     sub26000756     26000412     Chn_26000756         6.6915     0
+  26006746     sub26006746     26001641     Chn_ZERO_LENGTH     ZERO-     0
+  26004782     sub26004782     26006362     Chn_26004782         0.6591     0
+  26004781     sub26004781     26006557     Chn_ZERO_LENGTH     ZERO-     0
+  26007383     sub26007383     26006009     Chn_ZERO_LENGTH     ZERO-     0
+  26006783     sub26006783     26004704     Chn_ZERO_LENGTH     ZERO-     0
+  26004282     sub26004282     26004477     Chn_26004282         5.8987     0
+  26006009     sub26006009     26006014     Chn_26006009         0.7088     0
+  26000415     sub26000415     26000386     Chn_26000415        10.6137     0
+  26007052     sub26007052     26004772     Chn_ZERO_LENGTH     ZERO-     0
+  26006988     sub26006988     26004695     Chn_ZERO_LENGTH     ZERO-     0
+  26006881     sub26006881     26004765     Chn_ZERO_LENGTH     ZERO-     1
+  26006226     sub26006226     26000527     Chn_ZERO_LENGTH     ZERO-     1
+  26004773     sub26004773     26006918     Chn_26004773         5.3865     0
+  26004772     sub26004772     26007045     Chn_26004772         1.3015     0
+  26007848     sub26007848     26000211     Chn_26007848         4.6468     1
+  26006422     sub26006422     26004769     Chn_ZERO_LENGTH     ZERO-     0
+  26004769     sub26004769     26006401     Chn_26004769         0.5867     0
+  26006638     sub26006638     26004761     Chn_ZERO_LENGTH     ZERO-     0
+  26004766     sub26004766     26005648     Chn_26004766         3.8965     0
+  26000239     sub26000239     26007838     Chn_26000239         7.0648     0
+  26004765     sub26004765     26006853     Chn_26004765         2.1055     0
+  26000211     sub26000211     26007851     Chn_26000211         0.9415     0
+  26007469     sub26007469     26002731     Chn_ZERO_LENGTH     ZERO-     0
+  26001932     sub26001932     26001894     Chn_26001932        10.0509     0
+  26004760     sub26004760     26006774     Chn_26004760         8.1109     0
+  26007483     sub26007483     26004720     Chn_ZERO_LENGTH     ZERO-     1
+  26004761     sub26004761     26006642     Chn_26004761         1.2085     0
+  26005864     sub26005864     26000117     Chn_ZERO_LENGTH     ZERO-     0
+  26006560     sub26006560     26004747     Chn_ZERO_LENGTH     ZERO-     1
+  26005895     sub26005895     26004726     Chn_ZERO_LENGTH     ZERO-     0
+  26005826     sub26005826     26004756     Chn_ZERO_LENGTH     ZERO-     0
+  26006541     sub26006541     26000872     Chn_ZERO_LENGTH     ZERO-     1
+  26006175     sub26006175     26004730     Chn_ZERO_LENGTH     ZERO-     0
+  26006014     sub26006014     26004742     Chn_ZERO_LENGTH     ZERO-     0
+  26004756     sub26004756     26005810     Chn_26004756         1.4361     0
+  26001793     sub26001793     -1     Chn_26001793         3.4537     0
+  26006457     sub26006457     26004755     Chn_ZERO_LENGTH     ZERO-     1
+  26004755     sub26004755     26006679     Chn_26004755         0.1273     0
+  26000117     sub26000117     26005858     Chn_26000117         2.3374     0
+  26004749     sub26004749     26005685     Chn_ZERO_LENGTH     ZERO-     0
+  26004747     sub26004747     26005624     Chn_26004747         2.5422     0
+  26006504     sub26006504     26004745     Chn_ZERO_LENGTH     ZERO-     0
+  26004745     sub26004745     26006460     Chn_26004745         0.3197     0
+  26001661     sub26001661     26007824     Chn_ZERO_LENGTH     ZERO-     1
+  26003985     sub26003985     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26000872     sub26000872     26000847     Chn_26000872         2.9416     0
+  26007273     sub26007273     26004681     Chn_ZERO_LENGTH     ZERO-     0
+  26004742     sub26004742     26006054     Chn_26004742         2.5919     0
+  26004218     sub26004218     26007666     Chn_26004218         4.5174     0
+  26006774     sub26006774     26001599     Chn_ZERO_LENGTH     ZERO-     0
+  26004738     sub26004738     26006017     Chn_26004738         3.1340     0
+  26003026     sub26003026     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26004735     sub26004735     26007268     Chn_26004735         9.1184     0
+  26006734     sub26006734     26004721     Chn_ZERO_LENGTH     ZERO-     0
+  26004734     sub26004734     26006460     Chn_26004734         3.3462     0
+  26002820     sub26002820     26002831     Chn_26002820        10.1534     0
+  26002596     sub26002596     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26004730     sub26004730     26006167     Chn_26004730         3.0037     0
+  26003981     sub26003981     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26005754     sub26005754     26004729     Chn_ZERO_LENGTH     ZERO-     0
+  26004729     sub26004729     26005696     Chn_26004729         0.1149     0
+  26007169     sub26007169     26004398     Chn_ZERO_LENGTH     ZERO-     0
+  26007834     sub26007834     26007835     Chn_26007834         6.1635     1
+  26000028     sub26000028     26004697     Chn_ZERO_LENGTH     ZERO-     0
+  26004727     sub26004727     26007500     Chn_ZERO_LENGTH     ZERO-     0
+  26004726     sub26004726     26005888     Chn_26004726         4.2898     0
+  26007835     sub26007835     26000227     Chn_26007835         0.1024     1
+  26003062     sub26003062     26007724     Chn_26003062        13.5741     0
+  26004725     sub26004725     26005801     Chn_ZERO_LENGTH     ZERO-     0
+  26000227     sub26000227     -1     Chn_26000227         0.4770     0
+  26005981     sub26005981     26004715     Chn_ZERO_LENGTH     ZERO-     0
+  26003150     sub26003150     26007735     Chn_ZERO_LENGTH     ZERO-     0
+  26007685     sub26007685     26007684     Chn_ZERO_LENGTH     ZERO-     1
+  26000240     sub26000240     26007838     Chn_ZERO_LENGTH     ZERO-     0
+  26006094     sub26006094     26000350     Chn_ZERO_LENGTH     ZERO-     0
+  26002094     sub26002094     26005955     Chn_ZERO_LENGTH     ZERO-     0
+  26001377     sub26001377     26001368     Chn_ZERO_LENGTH     ZERO-     0
+  26004723     sub26004723     26006460     Chn_ZERO_LENGTH     ZERO-     1
+  26004724     sub26004724     26007072     Chn_ZERO_LENGTH     ZERO-     0
+  26007563     sub26007563     26004055     Chn_ZERO_LENGTH     ZERO-     0
+  26003358     sub26003358     26007705     Chn_ZERO_LENGTH     ZERO-     0
+  26001819     sub26001819     -1     Chn_ZERO_LENGTH     ZERO-     1
+  26004722     sub26004722     26007288     Chn_ZERO_LENGTH     ZERO-     0
+  26006443     sub26006443     26004719     Chn_ZERO_LENGTH     ZERO-     0
+  26007684     sub26007684     26003287     Chn_26007684         2.6571     1
+  26004721     sub26004721     26006729     Chn_26004721         3.9007     0
+  26006028     sub26006028     26004714     Chn_ZERO_LENGTH     ZERO-     0
+  26003151     sub26003151     26007735     Chn_ZERO_LENGTH     ZERO-     0
+  26004720     sub26004720     26003061     Chn_26004720         7.9121     1
+  26007251     sub26007251     26002262     Chn_ZERO_LENGTH     ZERO-     0
+  26003275     sub26003275     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26006000     sub26006000     26002137     Chn_ZERO_LENGTH     ZERO-     0
+  26004719     sub26004719     26006406     Chn_26004719         0.8867     0
+  26003287     sub26003287     -1     Chn_26003287         0.8464     0
+  26005815     sub26005815     26004687     Chn_ZERO_LENGTH     ZERO-     0
+  26001389     sub26001389     26007781     Chn_ZERO_LENGTH     ZERO-     1
+  26004718     sub26004718     26007493     Chn_ZERO_LENGTH     ZERO-     0
+  26002184     sub26002184     26004620     Chn_ZERO_LENGTH     ZERO-     0
+  26002384     sub26002384     26004598     Chn_ZERO_LENGTH     ZERO-     0
+  26003182     sub26003182     26004640     Chn_ZERO_LENGTH     ZERO-     0
+  26001931     sub26001931     26001894     Chn_ZERO_LENGTH     ZERO-     0
+  26004715     sub26004715     26005986     Chn_26004715         1.5510     0
+  26004714     sub26004714     26006046     Chn_26004714         1.8510     0
+  26006679     sub26006679     26001057     Chn_ZERO_LENGTH     ZERO-     1
+  26000253     sub26000253     26004700     Chn_26000253        10.3055     1
+  26001376     sub26001376     26003873     Chn_ZERO_LENGTH     ZERO-     0
+  26000576     sub26000576     26000580     Chn_ZERO_LENGTH     ZERO-     0
+  26004712     sub26004712     26006901     Chn_ZERO_LENGTH     ZERO-     0
+  26002262     sub26002262     26002256     Chn_26002262         4.4986     0
+  26001028     sub26001028     26001023     Chn_26001028        10.4204     1
+  26003496     sub26003496     26003480     Chn_ZERO_LENGTH     ZERO-     0
+  26007192     sub26007192     26007147     Chn_ZERO_LENGTH     ZERO-     0
+  26001057     sub26001057     26001002     Chn_26001057         3.2810     0
+  26003681     sub26003681     26003676     Chn_ZERO_LENGTH     ZERO-     0
+  26000173     sub26000173     26007844     Chn_ZERO_LENGTH     ZERO-     0
+  26002796     sub26002796     26004595     Chn_ZERO_LENGTH     ZERO-     0
+  26007725     sub26007725     26003359     Chn_ZERO_LENGTH     ZERO-     1
+  26006947     sub26006947     26001997     Chn_ZERO_LENGTH     ZERO-     1
+  26002255     sub26002255     26004564     Chn_ZERO_LENGTH     ZERO-     0
+  26001396     sub26001396     26003522     Chn_ZERO_LENGTH     ZERO-     0
+  26001615     sub26001615     26007819     Chn_26001615        18.4091     0
+  26005960     sub26005960     26004689     Chn_ZERO_LENGTH     ZERO-     0
+  26004704     sub26004704     26006818     Chn_26004704         5.8057     0
+  26006642     sub26006642     26000995     Chn_ZERO_LENGTH     ZERO-     0
+  26003675     sub26003675     26007682     Chn_ZERO_LENGTH     ZERO-     0
+  26007841     sub26007841     26000279     Chn_ZERO_LENGTH     ZERO-     1
+  26000279     sub26000279     -1     Chn_26000279         0.0900     0
+  26001643     sub26001643     26001624     Chn_26001643        10.8258     0
+  26003991     sub26003991     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26007358     sub26007358     26002418     Chn_ZERO_LENGTH     ZERO-     0
+  26005648     sub26005648     26001162     Chn_ZERO_LENGTH     ZERO-     0
+  26004706     sub26004706     26006362     Chn_ZERO_LENGTH     ZERO-     0
+  26001437     sub26001437     26001409     Chn_ZERO_LENGTH     ZERO-     0
+  26004705     sub26004705     26006362     Chn_ZERO_LENGTH     ZERO-     0
+  26003387     sub26003387     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26004702     sub26004702     26006643     Chn_ZERO_LENGTH     ZERO-     0
+  26004703     sub26004703     26005931     Chn_ZERO_LENGTH     ZERO-     0
+  26003554     sub26003554     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26004701     sub26004701     26006722     Chn_ZERO_LENGTH     ZERO-     0
+  26001547     sub26001547     26007801     Chn_ZERO_LENGTH     ZERO-     0
+  26003480     sub26003480     26007761     Chn_26003480         2.3528     0
+  26001179     sub26001179     26007829     Chn_26001179         6.8141     0
+  26002588     sub26002588     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26003064     sub26003064     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26004467     sub26004467     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26004700     sub26004700     26005944     Chn_26004700         0.9891     0
+  26004697     sub26004697     26005763     Chn_26004697         0.7046     0
+  26001023     sub26001023     26001000     Chn_26001023         1.1361     0
+  26004696     sub26004696     26007411     Chn_ZERO_LENGTH     ZERO-     0
+  26005685     sub26005685     26004655     Chn_ZERO_LENGTH     ZERO-     0
+  26005986     sub26005986     26004692     Chn_ZERO_LENGTH     ZERO-     0
+  26002835     sub26002835     26007716     Chn_ZERO_LENGTH     ZERO-     0
+  26006071     sub26006071     26002515     Chn_ZERO_LENGTH     ZERO-     0
+  26004695     sub26004695     26006966     Chn_26004695         7.8148     0
+  26000502     sub26000502     26000518     Chn_ZERO_LENGTH     ZERO-     0
+  26001628     sub26001628     26007812     Chn_ZERO_LENGTH     ZERO-     0
+  26004410     sub26004410     26004549     Chn_ZERO_LENGTH     ZERO-     0
+  26000527     sub26000527     26000523     Chn_26000527         9.6961     0
+  26001390     sub26001390     26007781     Chn_ZERO_LENGTH     ZERO-     0
+  26005858     sub26005858     26005846     Chn_26005858         1.8085     0
+  26004693     sub26004693     26005766     Chn_ZERO_LENGTH     ZERO-     0
+  26007700     sub26007700     26007697     Chn_ZERO_LENGTH     ZERO-     1
+  26004692     sub26004692     26005962     Chn_26004692         3.5986     0
+  26006401     sub26006401     26004691     Chn_ZERO_LENGTH     ZERO-     0
+  26003318     sub26003318     26007692     Chn_ZERO_LENGTH     ZERO-     0
+  26006406     sub26006406     26000710     Chn_ZERO_LENGTH     ZERO-     0
+  26007789     sub26007789     26001428     Chn_ZERO_LENGTH     ZERO-     1
+  26006111     sub26006111     26000349     Chn_ZERO_LENGTH     ZERO-     0
+  26003978     sub26003978     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26003824     sub26003824     26007737     Chn_ZERO_LENGTH     ZERO-     0
+  26004691     sub26004691     26006395     Chn_26004691         0.6291     0
+  26000995     sub26000995     26001001     Chn_26000995         4.6537     0
+  26002836     sub26002836     26007720     Chn_ZERO_LENGTH     ZERO-     0
+  26003359     sub26003359     26007705     Chn_26003359         5.3480     0
+  26004689     sub26004689     26005955     Chn_26004689         3.2935     0
+  26004687     sub26004687     26005793     Chn_26004687         8.1923     0
+  26006905     sub26006905     26004660     Chn_ZERO_LENGTH     ZERO-     0
+  26004686     sub26004686     26007584     Chn_ZERO_LENGTH     ZERO-     0
+  26006142     sub26006142     26004682     Chn_ZERO_LENGTH     ZERO-     1
+  26007697     sub26007697     26003746     Chn_26007697         1.1661     1
+  26000710     sub26000710     26007796     Chn_26000710         2.9065     0
+  26004027     sub26004027     26004007     Chn_ZERO_LENGTH     ZERO-     0
+  26007851     sub26007851     26000214     Chn_26007851        11.4998     1
+  26005748     sub26005748     26004679     Chn_ZERO_LENGTH     ZERO-     0
+  26007321     sub26007321     26002385     Chn_ZERO_LENGTH     ZERO-     0
+  26003550     sub26003550     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26001428     sub26001428     26007778     Chn_26001428         3.4135     0
+  26002515     sub26002515     26004656     Chn_26002515         5.2996     0
+  26007045     sub26007045     26002073     Chn_ZERO_LENGTH     ZERO-     1
+  26004683     sub26004683     26007398     Chn_ZERO_LENGTH     ZERO-     0
+  26007718     sub26007718     26003325     Chn_ZERO_LENGTH     ZERO-     1
+  26000214     sub26000214     -1     Chn_26000214         3.1946     0
+  26004682     sub26004682     26006149     Chn_26004682         2.1398     0
+  26001831     sub26001831     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26004681     sub26004681     26007314     Chn_26004681        14.0914     0
+  26006395     sub26006395     26000711     Chn_ZERO_LENGTH     ZERO-     0
+  26000711     sub26000711     26007796     Chn_26000711         0.3197     0
+  26004680     sub26004680     26005789     Chn_ZERO_LENGTH     ZERO-     0
+  26004678     sub26004678     26007410     Chn_ZERO_LENGTH     ZERO-     0
+  26004679     sub26004679     26005741     Chn_26004679         0.7118     0
+  26007769     sub26007769     26003906     Chn_26007769        13.4734     1
+  26001533     sub26001533     26007792     Chn_26001533         9.9906     1
+  26006149     sub26006149     26000434     Chn_ZERO_LENGTH     ZERO-     1
+  26004676     sub26004676     26006618     Chn_26004676         9.6173     0
+  26000805     sub26000805     26000826     Chn_ZERO_LENGTH     ZERO-     0
+  26007798     sub26007798     26001467     Chn_ZERO_LENGTH     ZERO-     1
+  26002665     sub26002665     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26003547     sub26003547     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26005793     sub26005793     26005801     Chn_ZERO_LENGTH     ZERO-     0
+  26004672     sub26004672     26006183     Chn_26004672        17.2396     0
+  26007744     sub26007744     26003827     Chn_ZERO_LENGTH     ZERO-     1
+  26004670     sub26004670     26007023     Chn_ZERO_LENGTH     ZERO-     0
+  26002731     sub26002731     26004562     Chn_26002731        15.3338     0
+  26004668     sub26004668     26007096     Chn_ZERO_LENGTH     ZERO-     0
+  26007023     sub26007023     26004649     Chn_ZERO_LENGTH     ZERO-     1
+  26002385     sub26002385     26004598     Chn_26002385         6.0148     0
+  26007278     sub26007278     26004663     Chn_ZERO_LENGTH     ZERO-     1
+  26006513     sub26006513     26000816     Chn_ZERO_LENGTH     ZERO-     0
+  26000324     sub26000324     26000350     Chn_ZERO_LENGTH     ZERO-     0
+  26002807     sub26002807     26002817     Chn_ZERO_LENGTH     ZERO-     0
+  26004665     sub26004665     26006626     Chn_ZERO_LENGTH     ZERO-     0
+  26007710     sub26007710     26003775     Chn_ZERO_LENGTH     ZERO-     1
+  26007493     sub26007493     26003020     Chn_ZERO_LENGTH     ZERO-     0
+  26005763     sub26005763     26000056     Chn_ZERO_LENGTH     ZERO-     0
+  26001641     sub26001641     26001624     Chn_26001641        22.1531     0
+  26004664     sub26004664     26007448     Chn_ZERO_LENGTH     ZERO-     0
+  26004663     sub26004663     26007286     Chn_26004663         0.9415     0
+  26006800     sub26006800     26004083     Chn_ZERO_LENGTH     ZERO-     1
+  26001538     sub26001538     26007797     Chn_ZERO_LENGTH     ZERO-     0
+  26001809     sub26001809     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26004428     sub26004428     -1     Chn_26004428        13.2189     0
+  26003634     sub26003634     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26002451     sub26002451     26002419     Chn_26002451        16.1390     0
+  26001000     sub26001000     26007800     Chn_26001000         6.1862     0
+  26002137     sub26002137     26004629     Chn_26002137         4.8547     0
+  26004660     sub26004660     26006886     Chn_26004660         6.0581     0
+  26000268     sub26000268     26007840     Chn_ZERO_LENGTH     ZERO-     0
+  26000434     sub26000434     26004587     Chn_26000434         3.6556     0
+  26007584     sub26007584     26004179     Chn_ZERO_LENGTH     ZERO-     0
+  26002269     sub26002269     26004545     Chn_ZERO_LENGTH     ZERO-     0
+  26005766     sub26005766     26004653     Chn_ZERO_LENGTH     ZERO-     1
+  26005741     sub26005741     26004657     Chn_ZERO_LENGTH     ZERO-     1
+  26004657     sub26004657     26006723     Chn_26004657         0.2649     0
+  26004656     sub26004656     26006038     Chn_26004656         1.8355     0
+  26002188     sub26002188     26004620     Chn_ZERO_LENGTH     ZERO-     0
+  26004655     sub26004655     26006723     Chn_26004655         9.4240     0
+  26007484     sub26007484     26002870     Chn_ZERO_LENGTH     ZERO-     0
+  26002418     sub26002418     26007742     Chn_26002418         5.6998     0
+  26003746     sub26003746     26007688     Chn_26003746         4.9241     0
+  26004653     sub26004653     26005789     Chn_26004653         2.7771     0
+  26001162     sub26001162     26007827     Chn_26001162        15.5944     1
+  26003775     sub26003775     26007707     Chn_26003775         1.2312     0
+  26003325     sub26003325     26003319     Chn_26003325         6.5102     0
+  26001409     sub26001409     26001395     Chn_26001409         7.1145     0
+  26001702     sub26001702     26007828     Chn_26001702        12.1355     0
+  26004179     sub26004179     -1     Chn_26004179         3.4040     0
+  26004083     sub26004083     26004601     Chn_26004083         3.0698     0
+  26004082     sub26004082     26004601     Chn_ZERO_LENGTH     ZERO-     0
+  26001997     sub26001997     26004612     Chn_26001997         7.7654     0
+  26002837     sub26002837     26007720     Chn_26002837        19.6510     0
+  26000578     sub26000578     26000622     Chn_26000578        21.7304     0
+  26000590     sub26000590     26004636     Chn_26000590        17.0815     0
+  26005931     sub26005931     26004639     Chn_ZERO_LENGTH     ZERO-     0
+  26003827     sub26003827     26003823     Chn_26003827         9.6979     0
+  26002637     sub26002637     26007678     Chn_26002637        30.7024     0
+  26000619     sub26000619     26000595     Chn_26000619        18.1567     0
+  26000847     sub26000847     26004582     Chn_26000847        11.5055     0
+  26004649     sub26004649     26007028     Chn_26004649         4.0353     0
+  26003458     sub26003458     26003459     Chn_ZERO_LENGTH     ZERO-     0
+  26004055     sub26004055     26004631     Chn_26004055         7.7599     0
+  26003140     sub26003140     26007739     Chn_ZERO_LENGTH     ZERO-     0
+  26001001     sub26001001     26004591     Chn_26001001         0.1273     0
+  26003906     sub26003906     26003903     Chn_26003906        10.8176     0
+  26003557     sub26003557     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26007603     sub26007603     26004219     Chn_ZERO_LENGTH     ZERO-     0
+  26004219     sub26004219     26007666     Chn_26004219         0.5070     0
+  26007699     sub26007699     26003745     Chn_ZERO_LENGTH     ZERO-     1
+  26005846     sub26005846     26004643     Chn_ZERO_LENGTH     ZERO-     0
+  26004646     sub26004646     26006046     Chn_26004646        22.5246     0
+  26004645     sub26004645     26007387     Chn_ZERO_LENGTH     ZERO-     0
+  26002870     sub26002870     26004627     Chn_26002870         7.0875     1
+  26007838     sub26007838     26000267     Chn_26007838         8.7306     1
+  26006966     sub26006966     26004637     Chn_ZERO_LENGTH     ZERO-     1
+  26000826     sub26000826     26004611     Chn_26000826         2.6022     0
+  26004643     sub26004643     26005809     Chn_26004643         2.4316     0
+  26004007     sub26004007     -1     Chn_26004007        12.8786     0
+  26004642     sub26004642     26007462     Chn_ZERO_LENGTH     ZERO-     0
+  26004641     sub26004641     26006259     Chn_ZERO_LENGTH     ZERO-     0
+  26004640     sub26004640     26007500     Chn_26004640         7.3575     0
+  26000816     sub26000816     26007820     Chn_26000816        11.2655     0
+  26000056     sub26000056     26004626     Chn_26000056        13.7601     0
+  26000267     sub26000267     26007840     Chn_26000267         4.1056     0
+  26003745     sub26003745     26007688     Chn_26003745         1.7331     0
+  26007689     sub26007689     26003709     Chn_ZERO_LENGTH     ZERO-     1
+  26003313     sub26003313     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26006886     sub26006886     26004613     Chn_ZERO_LENGTH     ZERO-     0
+  26003709     sub26003709     26003693     Chn_26003709         1.1888     0
+  26004639     sub26004639     26005944     Chn_26004639         4.0713     0
+  26006075     sub26006075     26004638     Chn_ZERO_LENGTH     ZERO-     0
+  26004398     sub26004398     26007671     Chn_26004398        13.3187     0
+  26001537     sub26001537     26007797     Chn_ZERO_LENGTH     ZERO-     0
+  26006038     sub26006038     26004621     Chn_ZERO_LENGTH     ZERO-     0
+  26006853     sub26006853     26004634     Chn_ZERO_LENGTH     ZERO-     1
+  26004638     sub26004638     26006058     Chn_26004638         2.0271     0
+  26004637     sub26004637     26006940     Chn_26004637        10.3103     0
+  26004636     sub26004636     26006362     Chn_26004636         2.6746     0
+  26007096     sub26007096     26004635     Chn_ZERO_LENGTH     ZERO-     0
+  26004635     sub26004635     26007103     Chn_26004635         0.8070     0
+  26000623     sub26000623     26007786     Chn_26000623        15.8596     0
+  26001599     sub26001599     26007802     Chn_26001599        20.6801     0
+  26004634     sub26004634     26006848     Chn_26004634         4.3177     0
+  26003457     sub26003457     26003459     Chn_ZERO_LENGTH     ZERO-     0
+  26007781     sub26007781     26001367     Chn_26007781         1.1712     1
+  26004366     sub26004366     26004476     Chn_ZERO_LENGTH     ZERO-     0
+  26007764     sub26007764     26003893     Chn_ZERO_LENGTH     ZERO-     1
+  26003893     sub26003893     26003913     Chn_26003893         2.0455     0
+  26007776     sub26007776     26007768     Chn_ZERO_LENGTH     ZERO-     1
+  26005809     sub26005809     26004632     Chn_ZERO_LENGTH     ZERO-     1
+  26006058     sub26006058     26002483     Chn_ZERO_LENGTH     ZERO-     0
+  26004632     sub26004632     26005792     Chn_26004632         0.7367     0
+  26007729     sub26007729     26007723     Chn_ZERO_LENGTH     ZERO-     1
+  26004630     sub26004630     26006769     Chn_ZERO_LENGTH     ZERO-     0
+  26004631     sub26004631     26006788     Chn_26004631         1.8788     0
+  26004629     sub26004629     26005978     Chn_26004629         7.8482     0
+  26007830     sub26007830     26001662     Chn_ZERO_LENGTH     ZERO-     1
+  26001894     sub26001894     26004144     Chn_26001894        13.0980     0
+  26002073     sub26002073     26004624     Chn_26002073         9.6785     0
+  26003744     sub26003744     26003736     Chn_ZERO_LENGTH     ZERO-     0
+  26005901     sub26005901     26004625     Chn_ZERO_LENGTH     ZERO-     0
+  26007707     sub26007707     26007711     Chn_26007707         1.4682     1
+  26004628     sub26004628     26007072     Chn_26004628        18.4897     0
+  26005681     sub26005681     26001222     Chn_ZERO_LENGTH     ZERO-     1
+  26004627     sub26004627     26007473     Chn_26004627        11.5955     0
+  26007723     sub26007723     26003802     Chn_26007723         5.4393     1
+  26003802     sub26003802     -1     Chn_26003802         0.4997     0
+  26006626     sub26006626     26007767     Chn_ZERO_LENGTH     ZERO-     1
+  26006557     sub26006557     26004623     Chn_ZERO_LENGTH     ZERO-     1
+  26004626     sub26004626     26005696     Chn_26004626         4.2504     0
+  26007762     sub26007762     26003856     Chn_ZERO_LENGTH     ZERO-     1
+  26004625     sub26004625     26005903     Chn_26004625         6.4223     1
+  26001662     sub26001662     26007824     Chn_26001662         3.8892     0
+  26001467     sub26001467     26007794     Chn_26001467        22.8117     0
+  26004624     sub26004624     26007028     Chn_26004624         0.2597     0
+  26004623     sub26004623     26006726     Chn_26004623         2.8465     0
+  26001002     sub26001002     26004591     Chn_26001002        14.1926     0
+  26007665     sub26007665     26003987     Chn_ZERO_LENGTH     ZERO-     1
+  26001624     sub26001624     26007825     Chn_26001624         2.1210     0
+  26004621     sub26004621     26006043     Chn_26004621         5.9596     0
+  26007820     sub26007820     26000818     Chn_26007820         5.3617     1
+  26000818     sub26000818     26000846     Chn_26000818         0.7615     0
+  26000592     sub26000592     26007783     Chn_26000592        20.5970     0
+  26000350     sub26000350     26000385     Chn_26000350         6.8278     0
+  26001367     sub26001367     26007775     Chn_26001367         7.7248     0
+  26007768     sub26007768     26003894     Chn_26007768        13.3162     1
+  26004620     sub26004620     26007154     Chn_26004620         2.4801     0
+  26002483     sub26002483     26004616     Chn_26002483         8.6084     1
+  26001095     sub26001095     26007810     Chn_26001095        45.0633     0
+  26007711     sub26007711     26007712     Chn_26007711         2.6155     1
+  26007712     sub26007712     26003762     Chn_26007712         0.0900     1
+  26006788     sub26006788     26004607     Chn_ZERO_LENGTH     ZERO-     1
+  26004185     sub26004185     -1     Chn_ZERO_LENGTH     ZERO-     0
+  26004616     sub26004616     26006017     Chn_26004616         0.0900     0
+  26003020     sub26003020     -1     Chn_26003020        12.3150     0
+  26007828     sub26007828     26001638     Chn_26007828        14.0576     1
+  26003194     sub26003194     26007753     Chn_ZERO_LENGTH     ZERO-     1
+  26001638     sub26001638     26001627     Chn_26001638         0.2824     0
+  26007387     sub26007387     26004608     Chn_ZERO_LENGTH     ZERO-     0
+  26007754     sub26007754     26003434     Chn_ZERO_LENGTH     ZERO-     1
+  26007796     sub26007796     26004615     Chn_26007796         1.8852     1
+  26004615     sub26004615     26006362     Chn_26004615         0.1024     1
+  26005978     sub26005978     26004614     Chn_ZERO_LENGTH     ZERO-     0
+  26004614     sub26004614     26005962     Chn_26004614         0.0900     0
+  26003987     sub26003987     -1     Chn_26003987         3.6886     0
+  26004613     sub26004613     26007147     Chn_26004613        14.8804     0
+  26004612     sub26004612     26006917     Chn_26004612        22.1037     0
+  26007720     sub26007720     26002800     Chn_26007720         0.8173     1
+  26004611     sub26004611     26005624     Chn_26004611         2.7771     0
+  26006848     sub26006848     26004593     Chn_ZERO_LENGTH     ZERO-     0
+  26006046     sub26006046     26004603     Chn_ZERO_LENGTH     ZERO-     1
+  26007448     sub26007448     26004606     Chn_ZERO_LENGTH     ZERO-     1
+  26002800     sub26002800     26004595     Chn_26002800         3.7422     1
+  26004608     sub26004608     26007386     Chn_26004608         5.5665     0
+  26001222     sub26001222     26001219     Chn_26001222        11.8428     0
+  26006259     sub26006259     26004592     Chn_ZERO_LENGTH     ZERO-     1
+  26004606     sub26004606     26007450     Chn_26004606         0.7967     0
+  26004607     sub26004607     26006817     Chn_26004607         6.6808     1
+  26006917     sub26006917     26004604     Chn_ZERO_LENGTH     ZERO-     0
+  26007314     sub26007314     26002373     Chn_ZERO_LENGTH     ZERO-     1
+  26003856     sub26003856     26007752     Chn_26003856         8.3226     0
+  26005792     sub26005792     26004605     Chn_ZERO_LENGTH     ZERO-     1
+  26004605     sub26004605     26005801     Chn_26004605         0.0900     1
+  26004604     sub26004604     26006901     Chn_26004604         1.7082     1
+  26007450     sub26007450     26002730     Chn_ZERO_LENGTH     ZERO-     1
+  26000433     sub26000433     26004587     Chn_ZERO_LENGTH     ZERO-     0
+  26004603     sub26004603     26002532     Chn_26004603         6.7057     1
+  26002532     sub26002532     26004478     Chn_26002532         0.4770     0
+  26001408     sub26001408     26001395     Chn_ZERO_LENGTH     ZERO-     0
+  26007758     sub26007758     26003460     Chn_ZERO_LENGTH     ZERO-     1
+  26002373     sub26002373     26007717     Chn_26002373         2.1604     0
+  26000846     sub26000846     26004582     Chn_26000846         5.7851     0
+  26003460     sub26003460     26007749     Chn_26003460         4.1862     0
+  26002730     sub26002730     26004562     Chn_26002730         9.2800     0
+  26006564     sub26006564     26007750     Chn_ZERO_LENGTH     ZERO-     1
+  26007750     sub26007750     26007751     Chn_26007750         0.3673     1
+  26004601     sub26004601     26006818     Chn_26004601         1.6204     1
+  26006940     sub26006940     26004600     Chn_ZERO_LENGTH     ZERO-     0
+  26004600     sub26004600     26006918     Chn_26004600         0.7864     0
+  26000349     sub26000349     26000385     Chn_26000349        33.9384     0
+  26007751     sub26007751     26007748     Chn_26007751         4.4750     1
+  26001600     sub26001600     26007802     Chn_ZERO_LENGTH     ZERO-     0
+  26003894     sub26003894     26003913     Chn_26003894        10.4894     0
+  26007748     sub26007748     26003154     Chn_26007748         0.9891     1
+  26003154     sub26003154     26004594     Chn_26003154         1.9049     1
+  26002638     sub26002638     26007678     Chn_ZERO_LENGTH     ZERO-     0
+  26003642     sub26003642     26007681     Chn_ZERO_LENGTH     ZERO-     0
+  26001219     sub26001219     26004596     Chn_26001219         2.9425     1
+  26007767     sub26007767     26003222     Chn_26007767        11.9804     1
+  26003222     sub26003222     26003195     Chn_26003222         2.5143     1
+  26007824     sub26007824     26001468     Chn_26007824         5.8653     1
+  26003434     sub26003434     26007746     Chn_26003434         6.5008     0
+  26002261     sub26002261     26002256     Chn_26002261        35.4426     0
+  26004598     sub26004598     26007462     Chn_26004598        16.9851     0
+  26007840     sub26007840     26000265     Chn_26007840         2.5422     1
+  26000265     sub26000265     -1     Chn_26000265         0.1024     0
+  26003459     sub26003459     26007749     Chn_26003459         2.0352     0
+  26004596     sub26004596     26006721     Chn_26004596         5.7735     0
+  26003762     sub26003762     -1     Chn_26003762        14.9438     1
+  26007386     sub26007386     26004426     Chn_ZERO_LENGTH     ZERO-     1
+  26004426     sub26004426     -1     Chn_26004426         0.2721     0
+  26004595     sub26004595     26007468     Chn_26004595         2.3331     1
+  26004594     sub26004594     26007496     Chn_26004594        13.2168     1
+  26007705     sub26007705     26003324     Chn_26007705        18.1996     1
+  26004593     sub26004593     26006817     Chn_26004593        14.8808     0
+  26003324     sub26003324     26003319     Chn_26003324         3.2768     0
+  26000526     sub26000526     26000523     Chn_ZERO_LENGTH     ZERO-     0
+  26004592     sub26004592     26006309     Chn_26004592        23.1983     0
+  26004591     sub26004591     26006657     Chn_26004591         0.1749     0
+  26005789     sub26005789     26004590     Chn_ZERO_LENGTH     ZERO-     0
+  26004590     sub26004590     26005804     Chn_26004590         0.2173     0
+  26007028     sub26007028     26002075     Chn_ZERO_LENGTH     ZERO-     0
+  26005962     sub26005962     26004588     Chn_ZERO_LENGTH     ZERO-     0
+  26004588     sub26004588     26005955     Chn_26004588         0.2297     0
+  26007735     sub26007735     26003027     Chn_26007735        27.4073     1
+  26002075     sub26002075     26004583     Chn_26002075         2.9065     1
+  26007666     sub26007666     26004175     Chn_26007666        15.9450     1
+  26004175     sub26004175     -1     Chn_26004175         0.1449     0
+  26005804     sub26005804     26004586     Chn_ZERO_LENGTH     ZERO-     1
+  26006657     sub26006657     26004585     Chn_ZERO_LENGTH     ZERO-     1
+  26006309     sub26006309     26004577     Chn_ZERO_LENGTH     ZERO-     0
+  26004587     sub26004587     26006167     Chn_26004587         1.2612     0
+  26004586     sub26004586     26004584     Chn_26004586         1.0988     1
+  26006721     sub26006721     26007815     Chn_ZERO_LENGTH     ZERO-     0
+  26004585     sub26004585     26006655     Chn_26004585         1.1888     0
+  26007815     sub26007815     26007814     Chn_26007815         4.3520     1
+  26007688     sub26007688     26007687     Chn_26007688        18.2887     1
+  26007814     sub26007814     26001096     Chn_26007814         0.7667     1
+  26002256     sub26002256     26004564     Chn_26002256         3.4310     0
+  26004584     sub26004584     26005823     Chn_26004584         3.0582     0
+  26004583     sub26004583     26007050     Chn_26004583         0.5194     0
+  26001096     sub26001096     26007810     Chn_26001096         3.7765     0
+  26001395     sub26001395     26003522     Chn_26001395         4.0683     0
+  26004582     sub26004582     26006509     Chn_26004582         1.9525     1
+  26005944     sub26005944     26007842     Chn_ZERO_LENGTH     ZERO-     1
+  26006460     sub26006460     26000753     Chn_ZERO_LENGTH     ZERO-     1
+  26005823     sub26005823     26004581     Chn_ZERO_LENGTH     ZERO-     0
+  26007154     sub26007154     26007676     Chn_ZERO_LENGTH     ZERO-     1
+  26004581     sub26004581     26005847     Chn_26004581         1.2312     0
+  26006655     sub26006655     26000998     Chn_ZERO_LENGTH     ZERO-     1
+  26007676     sub26007676     26004580     Chn_26007676         0.5970     1
+  26004580     sub26004580     26007157     Chn_26004580         0.2524     0
+  26007157     sub26007157     26004411     Chn_ZERO_LENGTH     ZERO-     0
+  26007681     sub26007681     26003612     Chn_26007681        12.0267     1
+  26004577     sub26004577     26006585     Chn_26004577         7.3387     1
+  26003027     sub26003027     -1     Chn_26003027        13.0792     1
+  26007797     sub26007797     26001476     Chn_26007797         9.0945     1
+  26001476     sub26001476     26001427     Chn_26001476         1.0315     1
+  26003612     sub26003612     -1     Chn_26003612         3.2279     0
+  26007050     sub26007050     26002093     Chn_ZERO_LENGTH     ZERO-     1
+  26006918     sub26006918     26007683     Chn_ZERO_LENGTH     ZERO-     1
+  26007683     sub26007683     26004576     Chn_26007683         0.1149     1
+  26000523     sub26000523     26007811     Chn_26000523         0.8691     0
+  26004576     sub26004576     26006901     Chn_26004576         0.5443     1
+  26002093     sub26002093     26005955     Chn_26002093         1.5510     0
+  26000753     sub26000753     26000412     Chn_26000753         7.0181     0
+  26004411     sub26004411     26004549     Chn_26004411         6.9971     0
+  26005847     sub26005847     26004571     Chn_ZERO_LENGTH     ZERO-     0
+  26001468     sub26001468     26007794     Chn_26001468        29.5287     0
+  26005624     sub26005624     26004574     Chn_ZERO_LENGTH     ZERO-     1
+  26003913     sub26003913     26007759     Chn_26003913         3.6213     1
+  26004574     sub26004574     26004573     Chn_26004574         0.3073     1
+  26004573     sub26004573     26005626     Chn_26004573         1.6555     0
+  26007268     sub26007268     26004567     Chn_ZERO_LENGTH     ZERO-     1
+  26007147     sub26007147     26004400     Chn_ZERO_LENGTH     ZERO-     1
+  26004571     sub26004571     26005888     Chn_26004571         6.4177     0
+  26007842     sub26007842     26000133     Chn_26007842        14.6674     1
+  26000133     sub26000133     26000166     Chn_26000133         0.2824     0
+  26005626     sub26005626     26004568     Chn_ZERO_LENGTH     ZERO-     1
+  26005696     sub26005696     26001261     Chn_ZERO_LENGTH     ZERO-     1
+  26004144     sub26004144     26004558     Chn_26004144        47.7936     0
+  26004568     sub26004568     26006547     Chn_26004568         2.4107     0
+  26004400     sub26004400     26007671     Chn_26004400         6.0260     0
+  26001261     sub26001261     26004561     Chn_26001261         4.0507     0
+  26003319     sub26003319     26007692     Chn_26003319         7.4257     0
+  26004567     sub26004567     26007288     Chn_26004567         6.0011     0
+  26007759     sub26007759     26007760     Chn_26007759         5.4796     1
+  26006167     sub26006167     26004566     Chn_ZERO_LENGTH     ZERO-     0
+  26004566     sub26004566     26006183     Chn_26004566         1.4134     0
+  26004564     sub26004564     26007249     Chn_26004564         8.0796     0
+  26004562     sub26004562     26007411     Chn_26004562        20.6034     0
+  26004561     sub26004561     26005640     Chn_26004561         3.1443     0
+  26007249     sub26007249     26004560     Chn_ZERO_LENGTH     ZERO-     1
+  26004560     sub26004560     26007262     Chn_26004560         1.5934     0
+  26005801     sub26005801     26007837     Chn_ZERO_LENGTH     ZERO-     0
+  26007802     sub26007802     26007799     Chn_26007802        10.0818     1
+  26007837     sub26007837     26005810     Chn_26007837         0.6943     1
+  26004558     sub26004558     26006818     Chn_26004558         9.5221     0
+  26007760     sub26007760     26003904     Chn_26007760         5.5962     1
+  26006547     sub26006547     26004557     Chn_ZERO_LENGTH     ZERO-     1
+  26004557     sub26004557     26006533     Chn_26004557         0.8815     0
+  26007799     sub26007799     26007795     Chn_26007799         5.0801     1
+  26003904     sub26003904     26003903     Chn_26003904         1.8179     0
+  26005888     sub26005888     26000132     Chn_ZERO_LENGTH     ZERO-     0
+  26000132     sub26000132     26000166     Chn_26000132         1.5261     0
+  26006533     sub26006533     26004555     Chn_ZERO_LENGTH     ZERO-     1
+  26004555     sub26004555     26006509     Chn_26004555         0.0900     0
+  26005640     sub26005640     26001207     Chn_ZERO_LENGTH     ZERO-     0
+  26000998     sub26000998     26007800     Chn_26000998        16.5068     0
+  26001207     sub26001207     26001184     Chn_26001207         8.8493     1
+  26007262     sub26007262     26002270     Chn_ZERO_LENGTH     ZERO-     0
+  26007749     sub26007749     26003433     Chn_26007749         4.6447     1
+  26007678     sub26007678     26007674     Chn_26007678        21.7867     1
+  26002270     sub26002270     26004545     Chn_26002270         6.7823     0
+  26003433     sub26003433     26007746     Chn_26003433         4.5843     0
+  26007795     sub26007795     26007791     Chn_26007795         4.8804     1
+  26000385     sub26000385     26007788     Chn_26000385        22.6492     1
+  26007692     sub26007692     26003738     Chn_26007692         3.1868     1
+  26007791     sub26007791     26001452     Chn_26007791         3.9337     1
+  26001452     sub26001452     26001378     Chn_26001452         0.3570     0
+  26007288     sub26007288     26004552     Chn_ZERO_LENGTH     ZERO-     1
+  26004552     sub26004552     26007286     Chn_26004552         2.1252     0
+  26003522     sub26003522     26007763     Chn_26003522        11.8994     0
+  26003738     sub26003738     26007691     Chn_26003738        10.8194     0
+  26007674     sub26007674     26002589     Chn_26007674         7.5881     1
+  26002589     sub26002589     26007673     Chn_26002589         2.2328     1
+  26001184     sub26001184     26001180     Chn_26001184         4.0207     1
+  26001180     sub26001180     26007829     Chn_26001180         1.0315     0
+  26007810     sub26007810     26001084     Chn_26007810         5.1226     1
+  26001084     sub26001084     26007808     Chn_26001084         0.3797     0
+  26007794     sub26007794     26001475     Chn_26007794         4.2462     1
+  26001475     sub26001475     26001427     Chn_26001475         0.1697     0
+  26007691     sub26007691     26007690     Chn_26007691         4.8929     1
+  26007671     sub26007671     26004363     Chn_26007671         6.7823     1
+  26004363     sub26004363     26004490     Chn_26004363         0.0900     0
+  26004549     sub26004549     26007398     Chn_26004549        23.6317     0
+  26005810     sub26005810     26004548     Chn_ZERO_LENGTH     ZERO-     1
+  26004548     sub26004548     26005903     Chn_26004548         0.0900     1
+  26007411     sub26007411     26004547     Chn_ZERO_LENGTH     ZERO-     0
+  26000412     sub26000412     26004539     Chn_26000412        23.2883     0
+  26004547     sub26004547     26007410     Chn_26004547         4.3971     0
+  26007763     sub26007763     26007755     Chn_26007763         8.0823     1
+  26007829     sub26007829     26001160     Chn_26007829         0.4397     1
+  26004545     sub26004545     26007462     Chn_26004545        10.6912     0
+  26003903     sub26003903     -1     Chn_26003903         8.2438     1
+  26006901     sub26006901     26004544     Chn_ZERO_LENGTH     ZERO-     0
+  26004544     sub26004544     26006887     Chn_26004544         2.8619     0
+  26007755     sub26007755     26003473     Chn_26007755         8.9457     1
+  26003473     sub26003473     26003418     Chn_26003473         0.1149     0
+  26006887     sub26006887     26004543     Chn_ZERO_LENGTH     ZERO-     1
+  26004543     sub26004543     26006869     Chn_26004543         1.5531     0
+  26001160     sub26001160     26007827     Chn_26001160         6.3611     1
+  26007286     sub26007286     26004541     Chn_ZERO_LENGTH     ZERO-     0
+  26004541     sub26004541     26007291     Chn_26004541         3.3055     0
+  26007410     sub26007410     26007677     Chn_ZERO_LENGTH     ZERO-     0
+  26007800     sub26007800     26007803     Chn_26007800        16.7987     1
+  26004539     sub26004539     26006099     Chn_26004539        19.6272     0
+  26006869     sub26006869     26004538     Chn_ZERO_LENGTH     ZERO-     0
+  26004538     sub26004538     26006858     Chn_26004538         0.0900     0
+  26007291     sub26007291     26002372     Chn_ZERO_LENGTH     ZERO-     1
+  26006858     sub26006858     26004537     Chn_ZERO_LENGTH     ZERO-     0
+  26007803     sub26007803     26007804     Chn_26007803         8.1778     1
+  26007804     sub26007804     26007805     Chn_26007804         0.4449     1
+  26007805     sub26007805     26007809     Chn_26007805         0.0900     1
+  26004537     sub26004537     26006840     Chn_26004537         3.5707     0
+  26007746     sub26007746     26003821     Chn_26007746         0.1024     1
+  26007809     sub26007809     26001083     Chn_26007809         3.4319     1
+  26002372     sub26002372     26007717     Chn_26002372        12.6934     0
+  26007677     sub26007677     26002590     Chn_26007677        12.1012     1
+  26002590     sub26002590     26007673     Chn_26002590         2.5276     0
+  26007827     sub26007827     26001151     Chn_26007827         0.5194     1
+  26001151     sub26001151     26007826     Chn_26001151         1.0988     1
+  26006183     sub26006183     26000501     Chn_ZERO_LENGTH     ZERO-     1
+  26000501     sub26000501     26000518     Chn_26000501         1.2561     0
+  26007826     sub26007826     26001159     Chn_26007826         4.3237     1
+  26001159     sub26001159     26006729     Chn_26001159         0.2597     0
+  26006840     sub26006840     26004536     Chn_ZERO_LENGTH     ZERO-     1
+  26004536     sub26004536     26006836     Chn_26004536         0.1449     0
+  26005955     sub26005955     26004535     Chn_ZERO_LENGTH     ZERO-     0
+  26004535     sub26004535     26006017     Chn_26004535         0.7067     1
+  26006836     sub26006836     26004532     Chn_ZERO_LENGTH     ZERO-     1
+  26003821     sub26003821     26007737     Chn_26003821        16.2943     1
+  26004532     sub26004532     26006818     Chn_26004532         7.8272     0
+  26006509     sub26006509     26000812     Chn_ZERO_LENGTH     ZERO-     0
+  26000812     sub26000812     26004531     Chn_26000812         1.8479     0
+  26006729     sub26006729     26007823     Chn_ZERO_LENGTH     ZERO-     1
+  26005903     sub26005903     26007843     Chn_ZERO_LENGTH     ZERO-     0
+  26007843     sub26007843     26004529     Chn_26007843         1.3170     1
+  26004531     sub26004531     26006726     Chn_26004531         3.1940     0
+  26007823     sub26007823     26004530     Chn_26007823         3.3822     1
+  26004530     sub26004530     26006723     Chn_26004530         0.8940     0
+  26000518     sub26000518     26007816     Chn_26000518         8.9260     0
+  26004529     sub26004529     26005908     Chn_26004529         2.5101     0
+  26005908     sub26005908     26004528     Chn_ZERO_LENGTH     ZERO-     1
+  26004528     sub26004528     26005910     Chn_26004528         2.7865     0
+  26000166     sub26000166     26000172     Chn_26000166        10.7903     1
+  26007816     sub26007816     26007817     Chn_26007816         6.3778     1
+  26007817     sub26007817     26000522     Chn_26007817         0.8070     1
+  26007717     sub26007717     26004526     Chn_26007717         0.0900     1
+  26000172     sub26000172     26007844     Chn_26000172         1.1318     0
+  26001427     sub26001427     26007778     Chn_26001427         9.6730     0
+  26000522     sub26000522     26007811     Chn_26000522        17.1475     0
+  26004526     sub26004526     26006043     Chn_26004526        10.3745     0
+  26005910     sub26005910     26007849     Chn_ZERO_LENGTH     ZERO-     1
+  26007844     sub26007844     26007845     Chn_26007844         4.3983     1
+  26007845     sub26007845     26000188     Chn_26007845         0.3921     1
+  26000188     sub26000188     -1     Chn_26000188         0.4170     1
+  26007849     sub26007849     26000213     Chn_26007849         8.8866     1
+  26000213     sub26000213     -1     Chn_26000213         0.0900     0
+  26006726     sub26006726     26004523     Chn_ZERO_LENGTH     ZERO-     1
+  26007778     sub26007778     26007779     Chn_26007778         8.5060     1
+  26007779     sub26007779     26001375     Chn_26007779         0.2349     1
+  26001375     sub26001375     26003873     Chn_26001375         1.2715     0
+  26006017     sub26006017     26007745     Chn_ZERO_LENGTH     ZERO-     1
+  26007745     sub26007745     26004522     Chn_26007745         0.7367     1
+  26007462     sub26007462     26004525     Chn_ZERO_LENGTH     ZERO-     1
+  26004525     sub26004525     26007463     Chn_26004525         0.7843     0
+  26007463     sub26007463     26004519     Chn_ZERO_LENGTH     ZERO-     1
+  26004523     sub26004523     26006724     Chn_26004523         3.8759     0
+  26006724     sub26006724     26004521     Chn_ZERO_LENGTH     ZERO-     1
+  26004522     sub26004522     26007379     Chn_26004522         1.6585     0
+  26004521     sub26004521     26006722     Chn_26004521         2.5328     0
+  26007379     sub26007379     26002450     Chn_ZERO_LENGTH     ZERO-     0
+  26004519     sub26004519     26007468     Chn_26004519        10.2151     0
+  26002450     sub26002450     26002419     Chn_26002450         8.0681     0
+  26007673     sub26007673     26002576     Chn_26007673         1.9679     1
+  26002576     sub26002576     -1     Chn_26002576         0.0900     0
+  26006722     sub26006722     26004518     Chn_ZERO_LENGTH     ZERO-     0
+  26004518     sub26004518     26006719     Chn_26004518         1.5912     0
+  26007811     sub26007811     26000416     Chn_26007811         0.0900     1
+  26003873     sub26003873     26003855     Chn_26003873        17.4162     1
+  26003855     sub26003855     26007752     Chn_26003855         2.8371     0
+  26002419     sub26002419     26007742     Chn_26002419         6.8947     0
+  26006719     sub26006719     26004517     Chn_ZERO_LENGTH     ZERO-     1
+  26004517     sub26004517     26006712     Chn_26004517         1.3140     0
+  26006723     sub26006723     26007821     Chn_ZERO_LENGTH     ZERO-     0
+  26007821     sub26007821     26007822     Chn_26007821         1.3915     1
+  26007822     sub26007822     26004516     Chn_26007822         0.2173     1
+  26004516     sub26004516     26006769     Chn_26004516         0.1024     0
+  26006712     sub26006712     26001094     Chn_ZERO_LENGTH     ZERO-     1
+  26001094     sub26001094     26001078     Chn_26001094         2.2834     0
+  26000416     sub26000416     26000386     Chn_26000416        24.2179     0
+  26007742     sub26007742     26004511     Chn_26007742        13.3034     1
+  26007752     sub26007752     26003828     Chn_26007752         0.0900     1
+  26004511     sub26004511     26006043     Chn_26004511         1.8055     0
+  26000386     sub26000386     26007788     Chn_26000386         5.6583     0
+  26006769     sub26006769     26007818     Chn_ZERO_LENGTH     ZERO-     1
+  26007818     sub26007818     26004510     Chn_26007818         0.7997     1
+  26004510     sub26004510     26006770     Chn_26004510         0.4821     0
+  26001078     sub26001078     26001083     Chn_26001078        18.0072     0
+  26006770     sub26006770     26001622     Chn_ZERO_LENGTH     ZERO-     1
+  26001622     sub26001622     26007825     Chn_26001622         2.4282     0
+  26003828     sub26003828     26003823     Chn_26003828         6.7944     0
+  26006818     sub26006818     26004507     Chn_ZERO_LENGTH     ZERO-     1
+  26007468     sub26007468     26007694     Chn_ZERO_LENGTH     ZERO-     1
+  26007694     sub26007694     26004508     Chn_26007694         0.6146     1
+  26004508     sub26004508     26007470     Chn_26004508         3.6410     0
+  26003823     sub26003823     26007737     Chn_26003823         1.8304     0
+  26004507     sub26004507     26006817     Chn_26004507         9.8621     0
+  26007470     sub26007470     26004505     Chn_ZERO_LENGTH     ZERO-     0
+  26004505     sub26004505     26007473     Chn_26004505         4.8204     0
+  26007825     sub26007825     26001636     Chn_26007825         0.3849     1
+  26001636     sub26001636     26001616     Chn_26001636         2.7861     1
+  26001616     sub26001616     26007819     Chn_26001616         2.9922     0
+  26007819     sub26007819     26001635     Chn_26007819         0.8297     1
+  26001635     sub26001635     26001627     Chn_26001635         2.9716     0
+  26007473     sub26007473     26007713     Chn_ZERO_LENGTH     ZERO-     1
+  26007713     sub26007713     26002834     Chn_26007713         2.2846     1
+  26002834     sub26002834     26007716     Chn_26002834         9.2642     0
+  26007716     sub26007716     26007715     Chn_26007716         6.4490     1
+  26007715     sub26007715     26002806     Chn_26007715         0.0900     1
+  26001627     sub26001627     26007812     Chn_26001627         2.5410     0
+  26007788     sub26007788     26004504     Chn_26007788         4.8132     1
+  26004504     sub26004504     26006099     Chn_26004504         7.2675     0
+  26002806     sub26002806     26002817     Chn_26002806         9.5026     0
+  26007812     sub26007812     26007813     Chn_26007812         7.9168     1
+  26007813     sub26007813     26004503     Chn_26007813         0.2049     1
+  26004503     sub26004503     26006767     Chn_26004503         0.1873     0
+  26006767     sub26006767     26007807     Chn_ZERO_LENGTH     ZERO-     1
+  26007807     sub26007807     26001548     Chn_26007807         0.4397     1
+  26001548     sub26001548     26007801     Chn_26001548         1.9710     0
+  26006817     sub26006817     26004362     Chn_ZERO_LENGTH     ZERO-     1
+  26002817     sub26002817     26002831     Chn_26002817         4.6679     0
+  26007801     sub26007801     26001534     Chn_26007801         1.8458     1
+  26001534     sub26001534     26007792     Chn_26001534         0.3321     1
+  26001083     sub26001083     26007808     Chn_26001083         2.2555     0
+  26004362     sub26004362     26004490     Chn_26004362        11.1040     0
+  26002831     sub26002831     26003061     Chn_26002831         3.9483     0
+  26003061     sub26003061     26007724     Chn_26003061         4.1768     0
+  26007792     sub26007792     26001451     Chn_26007792        13.6256     1
+  26001451     sub26001451     26001378     Chn_26001451         3.2416     0
+  26007724     sub26007724     26007722     Chn_26007724         0.4646     1
+  26007722     sub26007722     26007721     Chn_26007722         0.3621     1
+  26007721     sub26007721     26007719     Chn_26007721         0.1149     1
+  26007719     sub26007719     26007709     Chn_26007719         0.1749     1
+  26007709     sub26007709     26007698     Chn_26007709        12.6961     1
+  26007698     sub26007698     26003018     Chn_26007698         2.4128     1
+  26007737     sub26007737     26007736     Chn_26007737         2.6425     1
+  26003018     sub26003018     -1     Chn_26003018         0.6570     1
+  26007736     sub26007736     26007734     Chn_26007736         0.1624     1
+  26007734     sub26007734     26007695     Chn_26007734         0.3797     1
+  26007695     sub26007695     26003743     Chn_26007695        18.4371     1
+  26003743     sub26003743     26003736     Chn_26003743         0.2121     0
+  26006099     sub26006099     26004492     Chn_ZERO_LENGTH     ZERO-     0
+  26007808     sub26007808     26004494     Chn_26007808         2.2679     1
+  26004494     sub26004494     26001038     Chn_26004494         2.6995     0
+  26003736     sub26003736     26007690     Chn_26003736         2.9425     0
+  26004492     sub26004492     26006081     Chn_26004492         4.5813     1
+  26001038     sub26001038     26001033     Chn_ZERO_LENGTH     ZERO-     1
+  26004490     sub26004490     26007072     Chn_26004490        11.6127     0
+  26001033     sub26001033     26004489     Chn_26001033         2.7291     0
+  26006043     sub26006043     26007757     Chn_ZERO_LENGTH     ZERO-     1
+  26007757     sub26007757     26002507     Chn_26007757         0.4770     1
+  26004489     sub26004489     26006643     Chn_26004489         2.9879     0
+  26002507     sub26002507     26004488     Chn_26002507         4.3495     0
+  26004488     sub26004488     26006054     Chn_26004488         2.5152     0
+  26001378     sub26001378     26001368     Chn_26001378        11.1327     0
+  26001368     sub26001368     26007775     Chn_26001368         1.0667     0
+  26006643     sub26006643     26007785     Chn_ZERO_LENGTH     ZERO-     0
+  26007785     sub26007785     26007784     Chn_26007785         2.1831     1
+  26007784     sub26007784     26007780     Chn_26007784         0.3146     1
+  26006054     sub26006054     26004486     Chn_ZERO_LENGTH     ZERO-     1
+  26004486     sub26004486     26006053     Chn_26004486         1.8561     0
+  26006053     sub26006053     26002531     Chn_ZERO_LENGTH     ZERO-     0
+  26002531     sub26002531     26004478     Chn_26002531         1.4910     0
+  26007072     sub26007072     26007669     Chn_ZERO_LENGTH     ZERO-     1
+  26007669     sub26007669     26004284     Chn_26007669         1.4631     1
+  26007780     sub26007780     26004484     Chn_26007780         8.3184     1
+  26004484     sub26004484     26006595     Chn_26004484         0.9664     1
+  26004284     sub26004284     26004477     Chn_26004284         2.8010     0
+  26007775     sub26007775     26007774     Chn_26007775         1.9161     1
+  26007774     sub26007774     26003479     Chn_26007774         0.0900     1
+  26006595     sub26006595     26007772     Chn_ZERO_LENGTH     ZERO-     0
+  26007772     sub26007772     26007773     Chn_26007772         0.3849     1
+  26007773     sub26007773     26003257     Chn_26007773         0.1573     1
+  26003257     sub26003257     26003223     Chn_26003257         0.7543     1
+  26003479     sub26003479     26007761     Chn_26003479        13.6320     1
+  26003223     sub26003223     26003195     Chn_26003223         4.9241     0
+  26007690     sub26007690     26003710     Chn_26007690         1.9782     1
+  26003710     sub26003710     26003693     Chn_26003710         4.2162     0
+  26007761     sub26007761     26003474     Chn_26007761         0.1024     1
+  26003474     sub26003474     26003418     Chn_26003474         1.4815     0
+  26004478     sub26004478     26006081     Chn_26004478         3.3771     0
+  26004477     sub26004477     26007103     Chn_26004477        30.3951     0
+  26003693     sub26003693     26007687     Chn_26003693         5.3656     0
+  26007103     sub26007103     26004364     Chn_ZERO_LENGTH     ZERO-     0
+  26003195     sub26003195     26007753     Chn_26003195         6.7733     0
+  26004364     sub26004364     26004476     Chn_26004364         1.5737     0
+  26004476     sub26004476     26007398     Chn_26004476        15.2440     0
+  26007753     sub26007753     26003141     Chn_26007753         4.1489     1
+  26003141     sub26003141     26007739     Chn_26003141         3.2104     0
+  26007687     sub26007687     26003684     Chn_26007687         4.2295     1
+  26003684     sub26003684     26003676     Chn_26003684         3.0946     0
+  26003676     sub26003676     26007682     Chn_26003676         0.5597     0
+  26007739     sub26007739     26007733     Chn_26007739         8.1829     1
+  26007733     sub26007733     26007732     Chn_26007733         1.0937     1
+  26007732     sub26007732     26007726     Chn_26007732         0.4294     1
+  26007726     sub26007726     26003065     Chn_26007726         3.1143     1
+  26003065     sub26003065     -1     Chn_26003065         0.2597     0
+  26003418     sub26003418     26003397     Chn_26003418         7.5804     0
+  26007682     sub26007682     26003630     Chn_26007682        10.5987     1
+  26003630     sub26003630     26007680     Chn_26003630         0.1749     1
+  26003397     sub26003397     26007738     Chn_26003397         3.2922     1
+  26007738     sub26007738     26008393     Chn_26007738         3.8510     1
+  26008393     sub26008393     26007730     Chn_26008393         0.9994     1
+  26007730     sub26007730     26003369     Chn_26007730         0.4894     1
+  26003369     sub26003369     26007704     Chn_26003369         2.1904     0
+  26007680     sub26007680     26003602     Chn_26007680         9.5445     1
+  26003602     sub26003602     -1     Chn_26003602         3.6076     1
+  26007704     sub26007704     26007702     Chn_26007704         6.7511     1
+  26007702     sub26007702     26007701     Chn_26007702         1.4661     1
+  26007701     sub26007701     26003326     Chn_26007701         0.3197     1
+  26003326     sub26003326     -1     Chn_26003326         0.0900     0
+  26007398     sub26007398     26004475     Chn_ZERO_LENGTH     ZERO-     0
+  26004475     sub26004475     26007397     Chn_26004475         0.9818     0
+  26007397     sub26007397     26004441     Chn_ZERO_LENGTH     ZERO-     1
+  26004441     sub26004441     26004439     Chn_26004441         2.3074     0
+  26004439     sub26004439     -1     Chn_26004439         5.1226     1
+  26006081     sub26006081     26007770     Chn_ZERO_LENGTH     ZERO-     0
+  26007770     sub26007770     26002978     Chn_26007770         2.2225     1
+  26002978     sub26002978     26004473     Chn_26002978         2.9022     1
+  26004473     sub26004473     26000579     Chn_26004473         0.1624     1
+  26000579     sub26000579     26000577     Chn_26000579         7.1599     0
+  26000577     sub26000577     26000580     Chn_26000577         0.9767     0
+  26000580     sub26000580     26000622     Chn_26000580         1.8240     0
+  26000622     sub26000622     26007786     Chn_26000622         9.3521     0
+  26007786     sub26007786     26000618     Chn_26007786         4.5886     1
+  26000618     sub26000618     26000595     Chn_26000618         9.5248     0
+  26000595     sub26000595     26007783     Chn_26000595         3.4362     0
+  26007783     sub26007783     26004472     Chn_26007783         2.1634     1
+  26004472     sub26004472     26006362     Chn_26004472         1.9679     0
+  26006362     sub26006362     26004471     Chn_ZERO_LENGTH     ZERO-     1
+  26004471     sub26004471     26006618     Chn_26004471         0.0900     1
+  26006618     sub26006618     26004470     Chn_ZERO_LENGTH     ZERO-     1
+  26004470     sub26004470     26006585     Chn_26004470         0.7749     1
+  26006585     sub26006585     26004469     Chn_ZERO_LENGTH     ZERO-     1
+  26004469     sub26004469     26007500     Chn_26004469         0.0900     1
+  26007500     sub26007500     26004468     Chn_ZERO_LENGTH     ZERO-     1
+  26004468     sub26004468     26007496     Chn_26004468         0.0900     1
+  26007496     sub26007496     26007731     Chn_ZERO_LENGTH     ZERO-     1
+  26007731     sub26007731     26003073     Chn_26007731         2.0910     1
+  26003073     sub26003073     -1     Chn_26003073         1.0667     1
+:EndSubBasins
+
+
+:HRUs
+  :Attributes AREA ELEVATION  LATITUDE  LONGITUDE   BASIN_ID  LAND_USE_CLASS  VEG_CLASS   SOIL_PROFILE  AQUIFER_PROFILE   TERRAIN_CLASS   SLOPE   ASPECT
+  :Units       km2         m       deg        deg       none            none       none           none             none            none     deg      deg
+  1493         0.0702        77.2778        44.2122       -76.5733     26007852     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.272538     200.4977712739231     
+  1069         0.1692        71.0765        45.1042       -75.2193     26006754     LAKE     LAKE     LAKE     [NONE]     [NONE]       0.459428     156.36362136     
+  1070         0.1638        71.0765        45.1049       -75.2169     26006754     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.459428     156.36362136     
+  708         0.1264       269.5761        44.7782       -77.0520     26005633     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.377394     188.153162121     
+  709         0.2147       269.5761        44.7783       -77.0526     26005633     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.377394     188.153162121     
+  1312         0.5067       193.6906        46.2319       -78.0163     26007572     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.800443     173.937395891     
+  1083         0.9405        87.3639        44.7818       -75.4450     26006773     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.565514     173.77565413800002     
+  1252         1.0953       148.5470        46.0026       -77.3148     26007385     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.965347     174.572797979     
+  1106         0.1341       413.8532        45.9048       -78.3968     26006855     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.324933     178.399817562     
+  1107         1.0251       413.8532        45.9032       -78.4001     26006855     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.324933     178.399817562     
+  1071         0.1917       121.8744        45.0978       -75.9278     26006757     LAKE     LAKE     LAKE     [NONE]     [NONE]       0.654372     171.799304722     
+  1072         1.1106       121.8744        45.0964       -75.9263     26006757     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.654372     171.799304722     
+  1162         0.4554       461.7636        45.6725       -78.9767     26007000     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.348720     176.563596912     
+  1163         1.1997       461.7636        45.6758       -78.9759     26007000     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.348720     176.563596912     
+  1311         1.6803       179.8317        46.2337       -78.0023     26007571     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.509964     200.15770232700004     
+  941         0.2034       261.7052        45.2131       -76.9078     26006356     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.070693     159.639203568     
+  942         1.5462       261.7052        45.2135       -76.9073     26006356     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.070693     159.639203568     
+  1073         0.1367       113.4130        45.0640       -75.8202     26006759     LAKE     LAKE     LAKE     [NONE]     [NONE]       0.840149     193.075869346     
+  1074         1.9162       113.4130        45.0538       -75.8234     26006759     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.840149     193.075869346     
+  1332         2.5641       175.0897        46.0511       -77.3924     26007667     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.125372     193.415151614     
+  993         0.3303       341.6389        44.9837       -77.2978     26006516     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.412791     188.287561461     
+  994         2.2464       341.6389        44.9897       -77.3051     26006516     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.412791     188.287561461     
+  738         0.3132       192.2733        44.7156       -76.3826     26005718     LAKE     LAKE     LAKE     [NONE]     [NONE]       1.737966     187.993619256     
+  739         2.6955       192.2733        44.7081       -76.3844     26005718     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.737966     187.993619256     
+  712         0.1584       148.5074        44.8035       -76.2483     26005642     LAKE     LAKE     LAKE     [NONE]     [NONE]       1.635325     172.98041054443826     
+  713         3.0123       148.5074        44.8032       -76.2604     26005642     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.635325     172.98041054443826     
+  1333         0.6498       166.9515        46.0410       -77.3760     26007668     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.219223     186.047938471     
+  1210         0.6507       420.6228        45.7717       -78.1384     26007219     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.489519     216.79374476     
+  1211         2.6118       420.6228        45.7716       -78.1427     26007219     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.489519     216.79374476     
+  1075         0.2061       113.4616        45.0442       -75.8136     26006760     LAKE     LAKE     LAKE     [NONE]     [NONE]       0.609789     186.688782738     
+  1076         3.1437       113.4616        45.0373       -75.8221     26006760     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.609789     186.688782738     
+  1319         3.4335       139.6202        46.0686       -77.4571     26007627     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.539894     212.91567791843775     
+  1208         1.1916       297.7456        45.7594       -77.7340     26007214     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.896446     185.782186417     
+  1209         2.7855       297.7456        45.7616       -77.7357     26007214     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.896446     185.782186417     
+  1320         1.3689       309.9026        46.0900       -78.0133     26007636     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.422807     181.163508848     
+  1321         3.1149       309.9026        46.0868       -78.0152     26007636     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.422807     181.163508848     
+  253         4.5207       121.0647        45.6514       -76.7420     26002686     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.183453     260.1036002147     
+  1494         4.5288       244.9883        46.3021       -78.6597     26007854     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.077224     148.798232728     
+  421         4.5414       188.0595        46.2232       -77.9919     26004167     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.968912     154.99841840794292     
+  1502         4.5576       135.7174        44.7467       -76.0275     26009161     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.911946     175.067283872452     
+  1499         4.5612       140.5556        44.9996       -76.0238     26008978     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.478844     193.869484041     
+  1498         4.6026       222.0983        45.0512       -76.4964     26008926     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.017390     198.803278083     
+  1497         4.6296       468.5615        45.4285       -78.0936     26008594     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.664074     162.564913335     
+  901         0.4481       465.3687        45.2497       -78.0326     26006135     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.858819     189.917174545     
+  902         4.2076       465.3687        45.2537       -78.0370     26006135     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.858819     189.917174545     
+  430         4.6755       210.0441        46.1725       -77.8632     26004191     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.230650     171.454018636     
+  348         4.6953        69.8039        45.5776       -74.5710     26003558     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.402113     219.297960951     
+  340         4.7925        90.3500        45.2123       -75.6765     26003497     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.454686     190.466848014     
+  1495         4.7952        85.0163        45.4339       -76.2531     26008367     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.629442     153.068723861     
+  187         4.8492       102.9184        44.6304       -75.6523     26001761     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.029172     206.120813381     
+  1120         1.0602       444.4231        45.8284       -78.8764     26006899     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.686579     189.00638932     
+  1121         3.8529       444.4231        45.8281       -78.8873     26006899     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.686579     189.00638932     
+  185         4.9707        99.4972        44.6745       -75.5906     26001729     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.364988     196.474900012     
+  804         1.0539       146.5762        44.4822       -76.5144     26005875     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.680370     176.379953924     
+  805         3.9465       146.5762        44.4806       -76.5204     26005875     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.680370     176.379953924     
+  875         1.0654       451.9552        45.4129       -77.9534     26006051     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.509758     183.039811498     
+  876         3.9530       451.9552        45.4140       -77.9538     26006051     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.509758     183.039811498     
+  192         5.1633        59.5681        45.0180       -74.7482     26001803     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.882486     185.003302106     
+  409         5.2137       233.8244        46.2387       -78.3402     26004001     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.294445     167.62898012     
+  1326         0.4338       174.7218        46.0335       -77.3741     26007663     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.110052     175.324397387     
+  1327         1.6155       174.7218        46.0306       -77.3721     26007663     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.110052     175.324397387     
+  302         5.3136        67.7877        45.5682       -75.2066     26003271     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.749545     204.493597121     
+  1500         5.3307       393.6551        45.0642       -77.3196     26009013     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.785487     196.17198804     
+  249         5.3586       137.3514        45.7016       -76.7574     26002634     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.044263     171.74421472920238     
+  1305         1.3644       296.8609        46.2040       -78.3161     26007521     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.506158     194.980220458     
+  1306         4.0986       296.8609        46.2039       -78.3202     26007521     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.506158     194.980220458     
+  981         1.6443       337.4917        45.0108       -76.9108     26006470     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.731244     185.824249239     
+  982         3.8907       337.4917        45.0109       -76.9202     26006470     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.731244     185.824249239     
+  979         1.1219       365.2640        45.0256       -76.9781     26006467     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.885932     168.52207200550026     
+  980         4.5319       365.2640        45.0302       -76.9821     26006467     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.885932     168.52207200550026     
+  412         5.6565       243.8174        46.2320       -78.3162     26004009     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.523292     173.505848749158     
+  788         1.7326       169.6311        44.5408       -76.4961     26005832     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.741626     155.14610424099996     
+  789         3.9302       169.6311        44.5363       -76.5082     26005832     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.741626     155.14610424099996     
+  929         1.1799       401.6311        45.3967       -77.4303     26006271     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.979566     176.646539411     
+  930         4.4874       401.6311        45.3974       -77.4269     26006271     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.979566     176.646539411     
+  275         5.7168       101.8531        45.4973       -76.2021     26003010     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.326368     146.57528752581283     
+  742         1.8981       207.5561        44.7126       -76.7245     26005745     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.283970     195.41590652282486     
+  743         3.8214       207.5561        44.7114       -76.7330     26005745     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.283970     195.41590652282486     
+  352         5.7753        50.8921        45.5412       -74.4234     26003572     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.247099     192.764438142     
+  1146         1.3545       465.8386        45.7177       -78.9017     26006962     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.667414     185.179172082     
+  1147         4.4442       465.8386        45.7212       -78.9054     26006962     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.667414     185.179172082     
+  273         5.8041       161.6534        45.5710       -76.7082     26003006     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.881323     196.722581172     
+  1164         0.2133       480.5670        45.6482       -78.8295     26007005     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.030867     193.66980809     
+  1165         5.6241       480.5670        45.6473       -78.8438     26007005     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.030867     193.66980809     
+  716         1.0890       142.6238        44.7937       -76.2467     26005644     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.953296     173.06363802263104     
+  717         4.8384       142.6238        44.7896       -76.2580     26005644     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.953296     173.06363802263104     
+  276         5.9859        80.3989        45.4878       -76.1007     26003012     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.912628     234.22236184520295     
+  456         6.0147       151.4910        45.8639       -77.2465     26004453     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.899701     210.88581580124583     
+  1174         1.1619       471.6142        45.5504       -78.3154     26007041     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.652313     170.550631277     
+  1175         4.8879       471.6142        45.5521       -78.3092     26007041     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.652313     170.550631277     
+  422         6.1713       201.3250        46.2172       -77.9665     26004169     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.856807     187.5233654412858     
+  776         1.8162       165.4860        44.5561       -76.4606     26005820     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.910023     163.42669565882616     
+  777         4.4325       165.4860        44.5539       -76.4837     26005820     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.910023     163.42669565882616     
+  447         1.0305       166.3592        46.0400       -77.3636     26004419     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.914692     180.42230303622677     
+  703         6.3198       132.5763        44.6884       -76.0566     26005397     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.133552     196.22000515126842     
+  1501         6.3684       163.1295        44.8446       -76.4161     26009124     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.865373     170.798448403     
+  413         0.9837       286.9436        46.1962       -78.3040     26004026     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.382408     207.448113472     
+  244         6.4656       133.6021        45.7681       -77.0359     26002598     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.344168     205.909530725     
+  289         6.5142        95.5464        45.4242       -76.3004     26003084     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.413343     194.19810706804256     
+  774         0.3644       119.5745        44.5385       -76.2224     26005817     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.034576     176.40864126705202     
+  775         6.1777       119.5745        44.5525       -76.2172     26005817     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.034576     176.40864126705202     
+  985         1.7116       350.5540        45.0136       -76.9535     26006474     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.390045     167.052811379     
+  986         4.9286       350.5540        45.0128       -76.9529     26006474     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.390045     167.052811379     
+  278         6.6438       141.7248        45.5162       -76.6180     26003016     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.604575     216.500855439     
+  184         6.7230        95.0723        44.7089       -75.5448     26001723     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.474623     211.331151179     
+  455         6.7617       132.8307        45.8385       -76.8073     26004450     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.355884     206.797784009     
+  17         6.8994       109.8658        44.2744       -76.3914     26000203     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.718632     186.537823003     
+  702         1.1808       202.7878        44.6998       -76.7247     26005350     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.761517     175.47414905     
+  1112         1.7584       423.1398        45.8793       -78.9210     26006880     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.676861     162.536232818     
+  1113         5.1671       423.1398        45.8788       -78.9126     26006880     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.676861     162.536232818     
+  303         6.9264        71.2429        45.5499       -75.1536     26003273     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.166073     192.04785102627312     
+  963         1.1950       339.3698        45.0712       -76.9340     26006434     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.848612     175.182285399     
+  964         5.8610       339.3698        45.0712       -76.9346     26006434     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.848612     175.182285399     
+  937         1.5651       400.0401        45.3165       -77.0923     26006313     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.649582     192.653027021     
+  938         5.6502       400.0401        45.3232       -77.1009     26006313     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.649582     192.653027021     
+  248         7.2387       147.8081        45.7132       -76.8015     26002617     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.461360     218.85141566546883     
+  1491         7.3539       105.8323        44.2613       -76.5691     26007850     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.251107     183.40501540551278     
+  701         1.4499       140.0946        44.8084       -76.2295     26005308     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.411654     170.1492931423625     
+  700         7.4151       220.7582        44.6580       -76.8704     26005305     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.450497     201.05416964831733     
+  390         7.4493        53.1620        45.1691       -74.5000     26003871     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.610900     184.412137531     
+  163         7.4619        80.1654        44.8738       -75.2807     26001605     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.601833     178.908653373     
+  309         7.5771        83.2343        45.4539       -75.5388     26003311     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.281277     166.55757661051254     
+  245         7.7076       138.5236        45.7528       -76.9963     26002602     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.750097     186.62751443930313     
+  1065         3.0501       137.5700        44.8172       -76.1434     26006739     LAKE     LAKE     LAKE     [NONE]     [NONE]       0.946834     168.837881787     
+  1066         4.7655       137.5700        44.8123       -76.1428     26006739     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.946834     168.837881787     
+  40         7.8633        90.3812        44.3651       -76.0915     26000301     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.431300     167.56803203392     
+  27         7.8759       115.2777        44.6154       -75.9689     26000224     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.038817     194.80756261511186     
+  38         7.8840        98.4569        44.3767       -76.0262     26000297     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.529518     172.330124779     
+  37         7.9101        95.5846        44.3863       -75.9931     26000295     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.882819     170.805131403     
+  1021         1.3930       208.9759        45.2258       -76.6941     26006621     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.514500     179.102839471     
+  1022         6.5270       208.9759        45.2272       -76.6885     26006621     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.514500     179.102839471     
+  909         1.0593       411.8122        45.1910       -77.8123     26006152     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.882165     193.6976014676977     
+  910         6.8625       411.8122        45.1934       -77.8191     26006152     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.882165     193.6976014676977     
+  722         1.2014       137.0169        44.7761       -76.1894     26005665     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.622296     170.00254815385173     
+  723         6.7258       137.0169        44.7852       -76.1814     26005665     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.622296     170.00254815385173     
+  1402         7.9416        94.9458        45.3010       -75.7612     26007747     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.508188     209.90684589540203     
+  349         7.9776        67.0730        45.5715       -74.4965     26003561     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.007415     193.124233553     
+  1170         1.1970       456.6448        45.5587       -78.4928     26007039     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.868499     169.721517907     
+  1171         6.8103       456.6448        45.5524       -78.4979     26007039     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.868499     169.721517907     
+  915         1.0646       465.5508        45.1611       -78.2791     26006172     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.612245     186.647617468     
+  916         7.1119       465.5508        45.1593       -78.2773     26006172     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.612245     186.647617468     
+  247         8.3277       134.7690        45.7306       -76.8009     26002615     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.276481     231.732333162     
+  355         8.4375        58.0968        45.5729       -75.0313     26003590     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.714245     143.51476397460087     
+  726         1.8432       188.3203        44.7593       -76.4965     26005684     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.531558     152.01889189201668     
+  727         6.6303       188.3203        44.7606       -76.4836     26005684     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.531558     152.01889189201668     
+  790         1.3185       131.8214        44.5215       -76.2636     26005841     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.332739     176.485900433     
+  791         7.1721       131.8214        44.5293       -76.2652     26005841     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.332739     176.485900433     
+  206         0.5661       430.8376        45.5669       -78.4980     26002074     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       8.270517     157.515158702     
+  189         8.6553        53.8388        45.0517       -74.6203     26001773     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.507959     174.21750348     
+  699         0.8406       137.6845        44.8384       -76.1358     26005233     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.077076     179.34696658     
+  698         1.6578       336.9552        45.0737       -76.9578     26005226     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]      10.160403     171.291671267     
+  832         1.5319       123.3295        44.5913       -75.8823     26005927     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.897708     172.672727745     
+  833         7.1918       123.3295        44.5924       -75.8896     26005927     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.897708     172.672727745     
+  697         0.0432       123.2323        44.6015       -75.8711     26005224     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       9.427152     130.78569849099998     
+  16         8.8038       105.7462        44.2848       -76.3647     26000201     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.574228     176.056185799     
+  828         1.8774       126.2902        44.6667       -75.9631     26005922     LAKE     LAKE     LAKE     [NONE]     [NONE]       0.597060     181.689469946     
+  829         6.9678       126.2902        44.6671       -75.9647     26005922     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.597060     181.689469946     
+  424         9.0054       207.9606        46.1927       -77.9150     26004173     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.234317     184.6158995665555     
+  822         0.1557       135.3647        44.7846       -76.0258     26005912     LAKE     LAKE     LAKE     [NONE]     [NONE]       0.762978     188.69853430569887     
+  823         8.8497       135.3647        44.7613       -76.0326     26005912     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.762978     188.69853430569887     
+  176         9.0108        86.5909        44.8082       -75.3858     26001653     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.056224     171.027640646     
+  24         9.2736        89.3176        44.1636       -76.4145     26000217     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.713628     161.634666532     
+  405         9.2862       224.2772        46.2695       -78.4356     26003983     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.572422     185.69175700997036     
+  808         2.0561       159.7819        44.4557       -76.6133     26005890     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.422769     189.124163137     
+  809         7.2499       159.7819        44.4431       -76.6188     26005890     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.422769     189.124163137     
+  1206         1.2816       413.1392        45.8036       -78.1690     26007207     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.263192     176.70077725701756     
+  1207         8.0991       413.1392        45.8118       -78.1640     26007207     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.263192     176.70077725701756     
+  354         9.4671        55.9932        45.5261       -74.4154     26003585     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.167851     222.222028668     
+  236         9.4959       136.0868        45.8084       -76.8721     26002573     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.969564     150.587491185     
+  1154         1.3571       444.0607        45.6834       -78.5971     26006973     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.048286     170.481318866     
+  1155         8.1856       444.0607        45.6855       -78.5819     26006973     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.048286     170.481318866     
+  891         1.4319       423.9539        45.3440       -77.7334     26006080     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.700383     161.48215683807842     
+  892         8.1729       423.9539        45.3432       -77.7445     26006080     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.700383     161.48215683807842     
+  25         9.6174        82.5636        44.1386       -76.4261     26000218     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.655674     142.816720071     
+  943         1.4247       288.5126        45.2051       -77.0045     26006358     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.028905     173.36822638448388     
+  944         8.2008       288.5126        45.2052       -76.9987     26006358     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.028905     173.36822638448388     
+  269         9.9135       199.2344        45.4198       -76.8116     26002879     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.429657     169.81174896336609     
+  911         2.3227       441.5058        45.1993       -78.2227     26006159     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.719668     192.975680093     
+  912         7.6187       441.5058        45.2065       -78.2269     26006159     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.719668     192.975680093     
+  242         9.9567       123.5271        45.7898       -77.0535     26002594     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.184948     225.301237166     
+  939         1.4228       331.7956        45.2730       -77.5116     26006347     LAKE     LAKE     LAKE     [NONE]     [NONE]       8.120358     162.604536567     
+  940         8.5420       331.7956        45.2694       -77.5077     26006347     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       8.120358     162.604536567     
+  131         1.6182       184.8437        44.7679       -76.4975     26001262     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.277425     140.299550343     
+  305        10.1655        70.7888        45.5286       -75.2828     26003281     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.782559     198.80709437042418     
+  903         2.3094       373.5186        45.1880       -77.6443     26006141     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.371720     183.44128622     
+  904         7.9497       373.5186        45.1886       -77.6446     26006141     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.371720     183.44128622     
+  317        10.2780        78.1554        45.3850       -75.7350     26003353     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.305799     173.42283171884503     
+  696         1.0278       403.2801        45.7989       -78.1900     26005140     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.900935     194.78755396700004     
+  238        10.4112       133.6542        45.8095       -76.8028     26002582     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.191585     211.295893429     
+  246        10.5453       137.7876        45.7495       -76.9585     26002604     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.564729     178.02459564354663     
+  388        10.5606        55.6408        45.1943       -74.4877     26003867     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.681866     186.9742687884377     
+  344        10.5696        51.0624        45.6235       -74.8831     26003548     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.817404     183.83464216990635     
+  850         1.1304       493.2309        45.4397       -78.5186     26005976     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.610858     184.87972359467233     
+  851         9.4554       493.2309        45.4331       -78.5209     26005976     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.610858     184.87972359467233     
+  454        10.6218       125.6129        45.8578       -76.8469     26004444     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.072037     155.354490384     
+  180         1.6209       125.0578        44.7960       -76.0228     26001690     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.999586     157.418508645     
+  402        10.6974        55.6624        45.2244       -74.4353     26003976     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.673776     196.984147097     
+  277        10.7082       165.2039        45.5345       -76.6732     26003014     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.848650     189.637331801864     
+  865         1.1655       367.8346        45.4534       -77.7548     26006025     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.195946     203.244552341     
+  866         9.5463       367.8346        45.4521       -77.7636     26006025     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.195946     203.244552341     
+  322        10.7712        79.3484        45.3579       -75.7696     26003384     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.996341     143.82886303430047     
+  39        10.8162        96.8775        44.3793       -76.0486     26000300     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.320636     167.9658075977484     
+  734         0.1548       188.7022        44.7472       -76.4664     26005703     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.987636     173.17009234570762     
+  735        10.6740       188.7022        44.7318       -76.4630     26005703     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.987636     173.17009234570762     
+  695         4.5927       159.9622        44.5292       -76.4805     26005124     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.840864     182.61327508434135     
+  830         1.7288       108.0483        44.6241       -75.7221     26005924     LAKE     LAKE     LAKE     [NONE]     [NONE]       0.720583     184.971752568     
+  831         9.1990       108.0483        44.6244       -75.7228     26005924     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.720583     184.971752568     
+  12        10.9341        90.8983        44.3531       -76.1268     26000180     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.269243     179.99911956789967     
+  274        10.9611        99.7204        45.4954       -76.1501     26003008     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.435067     215.7777529869394     
+  308        11.0673        77.8469        45.4675       -75.5118     26003303     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.314353     155.46777078790916     
+  272        11.2500       143.3465        45.5978       -76.7291     26003003     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.008215     215.15149623583662     
+  271        11.2788       124.8434        45.6176       -76.7212     26002999     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.137999     211.734662558     
+  188        11.4453        60.4813        45.0359       -74.7275     26001772     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.880769     183.53019639446495     
+  694         1.9062       448.5656        45.6898       -78.6179     26005098     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.297964     187.002929118     
+  420        11.5488       236.5659        46.2522       -78.1694     26004165     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.968383     186.2753015691224     
+  147        10.2510       125.7405        45.0763       -75.9512     26001438     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.740527     182.11721045023052     
+  778         1.5272       139.3412        44.5313       -76.3141     26005821     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.512842     165.3184981601025     
+  779        10.1341       139.3412        44.5255       -76.3114     26005821     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.512842     165.3184981601025     
+  22        11.7504        82.6732        44.1976       -76.3919     26000215     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.855735     173.95994886000003     
+  1045         1.7037       217.9264        45.0065       -76.5272     26006688     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.743365     182.4188684878071     
+  1046        10.1097       217.9264        45.0102       -76.5293     26006688     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.743365     182.4188684878071     
+  736         3.2905       227.3694        44.7797       -76.7589     26005704     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.658069     175.67495644717977     
+  737         8.5409       227.3694        44.7822       -76.7614     26005704     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.658069     175.67495644717977     
+  23        11.8998        84.8557        44.1694       -76.4603     26000216     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.701244     138.202315424     
+  423        11.9646       206.6592        46.2085       -78.0115     26004171     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.732993     194.2170749642644     
+  1236         1.0764       395.7605        45.5851       -77.7579     26007305     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.708254     194.08586762124273     
+  1237        10.9620       395.7605        45.5767       -77.7736     26007305     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.708254     194.08586762124273     
+  14        12.1221        91.9761        44.2779       -76.2802     26000196     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.722775     192.502935166     
+  693         1.5579       482.4206        45.4503       -78.5261     26005081     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.710140     201.34145451743788     
+  194        12.3093        81.5739        44.9853       -75.0369     26001815     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.509229     199.256478808     
+  947         1.5840       387.4394        45.1487       -77.3673     26006394     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.578983     207.97996462457368     
+  948        10.8495       387.4394        45.1378       -77.3544     26006394     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.578983     207.97996462457368     
+  1035         2.0217       282.6507        45.1332       -76.7950     26006658     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.005373     163.38847132199996     
+  1036        10.5819       282.6507        45.1366       -76.7913     26006658     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.005373     163.38847132199996     
+  692         6.7905       460.6506        45.6667       -78.8255     26005055     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.473314     185.578394709     
+  102         8.3430       198.1912        45.0706       -76.4743     26001024     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.762634     183.8131485358991     
+  720         1.3058       234.3463        44.8102       -76.7640     26005652     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.972619     168.56085474800003     
+  721        11.6398       234.3463        44.8112       -76.7595     26005652     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.972619     168.56085474800003     
+  204         7.2180       455.8942        45.7139       -78.8765     26001998     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.821335     174.9905106553364     
+  1128         4.6311       446.5429        45.7712       -78.5328     26006916     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.512428     173.44771776146504     
+  1129         8.5152       446.5429        45.7705       -78.5356     26006916     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.512428     173.44771776146504     
+  46         2.9106       328.4369        45.1958       -77.6154     26000411     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.793864     227.736762413     
+  1142         1.9620       471.5141        45.7511       -79.0299     26006948     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.806247     167.7995663962727     
+  1143        11.3247       471.5141        45.7472       -79.0614     26006948     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.806247     167.7995663962727     
+  691         4.8267       135.7480        44.5169       -76.2902     26005051     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.813091     181.72292804940017     
+  690         0.1386       450.0113        45.7558       -79.0163     26005046     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.712061     151.210956193     
+  689        13.4793       289.6615        45.1591       -76.6334     26005044     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.868826     193.31801041187194     
+  154        13.7349       116.9581        44.9893       -75.8624     26001514     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.509409     190.1110383237238     
+  1214         1.7388       470.2278        45.7291       -78.1945     26007242     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.495311     191.19867932350533     
+  1215        12.0276       470.2278        45.7273       -78.2068     26007242     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.495311     191.19867932350533     
+  2         6.3531       203.2885        44.6673       -76.8368     26000030     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.593181     175.53420870416105     
+  1150         1.1339       455.2935        45.6843       -78.5356     26006968     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.409695     175.37169157117037     
+  1151        12.6829       455.2935        45.6816       -78.5431     26006968     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.409695     175.37169157117037     
+  341        13.8780        94.3735        45.1868       -75.8029     26003521     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.571738     183.77218855819604     
+  1303         3.8271        92.7362        45.2541       -74.7097     26007511     LAKE     LAKE     LAKE     [NONE]     [NONE]       0.997916     194.137877146     
+  1304        10.1337        92.7362        45.2563       -74.7200     26007511     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.997916     194.137877146     
+  87         7.3683       327.3122        44.9884       -76.9509     26000817     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.843686     171.00212784886685     
+  429        14.1048       212.9709        46.1733       -77.8964     26004189     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.429303     192.42069426722813     
+  883         2.1735       457.5447        45.3982       -77.9437     26006061     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.084965     180.56839866869603     
+  884        11.9979       457.5447        45.3954       -77.9418     26006061     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.084965     180.56839866869603     
+  1037         1.4525       143.3631        45.0371       -76.2723     26006671     LAKE     LAKE     LAKE     [NONE]     [NONE]       0.921541     189.6221551837661     
+  1038        12.7963       143.3631        45.0199       -76.2685     26006671     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.921541     189.6221551837661     
+  754         1.7764       179.7222        44.6223       -76.6296     26005777     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.346920     172.27759725779876     
+  755        12.7946       179.7222        44.6079       -76.6439     26005777     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.346920     172.27759725779876     
+  931         1.3212       440.6679        45.3786       -77.2999     26006281     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.101854     171.316422291384     
+  932        13.2660       440.6679        45.3994       -77.2940     26006281     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.101854     171.316422291384     
+  389        14.5872        53.0630        45.1783       -74.4825     26003869     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.670537     190.10456842030447     
+  367        14.6232        81.3915        45.3634       -74.4693     26003700     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.442544     153.096092163     
+  1244         1.4616       450.4524        45.5383       -78.1975     26007366     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.342305     185.30280959892212     
+  1245        13.1706       450.4524        45.5432       -78.1827     26007366     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.342305     185.30280959892212     
+  1365        14.6718        75.5959        45.3928       -75.7048     26007708     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.473030     199.39578536627664     
+  316         0.0333        67.7878        45.4265       -75.6986     26003339     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]      10.760839     201.215891091     
+  1396         0.8406        92.2639        45.2633       -74.6853     26007740     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.389355     149.55497040699998     
+  1172         1.7064       470.4942        45.5740       -78.5900     26007040     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.310667     187.7957979676498     
+  1173        13.1886       470.4942        45.5846       -78.5944     26007040     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.310667     187.7957979676498     
+  31        15.1497        95.9280        44.5753       -75.7338     26000241     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.327630     183.83100486748418     
+  19         7.8516        85.3688        44.2372       -76.5658     26000212     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.268160     186.728634152     
+  688         7.2999       213.3522        45.2408       -76.7176     26004991     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.586539     205.098904738     
+  199         8.4672       424.9926        45.8647       -78.9490     26001893     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.037198     182.24004415817515     
+  687         0.5625       444.4895        45.5558       -78.5849     26004982     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.244435     157.626530563     
+  327         7.5330        91.6007        45.3081       -75.7300     26003417     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.642774     186.114417437     
+  999         2.0295       270.5852        44.8953       -76.8864     26006539     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.843620     172.11101671929097     
+  1000        13.7817       270.5852        44.8806       -76.9123     26006539     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.843620     172.11101671929097     
+  65         5.9886       310.3294        45.2843       -77.4784     26000582     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.720698     145.02757002     
+  353        15.9867        78.8898        45.5719       -74.9820     26003580     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.426076     177.8847481046165     
+  164        16.0866        82.4237        44.8558       -75.3286     26001607     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.650250     175.944585927     
+  995         2.2428       270.2909        44.9130       -76.8964     26006531     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.697568     170.21626609384677     
+  996        13.9455       270.2909        44.9218       -76.8799     26006531     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.697568     170.21626609384677     
+  105         1.9611       139.3468        45.0476       -76.2629     26001034     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.587956     152.189314904     
+  427        16.4529       201.4094        46.1613       -77.7242     26004183     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.597707     193.6097479315171     
+  1156         3.4338       445.4426        45.6720       -78.7701     26006980     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.650185     188.49522173755807     
+  1157        13.0569       445.4426        45.6602       -78.7699     26006980     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.650185     188.49522173755807     
+  1488        16.5222       112.3410        44.3063       -76.4964     26007847     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.827529     175.18568186112665     
+  436        16.5744       157.0526        46.0845       -77.4974     26004238     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.937493     214.49223599466458     
+  792         2.1347       104.7682        44.5078       -76.1557     26005843     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.685228     190.26602426796538     
+  793        14.4460       104.7682        44.5066       -76.1724     26005843     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.685228     190.26602426796538     
+  1212         3.0044       405.1205        45.7260       -78.0462     26007227     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.505998     199.284930364     
+  1213        13.5898       405.1205        45.7260       -78.0484     26007227     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.505998     199.284930364     
+  686        11.5983       145.5456        44.4792       -76.4999     26004960     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.742240     174.31559297079164     
+  685         6.7536       408.6563        45.1960       -78.1818     26004958     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.257289     202.2001715009659     
+  233        11.7153       443.6968        45.4106       -77.9848     26002516     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.861351     167.45901059413     
+  1479        16.7364       130.8423        44.6572       -76.1020     26007836     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.621889     169.8771329094792     
+  684         0.3186        98.7661        44.2918       -76.5140     26004956     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.419171     211.742512413     
+  1138         0.3915       463.6502        45.7582       -79.0004     26006946     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.151734     165.788516108274     
+  1139         3.1392       463.6502        45.7586       -79.0019     26006946     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.151734     165.788516108274     
+  124        17.0127       162.2503        44.8878       -76.3952     26001187     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.140603     175.40630552510683     
+  965         1.6595       404.5795        45.1145       -77.3799     26006436     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.422302     191.2077246067884     
+  966        15.3559       404.5795        45.1194       -77.3901     26006436     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.422302     191.2077246067884     
+  683         3.9015       433.4613        45.7881       -78.5532     26004954     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.623414     160.0467505189158     
+  682         0.8946       260.4187        44.9276       -76.8980     26004952     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.654747     179.144912393     
+  113         5.3010       193.0360        44.9989       -76.5036     26001092     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.523432     163.067578026     
+  681         0.4194        96.1377        44.6069       -76.1253     26004950     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.970013     160.932281039     
+  410        17.3160       257.6370        46.2308       -78.2361     26004005     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.689450     180.7938015623206     
+  680         5.5881       217.4606        44.7795       -76.7308     26004943     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.694769     184.28519638750893     
+  365        17.6022        73.3381        45.3885       -74.4794     26003686     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.843756     169.03363966156172     
+  1160         4.7995       466.0057        45.6940       -78.9447     26006989     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.508052     178.40424986065113     
+  1161        12.9035       466.0057        45.6942       -78.9645     26006989     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.508052     178.40424986065113     
+  67         8.1270       291.6745        45.2278       -76.9976     26000591     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.900586     171.4209681229672     
+  679         3.1455       418.4138        45.5271       -78.2130     26004938     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.486576     209.8769494646562     
+  678         6.9741       178.4714        44.7339       -76.4903     26004937     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.230443     179.09810486256742     
+  1134         5.9967       446.3232        45.7450       -78.5088     26006935     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.236456     184.02344430431984     
+  1135        11.8602       446.3232        45.7396       -78.5047     26006935     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.236456     184.02344430431984     
+  1322         1.1268       383.0664        46.0868       -78.2131     26007647     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.404869     189.32000307284545     
+  1323        16.7526       383.0664        46.0716       -78.2307     26007647     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.404869     189.32000307284545     
+  182        13.4811       126.3779        44.7690       -75.9921     26001701     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.930285     206.661112861     
+  677         8.5203       412.2115        45.3586       -77.7161     26004934     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.850321     188.544801599009     
+  923         1.1907       433.1776        45.0602       -77.9215     26006214     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.440102     190.89700988558437     
+  924        17.2251       433.1776        45.0611       -77.9379     26006214     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.440102     190.89700988558437     
+  786         2.8412       143.9955        44.5264       -76.4672     26005827     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.681269     161.6414001959247     
+  787         4.8448       143.9955        44.5268       -76.4670     26005827     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.681269     161.6414001959247     
+  224        18.5508       457.1931        45.5654       -78.2705     26002412     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.314927     190.32796234642228     
+  676         0.9153       458.2782        45.6749       -78.9483     26004928     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.844920     206.228684223     
+  674         4.0437        91.6706        45.2744       -74.6832     26004925     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.966778     190.051564709     
+  673        12.8394       449.2585        45.5226       -78.3395     26004924     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.350873     184.63049707640587     
+  672         1.9899       375.3637        45.1043       -77.3773     26004921     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.494272     205.28380889399776     
+  1315         1.9492       302.1953        46.1759       -78.1880     26007595     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.478078     192.68664167828564     
+  1316        17.0642       302.1953        46.1822       -78.2027     26007595     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.478078     192.68664167828564     
+  1152         1.8555       434.4442        45.6821       -78.8012     26006971     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.316063     166.626453797     
+  1153         4.7172       434.4442        45.6869       -78.7929     26006971     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.316063     166.626453797     
+  671         0.0612       431.9931        45.6992       -78.7905     26004915     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.393407     246.65777366999998     
+  834         0.7101       118.5453        44.5954       -75.8269     26005929     LAKE     LAKE     LAKE     [NONE]     [NONE]       0.744561     183.88621908344248     
+  835        18.5805       118.5453        44.5798       -75.8491     26005929     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.744561     183.88621908344248     
+  1297         2.2893       202.8894        45.3971       -76.6721     26007502     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.368926     170.40800219267751     
+  1298        17.2065       202.8894        45.3959       -76.6577     26007502     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.368926     170.40800219267751     
+  983         2.1689       382.1923        45.0376       -77.5851     26006472     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.314207     180.83495933677543     
+  984        17.3287       382.1923        45.0446       -77.5865     26006472     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.314207     180.83495933677543     
+  399        19.5228        54.1639        45.0997       -74.5721     26003933     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.030420     179.90483645066405     
+  90        17.1351       325.0564        44.9743       -77.2994     26000827     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.265196     185.2428867544494     
+  1307         1.7125       354.0521        46.1315       -78.2900     26007549     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.646622     196.54905454844115     
+  1308        18.0326       354.0521        46.1336       -78.3010     26007549     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.646622     196.54905454844115     
+  75         7.4925       381.2491        45.1442       -77.4009     26000706     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.454694     179.52708358557408     
+  1013         2.9570       178.4768        45.3388       -76.7209     26006573     LAKE     LAKE     LAKE     [NONE]     [NONE]       1.184833     191.19756406196768     
+  1014        16.9753       178.4768        45.3290       -76.7496     26006573     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.184833     191.19756406196768     
+  675         8.2800       135.3334        44.5289       -76.3344     26004927     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.055260     173.67845109079195     
+  1328         1.7622       148.7902        46.0454       -77.4305     26007664     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.614560     188.42151464629836     
+  1329        18.2331       148.7902        46.0515       -77.4345     26007664     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.614560     188.42151464629836     
+  670         2.1816       444.9294        45.7516       -78.4633     26004909     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.001158     196.768405867     
+  1324         1.2060       337.7532        46.0663       -78.0382     26007652     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.739141     197.3453334849121     
+  1325        18.8703       337.7532        46.0617       -78.0661     26007652     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.739141     197.3453334849121     
+  669         0.1323       122.4901        46.0297       -77.4100     26004907     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.402379     207.350727665     
+  283        15.5160        81.4405        45.4459       -76.2242     26003036     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.313173     172.760256906     
+  1200         1.9728       263.6168        45.8211       -77.5496     26007163     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.605078     182.00376653755438     
+  1201        18.4311       263.6168        45.8284       -77.5701     26007163     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.605078     182.00376653755438     
+  961         0.3365       303.3946        45.0711       -76.8456     26006423     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.515566     169.3142451070491     
+  962        20.1709       303.3946        45.0643       -76.8577     26006423     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.515566     169.3142451070491     
+  296         0.6921       169.3661        45.3464       -76.7324     26003183     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.006617     184.216437938     
+  1353        20.7864        74.0594        45.3929       -75.1507     26007693     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.544122     194.73008429487075     
+  1257         1.0755       185.7783        45.9286       -77.4048     26007391     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.887868     184.45725178993945     
+  1258        19.9089       185.7783        45.9346       -77.4438     26007391     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.887868     184.45725178993945     
+  780         2.9079       171.5163        44.5899       -76.5480     26005822     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.286475     168.09100012882607     
+  781        18.1557       171.5163        44.5929       -76.5445     26005822     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.286475     168.09100012882607     
+  799         1.2903       132.7329        44.4967       -76.2960     26005860     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.937426     161.41663398599997     
+  800         6.4758       132.7329        44.4940       -76.2861     26005860     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.937426     161.41663398599997     
+  186        21.1113       104.9562        44.6650       -75.6257     26001753     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.056282     191.09114826550015     
+  400        21.2184        53.9562        45.0765       -74.5751     26003947     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.389689     172.39590565732894     
+  668         7.1334       458.7547        45.3797       -77.9764     26004886     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.379994     161.4916044401857     
+  1005         5.6582       285.4573        44.8663       -77.0895     26006555     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.914826     164.75389282008732     
+  1006        15.6790       285.4573        44.8740       -77.0880     26006555     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.914826     164.75389282008732     
+  1384        21.5397        93.1861        45.3519       -75.6568     26007727     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.147464     182.1829546461695     
+  320         0.0846        63.0975        45.3892       -75.6747     26003368     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.056607     104.30569118100001     
+  85        16.0605       318.5671        45.0015       -76.9996     26000815     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.933982     171.0978979282404     
+  820         0.3265        98.1349        44.2816       -76.5159     26005911     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.598752     165.2391853     
+  821         4.5767        98.1349        44.2839       -76.5108     26005911     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.598752     165.2391853     
+  953         0.9027       394.1742        45.1304       -77.2726     26006400     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.176664     199.70753165786496     
+  954        20.8548       394.1742        45.1384       -77.2995     26006400     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.176664     199.70753165786496     
+  758         1.3814       186.3838        44.6284       -76.7207     26005790     LAKE     LAKE     LAKE     [NONE]     [NONE]       1.865512     179.68224524990558     
+  759        20.6551       186.3838        44.6254       -76.7334     26005790     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.865512     179.68224524990558     
+  326        22.0455        97.0034        45.3165       -75.8385     26003401     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.084038     196.200571430379     
+  415         2.4039       338.6333        46.1089       -78.2940     26004054     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.301125     212.62850716915125     
+  667         5.7870       447.9081        45.6921       -78.7543     26004871     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.503689     172.19793255399998     
+  1194         1.8008       336.0916        45.8592       -77.9601     26007152     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.920888     185.69238579134358     
+  1195        20.7784       336.0916        45.8478       -77.9777     26007152     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.920888     185.69238579134358     
+  889         2.3193       463.1973        45.3969       -78.2557     26006079     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.947853     178.11846752845122     
+  890        20.3247       463.1973        45.4034       -78.2738     26006079     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.947853     178.11846752845122     
+  1216         2.5469       434.4105        45.6895       -77.9186     26007248     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.944213     189.18853936338863     
+  1217        20.1205       434.4105        45.7089       -77.9522     26007248     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.944213     189.18853936338863     
+  824         1.4679       125.8898        44.7506       -75.8507     26005913     LAKE     LAKE     LAKE     [NONE]     [NONE]       0.658564     195.3114342238483     
+  825        21.2256       125.8898        44.7416       -75.8681     26005913     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.658564     195.3114342238483     
+  5        13.4406       152.9890        44.4803       -76.6130     26000116     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.113284     180.03407568176294     
+  1398        22.9230        93.7784        45.3153       -75.7927     26007743     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.991348     191.776582609265     
+  1126         3.1554       440.4141        45.7697       -78.4716     26006913     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.602816     183.29002892303927     
+  1127        20.0466       440.4141        45.7816       -78.4909     26006913     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.602816     183.29002892303927     
+  26        14.4000       123.3822        44.6392       -75.9512     26000223     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.854041     182.77987052052336     
+  836         2.4336       117.1820        44.6032       -75.8553     26005930     LAKE     LAKE     LAKE     [NONE]     [NONE]       1.401210     168.16069708004335     
+  837        12.0726       117.1820        44.6246       -75.8446     26005930     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.401210     168.16069708004335     
+  450        23.3586       143.8338        45.9494       -77.3411     26004437     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.636318     209.62718566509238     
+  198        23.4423        83.7121        44.9099       -75.2432     26001833     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.460561     176.28432771459592     
+  666        11.6127       393.8677        45.6069       -77.7726     26004864     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.831611     195.28954048922978     
+  951         1.6001       391.5615        45.1496       -77.4355     26006399     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.291919     169.12560515480752     
+  952        22.1752       391.5615        45.1470       -77.4488     26006399     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.291919     169.12560515480752     
+  665         8.1612       258.3110        44.9100       -76.8498     26004861     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.891314     180.51865097046726     
+  109        24.0642       294.7504        45.0269       -76.7824     26001058     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.013973     164.89411613620462     
+  933         1.1448       368.7627        45.3539       -77.1906     26006294     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.182264     166.3557027709731     
+  934        22.9248       368.7627        45.3423       -77.1571     26006294     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.182264     166.3557027709731     
+  230        13.5666       340.6890        45.4338       -77.7309     26002506     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       7.707187     188.93481929130962     
+  55         5.8896       364.4780        45.0764       -77.9010     26000519     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.301944     189.204509565     
+  74         0.7641       342.6686        45.1552       -77.4157     26000705     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.157804     152.475594111     
+  1176         2.7873       472.8770        45.5625       -78.6505     26007042     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.233349     170.75642582957033     
+  1177        21.7899       472.8770        45.5808       -78.6439     26007042     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.233349     170.75642582957033     
+  664         7.6392       465.7202        45.7580       -78.9696     26004856     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.927004     161.60025471600002     
+  663        21.3930       405.9140        45.7924       -78.1191     26004855     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.553365     194.51545831712784     
+  662         8.2485        97.4239        44.4933       -76.1389     26004853     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.322946     166.504922162     
+  1301         1.0623        91.1395        45.2770       -74.6595     26007510     LAKE     LAKE     LAKE     [NONE]     [NONE]       0.963810     174.193804774     
+  1302         4.9758        91.1395        45.2713       -74.6550     26007510     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.963810     174.193804774     
+  371         4.1625        68.9233        45.4071       -75.1109     26003737     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.303975     196.621092459     
+  190        25.0155        74.8726        45.0511       -74.8471     26001783     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.575065     191.0284078552446     
+  432        25.2099       199.2503        46.1493       -77.6517     26004195     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.694072     200.50013432088272     
+  1190         1.1142       290.9943        45.9083       -77.9089     26007120     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.219436     182.33527552201028     
+  1191        24.1074       290.9943        45.9116       -77.9293     26007120     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.219436     182.33527552201028     
+  254        25.3764       149.3388        45.6166       -76.7672     26002699     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.961448     205.94550770590752     
+  1259         0.2286       157.2191        45.9046       -77.3101     26007395     LAKE     LAKE     LAKE     [NONE]     [NONE]       1.709199     194.71480925961353     
+  1260        25.4781       157.2191        45.9129       -77.3483     26007395     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.709199     194.71480925961353     
+  81        20.3967       349.6890        45.0264       -77.3098     26000804     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.007303     192.14925450962883     
+  452         0.0549       141.0006        45.9019       -77.3039     26004440     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.308713     232.32159740407414     
+  433        25.8372       193.8114        46.1106       -77.5641     26004213     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.929146     208.7542524200829     
+  661         4.7943       127.6748        44.4795       -76.3150     26004844     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.603816     178.254052757     
+  325         3.1662        76.0353        45.3376       -75.8132     26003399     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.718417     147.430237181     
+  977         1.1641       374.6755        45.0581       -77.5544     26006466     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.374149     177.880730297     
+  978         5.7569       374.6755        45.0580       -77.5497     26006466     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.374149     177.880730297     
+  971         0.4535       327.8973        45.0445       -76.8432     26006455     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.086431     181.29569384230268     
+  972        25.9894       327.8973        45.0390       -76.8937     26006455     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.086431     181.29569384230268     
+  1043         1.1754       273.7958        45.0210       -76.5936     26006683     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.416387     189.6010329073679     
+  1044        25.4736       273.7958        45.0213       -76.6249     26006683     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.416387     189.6010329073679     
+  1246         2.7720       364.1730        45.5135       -77.7597     26007367     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.729206     196.8634315035545     
+  1247        23.9409       364.1730        45.5346       -77.7783     26007367     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.729206     196.8634315035545     
+  660         0.0891       247.1612        45.0313       -76.5887     26004838     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.855168     229.129016284     
+  179        27.1026       132.1941        44.7765       -76.0625     26001689     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.009253     177.1876897780285     
+  659         0.8811       286.7212        45.0387       -76.8400     26004831     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.153222     189.826856654     
+  392        27.4239        57.7219        45.1769       -74.5437     26003885     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.015085     185.37963987546414     
+  4         5.5413       180.7175        44.6327       -76.6965     26000057     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.886162     192.772700969     
+  658         2.7369        87.3444        45.2919       -74.6389     26004830     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.317564     168.333621775     
+  714         2.5758       203.8262        44.8275       -76.5995     26005643     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.602344     167.02399155090072     
+  715        25.0965       203.8262        44.8288       -76.6100     26005643     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.602344     167.02399155090072     
+  94         6.3783       279.7081        44.9002       -77.0139     26000873     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.502401     171.70754592022521     
+  657         5.6430       397.9957        45.7029       -77.8887     26004822     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.813435     188.60626468     
+  1041         0.3699       238.4333        45.0316       -76.5806     26006682     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.017533     173.779400396     
+  1042         1.3374       238.4333        45.0317       -76.5771     26006682     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.017533     173.779400396     
+  656         3.9618       468.8857        45.5583       -78.6229     26004819     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.320256     182.81895759542616     
+  401        28.5705        56.0093        45.2349       -74.4209     26003974     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.569613     194.43056383220858     
+  1285         1.5102       239.0776        45.5114       -77.2666     26007477     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.444836     171.26353302131056     
+  1286        27.0612       239.0776        45.5059       -77.2475     26007477     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.444836     171.26353302131056     
+  655         3.4065       277.2748        45.9129       -77.8935     26004818     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.283957     186.996684603     
+  351        29.0259        67.0430        45.5395       -74.4971     26003567     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.775807     203.78864462286293     
+  730         2.8503       168.3988        44.7533       -76.4365     26005693     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.274173     179.273517231     
+  731         8.4411       168.3988        44.7524       -76.4412     26005693     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.274173     179.273517231     
+  654        21.6972       433.7774        45.1751       -78.2191     26004811     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.701671     185.220541349     
+  78        30.0123       354.2781        45.0937       -77.1419     26000714     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.731329     196.28690969273174     
+  921         1.6830       426.2094        45.0719       -78.0401     26006211     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.391865     180.00479488348807     
+  922        28.5732       426.2094        45.0684       -78.0882     26006211     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.391865     180.00479488348807     
+  1144         3.2967       447.5167        45.7056       -78.5895     26006960     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.350311     179.7465296428345     
+  1145        15.5601       447.5167        45.7176       -78.5758     26006960     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.350311     179.7465296428345     
+  125        24.1515       168.6278        44.8540       -76.4408     26001189     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.487659     181.15056761776094     
+  1092         3.9086       408.9742        46.0148       -78.6026     26006807     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.956914     190.6867734629666     
+  1093        26.6176       408.9742        46.0188       -78.6055     26006807     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.956914     190.6867734629666     
+  128         2.9385       186.8405        44.8383       -76.5652     26001221     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.471034     175.82715759     
+  83        25.3044       290.5766        44.9880       -76.8669     26000811     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.240599     167.7243786795018     
+  15        30.9321       105.0656        44.3206       -76.3256     26000199     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.894738     181.02670092080552     
+  653         7.7751       442.8058        45.7867       -78.4528     26004803     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.690753     188.38112942082287     
+  826         2.1420       133.8765        44.7132       -76.0342     26005919     LAKE     LAKE     LAKE     [NONE]     [NONE]       1.122619     191.64958608626188     
+  827        22.6206       133.8765        44.7158       -76.0528     26005919     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.122619     191.64958608626188     
+  652         0.9225       423.4727        45.0859       -78.0548     26004802     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       7.551409     205.876566425     
+  1299         0.2933        85.7399        45.3061       -74.6397     26007509     LAKE     LAKE     LAKE     [NONE]     [NONE]       1.222808     185.180833688     
+  1300         3.5308        85.7399        45.2983       -74.6510     26007509     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.222808     185.180833688     
+  651         0.9441       392.8555        46.0497       -78.6151     26004800     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       9.073425     187.376745136     
+  748         6.9399       199.0854        44.6838       -76.7008     26005761     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.843426     178.92854748826286     
+  749        17.6634       199.0854        44.6896       -76.6945     26005761     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.843426     178.92854748826286     
+  650         0.8424        97.2666        44.6096       -75.9484     26004799     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.247147     181.887907135     
+  1371         0.6255        82.6604        45.3110       -74.6345     26007714     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.306685     213.769731999     
+  379         0.6750        78.4969        45.3167       -74.6305     26003776     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.713638     184.875279474     
+  1432         8.0748        65.7825        45.0461       -74.8007     26007782     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.221237     189.64945752947438     
+  801        27.4293       156.1695        44.4993       -76.5303     26005862     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.347873     177.44985111030127     
+  431        33.3027       205.4575        46.1338       -77.7196     26004193     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.108440     194.55056753086856     
+  211        10.6902       456.4859        45.3693       -78.2936     26002138     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.623776     159.409157747     
+  969         2.7506       375.8270        45.0920       -77.3518     26006453     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.136332     179.80287098111032     
+  970        11.8006       375.8270        45.0964       -77.3381     26006453     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.136332     179.80287098111032     
+  649         2.0646       194.9780        44.6645       -76.6647     26004791     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.192753     191.408000877     
+  307        33.6303        90.5440        45.4781       -75.4368     26003293     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.956660     178.03041073927182     
+  648        15.8274       343.9655        46.1037       -78.1811     26004790     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.354194     194.522777382     
+  350        33.8112        59.0771        45.5919       -74.9330     26003566     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.089683     191.87231390687577     
+  96        21.5154       270.7903        45.1354       -76.7409     26000997     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.221879     184.49475284496347     
+  840         3.0888       118.6774        44.5684       -75.8838     26005934     LAKE     LAKE     LAKE     [NONE]     [NONE]       1.729252     149.65306286716458     
+  841         8.2449       118.6774        44.5510       -75.8927     26005934     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.729252     149.65306286716458     
+  647        20.9709       459.5794        45.7378       -78.1607     26004786     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.591967     184.93442570276383     
+  181        35.5851        94.5552        44.7487       -75.5186     26001699     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.051005     197.998314507     
+  80         9.8325       351.0853        45.0788       -77.5187     26000756     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.873727     172.357106952     
+  1067         5.9192       134.4590        44.7822       -76.1236     26006746     LAKE     LAKE     LAKE     [NONE]     [NONE]       1.480132     174.4823399543581     
+  1068        30.4057       134.4590        44.7673       -76.1175     26006746     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.480132     174.4823399543581     
+  646         6.4251       330.8551        45.1404       -77.1117     26004782     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       7.465458     190.77226119088417     
+  645        36.2412       270.6397        44.7879       -77.0701     26004781     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.898152     175.05129059896692     
+  1250         1.8828       336.7724        45.4924       -77.7415     26007383     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.909483     184.540546728     
+  1251         8.1054       336.7724        45.4977       -77.7394     26007383     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.909483     184.540546728     
+  1086         1.7091       391.7270        46.0781       -78.4939     26006783     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.477033     180.95714902036923     
+  1087        35.3484       391.7270        46.0818       -78.4771     26006783     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.477033     180.95714902036923     
+  437        17.0559       330.0992        46.0571       -78.0083     26004282     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.570983     184.714707841     
+  860         1.3131       330.1579        45.4789       -77.7280     26006009     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.190834     167.879831235     
+  48        30.1230       370.2723        45.1731       -77.7735     26000415     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.458910     187.66345621028177     
+  1182         1.1151       455.5728        45.5417       -78.6239     26007052     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.812179     171.78084755033552     
+  1183         8.4924       455.5728        45.5331       -78.6329     26007052     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.812179     171.78084755033552     
+  1158         1.4219       477.3506        45.6626       -78.9462     26006988     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.646108     169.45159530578164     
+  1159        16.8949       477.3506        45.6512       -78.9612     26006988     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.646108     169.45159530578164     
+  1114         7.7335       426.4078        45.8248       -78.5989     26006881     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.205841     177.02308757296186     
+  1115        30.8612       426.4078        45.8253       -78.5990     26006881     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.205841     177.02308757296186     
+  925         1.8072       365.3545        45.0182       -77.8144     26006226     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.288311     179.88426392931956     
+  926        37.0647       365.3545        45.0073       -77.8411     26006226     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.288311     179.88426392931956     
+  644         8.6778       443.9823        45.7199       -78.6162     26004773     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.893283     184.829673508     
+  643         0.8964       445.3486        45.5376       -78.6045     26004772     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.988006     151.85918009     
+  1489        17.4312        99.2768        44.2704       -76.5270     26007848     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.702913     171.4898722329482     
+  959         1.7532       329.4185        45.0769       -76.9885     26006422     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.544121     174.66590857667902     
+  960        28.8774       329.4185        45.0630       -76.9815     26006422     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.544121     174.66590857667902     
+  642         0.3006       265.4879        45.0909       -76.9943     26004769     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.640848     190.892588266     
+  1025         1.1628       266.6643        45.1933       -76.6895     26006638     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.302604     193.1619589492363     
+  1026        38.9367       266.6643        45.1930       -76.7240     26006638     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.302604     193.1619589492363     
+  641        11.0313       174.7060        44.7625       -76.4074     26004766     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.943966     180.29594256568808     
+  29        21.0825       105.9620        44.5726       -75.8112     26000239     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.336233     190.44672450280618     
+  640         1.8666       408.5407        45.8477       -78.5483     26004765     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.953198     167.495818417     
+  18         1.3491        86.4833        44.2527       -76.5423     26000211     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.490600     182.251087758     
+  1279         5.6240       177.4700        45.5648       -77.0494     26007469     LAKE     LAKE     LAKE     [NONE]     [NONE]       1.576766     193.48754704184174     
+  1280        35.2594       177.4700        45.5749       -77.0673     26007469     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.576766     193.48754704184174     
+  202        36.1908       449.3858        45.7924       -78.8973     26001932     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.945891     163.69108069674948     
+  638        18.4491       118.0124        44.7715       -75.8167     26004760     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.502546     170.6479987289365     
+  1287         0.8952       200.6467        45.4160       -76.7412     26007483     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.836919     179.94615191341967     
+  1288        40.3185       200.6467        45.3980       -76.7677     26007483     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.836919     179.94615191341967     
+  639         1.1277       232.1576        45.1843       -76.6796     26004761     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.778262     156.128613412     
+  802         1.1358       162.7797        44.5075       -76.5656     26005864     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.847958     175.078386176     
+  803         7.1496       162.7797        44.5129       -76.5627     26005864     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.847958     175.078386176     
+  1009         2.6649       300.7545        44.8946       -77.1381     26006560     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.384833     166.74482955631638     
+  1010        38.7837       300.7545        44.9181       -77.1335     26006560     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.384833     166.74482955631638     
+  810         2.4695       110.4163        44.4369       -76.2202     26005895     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.598059     173.01491712746466     
+  811        39.1249       110.4163        44.4558       -76.2297     26005895     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.598059     173.01491712746466     
+  784         2.5127       144.0658        44.5154       -76.3733     26005826     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.727336     167.86090778361842     
+  785        39.5092       144.0658        44.5032       -76.4197     26005826     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.727336     167.86090778361842     
+  1001         3.8346       294.3385        44.9204       -77.0434     26006541     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.721732     175.0106942035621     
+  1002        38.4420       294.3385        44.9182       -77.0744     26006541     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.721732     175.0106942035621     
+  917         2.6163       439.3153        45.1442       -78.2014     26006175     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.273741     185.92177481347923     
+  918        40.2444       439.3153        45.1336       -78.2258     26006175     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.273741     185.92177481347923     
+  861         1.0593       332.9765        45.4713       -77.7348     26006014     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.956068     178.259353124     
+  862         3.7989       332.9765        45.4689       -77.7437     26006014     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.956068     178.259353124     
+  637         0.9621       131.0605        44.5382       -76.3449     26004756     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.770827     168.233904452     
+  191        31.6251        57.9911        45.0572       -74.6781     26001793     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.138913     178.056486618381     
+  973         5.8281       288.4040        45.0184       -76.8470     26006457     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.626539     162.96793657919747     
+  974        10.0155       288.4040        45.0231       -76.8427     26006457     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.626539     162.96793657919747     
+  636         0.0504       287.6511        45.0371       -76.8113     26004755     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       8.365419     118.47645764699999     
+  6         2.1330       154.3162        44.5050       -76.5887     26000117     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.403214     163.18803262723205     
+  635        41.2533       180.9452        44.7256       -76.3981     26004749     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.232361     180.27286392578245     
+  634         2.8521       301.3427        44.8805       -77.1576     26004747     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       7.479009     157.52404276102874     
+  987         3.5998       344.7601        44.9839       -77.3576     26006504     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.481884     187.61734731799012     
+  988        40.8053       344.7601        44.9766       -77.3532     26006504     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.481884     187.61734731799012     
+  633         0.2097       328.9624        44.9974       -77.3801     26004745     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.166678     175.86813730399996     
+  177        44.7759       103.0528        44.8024       -75.6396     26001661     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.694819     192.38228999287296     
+  406        44.7939       265.7418        46.2501       -78.5468     26003985     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.657500     184.7692954105009     
+  93         3.0285       280.4469        44.9130       -77.0304     26000872     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.842488     193.76678539135483     
+  1226         2.1321       413.2709        45.6834       -77.9954     26007273     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.480599     182.94589562205985     
+  1227        43.4961       413.2709        45.6904       -78.0232     26007273     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.480599     182.94589562205985     
+  632         3.3354       346.3958        45.4668       -77.7130     26004742     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.777872     198.23787276300004     
+  434        27.8622       318.2263        46.1503       -78.1752     26004218     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.607744     197.62034190126124     
+  1084         2.5182       115.5073        44.8033       -75.8234     26006774     LAKE     LAKE     LAKE     [NONE]     [NONE]       0.366921     172.716680598     
+  1085         3.5820       115.5073        44.8037       -75.8230     26006774     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.366921     172.716680598     
+  631        28.9584       446.5592        45.5449       -78.2485     26004738     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.091402     183.1466763119719     
+  281        47.6991       151.6967        45.4492       -76.5561     26003026     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.811611     196.5790005266429     
+  630        34.1928       428.7229        45.7029       -78.4970     26004735     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.966966     181.76920026976458     
+  1063         7.0701       142.8556        44.8405       -76.2245     26006734     LAKE     LAKE     LAKE     [NONE]     [NONE]       1.777972     180.57653561360902     
+  1064        37.8264       142.8556        44.8420       -76.2462     26006734     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.777972     180.57653561360902     
+  629        14.8320       372.4250        45.0836       -77.3754     26004734     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.217618     183.97574634166756     
+  262        39.1464       167.6533        45.4467       -76.8105     26002820     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.545550     175.5942959851234     
+  243        49.9635       134.6818        45.7825       -76.8331     26002596     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.190884     208.29990926412142     
+  628         7.2801       435.8748        45.1481       -78.1705     26004730     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.209808     165.40575359233097     
+  404        50.2047       277.0992        46.2513       -78.6005     26003981     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.724526     184.57653667869545     
+  746         4.4801       195.1685        44.7110       -76.6153     26005754     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.080873     181.8563775452576     
+  747        45.9199       195.1685        44.7226       -76.6219     26005754     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.080873     181.8563775452576     
+  627         0.0117       169.2181        44.6791       -76.6172     26004729     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       8.045830     187.482686923     
+  1202         5.9380       384.7170        45.8357       -78.1099     26007169     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.708451     186.7336437298402     
+  1203        19.9046       384.7170        45.8317       -78.1207     26007169     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.708451     186.7336437298402     
+  1477        39.5721       109.4837        44.6369       -75.7092     26007834     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.131434     190.65547704774912     
+  1        50.5116       213.9545        44.6997       -76.8233     26000028     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.141039     179.68244399969848     
+  626        50.5116       186.4361        45.3212       -76.6011     26004727     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.112074     174.7567836650841     
+  625         8.9190       101.2816        44.4354       -76.1884     26004726     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.226855     177.009226579     
+  1478         0.0198        82.0158        44.5857       -75.6911     26007835     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.839384     187.110562715     
+  285        31.1229       176.7064        45.4360       -76.6811     26003062     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.206762     171.83792720315918     
+  624        50.6862       135.5069        44.6489       -76.2353     26004725     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.357609     164.7073021296291     
+  28         0.2115        83.6590        44.5876       -75.6884     26000227     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.867612     194.315463363     
+  854         1.1313       479.5678        45.4291       -78.4447     26005981     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.466408     181.3844175582384     
+  855        49.6080       479.5678        45.4010       -78.4660     26005981     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.466408     181.3844175582384     
+  292        50.8005       113.6194        45.2790       -75.9303     26003150     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.245989     206.29463981656843     
+  1346        50.8689        83.5131        45.4789       -75.3459     26007685     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.041441     192.57275209159764     
+  30        50.9211       116.7009        44.6264       -75.7828     26000240     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.931954     185.6713309232992     
+  895         8.5707       381.1890        45.3413       -77.8168     26006094     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.465677     173.6043753440164     
+  896        42.4062       381.1890        45.3448       -77.7997     26006094     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.465677     173.6043753440164     
+  209        50.9976       446.8135        45.5668       -78.3725     26002094     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.642545     184.60274005558668     
+  136        51.0210        91.1654        45.0912       -75.6956     26001377     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.687952     195.29805933456572     
+  622        51.7203       369.0044        45.0363       -77.5138     26004723     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.515911     200.06104645564048     
+  623        51.7590       304.6460        46.0035       -78.1275     26004724     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.933485     204.19003247194658     
+  1309         2.5209       395.1922        46.0871       -78.3905     26007563     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.091308     199.0271668200563     
+  1310        49.4973       395.1922        46.1042       -78.4296     26007563     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.091308     199.0271668200563     
+  318        52.3818        75.8517        45.4131       -75.4672     26003358     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.613267     198.14742533749012     
+  195         0.3744        84.4480        44.9595       -75.0426     26001819     LAKE     LAKE     LAKE     [NONE]     [NONE]       0.408718     179.11729206188076     
+  196        52.6617        84.4480        44.9872       -75.0992     26001819     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.408718     179.11729206188076     
+  621        53.0784       463.4516        45.6237       -78.2162     26004722     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.711488     178.00449143238615     
+  967         6.0142       320.3294        45.0491       -77.0493     26006443     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.890118     181.55406998421728     
+  968        47.0966       320.3294        45.0505       -77.0559     26006443     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.890118     181.55406998421728     
+  1345         2.2617        69.3533        45.5124       -75.3546     26007684     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.692273     179.396247062     
+  620         5.1327       140.2890        44.8785       -76.2219     26004721     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.181213     186.199023259     
+  867         2.1987       351.1049        45.4383       -77.5804     26006028     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.208955     176.8417919547671     
+  868        51.1857       351.1049        45.4579       -77.5820     26006028     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.208955     176.8417919547671     
+  293        53.5374       132.3125        45.2702       -76.0080     26003151     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.977113     200.55600475279658     
+  619        12.4416       156.4610        45.4463       -76.7491     26004720     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.010239     192.705757259     
+  1220         1.5217       390.6813        45.6850       -77.8700     26007251     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.060172     183.39414434122094     
+  1221        24.0743       390.6813        45.6764       -77.8492     26007251     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.060172     183.39414434122094     
+  304        53.9649        68.3776        45.5293       -75.2279     26003275     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.499450     186.48514776256087     
+  858         2.1708       470.5524        45.3311       -78.3850     26006000     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.282052     176.27317750194544     
+  859        52.2936       470.5524        45.3435       -78.3877     26006000     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.282052     176.27317750194544     
+  618         1.5282       316.4709        45.0833       -77.0519     26004719     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       7.601640     195.812354889     
+  306         1.5705        60.1990        45.5205       -75.3481     26003287     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.670027     140.24848782399997     
+  772         5.4593       145.8255        44.5340       -76.4390     26005815     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.578105     164.13759960248254     
+  773        14.1391       145.8255        44.5249       -76.4421     26005815     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.578105     164.13759960248254     
+  138        52.7202       105.5541        45.0987       -75.8165     26001389     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.634103     192.79928070543397     
+  617        54.7884        98.8090        45.3925       -76.0418     26004718     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.400826     211.64474621247822     
+  212        51.3198       299.0580        45.7986       -77.7355     26002184     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.989374     183.31649981179626     
+  222        55.6164       342.3566        45.5267       -77.6764     26002384     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.108251     180.38402573672278     
+  295        55.8495       200.4586        45.3619       -76.8187     26003182     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.472697     192.0701173162543     
+  201        56.1303       459.7053        45.7860       -79.0315     26001931     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.007700     169.18386856308587     
+  616         5.5737       471.0347        45.4411       -78.4343     26004715     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.169273     196.507381283     
+  615         3.2400       339.0586        45.4255       -77.5945     26004714     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.536407     205.70925668102083     
+  1039         2.4336       293.8899        45.0556       -76.7939     26006679     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.375154     175.057196715     
+  1040        11.0277       293.8899        45.0594       -76.7987     26006679     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.375154     175.057196715     
+  32        22.3263       109.0020        44.5501       -75.9305     26000253     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.720139     162.566711087     
+  135        57.2058        85.0485        45.0620       -75.1672     26001376     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.559032     162.16965394229385     
+  60        57.6747       352.6633        45.3498       -77.4290     26000576     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.739469     179.968874037731     
+  614        57.8421       441.0732        45.8107       -78.7625     26004712     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.397586     179.12837022677272     
+  217         4.0374       352.0096        45.6951       -77.8301     26002262     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       9.001908     161.019209576     
+  103        29.5974       224.3680        45.0443       -76.5412     26001028     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.788966     178.1485542980425     
+  339        58.2066        94.2213        45.1918       -75.7392     26003496     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.821509     185.1971080156223     
+  1204        10.3948       419.3490        45.7912       -78.1988     26007192     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.242295     179.97086451611636     
+  1205        37.5473       419.3490        45.7743       -78.2104     26007192     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.242295     179.97086451611636     
+  108         2.3220       272.8227        45.0609       -76.7681     26001057     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.565195     195.166321988     
+  363        59.1390        73.3582        45.4127       -74.7983     26003681     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.927620     164.16840141593883     
+  11        59.3838       106.4113        44.3578       -76.2641     26000173     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.742285     176.40327671570805     
+  257        59.6871       228.5994        45.5401       -77.4658     26002796     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.221148     197.22597703944274     
+  1382        60.3333        81.0365        45.3431       -75.5197     26007725     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.565092     200.88023005879757     
+  1140         3.2417       464.3764        45.7592       -78.9066     26006947     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.930522     169.03314008574708     
+  1141        32.6278       464.3764        45.7728       -78.8469     26006947     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.930522     169.03314008574708     
+  214        60.4854       282.9311        45.7623       -77.8216     26002255     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.127101     194.76123708918502     
+  141        60.7572       115.6552        45.0793       -75.8973     26001396     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.534655     188.130871576006     
+  165        56.3067       128.8610        44.9457       -75.9748     26001615     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.742019     189.09305559875077     
+  846         5.8847       472.5035        45.4691       -78.4847     26005960     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.088695     184.2841620858727     
+  847        42.9142       472.5035        45.4727       -78.4985     26005960     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.088695     184.2841620858727     
+  611        24.1488       393.7242        46.0742       -78.5286     26004704     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.986474     188.87406401138034     
+  1027         1.0638       267.1879        45.1688       -76.6909     26006642     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.055631     177.16353504181123     
+  1028        19.0674       267.1879        45.1689       -76.7078     26006642     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.055631     177.16353504181123     
+  361        61.4754        61.0599        45.4620       -74.8080     26003675     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.668946     157.14406244224543     
+  1483        61.4772        98.9670        44.4276       -75.9618     26007841     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.506954     175.99790896444856     
+  36         0.0072        81.6370        44.4332       -75.8828     26000279     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       7.472715     173.88844537700004     
+  175        23.8077       120.5119        44.8201       -76.0117     26001643     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.901678     173.4057427417866     
+  408        61.6518       255.6910        46.2334       -78.3850     26003991     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.243368     192.10368963143011     
+  1242         1.3923       442.7489        45.5437       -78.1136     26007358     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.470866     194.91284994851955     
+  1243        60.6465       442.7489        45.5771       -78.1839     26007358     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.470866     194.91284994851955     
+  718         3.5543       157.1965        44.7819       -76.3434     26005648     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.572862     164.22360908025553     
+  719        18.4057       157.1965        44.7843       -76.3362     26005648     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.572862     164.22360908025553     
+  613        62.1135       350.4545        45.1325       -77.1713     26004706     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.425158     188.22553802016586     
+  146        62.5095       131.5562        45.0577       -76.0001     26001437     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.668921     194.9078704485896     
+  612        62.5698       355.7181        45.2826       -77.1313     26004705     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.799114     170.15377527303653     
+  323        62.7201        85.3966        45.3503       -75.9208     26003387     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.255974     204.4069207866855     
+  609        62.8551       149.1667        44.9681       -76.2801     26004702     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.088382     186.40480018776995     
+  610        62.9631       120.5578        44.6561       -75.9086     26004703     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.838067     170.31000640017268     
+  346        63.8379        83.1054        45.5367       -74.5984     26003554     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.023486     185.72525314183716     
+  608        63.9144       275.1759        44.9940       -76.7066     26004701     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.301619     178.44372138971488     
+  159        63.9288       117.8466        44.9555       -75.8938     26001547     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.964261     194.09412179009735     
+  338         0.9594        87.7255        45.2384       -75.6986     26003480     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.199948     174.333236937     
+  121        16.4466       152.4416        44.8712       -76.3511     26001179     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.263647     182.148970648     
+  239        64.0107       141.6386        45.7446       -76.8914     26002588     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.287600     162.30788422634546     
+  286        64.0620       128.2440        45.4388       -76.4654     26003064     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.717200     208.22184088629055     
+  457        64.1565       157.3170        45.8206       -77.2367     26004467     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.952936     198.43809515595495     
+  607         7.3305       106.5869        44.5235       -75.9700     26004700     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.440067     186.4243731008873     
+  606         0.6120       194.0415        44.6722       -76.8133     26004697     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.715467     201.315027927     
+  101         6.8940       217.9121        45.0777       -76.5217     26001023     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.999318     199.02879654154543     
+  605        65.4741       164.3696        45.5816       -76.8150     26004696     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.105192     182.69166987128204     
+  728         3.7987       154.4540        44.7692       -76.3026     26005685     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.118921     177.39473481999127     
+  729        17.4233       154.4540        44.7667       -76.3142     26005685     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.118921     177.39473481999127     
+  856         2.6264       465.5985        45.4183       -78.4179     26005986     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.634601     185.3641759665232     
+  857         6.8659       465.5985        45.4123       -78.4163     26005986     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.634601     185.3641759665232     
+  265        65.8314       206.7208        45.4702       -77.0518     26002835     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.871606     198.82388048379713     
+  885         3.2283       460.3216        45.3645       -78.0196     26006071     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.871125     183.5497952455994     
+  886        41.3010       460.3216        45.3790       -78.0464     26006071     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.871125     183.5497952455994     
+  604        27.2736       465.3694        45.6795       -78.8884     26004695     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.185899     176.60168712202278     
+  53        66.4263       411.6201        45.1635       -77.8807     26000502     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.705467     185.35613171354345     
+  170        66.7134       116.8521        44.8123       -75.8641     26001628     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.646692     174.5276101534543     
+  445        66.8484       253.3407        45.9178       -77.7569     26004410     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.163534     192.88556788050315     
+  59        28.1709       338.6540        45.0261       -77.7573     26000527     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.179062     165.09539670255302     
+  139        64.3464       100.5094        45.0815       -75.7716     26001390     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.650248     185.62170216610778     
+  798         1.5579       149.1106        44.5087       -76.6016     26005858     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.193905     170.38660528399998     
+  603        67.8672       121.4650        44.6487       -76.0297     26004693     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.437154     166.16475929347422     
+  1359        68.2875        88.9705        45.3319       -74.8213     26007700     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.945394     161.93759970905748     
+  602         2.8008       447.2055        45.4259       -78.3928     26004692     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.258324     181.764133794     
+  955         2.1128       305.2030        45.1042       -76.9784     26006401     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.574759     161.99203695303237     
+  956        27.1759       305.2030        45.1125       -76.9436     26006401     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.574759     161.99203695303237     
+  311        69.0192        78.3438        45.4576       -75.2552     26003318     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.927161     195.16927141690485     
+  957         2.4318       293.4168        45.0930       -77.0258     26006406     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.140720     167.9056105962081     
+  958        12.1131       293.4168        45.0939       -77.0332     26006406     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.140720     167.9056105962081     
+  1438        69.2649        81.2374        44.9768       -75.2596     26007789     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.578490     170.918574019809     
+  899         2.4793       453.4126        45.3124       -78.0233     26006111     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.049258     185.4793151503451     
+  900        66.8909       453.4126        45.3157       -78.0168     26006111     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.049258     185.4793151503451     
+  403        69.5655        61.7531        45.2212       -74.5136     26003978     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.115041     187.26082862597832     
+  383        69.7239        75.6878        45.2548       -75.0479     26003824     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.657283     156.86414179490993     
+  601         0.8109       309.4868        45.1230       -76.9690     26004691     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       8.631117     194.576317832     
+  95         8.4222       231.1548        45.1574       -76.6781     26000995     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.588345     153.5793979527258     
+  266        70.6743       344.9693        45.4672       -77.4452     26002836     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.470423     171.52900791992136     
+  319        10.3977        72.3949        45.3687       -75.4511     26003359     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.748960     180.551959037     
+  600         9.7947       460.1450        45.4973       -78.4367     26004689     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.109108     196.2600516960878     
+  599        16.3872       147.4217        44.5725       -76.3920     26004687     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.260069     166.7559763730687     
+  1124         3.9357       437.4730        45.7773       -78.4001     26006905     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.998932     184.8795575816894     
+  1125        36.5661       437.4730        45.7918       -78.3763     26006905     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.998932     184.8795575816894     
+  598        67.4991       297.2148        46.1277       -78.0400     26004686     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.897988     187.0840309038158     
+  905         2.0753       462.4221        45.2564       -78.0898     26006142     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.412816     181.1410204664579     
+  906        70.3333       462.4221        45.2943       -78.0953     26006142     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.412816     181.1410204664579     
+  1356         4.1607        64.0990        45.3689       -74.8902     26007697     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.751964     146.574143046     
+  76         3.5658       281.7282        45.1184       -77.0146     26000710     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.785289     149.308576395     
+  414        72.9945       342.2388        46.1551       -78.3007     26004027     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.438430     191.00600951636477     
+  1492        17.4852        88.6073        44.2293       -76.5292     26007851     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.306882     174.909836218     
+  744        10.3071       169.1418        44.6759       -76.4898     26005748     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.616417     171.67481688818884     
+  745        63.1365       169.1418        44.6600       -76.5120     26005748     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.616417     171.67481688818884     
+  1240         7.2162       340.9970        45.5904       -77.7063     26007321     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.353856     202.39840399170623     
+  1241        42.6726       340.9970        45.6189       -77.7388     26007321     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.353856     202.39840399170623     
+  345        73.9260        60.2710        45.5482       -74.7415     26003550     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.788503     155.46886550592137     
+  145         4.8546        72.7697        45.0442       -75.2914     26001428     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.488389     172.925637988     
+  232         8.3781       444.2338        45.3960       -78.0187     26002515     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.021867     206.846758847     
+  1178         3.0714       456.3849        45.5412       -78.5843     26007045     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.264192     179.2872001966251     
+  1179        16.8555       456.3849        45.5364       -78.5947     26007045     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.264192     179.2872001966251     
+  597        74.5002       188.1971        45.8493       -77.3548     26004683     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.316531     188.74801987701414     
+  1375        74.5263        72.1501        45.3376       -75.2671     26007718     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.562713     191.53860913990084     
+  21         1.2816        83.4953        44.2314       -76.4834     26000214     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.528224     238.644757825     
+  596         2.1951       452.9908        45.2245       -78.1088     26004682     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       8.697371     143.35543297     
+  197        74.8917        84.3715        44.9724       -75.1721     26001831     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.432154     182.98292326301546     
+  595        29.4462       391.5124        45.6646       -77.9552     26004681     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.507985     194.97229331150376     
+  949         1.8945       291.8097        45.1200       -76.9871     26006395     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.868432     180.0940907136865     
+  950         3.6180       291.8097        45.1206       -76.9849     26006395     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.868432     180.0940907136865     
+  77         0.3294       261.5694        45.1281       -76.9913     26000711     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.193018     170.881433563     
+  594        75.6549       134.1418        44.6740       -76.1470     26004680     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.365552     175.69075051774036     
+  592        75.9951       158.9694        45.6847       -77.0794     26004678     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.519301     199.0896026239966     
+  593         2.5776       186.0131        44.6888       -76.4513     26004679     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.773157     175.720048242     
+  1421        42.9507        62.5301        45.0647       -74.7472     26007769     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.191377     181.7881193933065     
+  155        63.9873       119.9625        45.0150       -75.8859     26001533     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.625847     201.36866008911815     
+  907         0.1197       455.7830        45.2143       -78.1212     26006149     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.935752     154.949905081     
+  908         3.0627       455.7830        45.2204       -78.1177     26006149     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.935752     154.949905081     
+  591        58.0230       300.0946        45.0988       -76.8609     26004676     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.564292     169.11493296716444     
+  82        79.5006       361.5609        45.0606       -77.2611     26000805     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.809243     187.09195696022223     
+  1445        79.7472       101.4336        44.9292       -75.5941     26007798     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.847467     185.12816530351088     
+  252        80.8056       144.1073        45.6675       -76.8034     26002665     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.172686     199.7539928995532     
+  343        81.2340        69.8931        45.5576       -74.6697     26003547     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.245473     167.45759944075093     
+  762         4.4101       130.0218        44.5958       -76.3619     26005793     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.467415     173.06290801548272     
+  763         5.7176       130.0218        44.5894       -76.3608     26005793     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.467415     173.06290801548272     
+  590        77.3055       432.7588        45.2010       -77.9932     26004672     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.592005     177.64609554213618     
+  1399        81.9729        72.5327        45.2123       -75.2598     26007744     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.648232     170.2999128393905     
+  589        82.9989       453.5765        45.6351       -78.5263     26004670     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.621825     187.93978629434693     
+  256        43.2342       151.4798        45.5571       -76.9907     26002731     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.768885     202.44262834806025     
+  588        84.1806       238.2893        46.0277       -77.6707     26004668     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.689382     190.8265161374338     
+  1166         0.4212       414.7187        45.5945       -78.5239     26007023     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.439235     173.436753931     
+  1167         1.1025       414.7187        45.5952       -78.5234     26007023     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.439235     173.436753931     
+  223        10.9863       316.5192        45.5546       -77.6871     26002385     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.181266     199.171962041     
+  1228         5.3078       438.9959        45.6891       -78.1276     26007278     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.888695     189.66538845186227     
+  1229        44.6512       438.9959        45.7027       -78.1300     26007278     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.888695     189.66538845186227     
+  991         4.7024       342.1294        44.9952       -77.0697     26006513     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.563860     196.2707659855311     
+  992        80.3530       342.1294        45.0229       -77.1224     26006513     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.563860     196.2707659855311     
+  41        85.3794       404.4136        45.3300       -77.8908     26000324     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.019149     191.46776339739648     
+  260        85.5540       185.0207        45.4451       -76.8978     26002807     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.994352     186.0767966335952     
+  587        85.6008       210.5072        45.1759       -76.4867     26004665     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.190821     190.13133834445026     
+  1367        85.6161       100.5441        45.2818       -74.7665     26007710     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.220974     191.16501346145006     
+  1291         1.5057        85.4127        45.4098       -75.9801     26007493     LAKE     LAKE     LAKE     [NONE]     [NONE]       1.181383     195.8529738285007     
+  1292        29.3976        85.4127        45.3902       -75.9808     26007493     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.181383     195.8529738285007     
+  750         3.5862       198.9204        44.6761       -76.7707     26005763     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.024355     175.70488958652652     
+  751        17.5665       198.9204        44.6831       -76.7646     26005763     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.024355     175.70488958652652     
+  174        49.8501       125.4396        44.8355       -76.0626     26001641     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.039252     190.099435121     
+  586        86.4828       199.1294        45.6657       -77.2451     26004664     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.773078     192.10963686130168     
+  585         1.8054       413.3172        45.6683       -78.1088     26004663     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.248670     198.60522338699997     
+  1090         5.1368       382.8659        46.0589       -78.6872     26006800     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.958500     188.65667346047067     
+  1091        49.9567       382.8659        46.0700       -78.6983     26006800     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.958500     188.65667346047067     
+  158        86.8086        81.0771        44.8506       -75.3993     26001538     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.646182     169.2820638901271     
+  193        86.9409        85.2541        45.0347       -75.0179     26001809     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.653247     187.83016378545707     
+  449        66.0537       173.9698        45.9715       -77.4353     26004428     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.942285     194.51479174527452     
+  359        88.1514        74.1324        45.3982       -74.5236     26003634     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.065219     179.51106630782647     
+  228        83.7801       444.4463        45.4354       -78.1238     26002451     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.860957     181.45488673119078     
+  98        10.6200       195.0726        45.1002       -76.4919     26001000     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.644805     189.5962147362612     
+  210        34.3179       483.6243        45.3316       -78.3225     26002137     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.283655     175.2251412386393     
+  584        17.3052       431.5049        45.8101       -78.4546     26004660     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.629618     191.97824408395795     
+  35        88.9047       106.4765        44.5046       -75.9019     26000268     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.748918     175.50164659567335     
+  51        11.7855       442.8362        45.2204       -78.1397     26000434     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.955064     170.95614038413908     
+  1313         1.3678       234.8188        46.1881       -77.9618     26007584     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.241908     192.0313916649862     
+  1314        16.3091       234.8188        46.1782       -77.9587     26007584     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.241908     192.0313916649862     
+  218        89.9046       291.0443        45.7497       -77.6557     26002269     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.272820     182.84915367968313     
+  752         6.3191       111.3917        44.6190       -76.0847     26005766     LAKE     LAKE     LAKE     [NONE]     [NONE]       1.600420     176.3274576978357     
+  753        16.5967       111.3917        44.6278       -76.0849     26005766     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.600420     176.3274576978357     
+  740         2.4219       165.6370        44.6791       -76.4276     26005741     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.611208     167.76175573627611     
+  741        12.4776       165.6370        44.6679       -76.4410     26005741     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.611208     167.76175573627611     
+  583         0.1260       146.4008        44.6836       -76.4066     26004657     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.909830     190.510537337     
+  582         1.2051       413.4132        45.4207       -78.0062     26004656     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       8.589550     171.29498793     
+  213        92.5398       312.2392        45.8324       -77.8682     26002188     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.128712     187.0342585992502     
+  581        27.2277       147.0011        44.7453       -76.2923     26004655     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.374397     176.0557503675094     
+  1289        17.7936       309.3952        45.4411       -77.1951     26007484     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.720084     196.43920547358616     
+  1290        75.2295       309.3952        45.4416       -77.2375     26007484     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.720084     196.43920547358616     
+  225        31.0806       430.9028        45.5695       -78.0945     26002418     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.685506     199.82890781574207     
+  376        20.9736        73.0547        45.3739       -74.8625     26003746     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.953537     160.9443405930619     
+  580         2.6775       101.9150        44.5995       -76.1102     26004653     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.155390     153.37428951899997     
+  120        31.5153       145.9514        44.8531       -76.2936     26001162     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.398970     160.011400346     
+  378         8.6526        83.0359        45.3101       -74.6574     26003775     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.494887     177.36356834055528     
+  314        19.9233        71.4440        45.3772       -75.2753     26003325     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.181483     179.41901845876856     
+  143        20.6073       113.3751        45.1112       -75.9313     26001409     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.736270     200.21198029532124     
+  183        64.0512       119.7097        44.7335       -75.9556     26001702     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.026674     168.1776611237094     
+  426         5.5188       197.3710        46.1996       -77.9345     26004179     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.367221     175.714758066     
+  418         9.0918       382.6063        46.0632       -78.6198     26004083     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       7.041742     184.98105549026255     
+  417        95.8320       394.6020        46.1206       -78.6311     26004082     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.817475     182.56016547258025     
+  203        36.0495       466.1283        45.7348       -78.9245     26001997     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.225758     177.90657701796906     
+  267        68.1732       271.1814        45.4905       -77.3525     26002837     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.800546     176.81484029043858     
+  62        82.5165       372.5621        45.3448       -77.3449     26000578     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.821888     166.3143349466361     
+  66        91.0449       354.0229        45.3047       -77.0214     26000590     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.906330     186.36830835797676     
+  838         1.4054        98.6985        44.5975       -75.9527     26005931     LAKE     LAKE     LAKE     [NONE]     [NONE]       0.766331     206.70836334952332     
+  839         2.1469        98.6985        44.5983       -75.9597     26005931     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.766331     206.70836334952332     
+  384        16.9920        66.0532        45.2747       -75.1850     26003827     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.722953     180.9480877675517     
+  250        78.8670       221.3439        45.7979       -77.4217     26002637     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.911850     186.8918316636421     
+  71        78.2397       360.3826        45.1646       -77.2387     26000619     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       7.183557     186.81037015722535     
+  92        27.5994       274.5489        44.9286       -76.9754     26000847     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.956954     172.78065267972377     
+  579        16.5204       438.4104        45.5870       -78.5145     26004649     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.098455     187.4398894903307     
+  332       101.1267        89.1622        45.2278       -75.5183     26003458     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.860730     192.1462576937437     
+  416        50.4675       381.8240        46.1088       -78.3589     26004055     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.029803     191.40696140870864     
+  290       103.6809       129.2093        45.2866       -76.1529     26003140     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.508501     182.0788223929587     
+  99         0.0117       185.8906        45.1344       -76.6835     26001001     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.569152     234.77257068299997     
+  397        28.9845        57.6340        45.1167       -74.6495     26003906     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.394506     179.10694195259236     
+  347       105.0705        53.3276        45.5580       -74.8302     26003557     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.670176     177.7074040445479     
+  1317         2.1915       346.3108        46.1333       -78.1269     26007603     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.545552     183.06537935574997     
+  1318        69.3198       346.3108        46.0853       -78.1543     26007603     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.545552     183.06537935574997     
+  435         0.0828       266.5142        46.1596       -78.1332     26004219     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.562836     142.83889488700004     
+  1358       105.5250        80.6378        45.3034       -74.9200     26007699     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.833051     156.91123939481966     
+  794         4.0471       161.0313        44.5399       -76.5904     26005846     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.055791     170.88605967654618     
+  795        12.7514       161.0313        44.5485       -76.5875     26005846     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.055791     170.88605967654618     
+  578       100.4895       388.0914        45.4192       -77.4366     26004646     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.333399     175.06747951797848     
+  577       106.8237       204.1443        46.0816       -77.6340     26004645     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.560255     198.2854943160941     
+  268        14.2317       248.8239        45.4747       -77.1958     26002870     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.600015     181.24907461099113     
+  1481        16.1550        95.4107        44.5554       -75.7770     26007838     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.135856     159.42458038603564     
+  1148         3.6464       444.1951        45.6981       -78.8179     26006966     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.557976     171.67571434411653     
+  1149        19.5988       444.1951        45.6986       -78.8251     26006966     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.557976     171.67571434411653     
+  89         3.3912       306.6534        44.9939       -77.2685     26000826     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       7.442721     170.98254238589357     
+  576         3.5550       165.6144        44.5326       -76.5680     26004643     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.113635     141.44148935363293     
+  411        29.9025       280.2269        46.2019       -78.2721     26004007     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.759087     178.24473955435343     
+  575       109.4526       278.3178        45.5443       -77.5590     26004642     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.773121     188.61068770068854     
+  574       109.6884       295.9779        45.4001       -77.1130     26004641     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.558633     181.46363536428458     
+  573        33.4548       181.5136        45.3609       -76.6924     26004640     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.972198     189.00291439588375     
+  86        25.0317       297.6194        44.9678       -77.0490     26000816     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.176044     178.49007437569477     
+  3        24.7122       192.3451        44.6512       -76.7520     26000056     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.429226     174.67873617421577     
+  34         3.4992        86.3228        44.5137       -75.8123     26000267     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.090927     157.601209077     
+  375         5.4963        62.5153        45.3727       -74.9601     26003745     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.640937     191.821033872     
+  1349       112.8366        66.8898        45.4879       -75.1241     26007689     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.840528     192.55426198185856     
+  310       113.0013        75.4976        45.4026       -75.5777     26003313     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.219036     183.81498406526183     
+  1116         4.3119       429.0111        45.8324       -78.4375     26006886     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.227790     189.1599962457716     
+  1117        20.0853       429.0111        45.8394       -78.4335     26006886     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.227790     189.1599962457716     
+  368         2.1852        61.2941        45.4541       -75.0580     26003709     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.852921     201.929604187     
+  572        16.9650       108.7550        44.5783       -75.9515     26004639     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.990235     174.06137151669964     
+  887         8.2962       451.9589        45.3663       -78.1805     26006075     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.025109     182.31310609391488     
+  888       108.1611       451.9589        45.3344       -78.1887     26006075     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.025109     182.31310609391488     
+  443        66.2589       378.2781        45.8722       -78.1447     26004398     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.843732     185.1080984397939     
+  157       117.2295        84.9838        44.8546       -75.4699     26001537     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.724166     191.5747784972656     
+  869         2.9843       445.0142        45.4370       -78.0101     26006038     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.316943     195.68912094152887     
+  870        22.4740       445.0142        45.4372       -78.0400     26006038     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.316943     195.68912094152887     
+  1104        13.9635       410.9530        45.8708       -78.4989     26006853     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.397464     177.13802953232235     
+  1105        64.5381       410.9530        45.8560       -78.5027     26006853     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.397464     177.13802953232235     
+  571         2.7945       436.0380        45.3978       -78.1849     26004638     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.390628     180.423969559     
+  570        13.3407       431.8817        45.7139       -78.7409     26004637     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.304383     168.51516149374208     
+  569         5.7699       291.8637        45.2358       -76.9651     26004636     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.994742     182.120938666     
+  1186         2.8737       211.9960        45.9560       -77.5691     26007096     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.765144     190.9097486972399     
+  1187        34.7670       211.9960        45.9762       -77.5593     26007096     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.765144     190.9097486972399     
+  568         0.5148       195.7478        45.9434       -77.5671     26004635     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       8.528869     207.503339054     
+  73        78.2883       361.3415        45.1915       -77.3915     26000623     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       7.592556     185.59583254874724     
+  161        75.7125       110.4981        44.8460       -75.7563     26001599     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.650767     192.58853208205542     
+  567         4.3245       396.9746        45.9188       -78.4399     26004634     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.688634     187.00442240748342     
+  331       124.4304        87.3237        45.2913       -75.5111     26003457     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.803371     200.89641984790447     
+  1431         2.6622        91.4319        45.1373       -75.7107     26007781     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.127708     175.44009539     
+  442       125.6364       245.4580        45.9559       -77.7496     26004366     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.541277     196.12991121688023     
+  1418       126.3510        91.3303        45.1814       -74.8254     26007764     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.005766     190.03454588619957     
+  393         1.4715        65.2865        45.1565       -74.7288     26003893     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.673940     202.155887049     
+  1427       128.3859        92.2610        45.0920       -74.9526     26007776     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.894080     179.0972754120476     
+  768         3.6469       161.4362        44.5558       -76.5395     26005809     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.014558     164.80744828829762     
+  769        18.9476       161.4362        44.5609       -76.5288     26005809     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.014558     164.80744828829762     
+  881         2.7912       444.8293        45.4072       -78.2053     26006058     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.574861     189.56934013169945     
+  882        10.0824       444.8293        45.4179       -78.1924     26006058     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.574861     189.56934013169945     
+  566         0.5508       152.2417        44.5815       -76.5179     26004632     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.662142     187.830775147     
+  1385       132.9327        81.6018        45.2340       -74.6649     26007729     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.496130     178.65898460105237     
+  564       134.1540       136.7289        44.9682       -76.1301     26004630     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.698160     186.6257204282943     
+  565        10.0692       360.0040        46.0979       -78.2650     26004631     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.107620     151.39943621251527     
+  563        12.6774       463.5995        45.3883       -78.3347     26004629     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       7.053104     174.15888418605135     
+  1476       135.0225       105.6018        44.7216       -75.6438     26007830     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.863200     182.28118732012962     
+  200        37.8576       437.7848        45.8295       -78.9393     26001894     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.163635     173.89678010125132     
+  205        65.0637       460.4597        45.5117       -78.5473     26002073     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.209665     176.32845128582562     
+  374       139.5396        73.2662        45.3138       -75.0086     26003744     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.763292     176.25552887137016     
+  812        20.0700       140.3822        44.4235       -76.4548     26005901     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.240085     173.381917689219     
+  813        99.8316       140.3822        44.4225       -76.4754     26005901     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.240085     173.381917689219     
+  1364        14.0076        83.9214        45.3433       -74.6385     26007707     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.441798     186.36571909715025     
+  562       118.4625       317.0634        45.8980       -78.0230     26004628     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.214834     193.74521070869926     
+  724        16.2380       214.6825        44.7640       -76.6822     26005681     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.667800     173.9700787353234     
+  725       107.9404       214.6825        44.7632       -76.7405     26005681     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.667800     173.9700787353234     
+  561        34.7778       221.0050        45.5039       -77.1632     26004627     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.331021     192.12277199740367     
+  1380         9.1287        69.2270        45.2782       -74.4765     26007723     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.549898     171.536263497     
+  380         0.1503        62.7132        45.2821       -74.4481     26003802     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.635235     218.407967231     
+  1023         8.2950       178.0799        45.1635       -76.3431     26006626     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.028853     182.07922472412744     
+  1024        48.7776       178.0799        45.1418       -76.3403     26006626     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.028853     182.07922472412744     
+  1007        25.6137       263.2653        44.8271       -76.9680     26006557     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.482342     169.00941097220797     
+  1008        80.8041       263.2653        44.8331       -76.9799     26006557     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.482342     169.00941097220797     
+  560         4.7637       179.5296        44.6368       -76.6630     26004626     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.502086     174.365711074     
+  1416       144.4941        94.2596        45.1644       -75.0064     26007762     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.846374     168.5029890447466     
+  559         6.9660       121.1005        44.4195       -76.3825     26004625     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.403612     191.149662719     
+  178        12.2481        95.7445        44.7894       -75.5709     26001662     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.815430     170.9247178673877     
+  150        68.0400        87.7785        45.0192       -75.4857     26001467     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.684193     188.32097822339003     
+  558         0.0189       392.8688        45.5735       -78.4965     26004624     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.434692     139.667895817     
+  557         5.3208       267.0216        44.8771       -76.8688     26004623     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.285037     171.038050105     
+  100        65.5254       266.3319        45.0801       -76.7281     26001002     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.275345     176.73173984108317     
+  1330       148.9356       345.5375        46.1825       -78.4923     26007665     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.373940     184.70175067978695     
+  168         1.8666       109.1473        44.8723       -75.9925     26001624     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.685859     178.25461557955333     
+  556        32.0292       418.8010        45.4574       -77.9942     26004621     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.552820     185.652910085826     
+  1466        18.8217       287.6818        44.9640       -76.9921     26007820     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.506277     167.09793932817342     
+  88         0.4095       275.3467        44.9701       -76.9634     26000818     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.774575     171.55222437400002     
+  68       128.8143       341.9106        45.3196       -77.2553     26000592     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.443601     177.5589391684692     
+  43        16.8849       346.1802        45.2995       -77.7957     26000350     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.397313     185.92051069708492     
+  132        28.2348        90.4192        45.1531       -75.6928     26001367     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.949048     185.7850979352393     
+  1420        25.3647        77.8329        45.0870       -74.8301     26007768     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.435629     182.29267331405916     
+  555         8.1306       269.5170        45.8346       -77.7877     26004620     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.773355     176.58822582209754     
+  229        23.8869       450.3225        45.4386       -78.2351     26002483     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.288665     192.915872731     
+  115       145.0386       221.1821        44.8658       -76.6422     26001095     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.833514     177.8861778168435     
+  1368        17.2782        75.9523        45.3366       -74.5865     26007711     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.216141     172.4020452296124     
+  1369         0.0225        72.1840        45.3176       -74.6010     26007712     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.537002     147.400351868     
+  1088         1.3095       375.2742        46.0714       -78.2813     26006788     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.910740     194.07168874540093     
+  1089        23.9040       375.2742        46.0702       -78.2905     26006788     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.910740     194.07168874540093     
+  428       160.1289       245.3323        46.1242       -77.8772     26004185     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.160309     188.81764900388612     
+  554         4.7475       456.4412        45.4625       -78.2631     26004616     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.734622     208.33934760936998     
+  280        75.6999        82.8884        45.4476       -76.0754     26003020     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.176241     206.39384741629337     
+  1474        49.1175       112.8706        44.8139       -75.9373     26007828     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.984485     175.69487414699805     
+  297       162.2988       168.2366        45.2542       -76.3876     26003194     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.385768     189.38890374358178     
+  173         0.2196       105.1580        44.8632       -75.9130     26001638     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.579900     181.79304927900003     
+  1255         1.9476       199.4691        46.0045       -77.4673     26007387     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.761107     200.5758121394137     
+  1256        54.4905       199.4691        46.0287       -77.5639     26007387     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.761107     200.5758121394137     
+  1409       163.3500        76.4439        45.1161       -75.3806     26007754     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.630014     177.91297998964973     
+  1443        15.0219       290.2361        45.1491       -76.9691     26007796     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.449660     159.1965638617571     
+  553         0.0279       254.7644        45.1341       -77.0032     26004615     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.547016     246.417743129     
+  852         3.3343       452.1165        45.4111       -78.3642     26005978     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.031752     179.69149216227436     
+  853        27.5330       452.1165        45.4137       -78.3462     26005978     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.031752     179.69149216227436     
+  552         0.0711       434.2362        45.4351       -78.3551     26004614     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.971919     149.42255829     
+  407        17.6769       244.5792        46.2592       -78.5056     26003987     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.727307     180.36981782194675     
+  551        54.3456       419.2484        45.8530       -78.3660     26004613     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.904857     183.13901623284852     
+  550        58.6854       445.9542        45.7469       -78.7828     26004612     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.784229     173.99459883306343     
+  1377         1.1475       206.8420        45.5252       -77.4167     26007720     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.545143     177.591939635     
+  549        40.6071       336.8319        44.9988       -77.2056     26004611     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.544338     186.88209589353727     
+  1102         1.9845       404.7445        45.9227       -78.4058     26006848     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.872416     179.6203169274394     
+  1103        44.0001       404.7445        45.9260       -78.4197     26006848     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.872416     179.6203169274394     
+  873         1.7350       317.3286        45.4105       -77.5991     26006046     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.736679     180.61661376337324     
+  874         5.3156       317.3286        45.4121       -77.6056     26006046     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.736679     180.61661376337324     
+  1269        15.2487       171.0319        45.6178       -77.1151     26007448     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.535223     182.2700102900836     
+  1270        69.2154       171.0319        45.6060       -77.1558     26007448     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.535223     182.2700102900836     
+  258         2.4012       194.2069        45.5442       -77.4138     26002800     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.912728     184.463224615     
+  548         8.2647       154.0320        45.9986       -77.4101     26004608     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.612938     201.86456372926284     
+  129        31.1940       196.8989        44.7999       -76.5856     26001222     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.444742     169.70857666410123     
+  927         5.9050       255.7318        45.4032       -76.9844     26006259     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.294340     186.1919977032672     
+  928        59.4368       255.7318        45.3913       -77.0102     26006259     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.294340     186.1919977032672     
+  546         4.4955       173.0456        45.6522       -77.0978     26004606     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.344700     192.044371852     
+  547        15.5511       365.6503        46.0330       -78.2740     26004607     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.017319     181.99674807648526     
+  1130         1.7673       425.9466        45.7807       -78.6983     26006917     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.569888     171.46656828485698     
+  1131         6.2211       425.9466        45.7754       -78.7032     26006917     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.569888     171.46656828485698     
+  1238        21.6106       375.3692        45.6182       -77.8559     26007314     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.834184     183.80403745288572     
+  1239        79.5314       375.3692        45.6183       -77.8585     26007314     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.834184     183.80403745288572     
+  387        31.8744        78.9605        45.2057       -75.0863     26003856     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.812885     146.49852502975503     
+  760        11.3150       156.1809        44.5812       -76.4533     26005792     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.149491     171.1013212280903     
+  761        33.2440       156.1809        44.5896       -76.4679     26005792     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.149491     171.1013212280903     
+  545         0.0027       132.6069        44.6047       -76.4064     26004605     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.678929     307.5198198954     
+  544         1.1124       418.2257        45.7911       -78.6785     26004604     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.336378     195.099696166     
+  1271         0.1413       164.4458        45.6370       -77.0693     26007450     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.017489     193.134214648     
+  1272         2.1348       164.4458        45.6400       -77.0678     26007450     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.017489     193.134214648     
+  50       178.2324       462.6675        45.2705       -78.2591     26000433     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.793478     178.51539976432719     
+  543        10.0728       341.0596        45.3891       -77.5922     26004603     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.875269     146.44405239800003     
+  235         0.1863       283.3158        45.3704       -77.6213     26002532     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.929888     158.657547405     
+  142       181.2825       132.7874        45.1188       -76.0306     26001408     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.702220     189.2840915244079     
+  1412       183.3885        84.6345        45.1359       -75.5090     26007758     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.676661     191.62900883707462     
+  221         8.6202       383.0247        45.5871       -77.8783     26002373     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       7.133590     196.8726783773372     
+  91        20.2878       295.8763        44.9744       -76.9257     26000846     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.201193     176.9236080088834     
+  334         8.2944        73.6714        45.2276       -75.4028     26003460     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.748561     185.8658321662446     
+  255        15.0939       162.8592        45.6162       -77.0392     26002730     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.718158     214.081075819     
+  1011        24.5554       191.9851        45.2977       -76.5186     26006564     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.723188     179.4286130065811     
+  1012       170.6996       191.9851        45.2614       -76.5486     26006564     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.723188     179.4286130065811     
+  1405         0.1431       166.0291        45.3590       -76.4949     26007750     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.106054     164.689011554     
+  542         9.6435       417.7056        46.0700       -78.5724     26004601     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.330851     180.9326847696142     
+  1136         8.1159       430.4671        45.7237       -78.6823     26006940     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.886346     171.79685410340724     
+  1137        49.0683       430.4671        45.7097       -78.6914     26006940     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.886346     171.79685410340724     
+  541         0.3312       420.8599        45.7558       -78.6586     26004600     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]      10.089954     153.102607271     
+  42       132.9939       417.5391        45.2595       -77.9166     26000349     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.752937     185.56282368596138     
+  1406         7.2738       168.1654        45.3481       -76.4753     26007751     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.016149     206.64717371299997     
+  162       202.9491       114.3966        44.7489       -75.7610     26001600     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.775930     176.84570187094286     
+  394        49.3650        75.5440        45.1185       -74.7959     26003894     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.227928     192.6637881863908     
+  1403         0.8478       158.9688        45.3562       -76.4588     26007748     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.267807     240.312835085     
+  294         0.8991       133.4623        45.3592       -76.4448     26003154     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.779700     183.264807291     
+  251       206.2296       254.4014        45.7477       -77.4538     26002638     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.710859     195.37132186055229     
+  360       207.0324        81.8609        45.4147       -74.6618     26003642     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.164346     182.20479822617014     
+  127         4.4739       190.1145        44.8372       -76.5381     26001219     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.546587     171.12685415699357     
+  1419        69.6942       156.1157        45.1990       -76.2825     26007767     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.175723     185.4815783841889     
+  299         1.3023       121.3462        45.2496       -76.2511     26003222     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.973866     204.537509295     
+  1470        25.2792       100.0213        44.8351       -75.5838     26007824     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.015269     188.8777266310437     
+  330        53.9883        73.5036        45.2060       -75.3619     26003434     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.732091     173.92516597844272     
+  216       203.4999       364.7561        45.7688       -77.9810     26002261     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.012369     195.32457731423793     
+  540        81.4500       279.9182        45.6085       -77.6479     26004598     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.526479     199.56709638088506     
+  1482        25.7319        95.0465        44.4678       -75.8786     26007840     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.251728     173.88516637137965     
+  33         0.0585        89.5407        44.5053       -75.8046     26000265     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.292921     234.860364265     
+  333         1.2123        71.6971        45.2576       -75.3999     26003459     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.740322     189.77044971     
+  539        19.7784       188.3435        44.8285       -76.5129     26004596     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.302807     167.79258544831532     
+  377        69.9201        77.9259        45.3069       -74.5498     26003762     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.504062     169.88291777122345     
+  1253         3.7382       156.2744        46.0106       -77.3760     26007386     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.254716     189.45279958433403     
+  1254        41.5903       156.2744        46.0285       -77.4319     26007386     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.254716     189.45279958433403     
+  448         0.0576       116.4775        45.9980       -77.3452     26004426     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.532301     233.245395258     
+  538         6.5853       186.2217        45.5512       -77.4006     26004595     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.242490     179.86877992017932     
+  537        33.3801       142.5496        45.3544       -76.4022     26004594     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.965178     179.8124826535417     
+  1363       116.1648        77.2694        45.3914       -75.3753     26007705     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.859943     178.4409248499159     
+  536        74.3166       387.6565        45.9384       -78.3445     26004593     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.095207     185.11095607676427     
+  313        10.1871        66.1156        45.3966       -75.2787     26003324     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.941631     191.9380974511191     
+  58       250.3341       355.4979        44.9919       -77.7227     26000526     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.710667     175.98003071288642     
+  535        75.8025       239.5486        45.3494       -76.9175     26004592     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.928774     198.23156868972498     
+  534         0.0270       185.9959        45.1339       -76.6820     26004591     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.390277     245.26741965600002     
+  756         8.9013       110.8871        44.5926       -76.1423     26005789     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.271302     185.25762240706547     
+  757        60.5517       110.8871        44.5780       -76.1754     26005789     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.271302     185.25762240706547     
+  533         0.0675       101.5596        44.5820       -76.1206     26004590     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.363681     197.920493927     
+  1168         3.1960       412.5432        45.5783       -78.4810     26007028     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.503950     170.42754087088565     
+  1169         4.3523       412.5432        45.5821       -78.4757     26007028     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.503950     170.42754087088565     
+  848         4.0836       444.0946        45.4538       -78.3799     26005962     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.538198     194.3813834956398     
+  849        19.2363       444.0946        45.4541       -78.3984     26005962     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.538198     194.3813834956398     
+  532         0.0513       407.8230        45.4784       -78.3957     26004588     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       8.781702     172.071647941     
+  1391       155.1420       113.9044        45.3427       -76.0993     26007735     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.159442     209.48696070238572     
+  207         3.4083       411.6696        45.5751       -78.4548     26002075     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.457564     196.55467190777054     
+  1331       110.7207       273.0924        46.1909       -78.1122     26007666     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.904458     188.40214368089312     
+  425         0.0297       159.2510        46.2250       -78.0678     26004175     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.179507     153.49512684     
+  766         0.6246        98.0171        44.5658       -76.1210     26005804     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.014285     180.98018456     
+  767         6.7743        98.0171        44.5634       -76.1317     26005804     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.014285     180.98018456     
+  1033         0.3591       241.7082        45.1329       -76.6705     26006657     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.803340     170.9258809432489     
+  1034        12.9618       241.7082        45.1159       -76.6772     26006657     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.803340     170.9258809432489     
+  935         1.0557       258.6767        45.3012       -76.8432     26006309     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.903825     212.85397993546553     
+  936        15.3963       258.6767        45.2953       -76.8571     26006309     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.903825     212.85397993546553     
+  531         1.7460       396.6179        45.1911       -78.1393     26004587     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.202478     105.37958150200001     
+  530         8.8362       102.1632        44.5370       -76.1399     26004586     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.152588     192.86273999211184     
+  1051         5.6680       183.5091        44.8927       -76.4715     26006721     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.563063     176.12306843424304     
+  1052        40.7027       183.5091        44.8832       -76.4915     26006721     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.563063     176.12306843424304     
+  529         9.6057       229.0100        45.1144       -76.6576     26004585     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.010288     162.10564478273793     
+  1461         4.9500       165.8687        44.9366       -76.4307     26007815     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.611067     168.805953691     
+  1348        74.8071        65.3117        45.4088       -74.9009     26007688     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.820861     171.84957777670073     
+  1460         0.5472       164.6593        44.9488       -76.4069     26007814     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.684918     154.54955924     
+  215         2.0556       201.4386        45.7139       -77.8065     26002256     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.071136     208.645678516     
+  528        10.5390       102.5861        44.5538       -76.1034     26004584     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.715273     175.71055383438826     
+  527        23.5017       447.5810        45.5971       -78.4408     26004583     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.208167     178.32479801022166     
+  116         6.3018       160.3044        44.9354       -76.4131     26001096     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.142545     169.05927474422606     
+  140        11.9394       105.7285        45.1321       -75.8988     26001395     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.649574     198.95707332019788     
+  526         2.7864       261.9992        44.9335       -76.9283     26004582     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.789405     178.364124769     
+  842        28.0323       104.1486        44.5345       -76.0161     26005944     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.850385     174.17469175458444     
+  843        81.2187       104.1486        44.5477       -76.0294     26005944     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.850385     174.17469175458444     
+  975        24.2371       350.0910        45.0311       -77.4196     26006460     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.431560     183.64987572231485     
+  976       120.9860       350.0910        45.0078       -77.4375     26006460     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.431560     183.64987572231485     
+  782         1.0935        95.9161        44.5213       -76.1156     26005823     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.320287     174.356361908     
+  783         6.8292        95.9161        44.5146       -76.1245     26005823     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.320287     174.356361908     
+  1196         8.0367       277.3005        45.8764       -77.8067     26007154     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.335068     186.07862524009636     
+  1197        98.2749       277.3005        45.9074       -77.8345     26007154     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.335068     186.07862524009636     
+  525         0.5319        91.6409        44.5162       -76.1100     26004581     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.438911     176.865338227     
+  1031         0.6372       209.4457        45.1326       -76.6395     26006655     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.091389     182.0876732817417     
+  1032         1.8162       209.4457        45.1310       -76.6382     26006655     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.091389     182.0876732817417     
+  1338         0.6885       292.1334        45.8495       -77.7581     26007676     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.733142     119.14522978600002     
+  524         0.2367       280.6230        45.8506       -77.7532     26004580     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.121715     118.07507060200001     
+  1198         1.9800       288.4088        45.8502       -77.7201     26007157     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.690911     205.817408171     
+  1199         9.9180       288.4088        45.8452       -77.7219     26007157     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.690911     205.817408171     
+  1342        97.8192        69.9287        45.4823       -74.5192     26007681     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.151219     187.81155838044427     
+  523        39.5622       223.0717        45.2936       -76.8206     26004577     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.244574     183.70823872668427     
+  282        47.7405        98.5763        45.4445       -76.1780     26003027     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.538053     172.2280260886912     
+  1444       104.9274        78.9089        44.9412       -75.3853     26007797     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.463370     176.24099060584678     
+  153         0.2970        69.8235        45.0008       -75.3617     26001476     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.909863     193.380249336     
+  357        10.0080        57.0408        45.4960       -74.4314     26003612     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.753214     197.762937112     
+  1180         2.2932       448.3548        45.5454       -78.4221     26007050     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.508593     178.43416761844864     
+  1181        31.1589       448.3548        45.5410       -78.4578     26007050     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.508593     178.43416761844864     
+  1132        16.1034       421.6693        45.7634       -78.6242     26006918     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.605690     171.68183148372793     
+  1133        44.3424       421.6693        45.7662       -78.6109     26006918     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.605690     171.68183148372793     
+  1344         0.0342       403.8520        45.7856       -78.6519     26007683     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.639742     174.004127816     
+  57         0.7560       343.0006        45.0707       -77.7279     26000523     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.508890     190.211446725     
+  522         0.6174       412.6148        45.7891       -78.6513     26004576     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.496477     176.463782579     
+  208         6.4152       441.1160        45.5253       -78.4341     26002093     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.506139     209.71256000760877     
+  79        38.3805       379.8560        45.1028       -77.4661     26000753     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.060501     174.84906230216347     
+  446        27.4302       266.9547        45.8396       -77.6669     26004411     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.422622     188.0738673644317     
+  796         3.7373        98.0674        44.5293       -76.0871     26005847     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.733535     171.88400360037247     
+  797        11.8417        98.0674        44.5261       -76.0889     26005847     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.733535     171.88400360037247     
+  151       118.9773        90.1976        44.9307       -75.5092     26001468     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.826770     192.76751642333488     
+  704        16.5020       309.2449        44.9183       -77.1977     26005624     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.125429     178.47286127188386     
+  705       106.7134       309.2449        44.9323       -77.2199     26005624     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.125429     178.47286127188386     
+  398         8.1513        67.5239        45.1595       -74.7097     26003913     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.549802     178.334416629     
+  521         2.7099       291.5231        44.8399       -77.1701     26004574     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.504153     181.266610227     
+  520         2.1294       284.0884        44.8510       -77.1616     26004573     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.395846     177.35461088529584     
+  1224        60.7060       435.7761        45.7120       -78.3710     26007268     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.073170     179.2340073284137     
+  1225       217.3904       435.7761        45.6855       -78.3507     26007268     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.073170     179.2340073284137     
+  1192        26.0434       406.9326        45.8607       -78.2529     26007147     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.832150     182.64499407210928     
+  1193        98.8163       406.9326        45.8504       -78.2690     26007147     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.832150     182.64499407210928     
+  519        25.0704        97.8808        44.4734       -76.1336     26004571     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.287385     170.18650141166228     
+  1484        67.5711        95.7155        44.4391       -76.0614     26007842     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.519374     162.5925454715282     
+  8         0.1296        84.8311        44.4270       -76.1368     26000133     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.107750     160.346472164     
+  706         1.8692       285.4223        44.8443       -77.1377     26005626     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.010253     182.1272813934854     
+  707        14.8411       285.4223        44.8341       -77.1463     26005626     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.010253     182.1272813934854     
+  732        28.7987       180.0283        44.6851       -76.5849     26005696     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.602344     174.47303166906613     
+  733        88.7683       180.0283        44.7044       -76.5769     26005696     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.602344     174.47303166906613     
+  419       210.2922       415.0914        45.9089       -78.7494     26004144     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.244032     177.3223189589279     
+  518         3.7791       278.4712        44.8386       -77.1110     26004568     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.273834     165.9295776968514     
+  444        12.3336       388.6069        45.9070       -78.1927     26004400     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.762098     194.94134047281028     
+  130         4.9698       177.9606        44.7726       -76.5116     26001261     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.031979     174.9245269246436     
+  312        23.2911        68.2073        45.4088       -75.2212     26003319     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.999707     176.73878871550232     
+  517        21.1968       456.1184        45.6887       -78.2489     26004567     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.325510     185.73326741791905     
+  1413        28.2573        61.7961        45.1313       -74.6980     26007759     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.317296     179.84978331289474     
+  913         1.1122       381.1184        45.1806       -78.1528     26006167     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.225004     188.70054596222988     
+  914         4.6109       381.1184        45.1794       -78.1510     26006167     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.225004     188.70054596222988     
+  516         2.3427       396.1622        45.1686       -78.1364     26004566     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.039423     163.397535794     
+  515        35.9352       265.2280        45.6908       -77.7719     26004564     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.765360     221.8446823083302     
+  514       109.2816       141.6416        45.6356       -76.9628     26004562     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.441872     191.0158147383853     
+  513        14.8581       192.7118        44.8028       -76.4968     26004561     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.223472     174.30807525238794     
+  1218         0.5832       234.8130        45.6869       -77.7334     26007249     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.026997     181.49377167322115     
+  1219        17.6616       234.8130        45.7193       -77.7357     26007249     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.026997     181.49377167322115     
+  512         0.6786       182.9480        45.6829       -77.7144     26004560     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.159278     217.231104814     
+  764        24.7873       138.3343        44.6226       -76.3260     26005801     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.363389     178.2240376864811     
+  765        67.7237       138.3343        44.6290       -76.3670     26005801     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.363389     178.2240376864811     
+  1449        75.5154       105.7343        44.9192       -75.7006     26007802     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.572896     182.0930327930614     
+  1480         0.2646       129.5931        44.5817       -76.3178     26007837     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.270638     167.10229048     
+  511        41.5809       383.6250        45.9726       -78.5832     26004558     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.465936     163.84939033583666     
+  1414        44.7192        65.9012        45.1716       -74.6276     26007760     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.390473     177.46482013359721     
+  1003        12.3217       274.7267        44.8567       -77.0382     26006547     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.725399     170.37527013866992     
+  1004        38.0207       274.7267        44.8643       -77.0227     26006547     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.725399     170.37527013866992     
+  510         0.3429       268.7328        44.8944       -76.9558     26004557     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.532401     142.21998957800002     
+  1446        11.3022       102.2320        44.9794       -75.6659     26007799     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.191383     165.48010429034753     
+  396         1.1520        52.4561        45.1402       -74.5791     26003904     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.198711     191.369982832     
+  806         3.5222        97.8487        44.4463       -76.1520     26005888     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.516600     182.52413794237728     
+  807        10.5907        97.8487        44.4353       -76.1589     26005888     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.516600     182.52413794237728     
+  7         1.1664        90.2492        44.4330       -76.1440     26000132     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.625976     188.484425929     
+  997         1.1493       267.5730        44.9077       -76.9369     26006533     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.352958     178.306424797     
+  998         9.1566       267.5730        44.9058       -76.9391     26006533     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.352958     178.306424797     
+  509         0.0162       261.2003        44.9226       -76.9231     26004555     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       8.601355     248.905921936     
+  710         6.7596       176.6663        44.8030       -76.4393     26005640     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.299270     179.51364531088632     
+  711        29.0199       176.6663        44.8086       -76.4464     26005640     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.299270     179.51364531088632     
+  97       141.9498       251.2882        45.1056       -76.5853     26000998     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.118043     183.94511776718508     
+  126         8.8380       157.6796        44.8276       -76.3759     26001207     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.012054     179.639078877     
+  1222         2.3507       234.0427        45.6709       -77.6780     26007262     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.076687     191.58365048957177     
+  1223        38.1826       234.0427        45.6793       -77.6914     26007262     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.076687     191.58365048957177     
+  1404        19.6272        73.8066        45.2572       -75.3794     26007749     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.642218     171.19314010203883     
+  1340       135.7605       175.3161        45.7523       -77.2401     26007678     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.089185     190.67242515292386     
+  219         6.4422       189.7081        45.6623       -77.6282     26002270     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.736952     200.685451386     
+  329         6.1578        69.0204        45.2598       -75.3263     26003433     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.998589     182.876542756     
+  1442        32.6520       102.0313        45.0076       -75.6090     26007795     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.923267     159.23592621094465     
+  44        91.4670       351.7416        45.2622       -77.7529     26000385     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.236160     189.93854518265474     
+  1352        11.3571        68.1984        45.4257       -75.1688     26007692     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.074180     178.663899359     
+  1439        10.2618        89.3181        45.0359       -75.6514     26007791     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.669497     173.581131139     
+  149         0.0999        85.3132        45.0580       -75.6569     26001452     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.016779     98.616269934     
+  1232         5.8510       440.3986        45.6562       -78.1978     26007288     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.595816     184.08994778158942     
+  1233        30.6449       440.3986        45.6639       -78.2025     26007288     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.595816     184.08994778158942     
+  508         4.4946       454.3069        45.6496       -78.1480     26004552     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.456479     146.57998702390515     
+  342       113.4009       109.2573        45.1955       -75.8957     26003522     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.635457     213.44510728945193     
+  372        14.8428        59.8129        45.4258       -75.1297     26003738     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.169263     217.60840277323877     
+  1337        22.3929       149.3598        45.7982       -77.1653     26007674     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.666249     208.55823711553796     
+  240         0.7182       125.1068        45.8171       -77.1199     26002589     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.066556     208.339843774     
+  123        32.3361       162.1312        44.8088       -76.3700     26001184     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.813420     180.97349486177845     
+  122         9.3753       153.0652        44.8519       -76.3504     26001180     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.025102     185.4431251169976     
+  1456        40.3659       159.1446        44.9336       -76.3775     26007810     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.136562     163.76843178411306     
+  112         0.2097       139.6982        44.9737       -76.3615     26001084     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.055908     215.86607142082832     
+  1441         5.2749        73.5024        45.0016       -75.3896     26007794     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.550676     208.229170715     
+  152         0.0405        70.4153        45.0047       -75.3622     26001475     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.045057     227.313523224     
+  1351         2.2617        51.1365        45.4201       -75.0818     26007691     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.164496     184.680613971     
+  1335        21.3795       355.3816        45.9334       -78.1946     26007671     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.698223     198.63302697368138     
+  440         0.0117       270.3926        45.9589       -78.1831     26004363     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.283429     201.695354535     
+  507       106.5105       228.4957        45.8681       -77.5616     26004549     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.784801     186.78261590237693     
+  770        17.8848       129.6461        44.5645       -76.2933     26005810     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.997228     170.97228872133678     
+  771        44.9973       129.6461        44.5678       -76.2995     26005810     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.997228     170.97228872133678     
+  506         0.0828       124.4515        44.5503       -76.2347     26004548     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.702662     168.579779169     
+  1267        12.5532       142.2074        45.6750       -76.9090     26007411     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.133869     187.06624112542184     
+  1268        45.3051       142.2074        45.6849       -76.9167     26007411     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.133869     187.06624112542184     
+  47       150.5268       363.7641        45.1295       -77.5750     26000412     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.333468     178.77441848435186     
+  505         6.8112       141.8460        45.7275       -76.9990     26004547     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.864626     176.92924207999997     
+  1417        63.2970        99.2081        45.2482       -75.8340     26007763     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.694340     202.25690299496867     
+  1475         0.3303       140.2534        44.8742       -76.3041     26007829     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.429158     172.298163614     
+  504        15.5025       204.6868        45.6838       -77.6040     26004545     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.516769     185.68188116077883     
+  395        41.4279        53.7721        45.1280       -74.5727     26003903     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.952040     175.97517642128435     
+  1122         1.5390       413.7398        45.7970       -78.6683     26006901     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.753702     189.34887540097108     
+  1123         6.5133       413.7398        45.7989       -78.6691     26006901     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.753702     189.34887540097108     
+  503         1.9719       413.6553        45.8173       -78.6683     26004544     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.251713     170.667891523     
+  1410        30.7269        98.8397        45.2594       -75.7620     26007755     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.492896     183.99297105689655     
+  335         0.0171        79.3268        45.2601       -75.7073     26003473     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.796490     194.144003718     
+  1118         2.6108       432.0448        45.8308       -78.6527     26006887     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.397669     169.9677697928574     
+  1119        15.8113       432.0448        45.8464       -78.6341     26006887     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.397669     169.9677697928574     
+  502         0.8001       403.1754        45.8434       -78.6586     26004543     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.891734     195.008974363     
+  119        43.8723       143.8953        44.9233       -76.2873     26001160     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.947269     185.2745815293237     
+  1230         3.1625       436.1868        45.6511       -78.0974     26007286     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.497320     187.4733402078845     
+  1231        35.6320       436.1868        45.6462       -78.1045     26007286     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.497320     187.4733402078845     
+  501         4.7637       441.8125        45.6479       -78.0376     26004541     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.512302     187.36598737650124     
+  1265         1.4372       135.2111        45.7331       -77.0304     26007410     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.297044     182.53962787342775     
+  1266         7.8526       135.2111        45.7414       -77.0310     26007410     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.297044     182.53962787342775     
+  1447        95.1768       187.5389        45.0820       -76.4364     26007800     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.890108     181.37340645044148     
+  500        93.5991       335.0011        45.2209       -77.5465     26004539     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.704125     175.72474263003423     
+  1110         9.5959       416.6515        45.8610       -78.6761     26006869     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.652025     179.8173318772528     
+  1111        31.5323       416.6515        45.8648       -78.6919     26006869     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.652025     179.8173318772528     
+  499         0.0126       395.4329        45.8878       -78.6550     26004538     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.156266     177.84086542500003     
+  1234         9.4887       422.5216        45.6192       -78.0228     26007291     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.681660     193.33795285048757     
+  1235        30.5460       422.5216        45.6120       -78.0222     26007291     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.681660     193.33795285048757     
+  1108         1.7287       425.9066        45.8864       -78.6264     26006858     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.692469     167.73757761332445     
+  1109        26.8652       425.9066        45.8946       -78.6173     26006858     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.692469     167.73757761332445     
+  1450        39.3777       168.8530        45.0671       -76.3790     26007803     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.637799     192.40557905780207     
+  1451         0.1872       155.2599        45.0156       -76.3649     26007804     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.006348     193.613708129     
+  1452         0.0063       148.6311        45.0122       -76.3637     26007805     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.974895     116.54599435     
+  498         5.2560       410.7950        45.9070       -78.5759     26004537     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.680777     167.644268205     
+  1401         0.1341        67.8978        45.2709       -75.2923     26007746     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.605191     173.864480415     
+  1455         5.8356       152.1534        45.0068       -76.3696     26007809     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.715098     185.573550035     
+  220        35.8902       406.5267        45.6055       -77.9451     26002372     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.563296     195.0963066238532     
+  1339        70.7427       146.5064        45.7431       -77.1066     26007677     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.507161     202.89758074391395     
+  241         4.1454       134.8540        45.8020       -77.1129     26002590     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.528006     203.083247703     
+  1473         0.1440       137.1314        44.8966       -76.2542     26007827     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.265997     189.013987629     
+  117         0.8883       136.8911        44.9010       -76.2495     26001151     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.226027     193.942713356     
+  919        33.2881       399.6136        45.1233       -78.0443     26006183     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.694936     178.14030883965233     
+  920       186.2012       399.6136        45.1340       -78.0512     26006183     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.694936     178.14030883965233     
+  52         4.5684       393.0624        45.1189       -77.9084     26000501     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.729530     187.21444479716135     
+  1472        36.8172       137.7787        44.9191       -76.2135     26007826     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.657346     178.6366172133418     
+  118         0.0441       132.6903        44.8921       -76.1960     26001159     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.783756     218.529284312     
+  1100         8.9126       419.8657        45.9309       -78.5520     26006840     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.927729     175.170895533814     
+  1101        53.4259       419.8657        45.9151       -78.5430     26006840     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.927729     175.170895533814     
+  497         0.0288       395.9581        45.9570       -78.5354     26004536     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.509947     140.778919578     
+  844         5.3226       429.1707        45.5018       -78.3929     26005955     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.371616     195.00724105116205     
+  845        18.8010       429.1707        45.4969       -78.3976     26005955     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.371616     195.00724105116205     
+  496         1.1115       414.4659        45.4961       -78.3613     26004535     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.285999     189.210004663     
+  1098         0.6606       421.5016        45.9600       -78.5171     26006836     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.337353     149.4409158177064     
+  1099         8.3187       421.5016        45.9557       -78.5079     26006836     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.337353     149.4409158177064     
+  381        78.0003        70.7913        45.2964       -75.2846     26003821     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.623778     196.4903881885701     
+  495        12.1347       376.6647        45.9818       -78.4922     26004532     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.686683     177.4043996102431     
+  989         1.7583       271.4463        44.9443       -76.8887     26006509     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.247601     171.6309201811198     
+  990        16.5198       271.4463        44.9461       -76.8950     26006509     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.247601     171.6309201811198     
+  84         1.8837       269.7534        44.9625       -76.8562     26000812     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       7.569726     167.108193778     
+  1061         1.1357       136.2258        44.8847       -76.1746     26006729     LAKE     LAKE     LAKE     [NONE]     [NONE]       0.688302     184.4907399949738     
+  1062        17.8543       136.2258        44.9013       -76.1690     26006729     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.688302     184.4907399949738     
+  814        25.4339       115.0532        44.4503       -76.3075     26005903     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.489931     174.17911388066253     
+  815        77.5819       115.0532        44.4691       -76.3049     26005903     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.489931     174.17911388066253     
+  1485         0.3420       106.1656        44.4206       -76.3089     26007843     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.773830     182.88956841     
+  494        10.7370       291.7072        44.9814       -76.8185     26004531     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.214187     180.18315769220243     
+  1469         7.6059       134.6008        44.8957       -76.1460     26007823     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.731665     185.11540124199996     
+  493         1.5237       130.3155        44.8955       -76.1182     26004530     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.072776     189.293803652     
+  54        19.2582       368.2953        45.0957       -77.8776     26000518     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.668173     175.15004371498338     
+  492        13.3866       114.1165        44.4177       -76.2928     26004529     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.382157     157.57988543032425     
+  816         0.5436       111.5689        44.3924       -76.3268     26005908     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.186379     165.40334627920245     
+  817        10.5930       111.5689        44.3943       -76.3062     26005908     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.186379     165.40334627920245     
+  491         4.1751        99.3811        44.3800       -76.3392     26004528     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.998922     162.591114236     
+  9        46.5561        97.7357        44.3952       -76.1286     26000166     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.744943     176.38093018723987     
+  1462        21.5055       374.5283        45.0612       -77.8704     26007816     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       7.084853     168.8097363483459     
+  1463         1.2483       365.2515        45.0512       -77.8578     26007817     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       7.554078     180.501094011     
+  1374         0.0153       339.3478        45.5754       -77.8869     26007717     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.941102     153.691327712     
+  10        33.6033       110.5888        44.3890       -76.2103     26000172     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.874565     183.5111551486785     
+  144        80.5374        74.7890        45.0236       -75.3353     26001427     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.552614     173.70296747826973     
+  56        38.0718       360.3043        45.0571       -77.8077     26000522     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.724017     182.6796036693977     
+  490        36.0747       398.1065        45.5522       -77.9086     26004526     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       7.002046     188.40361081371012     
+  818        15.6959       103.2516        44.3343       -76.4081     26005910     LAKE     LAKE     LAKE     [NONE]     [NONE]       1.828971     173.39628924149258     
+  819        72.6265       103.2516        44.3418       -76.3981     26005910     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.828971     173.39628924149258     
+  1486        12.3165        94.6137        44.3464       -76.1688     26007844     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.172106     171.04081842359074     
+  1487         0.1656        84.7532        44.3274       -76.1655     26007845     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.011544     226.93370601     
+  13         0.3321        85.2893        44.3288       -76.1592     26000188     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.954436     207.782369861     
+  1490        36.9495        97.2823        44.2669       -76.4561     26007849     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.623352     174.1032035891006     
+  20         0.0009        74.7104        44.2343       -76.4746     26000213     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.771053     225.001144409     
+  1059        15.3168       260.4212        44.9103       -76.8032     26006726     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.273546     169.4662069412463     
+  1060        49.7568       260.4212        44.9193       -76.8135     26006726     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.273546     169.4662069412463     
+  1428        74.4012        77.2559        45.0723       -75.2529     26007778     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.596753     172.07892704938826     
+  1429         0.2142        71.3261        45.0997       -75.2298     26007779     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.701342     229.1906468     
+  134         3.2427        72.7782        45.0944       -75.2233     26001375     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.656644     186.143361093     
+  863        10.6273       426.7415        45.4873       -78.2899     26006017     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.102722     180.39347706416123     
+  864        68.0075       426.7415        45.4752       -78.3079     26006017     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.102722     180.39347706416123     
+  1400         1.0485       407.6135        45.4919       -78.2373     26007745     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.682656     148.054515719     
+  1273        30.0586       237.2095        45.6407       -77.5290     26007462     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.843817     191.11559781621995     
+  1274       131.4131       237.2095        45.6849       -77.5331     26007462     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.843817     191.11559781621995     
+  489         0.9342       174.7434        45.6254       -77.4716     26004525     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.204121     181.369796526     
+  1275         0.1161       177.9448        45.6205       -77.4703     26007463     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.882821     194.00165841     
+  1276         0.5337       177.9448        45.6200       -77.4692     26007463     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.882821     194.00165841     
+  488        27.2142       271.1789        44.9617       -76.7685     26004523     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.810971     175.02011116829175     
+  1057         0.1323       251.4847        44.9401       -76.7339     26006724     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.842763     179.808973996     
+  1058         1.5048       251.4847        44.9408       -76.7394     26006724     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.842763     179.808973996     
+  487        24.9759       446.7700        45.4773       -78.2088     26004522     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.725108     171.0696799590647     
+  486         7.0812       245.0748        44.9479       -76.7236     26004521     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.286422     189.395203363     
+  1248         1.1665       420.0763        45.5124       -78.2131     26007379     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.361791     167.13587657225338     
+  1249         7.6886       420.0763        45.5143       -78.2078     26007379     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.361791     167.13587657225338     
+  485        66.1095       217.3628        45.6345       -77.4316     26004519     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.159374     179.51516874819478     
+  227        38.5011       429.5176        45.5062       -78.1457     26002450     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.599846     190.0175975457632     
+  1336         1.6794       130.7597        45.8209       -77.1112     26007673     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.944852     107.136014074     
+  237         0.0027       111.6435        45.8293       -77.1131     26002576     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.724518     93.505635579     
+  1053         0.6435       246.5842        44.9395       -76.6926     26006722     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.268365     172.15636728913975     
+  1054        59.7105       246.5842        44.8979       -76.7168     26006722     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.268365     172.15636728913975     
+  484         1.3266       216.1960        44.9311       -76.6694     26004518     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.451979     158.001507834     
+  1457         0.0027       308.4697        45.0667       -77.7334     26007811     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.167274     285.6340758006     
+  391       128.1474        75.6280        45.1438       -75.1656     26003873     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.643816     170.54548443984626     
+  386        10.6830        68.3956        45.2183       -75.1369     26003855     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.678193     154.68788337329192     
+  226        17.2278       404.4045        45.4954       -78.0706     26002419     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.796599     162.6598741396387     
+  1049         2.7079       234.7334        44.9471       -76.6353     26006719     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.595895     180.21207964920447     
+  1050        38.9828       234.7334        44.9572       -76.6437     26006719     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.595895     180.21207964920447     
+  483         1.6884       199.7792        44.9567       -76.6140     26004517     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       8.730458     185.24191485200004     
+  1055        76.5627       135.1563        44.7573       -76.2206     26006723     LAKE     LAKE     LAKE     [NONE]     [NONE]       1.498846     179.18414711750347     
+  1056       171.5484       135.1563        44.7539       -76.2281     26006723     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.498846     179.18414711750347     
+  1467         1.9944       125.3942        44.8961       -76.0715     26007821     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.651715     192.570453821     
+  1468         0.0351       123.2432        44.8917       -76.0632     26007822     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.052401     165.764312793     
+  482         0.0198       123.3457        44.8918       -76.0617     26004516     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.024792     164.622406006     
+  1047         6.2532       211.1006        44.9650       -76.5721     26006712     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.107558     179.05723050335746     
+  1048        72.0738       211.1006        44.9427       -76.5928     26006712     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.107558     179.05723050335746     
+  114         4.6332       175.8313        44.9754       -76.5250     26001094     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.652686     179.27052477821331     
+  49       149.7303       358.1758        45.1344       -77.7429     26000416     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.008655     175.89666678996366     
+  1397        72.2547       404.9346        45.5585       -78.0190     26007742     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.897310     179.0112849528833     
+  1407         0.0072        60.4572        45.2392       -75.1308     26007752     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.368438     128.849761009     
+  481        15.2964       369.5624        45.5106       -78.0172     26004511     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.412190     208.16747390240928     
+  45        24.8571       333.7234        45.2094       -77.7205     26000386     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.609718     192.49172018322022     
+  1079         1.8053       129.2418        44.8965       -76.0431     26006769     LAKE     LAKE     LAKE     [NONE]     [NONE]       0.791563     178.0332590858312     
+  1080        29.2690       129.2418        44.9229       -76.0424     26006769     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.791563     178.0332590858312     
+  1464         1.0755       123.7462        44.8928       -76.0264     26007818     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.920027     180.646994968     
+  480         0.2970       119.8721        44.8978       -76.0194     26004510     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.987357     227.076769973     
+  110        88.8399       177.4298        44.9714       -76.4680     26001078     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.806589     179.55898687729328     
+  1081         0.3816       122.6947        44.8928       -76.0097     26006770     LAKE     LAKE     LAKE     [NONE]     [NONE]       1.095821     213.903469919     
+  1082         2.3814       122.6947        44.8923       -76.0139     26006770     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.095821     213.903469919     
+  167        11.2761       124.7230        44.9060       -75.9997     26001622     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.860628     195.6711621330937     
+  385        45.8199        68.7932        45.2441       -75.1595     26003828     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.642861     174.09481781982169     
+  1096        26.4243       363.1856        46.0198       -78.4646     26006818     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.681857     184.09752903795834     
+  1097        88.0620       363.1856        46.0085       -78.4695     26006818     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.681857     184.09752903795834     
+  1277        36.5729       201.2712        45.5739       -77.3360     26007468     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.024280     182.9453687185543     
+  1278       140.0242       201.2712        45.5925       -77.3199     26007468     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.024280     182.9453687185543     
+  1354         0.4410       176.9699        45.5770       -77.2356     26007694     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.215046     199.110054275     
+  479        18.9855       193.6380        45.5559       -77.2242     26004508     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.427322     187.92051488077797     
+  382         4.0419        64.2395        45.2873       -75.1151     26003823     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.608540     160.632944418     
+  478        41.8203       370.7571        46.0287       -78.3580     26004507     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.539429     187.282844975734     
+  1281         3.0733       198.7008        45.5589       -77.1749     26007470     LAKE     LAKE     LAKE     [NONE]     [NONE]       1.991934     202.26524783891603     
+  1282        21.9827       198.7008        45.5391       -77.1823     26007470     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.991934     202.26524783891603     
+  477         6.8940       183.8324        45.5515       -77.1411     26004505     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.770841     180.90790440066814     
+  1471         0.3006       111.2492        44.8831       -75.9846     26007825     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.917151     178.595339309     
+  172         5.9310       108.9694        44.8721       -75.9739     26001636     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.908895     191.762660504     
+  166        20.7369       114.6867        44.8806       -75.9675     26001616     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.734344     190.03991532792466     
+  1465         0.6993       109.7561        44.8889       -75.9303     26007819     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.081948     163.944984024     
+  171        13.9212       109.5579        44.8647       -75.9364     26001635     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.744270     186.2852480154315     
+  1283         0.3060       182.8577        45.5419       -77.1136     26007473     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.343035     168.30126709425784     
+  1284         2.8530       182.8577        45.5450       -77.1120     26007473     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.343035     168.30126709425784     
+  1370         3.4425       177.5816        45.5334       -77.0919     26007713     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.347189     223.688947731     
+  264        47.2176       169.9304        45.5146       -77.0589     26002834     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.401876     202.44311167384654     
+  1373        28.4346       154.4599        45.4891       -76.9532     26007716     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.583186     185.72430519290745     
+  1372         0.0126       132.9106        45.5092       -76.9335     26007715     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       8.387136     221.090070452     
+  169        15.6771       110.9500        44.8630       -75.8964     26001627     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.770419     174.30559661963665     
+  1437        15.6978       317.6285        45.2448       -77.6775     26007788     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.171782     164.8362567668737     
+  476        35.8704       327.8039        45.2553       -77.6383     26004504     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.860924     181.4750012938096     
+  259        72.1035       143.2069        45.5390       -76.9015     26002806     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.996554     201.0616044201701     
+  1458        23.7861       111.5826        44.8945       -75.8640     26007812     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.761599     163.05314156017633     
+  1459         0.1017       103.6899        44.9163       -75.8384     26007813     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.336827     293.6886145161     
+  475         0.0729       100.8623        44.9182       -75.8364     26004503     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.059690     240.83879649099998     
+  1077         0.6642       107.9848        44.9311       -75.8290     26006767     LAKE     LAKE     LAKE     [NONE]     [NONE]       1.327175     171.620141476     
+  1078         7.9560       107.9848        44.9288       -75.8329     26006767     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.327175     171.620141476     
+  1453         1.0224       102.6053        44.9503       -75.8233     26007807     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.979224     186.207700926     
+  160         2.2302        98.5756        44.9573       -75.8146     26001548     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.554690     147.80172237607144     
+  1094         6.4656       326.0261        45.9929       -78.2913     26006817     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.031269     173.77435981131882     
+  1095        18.8154       326.0261        45.9944       -78.3069     26006817     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.031269     173.77435981131882     
+  261        17.6193       132.0823        45.4909       -76.8213     26002817     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.583045     193.54420985810015     
+  1448        38.0007       112.9572        44.9048       -75.8045     26007801     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.794467     179.6626807486716     
+  156         0.4554       100.6330        44.9815       -75.8108     26001534     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.831484     237.924701467     
+  111         3.5397       145.0885        44.9901       -76.3598     26001083     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.557196     170.82850264496523     
+  439        82.4616       340.5567        45.9813       -78.2321     26004362     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.712263     188.13023320088928     
+  263        58.2048       151.1793        45.5199       -76.7831     26002831     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.296921     187.61125144735232     
+  284        20.6982       142.4214        45.4643       -76.7162     26003061     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.443876     161.8131841135476     
+  1440       102.3858        98.3820        44.9919       -75.7348     26007792     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.776020     174.92345149493025     
+  148        10.3536        90.1870        45.0431       -75.6763     26001451     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.652762     191.79546463412777     
+  1381         0.3519       119.9185        45.4769       -76.6935     26007724     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.474836     150.046377452     
+  1379         0.2160       115.1465        45.4783       -76.6907     26007722     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.646747     139.21911780799996     
+  1378         0.0243        93.6242        45.4805       -76.6893     26007721     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.610696     201.233092909     
+  1376         0.0315        90.9351        45.4809       -76.6877     26007719     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.541839     140.96482281     
+  1366        93.3291       147.1717        45.4837       -76.6389     26007709     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.300753     180.20555660451302     
+  1357         2.4255        92.1330        45.5029       -76.5565     26007698     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.933017     166.091304064     
+  1393         6.0120        64.4655        45.3091       -75.1001     26007737     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.843238     173.06861633732635     
+  279         0.9459        88.6395        45.5106       -76.5631     26003018     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.521934     240.18008564500002     
+  1392         0.0612        61.3050        45.3180       -75.0931     26007736     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.094453     206.826087797     
+  1390         0.1161        59.4623        45.3201       -75.0933     26007734     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.652553     196.007821688     
+  1355        79.3116        67.5563        45.3476       -75.1429     26007695     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.221948     186.17626476667854     
+  373         0.0441        54.6651        45.3962       -75.0650     26003743     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.543731     209.493305361     
+  897         4.0201       323.4875        45.2785       -77.5878     26006099     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.813806     169.8517061327987     
+  898        21.7766       323.4875        45.2835       -77.5707     26006099     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.813806     169.8517061327987     
+  1454         2.1042       145.7765        44.9929       -76.3491     26007808     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.229720     166.62511930298163     
+  474         9.4590       149.6468        44.9880       -76.3325     26004494     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.341682     149.0309313705444     
+  370         5.1750        64.6056        45.4038       -75.0698     26003736     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.891470     173.046557376     
+  473        40.4028       363.4653        45.3100       -77.6285     26004492     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.551497     177.14182554762118     
+  106         1.2258       145.5494        45.0307       -76.3104     26001038     LAKE     LAKE     LAKE     [NONE]     [NONE]       1.134038     174.90395565195794     
+  107        23.8005       145.5494        45.0247       -76.3141     26001038     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.134038     174.90395565195794     
+  472        34.4871       300.2092        45.9520       -78.1333     26004490     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.601323     191.28845198292834     
+  104        57.7701       161.8049        45.0810       -76.3044     26001033     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.983776     182.17367708338543     
+  871        44.5498       370.9936        45.4577       -77.8556     26006043     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.406974     182.1908063257952     
+  872       188.8202       370.9936        45.4683       -77.8743     26006043     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.406974     182.1908063257952     
+  1411         5.8437       401.1931        45.3955       -77.7847     26007757     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.812132     189.6243574573913     
+  471         9.3933       149.3153        45.0641       -76.2367     26004489     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.702245     186.42978629882714     
+  231        13.9041       366.2353        45.4149       -77.7649     26002507     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.033477     190.624200105     
+  470         3.7269       306.2098        45.4048       -77.7318     26004488     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.587111     197.966292063     
+  137        69.9534        90.5424        45.0784       -75.6131     26001378     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.498867     153.03436904903452     
+  133         0.9846        86.3971        45.1431       -75.6396     26001368     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.473322     181.568379491     
+  1029        24.8450       139.9612        45.0654       -76.1852     26006643     LAKE     LAKE     LAKE     [NONE]     [NONE]       0.970829     174.67191125932428     
+  1030        88.3237       139.9612        45.0762       -76.1835     26006643     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.970829     174.67191125932428     
+  1435         2.5884       137.7338        45.1337       -76.1533     26007785     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.872471     164.970481453     
+  1434         0.9027       137.0847        45.1371       -76.1422     26007784     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.178424     197.094468629     
+  879        22.4782       334.7446        45.4163       -77.6899     26006054     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.085918     185.52054183722552     
+  880        77.6540       334.7446        45.4391       -77.6990     26006054     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.085918     185.52054183722552     
+  469         2.2986       326.1952        45.3780       -77.6444     26004486     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.471664     231.77150871     
+  877         1.4418       320.1545        45.3918       -77.6337     26006053     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.327639     187.21639268014215     
+  878        14.8815       320.1545        45.4079       -77.6390     26006053     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.327639     187.21639268014215     
+  234         2.1150       290.0283        45.3796       -77.6202     26002531     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.699540     182.39307948262552     
+  1184         6.3747       290.5949        45.9798       -78.0427     26007072     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.679631     178.18773249130425     
+  1185        96.5349       290.5949        45.9894       -78.0248     26007072     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.679631     178.18773249130425     
+  1334         4.0518       321.3684        46.0292       -78.0132     26007669     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       8.128802     166.636164969     
+  1430        57.9312       134.9863        45.1426       -76.1052     26007780     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.744862     181.97798013242002     
+  468         0.6651       129.2678        45.1800       -76.1206     26004484     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.662386     194.923400188     
+  438         4.6035       283.9234        46.0374       -77.9922     26004284     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       9.172479     163.270267425     
+  1426         8.3286        89.7962        45.1640       -75.6504     26007775     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.877531     189.6778417814947     
+  1425         0.0036        86.2835        45.1621       -75.6344     26007774     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.598554     156.432929039     
+  1017         1.5129       135.7570        45.2010       -76.1571     26006595     LAKE     LAKE     LAKE     [NONE]     [NONE]       0.996895     186.26310437193555     
+  1018        83.7144       135.7570        45.1983       -76.1548     26006595     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.996895     186.26310437193555     
+  1423         0.2853       129.1150        45.2297       -76.1953     26007772     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.894481     204.174095923     
+  1424         0.0225       113.8868        45.2259       -76.1972     26007773     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.647767     121.968700256     
+  301         6.6285       134.0385        45.2059       -76.1955     26003257     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.726031     192.41669212474213     
+  337        60.4413        92.4332        45.2044       -75.6371     26003479     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.968269     175.0096024493902     
+  300        53.1009       143.7456        45.1841       -76.2298     26003223     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.152455     194.30861747277314     
+  1350         1.9674        52.3210        45.4184       -75.0611     26007690     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.387941     125.86243543658631     
+  369        13.3344        54.8717        45.4240       -75.0456     26003710     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.744676     154.46470767605325     
+  1415         0.0144        83.2262        45.2488       -75.7043     26007761     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.018668     92.90925884199999     
+  336         7.7400        93.0001        45.2475       -75.7079     26003474     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.265748     189.827596325     
+  467        45.3231       365.3362        45.3497       -77.6451     26004478     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.579750     180.18190089475658     
+  466       191.6604       256.8864        46.0333       -77.8428     26004477     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.571258     195.14742451169332     
+  366        35.7543        59.4394        45.4498       -75.0169     26003693     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.641980     183.22217631286998     
+  1188         3.2517       197.9450        45.9530       -77.6168     26007103     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.085413     200.94004815339494     
+  1189        36.8469       197.9450        45.9515       -77.6225     26007103     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.085413     200.94004815339494     
+  298        33.8814       123.8568        45.2780       -76.2419     26003195     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.962045     189.3272348645331     
+  441         2.4795       175.0793        45.9243       -77.5453     26004364     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.867643     187.879979178     
+  465        49.7205       187.5076        45.9106       -77.4803     26004476     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.719597     196.53593106369527     
+  1408        42.1362       154.1041        45.3143       -76.3212     26007753     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.050551     193.6183750383581     
+  291        14.9211       113.5831        45.3347       -76.2839     26003141     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.778723     176.69164861065096     
+  1347        24.4503        60.6307        45.4742       -74.9923     26007687     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.585720     195.49626916920235     
+  364        10.6488        53.8164        45.4504       -74.9299     26003684     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.623903     176.154468622     
+  362         0.2988        46.8478        45.4583       -74.9139     26003676     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.042452     167.484292237     
+  1395        82.3347       105.4564        45.3750       -76.2825     26007739     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.133014     183.16925834994035     
+  1389         2.0961        93.4526        45.4204       -76.2552     26007733     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.949824     179.15597556     
+  1388         0.0963        85.2808        45.4248       -76.2542     26007732     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.682800     216.262731196     
+  1383         3.7251        86.0301        45.4269       -76.2721     26007726     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.561687     200.168232078     
+  287         0.4734        77.0168        45.4427       -76.2796     26003065     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.044011     155.03028547900004     
+  328        63.8415        96.9963        45.2847       -75.6658     26003418     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.945352     168.31410134843566     
+  1343        84.1905        58.5474        45.5113       -74.9184     26007682     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.706433     184.86511080889187     
+  358         0.0324        46.1604        45.5181       -74.9774     26003630     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.991073     172.304037836     
+  324         3.6936        88.8517        45.3316       -75.6998     26003397     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.426332     175.970772928     
+  1394        27.5058        91.7514        45.3398       -75.7192     26007738     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       0.881464     170.79790233564776     
+  1496         0.7722        74.8855        45.3747       -75.6941     26008393     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.139599     172.451043308     
+  1386         0.2511        66.9353        45.3794       -75.6971     26007730     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.583764     149.015437758     
+  321         2.6649        62.8091        45.3864       -75.6881     26003369     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.767302     171.228999158     
+  1341        61.3935        63.3799        45.5372       -75.0331     26007680     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.446459     204.5422982977445     
+  356         5.1489        51.3927        45.5681       -75.0726     26003602     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.543010     179.772183644     
+  1362        20.6253        68.0405        45.4191       -75.6561     26007704     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.388375     158.627717374206     
+  1361         3.6027        61.3542        45.4358       -75.6833     26007702     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.526350     166.26169123899996     
+  1360         0.2043        56.4349        45.4420       -75.6919     26007701     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.379489     175.513945172     
+  315         0.0045        52.5350        45.4418       -75.6954     26003326     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.691135     118.233114624     
+  1263         2.0699       169.9173        45.8808       -77.3867     26007398     LAKE     LAKE     LAKE     [NONE]     [NONE]       4.259570     191.17141447927173     
+  1264        18.4474       169.9173        45.8890       -77.4075     26007398     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       4.259570     191.17141447927173     
+  464         0.9432       155.3992        45.8806       -77.3455     26004475     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.999937     197.399175465     
+  1261         0.5857       151.6215        45.8827       -77.3266     26007397     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.235687     166.53408736     
+  1262         2.3897       151.6215        45.8816       -77.3257     26007397     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.235687     166.53408736     
+  453         1.6443       144.0734        45.8940       -77.3027     26004441     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.507970     171.26802274996334     
+  451        19.6281       149.4878        45.8905       -77.2768     26004439     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.522596     183.76324105298244     
+  893         2.5681       349.6874        45.3437       -77.5818     26006081     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.460900     181.32725519376726     
+  894        34.4003       349.6874        45.3676       -77.5516     26006081     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.460900     181.32725519376726     
+  1422         2.7486       317.3601        45.3276       -77.5536     26007770     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.046766     140.69383546200004     
+  270         4.0356       307.6816        45.3325       -77.5342     26002978     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.238836     206.096431998     
+  463        15.3036       385.7374        45.3623       -77.5030     26004473     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.806244     166.1705482479067     
+  63        39.5037       342.4531        45.3179       -77.5007     26000579     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.803989     183.72408960829304     
+  61         0.4995       283.0262        45.2925       -77.4574     26000577     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.263300     121.51909660600003     
+  64         1.7991       302.6708        45.2900       -77.4455     26000580     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.833812     202.794197094     
+  72        73.5381       331.2830        45.2576       -77.4115     26000622     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.330186     176.6943053761067     
+  1436        14.4198       326.0175        45.2241       -77.3416     26007786     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       7.297473     189.74264385547147     
+  70        54.5355       323.1104        45.2240       -77.2900     26000618     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.286010     190.16377888099692     
+  69         7.8633       295.1370        45.2455       -77.2274     26000595     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.970994     165.453498985     
+  1433        12.8277       336.7024        45.2764       -77.1984     26007783     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       7.508269     161.80512922353876     
+  462         7.9443       301.1377        45.2518       -77.1839     26004472     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       7.119525     188.092421578     
+  945        32.2836       302.8774        45.1948       -76.9991     26006362     LAKE     LAKE     LAKE     [NONE]     [NONE]       5.718833     178.61614791566473     
+  946       255.0405       302.8774        45.2086       -77.0358     26006362     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.718833     178.61614791566473     
+  461         0.0027       219.2139        45.1954       -76.9070     26004471     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]      21.080368     315.5840415955     
+  1019        13.3855       273.0464        45.1890       -76.8471     26006618     LAKE     LAKE     LAKE     [NONE]     [NONE]       6.733260     173.1418621688316     
+  1020       137.8091       273.0464        45.1939       -76.8394     26006618     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       6.733260     173.1418621688316     
+  460         0.1530       207.4901        45.2459       -76.7603     26004470     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.573005     243.272498654     
+  1015        13.9807       184.6936        45.2773       -76.7424     26006585     LAKE     LAKE     LAKE     [NONE]     [NONE]       2.844301     178.55390424288444     
+  1016        77.0219       184.6936        45.2724       -76.7016     26006585     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       2.844301     178.55390424288444     
+  459         0.0018       147.9911        45.3038       -76.7113     26004469     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       5.146936     164.734054565     
+  1295         3.8159       178.7844        45.3624       -76.6144     26007500     LAKE     LAKE     LAKE     [NONE]     [NONE]       3.527747     179.70570343500734     
+  1296        49.4920       178.7844        45.3601       -76.6244     26007500     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       3.527747     179.70570343500734     
+  458         0.0243       152.1515        45.4078       -76.5076     26004468     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       9.711051     252.218160135     
+  1293        10.0522       134.2870        45.4033       -76.3891     26007496     LAKE     LAKE     LAKE     [NONE]     [NONE]       1.847466     200.50626976402387     
+  1294        83.5964       134.2870        45.3886       -76.4647     26007496     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.847466     200.50626976402387     
+  1387         9.6795       101.6628        45.4234       -76.3590     26007731     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.290739     198.33287726     
+  288         1.2636        84.3538        45.4388       -76.3507     26003073     Landuse_Land_HRU     Veg_Land_HRU     Soil_Land_HRU     [NONE]     [NONE]       1.712946     192.112758792     
+:EndHRUs
+:PopulateHRUGroup Lake_HRUs With LANDUSE EQUALS LAKE     
+:RedirectToFile Lakes.rvh
+:SubBasinGroup   Allsubbasins
+       26007852   26006754   26005633   26007572   26006773   26007385   26006855   26006757   26007000   26007571
+       26006356   26006759   26007667   26006516   26005718   26005642   26007668   26007219   26006760   26007627
+       26007214   26007636   26002686   26007854   26004167   26009161   26008978   26008926   26008594   26006135
+       26004191   26003558   26003497   26008367   26001761   26006899   26001729   26005875   26006051   26001803
+       26004001   26007663   26003271   26009013   26002634   26007521   26006470   26006467   26004009   26005832
+       26006271   26003010   26005745   26003572   26006962   26003006   26007005   26005644   26003012   26004453
+       26007041   26004169   26005820   26004419   26005397   26009124   26004026   26002598   26003084   26005817
+       26006474   26003016   26001723   26004450   26000203   26005350   26006880   26003273   26006434   26006313
+       26002617   26007850   26005308   26005305   26003871   26001605   26003311   26002602   26006739   26000301
+       26000224   26000297   26000295   26006621   26006152   26005665   26007747   26003561   26007039   26006172
+       26002615   26003590   26005684   26005841   26002074   26001773   26005233   26005226   26005927   26005224
+       26000201   26005922   26004173   26005912   26001653   26000217   26003983   26005890   26007207   26003585
+       26002573   26006973   26006080   26000218   26006358   26002879   26006159   26002594   26006347   26001262
+       26003281   26006141   26003353   26005140   26002582   26002604   26003867   26003548   26005976   26004444
+       26001690   26003976   26003014   26006025   26003384   26000300   26005703   26005124   26005924   26000180
+       26003008   26003303   26003003   26002999   26001772   26005098   26004165   26001438   26005821   26000215
+       26006688   26005704   26000216   26004171   26007305   26000196   26005081   26001815   26006394   26006658
+       26005055   26001024   26005652   26001998   26006916   26000411   26006948   26005051   26005046   26005044
+       26001514   26007242   26000030   26006968   26003521   26007511   26000817   26004189   26006061   26006671
+       26005777   26006281   26003869   26003700   26007366   26007708   26003339   26007740   26007040   26000241
+       26000212   26004991   26001893   26004982   26003417   26006539   26000582   26003580   26001607   26006531
+       26001034   26004183   26006980   26007847   26004238   26005843   26007227   26004960   26004958   26002516
+       26007836   26004956   26006946   26001187   26006436   26004954   26004952   26001092   26004950   26004005
+       26004943   26003686   26006989   26000591   26004938   26004937   26006935   26007647   26001701   26004934
+       26006214   26005827   26002412   26004928   26004925   26004924   26004921   26007595   26006971   26004915
+       26005929   26007502   26006472   26003933   26000827   26007549   26000706   26006573   26004927   26007664
+       26004909   26007652   26004907   26003036   26007163   26006423   26003183   26007693   26007391   26005822
+       26005860   26001753   26003947   26004886   26006555   26007727   26003368   26000815   26005911   26006400
+       26005790   26003401   26004054   26004871   26007152   26006079   26007248   26005913   26000116   26007743
+       26006913   26000223   26005930   26004437   26001833   26004864   26006399   26004861   26001058   26006294
+       26002506   26000519   26000705   26007042   26004856   26004855   26004853   26007510   26003737   26001783
+       26004195   26007120   26002699   26007395   26000804   26004440   26004213   26004844   26003399   26006466
+       26006455   26006683   26007367   26004838   26001689   26004831   26003885   26000057   26004830   26005643
+       26000873   26004822   26006682   26004819   26003974   26007477   26004818   26003567   26005693   26004811
+       26000714   26006211   26006960   26001189   26006807   26001221   26000811   26000199   26004803   26005919
+       26004802   26007509   26004800   26005761   26004799   26007714   26003776   26007782   26005862   26004193
+       26002138   26006453   26004791   26003293   26004790   26003566   26000997   26005934   26004786   26001699
+       26000756   26006746   26004782   26004781   26007383   26006783   26004282   26006009   26000415   26007052
+       26006988   26006881   26006226   26004773   26004772   26007848   26006422   26004769   26006638   26004766
+       26000239   26004765   26000211   26007469   26001932   26004760   26007483   26004761   26005864   26006560
+       26005895   26005826   26006541   26006175   26006014   26004756   26001793   26006457   26004755   26000117
+       26004749   26004747   26006504   26004745   26001661   26003985   26000872   26007273   26004742   26004218
+       26006774   26004738   26003026   26004735   26006734   26004734   26002820   26002596   26004730   26003981
+       26005754   26004729   26007169   26007834   26000028   26004727   26004726   26007835   26003062   26004725
+       26000227   26005981   26003150   26007685   26000240   26006094   26002094   26001377   26004723   26004724
+       26007563   26003358   26001819   26004722   26006443   26007684   26004721   26006028   26003151   26004720
+       26007251   26003275   26006000   26004719   26003287   26005815   26001389   26004718   26002184   26002384
+       26003182   26001931   26004715   26004714   26006679   26000253   26001376   26000576   26004712   26002262
+       26001028   26003496   26007192   26001057   26003681   26000173   26002796   26007725   26006947   26002255
+       26001396   26001615   26005960   26004704   26006642   26003675   26007841   26000279   26001643   26003991
+       26007358   26005648   26004706   26001437   26004705   26003387   26004702   26004703   26003554   26004701
+       26001547   26003480   26001179   26002588   26003064   26004467   26004700   26004697   26001023   26004696
+       26005685   26005986   26002835   26006071   26004695   26000502   26001628   26004410   26000527   26001390
+       26005858   26004693   26007700   26004692   26006401   26003318   26006406   26007789   26006111   26003978
+       26003824   26004691   26000995   26002836   26003359   26004689   26004687   26006905   26004686   26006142
+       26007697   26000710   26004027   26007851   26005748   26007321   26003550   26001428   26002515   26007045
+       26004683   26007718   26000214   26004682   26001831   26004681   26006395   26000711   26004680   26004678
+       26004679   26007769   26001533   26006149   26004676   26000805   26007798   26002665   26003547   26005793
+       26004672   26007744   26004670   26002731   26004668   26007023   26002385   26007278   26006513   26000324
+       26002807   26004665   26007710   26007493   26005763   26001641   26004664   26004663   26006800   26001538
+       26001809   26004428   26003634   26002451   26001000   26002137   26004660   26000268   26000434   26007584
+       26002269   26005766   26005741   26004657   26004656   26002188   26004655   26007484   26002418   26003746
+       26004653   26001162   26003775   26003325   26001409   26001702   26004179   26004083   26004082   26001997
+       26002837   26000578   26000590   26005931   26003827   26002637   26000619   26000847   26004649   26003458
+       26004055   26003140   26001001   26003906   26003557   26007603   26004219   26007699   26005846   26004646
+       26004645   26002870   26007838   26006966   26000826   26004643   26004007   26004642   26004641   26004640
+       26000816   26000056   26000267   26003745   26007689   26003313   26006886   26003709   26004639   26006075
+       26004398   26001537   26006038   26006853   26004638   26004637   26004636   26007096   26004635   26000623
+       26001599   26004634   26003457   26007781   26004366   26007764   26003893   26007776   26005809   26006058
+       26004632   26007729   26004630   26004631   26004629   26007830   26001894   26002073   26003744   26005901
+       26007707   26004628   26005681   26004627   26007723   26003802   26006626   26006557   26004626   26007762
+       26004625   26001662   26001467   26004624   26004623   26001002   26007665   26001624   26004621   26007820
+       26000818   26000592   26000350   26001367   26007768   26004620   26002483   26001095   26007711   26007712
+       26006788   26004185   26004616   26003020   26007828   26003194   26001638   26007387   26007754   26007796
+       26004615   26005978   26004614   26003987   26004613   26004612   26007720   26004611   26006848   26006046
+       26007448   26002800   26004608   26001222   26006259   26004606   26004607   26006917   26007314   26003856
+       26005792   26004605   26004604   26007450   26000433   26004603   26002532   26001408   26007758   26002373
+       26000846   26003460   26002730   26006564   26007750   26004601   26006940   26004600   26000349   26007751
+       26001600   26003894   26007748   26003154   26002638   26003642   26001219   26007767   26003222   26007824
+       26003434   26002261   26004598   26007840   26000265   26003459   26004596   26003762   26007386   26004426
+       26004595   26004594   26007705   26004593   26003324   26000526   26004592   26004591   26005789   26004590
+       26007028   26005962   26004588   26007735   26002075   26007666   26004175   26005804   26006657   26006309
+       26004587   26004586   26006721   26004585   26007815   26007688   26007814   26002256   26004584   26004583
+       26001096   26001395   26004582   26005944   26006460   26005823   26007154   26004581   26006655   26007676
+       26004580   26007157   26007681   26004577   26003027   26007797   26001476   26003612   26007050   26006918
+       26007683   26000523   26004576   26002093   26000753   26004411   26005847   26001468   26005624   26003913
+       26004574   26004573   26007268   26007147   26004571   26007842   26000133   26005626   26005696   26004144
+       26004568   26004400   26001261   26003319   26004567   26007759   26006167   26004566   26004564   26004562
+       26004561   26007249   26004560   26005801   26007802   26007837   26004558   26007760   26006547   26004557
+       26007799   26003904   26005888   26000132   26006533   26004555   26005640   26000998   26001207   26007262
+       26007749   26007678   26002270   26003433   26007795   26000385   26007692   26007791   26001452   26007288
+       26004552   26003522   26003738   26007674   26002589   26001184   26001180   26007810   26001084   26007794
+       26001475   26007691   26007671   26004363   26004549   26005810   26004548   26007411   26000412   26004547
+       26007763   26007829   26004545   26003903   26006901   26004544   26007755   26003473   26006887   26004543
+       26001160   26007286   26004541   26007410   26007800   26004539   26006869   26004538   26007291   26006858
+       26007803   26007804   26007805   26004537   26007746   26007809   26002372   26007677   26002590   26007827
+       26001151   26006183   26000501   26007826   26001159   26006840   26004536   26005955   26004535   26006836
+       26003821   26004532   26006509   26000812   26006729   26005903   26007843   26004531   26007823   26004530
+       26000518   26004529   26005908   26004528   26000166   26007816   26007817   26007717   26000172   26001427
+       26000522   26004526   26005910   26007844   26007845   26000188   26007849   26000213   26006726   26007778
+       26007779   26001375   26006017   26007745   26007462   26004525   26007463   26004523   26006724   26004522
+       26004521   26007379   26004519   26002450   26007673   26002576   26006722   26004518   26007811   26003873
+       26003855   26002419   26006719   26004517   26006723   26007821   26007822   26004516   26006712   26001094
+       26000416   26007742   26007752   26004511   26000386   26006769   26007818   26004510   26001078   26006770
+       26001622   26003828   26006818   26007468   26007694   26004508   26003823   26004507   26007470   26004505
+       26007825   26001636   26001616   26007819   26001635   26007473   26007713   26002834   26007716   26007715
+       26001627   26007788   26004504   26002806   26007812   26007813   26004503   26006767   26007807   26001548
+       26006817   26002817   26007801   26001534   26001083   26004362   26002831   26003061   26007792   26001451
+       26007724   26007722   26007721   26007719   26007709   26007698   26007737   26003018   26007736   26007734
+       26007695   26003743   26006099   26007808   26004494   26003736   26004492   26001038   26004490   26001033
+       26006043   26007757   26004489   26002507   26004488   26001378   26001368   26006643   26007785   26007784
+       26006054   26004486   26006053   26002531   26007072   26007669   26007780   26004484   26004284   26007775
+       26007774   26006595   26007772   26007773   26003257   26003479   26003223   26007690   26003710   26007761
+       26003474   26004478   26004477   26003693   26007103   26003195   26004364   26004476   26007753   26003141
+       26007687   26003684   26003676   26007739   26007733   26007732   26007726   26003065   26003418   26007682
+       26003630   26003397   26007738   26008393   26007730   26003369   26007680   26003602   26007704   26007702
+       26007701   26003326   26007398   26004475   26007397   26004441   26004439   26006081   26007770   26002978
+       26004473   26000579   26000577   26000580   26000622   26007786   26000618   26000595   26007783   26004472
+       26006362   26004471   26006618   26004470   26006585   26004469   26007500   26004468   26007496   26007731
+       26003073
+:EndSubBasinGroup   
+# :SBGroupPropertyOverride Allsubbasins   MANNINGS_N 0.001
+# :SBGroupPropertyMultiplier Allsubbasins  MANNINGS_N 1.0
+:SubBasinGroup   AllLakesubbasins
+       26006754   26005633   26006855   26006757   26007000   26006356   26006759   26006516   26005718   26005642
+       26007219   26006760   26007214   26007636   26006135   26006899   26005875   26006051   26007663   26007521
+       26006470   26006467   26005832   26006271   26005745   26006962   26007005   26005644   26007041   26005820
+       26005817   26006474   26006880   26006434   26006313   26006739   26006621   26006152   26005665   26007039
+       26006172   26005684   26005841   26005927   26005922   26005912   26005890   26007207   26006973   26006080
+       26006358   26006159   26006347   26006141   26005976   26006025   26005703   26005924   26005821   26006688
+       26005704   26007305   26006394   26006658   26005652   26006916   26006948   26007242   26006968   26007511
+       26006061   26006671   26005777   26006281   26007366   26007040   26006539   26006531   26006980   26005843
+       26007227   26006946   26006436   26006989   26006935   26007647   26006214   26005827   26007595   26006971
+       26005929   26007502   26006472   26007549   26006573   26007664   26007652   26007163   26006423   26007391
+       26005822   26005860   26006555   26005911   26006400   26005790   26007152   26006079   26007248   26005913
+       26006913   26005930   26006399   26006294   26007042   26007510   26007120   26007395   26006466   26006455
+       26006683   26007367   26005643   26006682   26007477   26005693   26006211   26006960   26006807   26005919
+       26007509   26005761   26006453   26005934   26006746   26007383   26006783   26007052   26006988   26006881
+       26006226   26006422   26006638   26007469   26007483   26005864   26006560   26005895   26005826   26006541
+       26006175   26006014   26006457   26006504   26007273   26006774   26006734   26005754   26007169   26005981
+       26006094   26007563   26001819   26006443   26006028   26007251   26006000   26005815   26006679   26007192
+       26006947   26005960   26006642   26007358   26005648   26005685   26005986   26006071   26006401   26006406
+       26006111   26006905   26006142   26005748   26007321   26007045   26006395   26006149   26005793   26007023
+       26007278   26006513   26007493   26005763   26006800   26007584   26005766   26005741   26007484   26005931
+       26007603   26005846   26006966   26006886   26006075   26006038   26006853   26007096   26005809   26006058
+       26005901   26005681   26006626   26006557   26006788   26007387   26005978   26006848   26006046   26007448
+       26006259   26006917   26007314   26005792   26007450   26006564   26006940   26007386   26005789   26007028
+       26005962   26005804   26006657   26006309   26006721   26005944   26006460   26005823   26007154   26006655
+       26007157   26007050   26006918   26005847   26005624   26007268   26007147   26005626   26005696   26006167
+       26007249   26005801   26006547   26005888   26006533   26005640   26007262   26007288   26005810   26007411
+       26006901   26006887   26007286   26007410   26006869   26007291   26006858   26006183   26006840   26005955
+       26006836   26006509   26006729   26005903   26005908   26005910   26006726   26006017   26007462   26007463
+       26006724   26007379   26006722   26006719   26006723   26006712   26006769   26006770   26006818   26007468
+       26007470   26007473   26006767   26006817   26006099   26001038   26006043   26006643   26006054   26006053
+       26007072   26006595   26007103   26007398   26007397   26006081   26006362   26006618   26006585   26007500
+       26007496
+:EndSubBasinGroup   
+

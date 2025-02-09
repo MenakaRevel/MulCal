@@ -1,0 +1,8 @@
+# folders
+*/forcing/
+*/obs/
+*/dat/
+dat
+
+# slurm
+slurm-*
