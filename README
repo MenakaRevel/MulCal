@@ -1,0 +1,4 @@
+# Mutiple Scale Model Calibration for Raven Hydrological Model
+- site specific local catchment calibration
+- deveide the whole region into sub region
+- use upsetream observations as inflow boundry conditions
