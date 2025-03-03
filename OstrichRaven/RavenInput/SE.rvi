@@ -25,7 +25,7 @@
 
 :ChunkSize           100                  # Specifies memory buffer size for NetCDF files, in megabytes
 
-# Calibrration Period
+# Calibration Period
 :EvaluationPeriod CALIBRATION 2008-10-01 2018-09-30
 
 # Defines the hydrograph performance metrics output by Raven. Either one or multiple is acceptable.

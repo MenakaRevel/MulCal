@@ -42,6 +42,9 @@ if [[ "$runname" == 'Init' ]]; then
     # copy src files
     cp -r /home/menaka/projects/def-btolson/menaka/MulCal/src/* .
 
+    # copy run_best_Raven.sh
+    cp -r /home/menaka/projects/def-btolson/menaka/MulCal/run_best_Raven.sh .
+    
     #========================
     # Init - intialization
     #========================
@@ -79,6 +82,10 @@ fi
 # run parallel MPI
 echo "./Ostrich"
 ./Ostrich
+
+# run best Raven
+echo "./run_best_Raven.sh"
+./run_best_Raven.sh $expname
 
 echo "end: $(date)"
 wait
