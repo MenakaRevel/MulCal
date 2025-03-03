@@ -75,6 +75,7 @@ ModelName=sys.argv[2]
 MaxIter=sys.argv[3]
 ObsDir=sys.argv[4]
 ObsList=sys.argv[5]
+CWList=sys.argv[6]
 #================================================================
 # read GaugeSpecificList.csv
 if ObsList == '':
@@ -82,18 +83,31 @@ if ObsList == '':
 ObsList = pd.read_csv(ObsList)
 # print (ObsList.head())
 #================================================================
+# read LakeCWList.csv
+if CWList == '':
+    CWList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/LakeCWList.csv'
+CWList = pd.read_csv(CWList)
+#================================================================
 # print (read_cal_gagues("./RavenInput"))
 ObsType=ObsList[ObsList['Obs_NM']==Obs_NM]['ObsType'].values[0] #read_cal_gagues("./RavenInput")[Obs_NM]
 Obsrvt=os.path.join(ObsDir,Obs_NM+'_'+suffixs[ObsType]+'.rvt')
 SubId=read_subid(Obsrvt)
 #================================================================
-UpObsNMList=ObsList[ObsList['Obs_NM']==Obs_NM]['UpGauges'].values[0]
-if len(UpObsNMList) == 0:
-    UpObsNMList = ['None']
+BasinType=ObsList[ObsList['Obs_NM']==Obs_NM]['Type'].values[0]
+if BasinType == 'Upstream':
+    UpObsNMList = 'None'
     UpObsTypes  = ['None']
+    UpSubIds    = ['None']
 else:
     # AllObsTypes=read_cal_gagues("./RavenInput")
-    UpObsTypes=[ObsList[ObsList['Obs_NM']==gau]['ObsType'].values[0] for gau in UpObsNMList.split('&')]
+    UpObsNMList = ObsList[ObsList['Obs_NM']==Obs_NM]['UpGauges'].values[0]
+    UpObsTypes  = [ObsList[ObsList['Obs_NM']==gau]['ObsType'].values[0] for gau in UpObsNMList.split('&')]
+    UpSubIds    = [read_subid(os.path.join(ObsDir,UpObs_NM+'_'+suffixs[ObsType]+'.rvt')) for UpObs_NM, ObsType in zip(UpObsNMList.split('&'),UpObsTypes)]
+# print (UpObsNMList, UpObsTypes)
+if ObsType == "RS":
+    iniCW = CWList[CWList['Obs_NM']==Obs_NM]['ini.CW'].values[0]
+else:
+    iniCW = -9999.0
 #================================================================
 with open('./params.py', 'w') as f:
     f.write('import os')
@@ -113,11 +127,20 @@ with open('./params.py', 'w') as f:
     f.write('\ndef ObsType():')
     f.write('\n\treturn\t"'+str(ObsType)+'"')
     f.write('\n#--------------------------------------')
+    f.write('\ndef InitCW():')
+    f.write('\n\treturn\t'+str(iniCW))
+    f.write('\n#--------------------------------------')
+    f.write('\ndef BasinType():')
+    f.write('\n\treturn\t"'+str(BasinType)+'"')
+    f.write('\n#--------------------------------------')
     f.write('\ndef UpObsNMList():')
     f.write('\n\treturn\t['+','.join(f'"{g}"' for g in UpObsNMList.split('&'))+']')
     f.write('\n#--------------------------------------')
     f.write('\ndef UpObsTypes():')
     f.write('\n\treturn\t['+','.join(f'"{g}"' for g in UpObsTypes)+']')
+    f.write('\n#--------------------------------------')
+    f.write('\ndef UpSubIds():')
+    f.write('\n\treturn\t['+','.join(f'{g}' for g in UpSubIds)+']')
     f.write('\n#--------------------------------------')
     f.write('\ndef MaxIter():')
     f.write('\n\treturn\t'+str(MaxIter))

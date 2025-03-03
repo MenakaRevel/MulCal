@@ -2,3 +2,9 @@
 - site specific local catchment calibration
 - deveide the whole region into sub region
 - use upsetream observations as inflow boundry conditions
+
+
+# Updates
+## 2025/02/13
+- Use deviation from 10% Lake level as ReservoirTargetStage [update_rvt.py]
+- If upstream is a lake - use global calibarated CW [update_rvh_tpl.py]

@@ -147,6 +147,7 @@ def write_ostIN_serial(
     RunName='SE',
     progType='DDS',
     objFunc='GCOP',
+    CWindv=False,
     costFunc='NegMET',
     MaxIter='2',
     w1=1.0,
@@ -205,7 +206,7 @@ def write_ostIN_serial(
         # f.write('\n'+'%PET_CORRECTION%          random       0.5        1.5          none    none    none')
         f.write('\n'+'%MAX_BASEFLOW_RATE%       random       0          20           none    none    none')
         f.write('\n'+'%BASEFLOW_N%              random       0.1        4.0          none    none    none')
-        f.write('\n'+'%BASE_T%                  random       0.5        0.99         none    none    none')
+        # f.write('\n'+'%BASE_T%                  random       0.5        0.99         none    none    none')
         # f.write('\n')
         # f.write('\n'+'%LAKE_PET_CORR%           random       0.5        1.5          none    none    none')
         # f.write('\n'+'%WIND_VEL_CORR%           random       0.5        1.5          none    none    none')
@@ -226,9 +227,19 @@ def write_ostIN_serial(
         # f.write('\n'+'d_multi                   random       0.1        10           none    none    none   # diffusivity'                )
         # f.write('\n'+'k_multi                   random       0.1        10           none    none    none   # lake crest width multiplier')
         #-----------------------------------------------------------------------------------------
-        f.write('\n'+'EndParams')
-        #-----------------------------------------------------------------------------------------
         gnames, tags = read_cal_gagues(RavenDir)
+        #-----------------------------------------------------------------------------------------
+        if CWindv:
+            if 'reservoirstage' in tags:
+                indices = [i for i, tag in enumerate(tags) if tag == 'reservoirstage']
+                f.write('\n')
+                f.write('\n'+'## Individual Lake CW multipler')
+                for index in indices:
+                    lowb = max(float(pm.InitCW())*0.1,0.1)
+                    upb  = max(float(pm.InitCW())*2.0,10.0)
+                    f.write('\nw_'+'%-24s'%(str(gnames[index].split('_')[0]))+'random       '+'%5.2f'%(lowb)+'        '+'%5.2f'%(upb)+'          none    none    none   #'+str(gnames[index].split('_')[0]))
+        #-----------------------------------------------------------------------------------------
+        f.write('\n'+'EndParams')
         #-----------------------------------------------------------------------------------------
         f.write('\n')
         f.write('\n')
@@ -444,6 +455,7 @@ def write_ostIN_parallel(
     RunName='SE',
     progType='ParallelDDS',
     objFunc='GCOP',
+    CWindv=False,
     costFunc='NegMET',
     MaxIter='500',
     w1=1.0,
@@ -502,7 +514,7 @@ def write_ostIN_parallel(
         # f.write('\n'+'%PET_CORRECTION%          random       0.5        1.5          none    none    none')
         f.write('\n'+'%MAX_BASEFLOW_RATE%       random       0          20           none    none    none')
         f.write('\n'+'%BASEFLOW_N%              random       0.1        4.0          none    none    none')
-        f.write('\n'+'%BASE_T%                  random       0.5        0.99         none    none    none')
+        # f.write('\n'+'%BASE_T%                  random       0.5        0.99         none    none    none')
         # f.write('\n')
         # f.write('\n'+'%LAKE_PET_CORR%           random       0.5        1.5          none    none    none')
         # f.write('\n'+'%WIND_VEL_CORR%           random       0.5        1.5          none    none    none')
@@ -523,9 +535,19 @@ def write_ostIN_parallel(
         # f.write('\n'+'d_multi                   random       0.1        10           none    none    none   # diffusivity'                )
         # f.write('\n'+'k_multi                   random       0.1        10           none    none    none   # lake crest width multiplier')
         #-----------------------------------------------------------------------------------------
-        f.write('\n'+'EndParams')
-        #-----------------------------------------------------------------------------------------
         gnames, tags = read_cal_gagues(RavenDir)
+        #-----------------------------------------------------------------------------------------
+        if CWindv:
+            if 'reservoirstage' in tags:
+                indices = [i for i, tag in enumerate(tags) if tag == 'reservoirstage']
+                f.write('\n')
+                f.write('\n'+'## Individual Lake CW multipler')
+                for index in indices:
+                    lowb = max(float(pm.InitCW())*0.1,0.1)
+                    upb  = max(float(pm.InitCW())*2.0,10.0)
+                    f.write('\nw_'+'%-24s'%(str(gnames[index].split('_')[0]))+'random       '+'%5.2f'%(lowb)+'        '+'%5.2f'%(upb)+'          none    none    none   #'+str(gnames[index].split('_')[0]))
+        #-----------------------------------------------------------------------------------------
+        f.write('\n'+'EndParams')
         #-----------------------------------------------------------------------------------------
         f.write('\n')
         f.write('\n')
@@ -720,6 +742,6 @@ def write_ostIN_parallel(
 para=int(sys.argv[1])
 
 if para>0:
-    write_ostIN_parallel('./',MaxIter=pm.MaxIter()) # parallel
+    write_ostIN_parallel('./', CWindv=True, MaxIter=pm.MaxIter()) # parallel
 else:
-    write_ostIN_serial('./',MaxIter=pm.MaxIter())   # serial
+    write_ostIN_serial('./', CWindv=True, MaxIter=pm.MaxIter())   # serial

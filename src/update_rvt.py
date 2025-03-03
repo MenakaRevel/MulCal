@@ -165,13 +165,13 @@ def Generate_Raven_Timeseries_rvt_String(obsnm, suffix="discharge"):
     )
     return output_string
 #=================================================================================================
-def replace_SubID_save(obs_rvt_file_path, Replace1, Replace2, out_rvt_file_path):
+def replace_keyword_save(obs_rvt_file_path, Replace1, Replace2, out_rvt_file_path):
     # Open the rvt file in read mode
     with open(obs_rvt_file_path, 'r') as file:
         # Read the content of the file
         content = file.read()
 
-    # Replace the __SubId__ placeholder with the actual subbasin ID
+    # Replace the Replace1 placeholder with the actual Replace2
     # subbasin_id = 'your_subbasin_id'
     content = re.sub(Replace1, Replace2, content)
 
@@ -180,6 +180,72 @@ def replace_SubID_save(obs_rvt_file_path, Replace1, Replace2, out_rvt_file_path)
         file.write(content)
 
     return 0
+#=================================================================================================
+def update_ReservoirTargetStage(inputfile, outputfile, percentile=50):
+    """
+    Process the observation file to compute and adjust values based on the specified percentile.
+
+    Parameters:
+    - inputfile: str, the path to the input .rvt file.
+    - outputfile: str, the path to the output .rvt file where adjusted data will be saved.
+    - percentile: float, the percentile value to compute (default is 50).
+
+    Returns:
+    - None
+    """
+    # Read the file
+    with open(inputfile, "r") as file:
+        lines = file.readlines()
+
+    # Extract numeric data
+    values = []
+    for line in lines:
+        try:
+            value = float(line.strip())
+            values.append(value)
+        except ValueError:
+            continue  # Ignore non-numeric lines
+
+    # Extract header dynamically
+    header = []
+    for i, line in enumerate(lines):
+        header.append(line)
+        if line.startswith(":ReservoirTargetStage"):
+            header.append(lines[i + 1])  # Include the next line as well
+            break
+
+    # Extract footer
+    footer_index = next(i for i, line in enumerate(lines) if line.strip() == ":EndObservationData")
+    footer = lines[footer_index:]
+
+    # Convert to numpy array
+    values = np.array(values)
+
+    # Filter out missing data (-1.2345)
+    valid_values = values[values != -1.2345]
+
+    # Compute specified percentile
+    percentile_value = np.percentile(valid_values, percentile)
+
+    # Subtract percentile value from all valid values
+    # adjusted_values = np.where(values != -1.2345, values - percentile_value, values)
+    adjusted_values = np.where(
+        (values != -1.2345), 
+        np.where((values - percentile_value) == -0.0000, 0.0000, values - percentile_value), 
+        values
+    )
+
+    # Save adjusted data
+    with open(outputfile, "w") as file:
+        file.writelines(header)
+        for value in adjusted_values:
+            if value != -1.2345:
+                print (value)
+            # file.write(f"\t{value:.4f}\n")
+            # file.write(f"\t{0.0000 if value == -0.0000 else value:.4f}\n")
+            # print (f"\t{0.0000 if value == -0.0000 else value:.4f}\n")
+            file.write("\t%.8f\n"%(value if value != 0 else abs(value)))
+        file.writelines(footer)
 #=================================================================================================
 suffixs={
     'SF':'discharge',
@@ -198,6 +264,10 @@ for k, v in zip(pm.UpObsTypes(), pm.UpObsNMList()):
 upSF=UpObsDict.get("SF") or []
 upRS=UpObsDict.get("RS") or []
 # print (upSF, upRS)
+#=================================================================================================
+SubId_dict={}
+for UpObs_NM, UpSubId in zip(pm.UpObsNMList(),pm.UpSubIds()):
+    SubId_dict[UpObs_NM]=UpSubId
 #=================================================================================================
 # create forcing rvt
 RavenFolder="./RavenInput"
@@ -271,11 +341,22 @@ os.system(
 #=============================================
 # Input data dicharge/lake water level
 if len(upSF) > 0:
-    print ("upSF")
+    # print ("upSF")
     WriteStringToFile(
     '# Inflow - BasinInflowHydrograph\n \n',Model_rvt_file_path,"a")
     # need to update the rvt file as well
     for upObs_NM in upSF:
+        #=============================================
+        # write :OverrideStreamflow  {SubID}
+        override_statment = (
+            '\n:OverrideStreamflow    '+
+            str(SubId_dict[upObs_NM])
+        )
+
+        WriteStringToFile(
+            override_statment+'\n',Model_rvt_file_path,"a")
+        #=============================================
+        # write observation file
         obs_rvt_file_path = (
             "\n"
             + ":RedirectToFile    "
@@ -295,11 +376,12 @@ if len(upSF) > 0:
             './RavenInput/obs/'+upObs_NM+'_discharge.rvt'
         )
         #=============================================
-        # Typically rvt files in  ./RavenInput/obs/
-        obs_rvt_file= './RavenInput/obs/'+upObs_NM+"_discharge.rvt"
-        Replace1    = r'ObservationData\s+HYDROGRAPH'
-        Replace2    = 'BasinInflowHydrograph'
-        replace_SubID_save(obs_rvt_file, Replace1, Replace2, obs_rvt_file)
+        # !!!! No need to change instead use == :OverrideStreamflow  {SubID} ==
+        # # # Typically rvt files in  ./RavenInput/obs/
+        # # obs_rvt_file= './RavenInput/obs/'+upObs_NM+"_discharge.rvt"
+        # # Replace1    = r'ObservationData\s+HYDROGRAPH'
+        # # Replace2    = 'BasinInflowHydrograph'
+        # # replace_keyword_save(obs_rvt_file, Replace1, Replace2, obs_rvt_file)
 
 if len(upRS) > 0:
     WriteStringToFile(
@@ -329,4 +411,8 @@ if len(upRS) > 0:
         obs_rvt_file= './RavenInput/obs/'+upObs_NM+"_level.rvt"
         Replace1    = r'ObservationData\s+RESERVOIR_STAGE'
         Replace2    = 'ReservoirTargetStage'
-        replace_SubID_save(obs_rvt_file, Replace1, Replace2, obs_rvt_file)
+        replace_keyword_save(obs_rvt_file, Replace1, Replace2, obs_rvt_file)
+
+        #=============================================
+        # update the ReservoirTargetStage with respect to lake CH
+        update_ReservoirTargetStage(obs_rvt_file, obs_rvt_file, percentile=10)

@@ -9,7 +9,7 @@
 #SBATCH --mail-user=menaka.revel@uwaterloo.ca     # email address for notifications
 #SBATCH --mail-type=ALL                           # email send only in case of failure
 #SBATCH --time=0-48:00                            # time (DD-HH:MM)
-#SBATCH --job-name=SEreg-Cal_MPI                  # jobname
+#SBATCH --job-name=02KF010                       # jobname
 
 # load python
 module load python/3.12.4
@@ -19,7 +19,7 @@ module load scipy-stack
 #==================
 echo "start: $(date)"
 #==================
-Obs_NM="02LA027" #calMPI1_02KC015
+Obs_NM="02KF010"
 ModelName="SE"
 # SubId=26007677
 # ObsType="SF"
@@ -28,8 +28,10 @@ MaxIter=5000
 runname='Init' #'Restart' #
 ObsDir='/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInput/obs'
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
+CWList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/LakeCWList.csv'
 #==================
 if [[ "$runname" == 'Init' ]]; then
+    # rm -rf /home/menaka/scratch/MulCal/$expname/processor_* 
     mkdir -p /home/menaka/scratch/MulCal/$expname
     cd /home/menaka/scratch/MulCal/$expname
     pwd
@@ -45,8 +47,8 @@ if [[ "$runname" == 'Init' ]]; then
     #========================
     # Init - intialization
     #========================
-    echo create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList
-    python create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList
+    echo create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList
+    python create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList
 
     #========================
     # rvt

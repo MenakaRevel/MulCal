@@ -2,7 +2,7 @@
 # Raven Input file
 # GEM-Hydro SE region
 # ----------------------------------------------
-:StartDate             2001-01-01 00:00:00           # Model run start time, format in yyyy-mm-dd hh:mm:ss
+:StartDate             2007-10-01 00:00:00           # Model run start time, format in yyyy-mm-dd hh:mm:ss
 :EndDate               2018-12-31 00:00:00           # Model run end time, format in yyyy-mm-dd hh:mm:ss
 :Method                ORDERED_SERIES                # Numerical method used for simulation
 :TimeStep              24:00:00                      # Expressed in days as a real-valued number (e.g., 1.0 for one day) or using hh:mm:ss format (e.g., 24:00:00 for one hour).
@@ -24,6 +24,9 @@
 :EndHydrologicProcesses
 
 :ChunkSize           100                  # Specifies memory buffer size for NetCDF files, in megabytes
+
+# Calibrration Period
+:EvaluationPeriod CALIBRATION 2008-10-01 2018-09-30
 
 # Defines the hydrograph performance metrics output by Raven. Either one or multiple is acceptable.
 :SuppressOutput
