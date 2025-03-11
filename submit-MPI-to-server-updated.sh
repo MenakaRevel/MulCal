@@ -9,7 +9,7 @@
 #SBATCH --mail-user=menaka.revel@uwaterloo.ca     # email address for notifications
 #SBATCH --mail-type=ALL                           # email send only in case of failure
 #SBATCH --time=0-48:00                            # time (DD-HH:MM)
-#SBATCH --job-name=02KF013                       # jobname
+#SBATCH --job-name=02KB001                       # jobname
 
 # load pythons
 module load python/3.12.4
@@ -19,7 +19,7 @@ module load scipy-stack
 #==================
 echo "start: $(date)"
 #==================
-Obs_NM="02KF013"
+Obs_NM="02KB001"
 ModelName="SE"
 # SubId=26007677
 # ObsType="SF"
@@ -43,6 +43,9 @@ if [[ "$runname" == 'Init' ]]; then
 
     # copy src files
     cp -r /home/menaka/projects/def-btolson/menaka/MulCal/src/* .
+
+    # copy run_best_Raven.sh
+    cp -r /home/menaka/projects/def-btolson/menaka/MulCal/run_best_Raven_MPI.sh .
 
     #========================
     # Init - intialization
@@ -85,6 +88,10 @@ fi
 echo "srun ./OstrichMPI"
 mpirun -np $SLURM_NTASKS ./OstrichMPI                # mpirun or mpiexec also work
 # ./Ostrich
+
+# run best Raven
+echo "./run_best_Raven_MPI.sh"
+./run_best_Raven_MPI.sh $expname
 
 echo "end: $(date)"
 wait

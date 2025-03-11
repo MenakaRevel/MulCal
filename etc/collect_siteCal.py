@@ -22,7 +22,8 @@ warnings.filterwarnings("ignore")
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
 ObsList = pd.read_csv(ObsList)
 # Obs_NMs = ObsList[ObsList['Obs_NM']!='Burntroot']['Obs_NM'].values
-Obs_NMs = ObsList[ObsList['rivseq']<8]['Obs_NM'].values
+# Obs_NMs = ObsList[ObsList['rivseq']<8]['Obs_NM'].values
+Obs_NMs = ObsList[ObsList['ObsType']=='SF']['Obs_NM'].values
 # List to store DataFrames
 df_list = []
 

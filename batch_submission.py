@@ -20,7 +20,7 @@ output_file = "submit-MPI-to-server-updated.sh"
 #     "Hogan", "LaMuir", "Lavieille", "LittleCauchon", "Loontail", 
 #     "Narrowbag", "Timberwolf"
 # ]
-targetG=7
+targetG=5
 #==========================================================
 # Read Obs_NMs
 ObsList=pd.read_csv('./dat/GaugeSpecificList.csv')
@@ -30,8 +30,11 @@ CWList=pd.read_csv('./dat/LakeCWList.csv')
 # CWList=CWList.dropna(subset=['Obs_NM'])
 #==========================================================
 # Obs_NMs = ObsList['Obs_NM'].values
-# Obs_NMs = ObsList[ObsList['rivseq']==targetG]['Obs_NM'].values
-Obs_NMs = ObsList[ObsList['ObsType']=='SF']['Obs_NM'].values
+Obs_NMs = ObsList[ObsList['rivseq']==targetG]['Obs_NM'].values
+# # # # Obs_NMs = ObsList[ObsList['ObsType']=='SF']['Obs_NM'].values
+# # # # Obs_NMs = ObsList[(ObsList['ObsType']=='RS') & (ObsList['rivseq']==1)]['Obs_NM'].values
+# # # # Obs_NMs = ObsList[(ObsList['ObsType']=='SF') & (ObsList['rivseq']==1)]['Obs_NM'].values
+# print (Obs_NMs)
 #==========================================================
 if targetG > 1:
     # need to collect Lake CW
@@ -62,7 +65,11 @@ for Obs_NM in Obs_NMs:
     with open(output_file, "w") as file:
         file.write(updated_script)
 
-    print(f"Updated script saved as {output_file}")
+    print(f"Updated script saved as {output_file} for {Obs_NM}")
 
     # run it
     os.system('sbatch '+output_file)
+'''
+for Obs_NM in Obs_NMs:
+    os.system('sbatch run_best_Raven_MPI.sh '+str(Obs_NM))
+'''

@@ -90,8 +90,8 @@ mpirun -np $SLURM_NTASKS ./OstrichMPI                # mpirun or mpiexec also wo
 # ./Ostrich
 
 # run best Raven
-echo "./run_best_Raven.sh"
-./run_best_Raven.sh $expname
+echo "./run_best_Raven_MPI.sh"
+./run_best_Raven_MPI.sh $expname
 
 echo "end: $(date)"
 wait

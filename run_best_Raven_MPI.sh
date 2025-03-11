@@ -7,8 +7,8 @@
 #SBATCH --mem-per-cpu=10G                        # memory; default unit is megabytes
 #SBATCH --mail-user=menaka.revel@uwaterloo.ca    # email address for notifications
 #SBATCH --mail-type=ALL                          # email send only in case of failure
-#SBATCH --time=00-100:00  
-#SBATCH --job-name=02KF013
+#SBATCH --time=00-06:00  
+#SBATCH --job-name=run-best-Raven
 
 # load python
 module load python/3.12.4
