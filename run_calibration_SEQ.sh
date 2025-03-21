@@ -18,7 +18,7 @@ module load scipy-stack
 #==================
 echo "start: $(date)"
 #==================
-Obs_NM="02MC037" #"NorthDepot" #calMPI1_02KC015
+Obs_NM="02KF013" #"NorthDepot" #calMPI1_02KC015
 ModelName="SE"
 # SubId=26007677
 # ObsType="SF"

@@ -9,8 +9,8 @@
 #SBATCH --mail-user=menaka.revel@uwaterloo.ca     # email address for notifications
 #SBATCH --mail-type=ALL                           # email send only in case of failure
 #SBATCH --time=0-48:00                            # time (DD-HH:MM)
-#SBATCH --job-name=02KB001                       # jobname
-#SBATCH --begin=now+3hour
+#SBATCH --job-name=02KF013                        # jobname
+#SBATCH --begin=now+0hour
 
 # load pythons
 module load python/3.12.4
@@ -20,7 +20,7 @@ module load scipy-stack
 #==================
 echo "start: $(date)"
 #==================
-Obs_NM="02KB001"
+Obs_NM="02KF013"
 ModelName="SE"
 # SubId=26007677
 # ObsType="SF"

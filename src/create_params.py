@@ -106,6 +106,8 @@ else:
 # print (UpObsNMList, UpObsTypes)
 if ObsType == "RS":
     iniCW = CWList[CWList['Obs_NM']==Obs_NM]['ini.CW'].values[0]
+elif ObsType == "SF" and SubId in CWList['SubBasinID'].values:
+    iniCW = CWList[CWList['Obs_NM']==Obs_NM]['ini.CW'].values[0]
 else:
     iniCW = -9999.0
 #================================================================
