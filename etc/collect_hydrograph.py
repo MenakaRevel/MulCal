@@ -37,7 +37,17 @@ Obs_NMs=['02KF010','02KF013']
 # ]
 
 # dat/GaugeSpecificList.csv
-ObsList=pd.read_csv('../dat/GaugeSpecificList.csv')
+# ObsList=pd.read_csv('../dat/GaugeSpecificList.csv')
+
+ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
+ObsList = pd.read_csv(ObsList)
+# Obs_NMs = ObsList[ObsList['Obs_NM']!='Burntroot']['Obs_NM'].values
+# Obs_NMs = ObsList[ObsList['rivseq']<2]['Obs_NM'].values
+Obs_NMs = ObsList[ObsList['ObsType']=='SF']['Obs_NM'].values
+# Obs_NMs = ObsList['Obs_NM'].values
+
+# Obs_NMs = ObsList[(ObsList['ObsType']=='SF') & (ObsList['rivseq']<4)]['Obs_NM'].values
+
 df=pd.DataFrame()
 
 for i, Obs_NM in enumerate(Obs_NMs):

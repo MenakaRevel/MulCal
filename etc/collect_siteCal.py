@@ -22,14 +22,16 @@ warnings.filterwarnings("ignore")
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
 ObsList = pd.read_csv(ObsList)
 # Obs_NMs = ObsList[ObsList['Obs_NM']!='Burntroot']['Obs_NM'].values
-# Obs_NMs = ObsList[ObsList['rivseq']<8]['Obs_NM'].values
-Obs_NMs = ObsList[ObsList['ObsType']=='SF']['Obs_NM'].values
+# Obs_NMs = ObsList[ObsList['rivseq']<4]['Obs_NM'].values
+# Obs_NMs = ObsList[ObsList['ObsType']=='SF']['Obs_NM'].values
+Obs_NMs = ObsList['Obs_NM'].values
 # List to store DataFrames
 df_list = []
 
 for Obs_NM in Obs_NMs:
     # Read the CSV file
-    df_new = pd.read_csv(f'/home/menaka/scratch/MulCal/{Obs_NM}/processor_0/best/RavenInput/output/SE_Diagnostics.csv')
+    # df_new = pd.read_csv(f'/home/menaka/scratch/MulCal/{Obs_NM}/processor_0/best/RavenInput/output/SE_Diagnostics.csv')
+    df_new = pd.read_csv(f'/home/menaka/scratch/MulCal/{Obs_NM}/best_Raven/output/SE_Diagnostics.csv')
     
     # Remove columns with "Unnamed" in the name
     df_new = df_new.loc[:, ~df_new.columns.str.contains("Unnamed")]

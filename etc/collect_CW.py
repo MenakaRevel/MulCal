@@ -25,6 +25,9 @@ CWList['glb1.CW']=CWList['ini.CW']*ddss['k_multi'].values[-1]
 # add column glb2.CW
 ddss =pd.read_csv('/home/menaka/scratch/SEregion/MPI_SE_GLB_02/dds_status.out', sep='\s+')
 CWList['glb2.CW']=CWList['ini.CW']
+# add column glb3.CW
+ddss =pd.read_csv('/home/menaka/scratch/SEregion/MPI_SE_GLB_03/dds_status.out', sep='\s+')
+CWList['glb3.CW']=CWList['ini.CW']
 # for Obs_NM in CWList['Obs_NM'].dropna().values:
 #     print (Obs_NM, ddss['w_'+str(Obs_NM)].values[-1])
 #     CWList.loc[CWList['Obs_NM']==Obs_NM,'glb2.CW']=ddss['w_'+str(Obs_NM)].values[-1]
@@ -40,6 +43,11 @@ for Obs_NM, value in latest_values.items():
 CWList.loc[CWList['Obs_NM'].notna(), 'glb2.CW'] = CWList['Obs_NM'].map(latest_values)
 
 CWList.loc[CWList['Obs_NM'].isnull(),'glb2.CW']=CWList['ini.CW']*ddss['k_multi'].values[-1]
+
+# Update CWList efficiently using map
+CWList.loc[CWList['Obs_NM'].notna(), 'glb3.CW'] = CWList['Obs_NM'].map(latest_values)
+
+CWList.loc[CWList['Obs_NM'].isnull(),'glb3.CW']=CWList['ini.CW']*ddss['k_multi'].values[-1]
 
 print (CWList)
 
