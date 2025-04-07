@@ -216,9 +216,9 @@ def write_ostIN_serial(
         ## Routing parameters
         f.write('\n')
         f.write('\n'+'## ROUTING')
-        f.write('\n'+'n_multi                   random       0.1        10           none    none    none   # manning`s n'                )
-        f.write('\n'+'q_multi                   random       0.1        10           none    none    none   # Q_reference'                )
-        f.write('\n'+'k_multi                   random       0.1        10           none    none    none   # lake crest width multiplier')
+        f.write('\n'+'n_multi                   random       0.1        10.0           none    none    none   # manning`s n'                )
+        f.write('\n'+'q_multi                   random       0.1        10.0           none    none    none   # Q_reference'                )
+        f.write('\n'+'k_multi                   random       0.1         2.0           none    none    none   # lake crest width multiplier')
         #-----------------------------------------------------------------------------------------
         ## Routing parameters
         # f.write('\n')
@@ -531,9 +531,9 @@ def write_ostIN_parallel(
         ## Routing parameters
         f.write('\n')
         f.write('\n'+'## ROUTING')
-        f.write('\n'+'n_multi                   random       0.1        10           none    none    none   # manning`s n'                )
-        f.write('\n'+'q_multi                   random       0.1        10           none    none    none   # celerity'                   )
-        f.write('\n'+'k_multi                   random       0.1        10           none    none    none   # lake crest width multiplier')
+        f.write('\n'+'n_multi                   random       0.1        10.0           none    none    none   # manning`s n'                )
+        f.write('\n'+'q_multi                   random       0.1        10.0           none    none    none   # celerity'                   )
+        f.write('\n'+'k_multi                   random       0.1         2.0           none    none    none   # lake crest width multiplier')
         #-----------------------------------------------------------------------------------------
         # ## Routing parameters
         # f.write('\n')

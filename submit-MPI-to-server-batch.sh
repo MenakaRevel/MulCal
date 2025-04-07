@@ -10,7 +10,7 @@
 #SBATCH --mail-type=ALL                           # email send only in case of failure
 #SBATCH --time=0-48:00                            # time (DD-HH:MM)
 #SBATCH --job-name={Obs_NM}                       # jobname
-#SBATCH --begin=now+3hour
+### #SBATCH --begin=now+{delay}hour
 
 # load pythons
 module load python/3.12.4
