@@ -9,7 +9,7 @@
 #SBATCH --mail-user=menaka.revel@uwaterloo.ca     # email address for notifications
 #SBATCH --mail-type=ALL                           # email send only in case of failure
 #SBATCH --time=0-48:00                            # time (DD-HH:MM)
-#SBATCH --job-name=Animoosh                       # jobname
+#SBATCH --job-name=Cedar                       # jobname
 ### #SBATCH --begin=now+{delay}hour
 
 # load pythons
@@ -20,7 +20,7 @@ module load scipy-stack
 #==================
 echo "start: $(date)"
 #==================
-Obs_NM="Animoosh"
+Obs_NM="Cedar"
 ModelName="SE"
 # SubId=26007677
 # ObsType="SF"

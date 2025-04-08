@@ -32,8 +32,8 @@ rvh_tpl='./'+pm.ModelName()+'.rvh.tpl' # sys.argv[4] #'./SE.rvh.tpl'
 with open(rvh_tpl,'a') as f:
     f.write('\n'                                                                                            )
     f.write('\n# GAUGE specific subbasins'                                                                  )                                                                
-    f.write('\n:PopulateSubBasinGroup UpstreamOf'+Obs_NM+' With Allsubbasins UPSTREAM_OF '+str(SubId)       )
-    f.write('\n:PopulateSubBasinGroup NotUpstreamOf'+Obs_NM+' With Allsubbasins NOTWITHIN UpstreamOf'+Obs_NM)
+    f.write('\n:PopulateSubBasinGroup UpstreamOf'+Obs_NM+' With SUBBASINS UPSTREAM_OF '+str(SubId)       )
+    f.write('\n:PopulateSubBasinGroup NotUpstreamOf'+Obs_NM+' With SUBBASINS NOTWITHIN UpstreamOf'+Obs_NM)
     f.write('\n'                                                                                            )
     f.write('\n# Disable'                                                                                   )
     f.write('\n:DisableSubBasinGroup NotUpstreamOf'+Obs_NM                                                  )
