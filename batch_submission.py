@@ -20,7 +20,7 @@ output_file = "submit-MPI-to-server-updated.sh"
 #     "Hogan", "LaMuir", "Lavieille", "LittleCauchon", "Loontail", 
 #     "Narrowbag", "Timberwolf"
 # ]
-targetG=3 # max 5
+targetG=5 # max 5
 #==========================================================
 # Read Obs_NMs
 ObsList=pd.read_csv('./dat/GaugeSpecificList.csv')
@@ -28,7 +28,7 @@ ObsList=pd.read_csv('./dat/GaugeSpecificList.csv')
 # Read CWList
 CWList=pd.read_csv('./dat/LakeCWList.csv')
 # CWList=CWList.dropna(subset=['Obs_NM'])
-#==========================================================
+'''#==========================================================
 # Obs_NMs = ObsList['Obs_NM'].values
 Obs_NMs = ObsList[ObsList['rivseq']==targetG]['Obs_NM'].values
 # # # # Obs_NMs = ObsList[ObsList['ObsType']=='SF']['Obs_NM'].values
@@ -39,8 +39,11 @@ Obs_NMs = ObsList[ObsList['rivseq']==targetG]['Obs_NM'].values
 if targetG > 1:
     # need to collect Lake CW
     CW_values = {}  # Dictionary to store CW values
-    for upLake0 in ObsList[(ObsList['rivseq']==targetG-1) & (ObsList['ObsType']=='RS')]['Obs_NM'].values:
+    # for upLake0 in ObsList[(ObsList['rivseq']==targetG-1) & (ObsList['ObsType']=='RS')]['Obs_NM'].values:
+    for upLake0 in CWList['Obs_NM'].dropna().values:
         for upLake in upLake0.split('&'):
+            if upLake not in ObsList[ObsList['rivseq']==targetG-1]['Obs_NM'].values:
+                continue
             fname="/home/menaka/scratch/MulCal/"+str(upLake)+"/dds_status.out"
             paraList=pd.read_csv(fname, sep='\s+')
             # print (paraList)
@@ -70,6 +73,7 @@ for Obs_NM in Obs_NMs:
     # run it
     os.system('sbatch '+output_file)
 '''
+Obs_NMs = ObsList[ObsList['rivseq']<targetG]['Obs_NM'].values
 for Obs_NM in Obs_NMs:
     os.system('sbatch run_best_Raven_MPI.sh '+str(Obs_NM))
-'''
+

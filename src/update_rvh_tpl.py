@@ -64,7 +64,6 @@ with open(rvh_tpl,'a') as f:
         f.write('\n:SBGroupPropertyMultiplier   NonLake'+Obs_NM+'        RESERVOIR_CREST_WIDTH  k_multi'     )
         f.write('\n:SBGroupPropertyOverride     Lake_'+Obs_NM+'          RESERVOIR_CREST_WIDTH  w_'+Obs_NM   ) 
         # f.write('\n:SBGroupPropertyMultiplier   Lake_'+Obs_NM+'        RESERVOIR_CREST_WIDTH  k_'+Obs_NM   ) 
- 
     else:
         f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'      RESERVOIR_CREST_WIDTH  k_multi'   )
         # f.write('\n:SBGroupPropertyMultiplier   Allsubbasins       MANNINGS_N             n_multi'        )
@@ -75,9 +74,17 @@ with open(rvh_tpl,'a') as f:
             if uoty == 'RS':
                 # Up_SubId --> read_subid {Need add global parameters}
                 f.write('\n')
-                f.write('\n# Intermediate Sub Basin'                                                          )
+                f.write('\n# Intermediate Sub Basin - Observed lake level'                                                          )
                 f.write('\n:SubBasinGroup   Lake_'+str(uonm)                                                  )
                 f.write('\n\t'+str(usid)                                                                      )
                 f.write('\n:EndSubBasinGroup'                                                                 )
                 f.write('\n:SBGroupPropertyOverride   Lake_'+str(uonm)+'        RESERVOIR_CREST_WIDTH  '+str(CWList[CWList['Obs_NM']==uonm]['cal.CW'].values[0]))  
+            # # elif uoty == 'SF':
+            # #     if uonm is in CWList['Obs_NM'].dropna().values:
+            # #         f.write('\n')
+            # #         f.write('\n# Intermediate Sub Basin - Observed outflow'                                                          )
+            # #         f.write('\n:SubBasinGroup   Lake_'+str(uonm)                                                  )
+            # #         f.write('\n\t'+str(usid)                                                                      )
+            # #         f.write('\n:EndSubBasinGroup'                                                                 )
+            # #         f.write('\n:SBGroupPropertyOverride   Lake_'+str(uonm)+'        RESERVOIR_CREST_WIDTH  '+str(CWList[CWList['Obs_NM']==uonm]['cal.CW'].values[0]))              
                                                              

@@ -28,6 +28,7 @@ cd best_Raven
 cp -r ../processor_0/best/RavenInput/* .
 cp -r ../RavenInput/forcing .
 cp -r ../RavenInput/obs .
+cp -r ../RavenInput/SubBasinProperties.rvh .
 #==================
 # change rvi
 rvi='SE.rvi'
