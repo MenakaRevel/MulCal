@@ -8,8 +8,8 @@ import warnings
 import pandas as pd
 #=============
 # Define the input and output file names
-input_file = "submit-MPI-to-server-batch.sh"
-output_file = "submit-MPI-to-server-updated.sh"
+input_file = "submit-MPI-to-server-batch_jobarray.sh"
+output_file = "submit-MPI-to-server-updated_jobarray.sh"
 
 # "02KF010", "02KF011", 
 # Obs_NMs = [
@@ -20,7 +20,7 @@ output_file = "submit-MPI-to-server-updated.sh"
 #     "Hogan", "LaMuir", "Lavieille", "LittleCauchon", "Loontail", 
 #     "Narrowbag", "Timberwolf"
 # ]
-targetG=5 # max 5
+targetG=1 # max 5
 #==========================================================
 # Read Obs_NMs
 ObsList=pd.read_csv('./dat/GaugeSpecificList.csv')
@@ -28,7 +28,7 @@ ObsList=pd.read_csv('./dat/GaugeSpecificList.csv')
 # Read CWList
 CWList=pd.read_csv('./dat/LakeCWList.csv')
 # CWList=CWList.dropna(subset=['Obs_NM'])
-'''#==========================================================
+#==========================================================
 # Obs_NMs = ObsList['Obs_NM'].values
 Obs_NMs = ObsList[ObsList['rivseq']==targetG]['Obs_NM'].values
 # # # # Obs_NMs = ObsList[ObsList['ObsType']=='SF']['Obs_NM'].values
@@ -72,8 +72,8 @@ for Obs_NM in Obs_NMs:
 
     # run it
     os.system('sbatch '+output_file)
-'''
-Obs_NMs = ObsList[ObsList['rivseq']<targetG]['Obs_NM'].values
-for Obs_NM in Obs_NMs:
-    os.system('sbatch run_best_Raven_MPI.sh '+str(Obs_NM))
+
+# Obs_NMs = ObsList[ObsList['rivseq']<targetG]['Obs_NM'].values
+# for Obs_NM in Obs_NMs:
+#     os.system('sbatch run_best_Raven_MPI.sh '+str(Obs_NM))
 
