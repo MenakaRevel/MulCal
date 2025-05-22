@@ -213,6 +213,12 @@ def write_ostIN_serial(
         # f.write('\n'+'%RELHUM_CORR%             random       0.5        1.5          none    none    none')
         # f.write('\n')
         #-----------------------------------------------------------------------------------------
+        ## Bias correction
+        f.write('\n')
+        f.write('\n'+'## CORRECTION FACTORS')
+        f.write('\n'+'p_multi                   random       0.1         2.0           none    none    none   # rain correction factor for subbasin'                )
+        f.write('\n'+'r_multi                   random       0.1         2.0           none    none    none   # recharge correction factor for subbasin'            )  
+        #-----------------------------------------------------------------------------------------
         ## Routing parameters
         f.write('\n')
         f.write('\n'+'## ROUTING')
@@ -527,6 +533,12 @@ def write_ostIN_parallel(
         # f.write('\n'+'%WIND_VEL_CORR%           random       0.5        1.5          none    none    none')
         # f.write('\n'+'%RELHUM_CORR%             random       0.5        1.5          none    none    none')
         # f.write('\n')
+        #-----------------------------------------------------------------------------------------
+        ## Bias correction
+        f.write('\n')
+        f.write('\n'+'## CORRECTION FACTORS')
+        f.write('\n'+'p_multi                   random       0.1         2.0           none    none    none   # rain correction factor for subbasin'                )
+        f.write('\n'+'r_multi                   random       0.1         2.0           none    none    none   # recharge correction factor for subbasin'            )  
         #-----------------------------------------------------------------------------------------
         ## Routing parameters
         f.write('\n')

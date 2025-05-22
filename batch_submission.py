@@ -20,7 +20,7 @@ output_file = "submit-MPI-to-server-updated_jobarray.sh"
 #     "Hogan", "LaMuir", "Lavieille", "LittleCauchon", "Loontail", 
 #     "Narrowbag", "Timberwolf"
 # ]
-targetG=1 # max 5
+targetG=5 # max 5
 #==========================================================
 # Read Obs_NMs
 ObsList=pd.read_csv('./dat/GaugeSpecificList.csv')
@@ -44,8 +44,18 @@ if targetG > 1:
         for upLake in upLake0.split('&'):
             if upLake not in ObsList[ObsList['rivseq']==targetG-1]['Obs_NM'].values:
                 continue
-            fname="/home/menaka/scratch/MulCal/"+str(upLake)+"/dds_status.out"
-            paraList=pd.read_csv(fname, sep='\s+')
+            objFun    = float('-inf')
+            bestTrail = 0
+            paraList  = None
+            #=======================
+            for num in range(1, 10+1):
+                fname     = f"/home/menaka/scratch/MulCal/{upLake}_{num:02d}/dds_status.out"
+                paraList0 = pd.read_csv(fname, sep=r'\s+')
+                current_obj = -paraList0['OBJ._FUNCTION'].iloc[-1]
+                if current_obj > objFun:
+                    objFun    = current_obj
+                    bestTrail = num
+                    paraList  = paraList0
             # print (paraList)
             # CW = paraList['w_'+str(upLake)].values[-1]
             CW_values[upLake] = paraList[f'w_{upLake}'].values[-1]  # Store last value
@@ -72,8 +82,11 @@ for Obs_NM in Obs_NMs:
 
     # run it
     os.system('sbatch '+output_file)
-
-# Obs_NMs = ObsList[ObsList['rivseq']<targetG]['Obs_NM'].values
-# for Obs_NM in Obs_NMs:
-#     os.system('sbatch run_best_Raven_MPI.sh '+str(Obs_NM))
-
+'''
+targetG = 1
+Obs_NMs = ObsList[ObsList['rivseq']<=targetG]['Obs_NM'].values
+for Obs_NM in Obs_NMs:
+    for num in range(1,10+1):
+        print ('sbatch run_best_Raven_MPI.sh   '+str(Obs_NM)+'   %02d'%(num))
+        os.system('sbatch run_best_Raven_MPI.sh   '+str(Obs_NM)+'   %02d'%(num))
+'''

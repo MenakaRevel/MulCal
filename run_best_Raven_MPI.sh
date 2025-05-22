@@ -19,9 +19,10 @@ module load scipy-stack
 echo "start: $(date)"
 #==================
 Obs_NM=$1
+Num=`printf '%02g' "$2"`
 ModelName="SE"
 #==================
-cd /home/menaka/scratch/MulCal/$Obs_NM
+cd /home/menaka/scratch/MulCal/${Obs_NM}_${Num}
 mkdir -p best_Raven
 cd best_Raven
 `pwd`

@@ -69,20 +69,20 @@ for i, Obs_NM in enumerate(Obs_NMs):
     Obsrvt=os.path.join(ObsDir,Obs_NM+'_'+suffixs[ObsType]+'.rvt')
     SubId=read_subid(Obsrvt)
     # read SE_Hydrograph
-    fname=f"/home/menaka/scratch/MulCal/{Obs_NM}_{bestTrail:02d}/best_Raven/output/SE_Hydrographs.csv"
+    fname=f"/home/menaka/scratch/MulCal/{Obs_NM}_{bestTrail:02d}/best_Raven/output/SE_ReservoirStages.csv"
     df_hyd=pd.read_csv(fname)
-    print (df_hyd.columns)
+    # print (df_hyd.columns)
 
-    if f'sub{SubId} [m3/s]' not in df_hyd.columns:
-        print (f'\tsub{SubId}  not in df_hyd.columns')
+    if f'sub{SubId} ' not in df_hyd.columns:
+        print (f'\tsub{SubId}  not in df_hyd.columns', '---> no lakes in the subregion')
         continue
 
     # Select required columns
     if df.empty:
-        # cols_to_merge = ['time','date','hour', f'sub{SubId} [m3/s]', f'sub{SubId} (observed) [m3/s]']
+        # cols_to_merge = ['time','date','hour', f'sub{SubId} ', f'sub{SubId} (observed) [m]']
         cols_to_merge = ['time','date','hour','precip [mm/day]'] + [col for col in df_hyd.columns if f'sub{SubId}' in col]
     else:
-        # cols_to_merge = ['date',f'sub{SubId} [m3/s]', f'sub{SubId} (observed) [m3/s]']
+        # cols_to_merge = ['date',f'sub{SubId} ', f'sub{SubId} (observed) [m]']
         cols_to_merge = ['date'] + [col for col in df_hyd.columns if f'sub{SubId}' in col]
         
     print (cols_to_merge)    
@@ -97,4 +97,4 @@ for i, Obs_NM in enumerate(Obs_NMs):
         df = pd.merge(df, df_hyd, on='date', how='outer')  # Use 'outer' to keep all data
 
 print (df)
-df.to_csv("../dat/SiteCal_merged_SE_Hydrographs.csv", index=False)
+df.to_csv("../dat/SiteCal_merged_SE_ReservoirStages.csv", index=False)

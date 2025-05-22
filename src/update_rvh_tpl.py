@@ -32,8 +32,8 @@ rvh_tpl='./'+pm.ModelName()+'.rvh.tpl' # sys.argv[4] #'./SE.rvh.tpl'
 with open(rvh_tpl,'a') as f:
     f.write('\n'                                                                                            )
     f.write('\n# GAUGE specific subbasins'                                                                  )                                                                
-    f.write('\n:PopulateSubBasinGroup UpstreamOf'+Obs_NM+' With SUBBASINS UPSTREAM_OF '+str(SubId)       )
-    f.write('\n:PopulateSubBasinGroup NotUpstreamOf'+Obs_NM+' With SUBBASINS NOTWITHIN UpstreamOf'+Obs_NM)
+    f.write('\n:PopulateSubBasinGroup UpstreamOf'+Obs_NM+' With SUBBASINS UPSTREAM_OF '+str(SubId)          )
+    f.write('\n:PopulateSubBasinGroup NotUpstreamOf'+Obs_NM+' With SUBBASINS NOTWITHIN UpstreamOf'+Obs_NM   )
     f.write('\n'                                                                                            )
     f.write('\n# Disable'                                                                                   )
     f.write('\n:DisableSubBasinGroup NotUpstreamOf'+Obs_NM                                                  )
@@ -41,6 +41,8 @@ with open(rvh_tpl,'a') as f:
     f.write('\n# parameters to calibrate'                                                                   )
     f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       MANNINGS_N             n_multi'      )
     f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       Q_REFERENCE            q_multi'      ) 
+    f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       RAIN_CORR              p_multi'      )
+    f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       RECHARGE_CORR          q_multi'      ) 
     #================================================================
     # f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       RESERVOIR_CREST_WIDTH  k_multi'      )
     # f.write('\n:SBGroupPropertyMultiplier   Allsubbasins       MANNINGS_N             n_multi'              )
