@@ -32,6 +32,7 @@ Num=`printf '%02g' "${SLURM_ARRAY_TASK_ID}"`
 ObsDir='/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInput/obs'
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
 CWList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/LakeCWList.csv'
+CWindv='True'
 #==================
 if [[ "$runname" == 'Init' ]]; then
     rm -rf /home/menaka/scratch/MulCal/${expname}_${Num}
@@ -53,8 +54,8 @@ if [[ "$runname" == 'Init' ]]; then
     #========================
     # Init - intialization
     #========================
-    echo create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList
-    python create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList
+    echo create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $CWindv
+    python create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $CWindv
 
     #========================
     # rvt
@@ -96,6 +97,8 @@ mpirun -np $SLURM_NTASKS ./OstrichMPI                # mpirun or mpiexec also wo
 echo "./run_best_Raven_MPI.sh"
 ./run_best_Raven_MPI.sh ${expname} ${Num}
 
+# remove the forcing - softlink
+python ./etc/softlink_forcing.py
 echo "end: $(date)"
 wait
 exit 0

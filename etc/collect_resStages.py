@@ -97,4 +97,4 @@ for i, Obs_NM in enumerate(Obs_NMs):
         df = pd.merge(df, df_hyd, on='date', how='outer')  # Use 'outer' to keep all data
 
 print (df)
-df.to_csv("../dat/SiteCal_merged_SE_ReservoirStages.csv", index=False)
+df.to_csv("../dat/SiteCal_merged_SE_ReservoirStages_new.csv", index=False)

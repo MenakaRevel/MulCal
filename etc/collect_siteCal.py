@@ -22,7 +22,7 @@ warnings.filterwarnings("ignore")
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
 ObsList = pd.read_csv(ObsList)
 # Obs_NMs = ObsList[ObsList['Obs_NM']!='Burntroot']['Obs_NM'].values
-# Obs_NMs = ObsList[ObsList['rivseq']<=3]['Obs_NM'].values
+# Obs_NMs = ObsList[ObsList['rivseq']<=4]['Obs_NM'].values
 # Obs_NMs = ObsList[ObsList['ObsType']=='SF']['Obs_NM'].values
 Obs_NMs = ObsList['Obs_NM'].values
 # List to store DataFrames
@@ -32,10 +32,16 @@ for Obs_NM in Obs_NMs:
     objFun    = float('-inf')
     bestTrail = 0
     paraList  = None
+    try:
+        fname     = f"/home/menaka/scratch/MulCal/{Obs_NM}_10/dds_status.out"
+        paraList0 = pd.read_csv(fname, sep=r'\s+')
+    except:
+        continue
     #=======================
     for num in range(1, 10+1):
         fname     = f"/home/menaka/scratch/MulCal/{Obs_NM}_{num:02d}/dds_status.out"
-        paraList0 = pd.read_csv(fname, sep=r'\s+')
+        print (num, fname)
+        paraList0   = pd.read_csv(fname, sep=r'\s+')
         current_obj = -paraList0['OBJ._FUNCTION'].iloc[-1]
         if current_obj > objFun:
             objFun    = current_obj
@@ -62,4 +68,4 @@ df_final = pd.concat(df_list, ignore_index=True)
 # Print or save the final DataFrame
 print(df_final)
 
-df_final.to_csv("../dat/SiteCal_merged_SE_Diagnostics.csv", index=False)
+df_final.to_csv("../dat/SiteCal_merged_SE_Diagnostics_new.csv", index=False)

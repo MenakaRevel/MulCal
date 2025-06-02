@@ -147,7 +147,7 @@ def write_ostIN_serial(
     RunName='SE',
     progType='DDS',
     objFunc='GCOP',
-    CWindv=False,
+    CWindv='False',
     costFunc='NegMET',
     MaxIter='2',
     w1=1.0,
@@ -235,7 +235,7 @@ def write_ostIN_serial(
         #-----------------------------------------------------------------------------------------
         gnames, tags = read_cal_gagues(RavenDir)
         #-----------------------------------------------------------------------------------------
-        if CWindv:
+        if CWindv == 'True':
             if pm.InitCW() != -9999.0:
                 f.write('\n')
                 f.write('\n'+'## Individual Lake CW multipler')
@@ -468,7 +468,7 @@ def write_ostIN_parallel(
     RunName='SE',
     progType='ParallelDDS',
     objFunc='GCOP',
-    CWindv=False,
+    CWindv='False',
     costFunc='NegMET',
     MaxIter='500',
     w1=1.0,
@@ -556,7 +556,7 @@ def write_ostIN_parallel(
         #-----------------------------------------------------------------------------------------
         gnames, tags = read_cal_gagues(RavenDir)
         #-----------------------------------------------------------------------------------------
-        if CWindv:
+        if CWindv == 'True':
             if pm.InitCW() != -9999.0:
                 f.write('\n')
                 f.write('\n'+'## Individual Lake CW multipler')
@@ -768,6 +768,6 @@ def write_ostIN_parallel(
 para=int(sys.argv[1])
 
 if para>0:
-    write_ostIN_parallel('./', CWindv=True, MaxIter=pm.MaxIter()) # parallel
+    write_ostIN_parallel('./', CWindv=pm.CWindv(), MaxIter=pm.MaxIter()) # parallel
 else:
-    write_ostIN_serial('./', CWindv=True, MaxIter=pm.MaxIter())   # serial
+    write_ostIN_serial('./', CWindv=pm.CWindv(), MaxIter=pm.MaxIter())   # serial

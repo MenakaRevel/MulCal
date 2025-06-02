@@ -50,6 +50,7 @@ def Generate_Raven_rvt_String(varList, fileName):
         output_string_list.append("    :VarNameNC            "+var_name_string)
         output_string_list.append("    :DimNamesNC           rlon rlat time      # must be in the order of (x,y,t)")
         output_string_list.append("    :LinearTransform      24.0     0.0        # unit conversion")
+        output_string_list.append("    :PeriodEndingNC")
         output_string_list.append("    :RedirectToFile       ./forcing/GriddedForcings.txt")                  
         output_string_list.append(":EndGriddedForcing")
         output_string_list.append(" ")

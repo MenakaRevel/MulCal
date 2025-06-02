@@ -76,6 +76,7 @@ MaxIter=sys.argv[3]
 ObsDir=sys.argv[4]
 ObsList=sys.argv[5]
 CWList=sys.argv[6]
+CWindv=sys.argv[7]
 #================================================================
 # read GaugeSpecificList.csv
 if ObsList == '':
@@ -147,5 +148,6 @@ with open('./params.py', 'w') as f:
     f.write('\ndef MaxIter():')
     f.write('\n\treturn\t'+str(MaxIter))
     f.write('\n#--------------------------------------')
-
-    
+    f.write('\ndef CWindv():')
+    f.write('\n\treturn\t'+str(CWindv))
+    f.write('\n#--------------------------------------')

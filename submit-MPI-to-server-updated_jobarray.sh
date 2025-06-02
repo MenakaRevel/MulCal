@@ -10,7 +10,7 @@
 #SBATCH --mail-type=ALL                           # email send only in case of failure
 #SBATCH --array=1-10                              # submit as a job array 
 #SBATCH --time=0-6:00                            # time (DD-HH:MM)
-#SBATCH --job-name=02KB001                       # jobname
+#SBATCH --job-name=Animoosh                       # jobname
 ### #SBATCH --begin=now+{delay}hour
 
 # load pythons
@@ -21,7 +21,7 @@ module load scipy-stack
 #==================
 echo "start: $(date)"
 #==================
-Obs_NM="02KB001"
+Obs_NM="Animoosh"
 ModelName="SE"
 # SubId=26007677
 # ObsType="SF"
@@ -96,6 +96,8 @@ mpirun -np $SLURM_NTASKS ./OstrichMPI                # mpirun or mpiexec also wo
 echo "./run_best_Raven_MPI.sh"
 ./run_best_Raven_MPI.sh ${expname} ${Num}
 
+# remove the forcing - softlink
+python ./etc/softlink_forcing.py
 echo "end: $(date)"
 wait
 exit 0

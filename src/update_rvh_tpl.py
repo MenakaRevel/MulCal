@@ -42,7 +42,7 @@ with open(rvh_tpl,'a') as f:
     f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       MANNINGS_N             n_multi'      )
     f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       Q_REFERENCE            q_multi'      ) 
     f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       RAIN_CORR              p_multi'      )
-    f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       RECHARGE_CORR          q_multi'      ) 
+    f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       RECHARGE_CORR          r_multi'      ) 
     #================================================================
     # f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       RESERVOIR_CREST_WIDTH  k_multi'      )
     # f.write('\n:SBGroupPropertyMultiplier   Allsubbasins       MANNINGS_N             n_multi'              )
@@ -56,7 +56,8 @@ with open(rvh_tpl,'a') as f:
         f.write('\n:EndSubBasinGroup'                                                                        )    
         f.write('\n:PopulateSubBasinGroup NonLake'+Obs_NM+' With UpstreamOf'+Obs_NM+' NOTWITHIN Lake_'+Obs_NM)
         f.write('\n:SBGroupPropertyMultiplier   NonLake'+Obs_NM+'        RESERVOIR_CREST_WIDTH  k_multi'     )
-        f.write('\n:SBGroupPropertyOverride     Lake_'+Obs_NM+'          RESERVOIR_CREST_WIDTH  w_'+Obs_NM   ) 
+        if pm.CWindv() == 'True':
+            f.write('\n:SBGroupPropertyOverride     Lake_'+Obs_NM+'          RESERVOIR_CREST_WIDTH  w_'+Obs_NM   ) 
         # f.write('\n:SBGroupPropertyMultiplier   Lake_'+Obs_NM+'        RESERVOIR_CREST_WIDTH  k_'+Obs_NM   ) 
     elif ObsType == 'SF' and SubId in CWList['SubBasinID'].values:
         f.write('\n:SubBasinGroup   Lake_'+Obs_NM                                                            )
@@ -64,7 +65,8 @@ with open(rvh_tpl,'a') as f:
         f.write('\n:EndSubBasinGroup'                                                                        )    
         f.write('\n:PopulateSubBasinGroup NonLake'+Obs_NM+' With UpstreamOf'+Obs_NM+' NOTWITHIN Lake_'+Obs_NM)
         f.write('\n:SBGroupPropertyMultiplier   NonLake'+Obs_NM+'        RESERVOIR_CREST_WIDTH  k_multi'     )
-        f.write('\n:SBGroupPropertyOverride     Lake_'+Obs_NM+'          RESERVOIR_CREST_WIDTH  w_'+Obs_NM   ) 
+        if pm.CWindv() == 'True':
+            f.write('\n:SBGroupPropertyOverride     Lake_'+Obs_NM+'          RESERVOIR_CREST_WIDTH  w_'+Obs_NM   ) 
         # f.write('\n:SBGroupPropertyMultiplier   Lake_'+Obs_NM+'        RESERVOIR_CREST_WIDTH  k_'+Obs_NM   ) 
     else:
         f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'      RESERVOIR_CREST_WIDTH  k_multi'   )

@@ -20,7 +20,7 @@ output_file = "submit-MPI-to-server-updated_jobarray.sh"
 #     "Hogan", "LaMuir", "Lavieille", "LittleCauchon", "Loontail", 
 #     "Narrowbag", "Timberwolf"
 # ]
-targetG=5 # max 5
+targetG=1 # max 5
 #==========================================================
 # Read Obs_NMs
 ObsList=pd.read_csv('./dat/GaugeSpecificList.csv')
@@ -82,6 +82,7 @@ for Obs_NM in Obs_NMs:
 
     # run it
     os.system('sbatch '+output_file)
+
 '''
 targetG = 1
 Obs_NMs = ObsList[ObsList['rivseq']<=targetG]['Obs_NM'].values
