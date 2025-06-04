@@ -147,7 +147,7 @@ def write_ostIN_serial(
     RunName='SE',
     progType='DDS',
     objFunc='GCOP',
-    CWindv='False',
+    CWindv=True,
     costFunc='NegMET',
     MaxIter='2',
     w1=1.0,
@@ -235,7 +235,7 @@ def write_ostIN_serial(
         #-----------------------------------------------------------------------------------------
         gnames, tags = read_cal_gagues(RavenDir)
         #-----------------------------------------------------------------------------------------
-        if CWindv == 'True':
+        if CWindv:
             if pm.InitCW() != -9999.0:
                 f.write('\n')
                 f.write('\n'+'## Individual Lake CW multipler')
@@ -468,7 +468,7 @@ def write_ostIN_parallel(
     RunName='SE',
     progType='ParallelDDS',
     objFunc='GCOP',
-    CWindv='False',
+    CWindv=True,
     costFunc='NegMET',
     MaxIter='500',
     w1=1.0,
@@ -556,7 +556,7 @@ def write_ostIN_parallel(
         #-----------------------------------------------------------------------------------------
         gnames, tags = read_cal_gagues(RavenDir)
         #-----------------------------------------------------------------------------------------
-        if CWindv == 'True':
+        if CWindv:
             if pm.InitCW() != -9999.0:
                 f.write('\n')
                 f.write('\n'+'## Individual Lake CW multipler')

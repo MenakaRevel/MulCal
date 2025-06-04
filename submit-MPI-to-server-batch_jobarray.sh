@@ -6,7 +6,7 @@
 #SBATCH --account=def-btolson
 #SBATCH --ntasks=20                               # number of MPI processes
 #SBATCH --mem-per-cpu=10G                         # memory; default unit is megabytes
-#SBATCH --mail-user=menaka.revel@uwaterloo.ca     # email address for notifications
+##SBATCH --mail-user=menaka.revel@uwaterloo.ca     # email address for notifications
 #SBATCH --mail-type=ALL                           # email send only in case of failure
 #SBATCH --array=1-10                              # submit as a job array 
 #SBATCH --time=0-6:00                            # time (DD-HH:MM)
@@ -97,8 +97,8 @@ mpirun -np $SLURM_NTASKS ./OstrichMPI                # mpirun or mpiexec also wo
 echo "./run_best_Raven_MPI.sh"
 ./run_best_Raven_MPI.sh ${expname} ${Num}
 
-# remove the forcing - softlink
-python ./etc/softlink_forcing.py
+# # remove the forcing - softlink
+# python /home/menaka/projects/def-btolson/menaka/MulCal/etc/softlink_forcing.py
 echo "end: $(date)"
 wait
 exit 0

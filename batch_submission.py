@@ -21,6 +21,7 @@ output_file = "submit-MPI-to-server-updated_jobarray.sh"
 #     "Narrowbag", "Timberwolf"
 # ]
 targetG=1 # max 5
+CWindiv=True
 #==========================================================
 # Read Obs_NMs
 ObsList=pd.read_csv('./dat/GaugeSpecificList.csv')
@@ -51,6 +52,7 @@ if targetG > 1:
             for num in range(1, 10+1):
                 fname     = f"/home/menaka/scratch/MulCal/{upLake}_{num:02d}/dds_status.out"
                 paraList0 = pd.read_csv(fname, sep=r'\s+')
+                print (fname,paraList0)
                 current_obj = -paraList0['OBJ._FUNCTION'].iloc[-1]
                 if current_obj > objFun:
                     objFun    = current_obj
@@ -58,7 +60,11 @@ if targetG > 1:
                     paraList  = paraList0
             # print (paraList)
             # CW = paraList['w_'+str(upLake)].values[-1]
-            CW_values[upLake] = paraList[f'w_{upLake}'].values[-1]  # Store last value
+            if CWindiv:
+                CW_values[upLake] = paraList[f'w_{upLake}'].values[-1]  # Store last value
+            else:
+                CW_values[upLake] = paraList['k_multi'].values[-1]*CWList[CWList['Obs_NM']==upLake]['ini.CW'].values[0]
+
             # CWList.loc[CWList['Obs_NM']==upLake,'cal.CW']=CW
         
         # Update CWList in one operation
