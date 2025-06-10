@@ -20,8 +20,8 @@ output_file = "submit-MPI-to-server-updated_jobarray.sh"
 #     "Hogan", "LaMuir", "Lavieille", "LittleCauchon", "Loontail", 
 #     "Narrowbag", "Timberwolf"
 # ]
-targetG=1 # max 5
-CWindiv=True
+targetG=int(sys.argv[1]) # max 5
+CWindiv=False #True
 #==========================================================
 # Read Obs_NMs
 ObsList=pd.read_csv('./dat/GaugeSpecificList.csv')

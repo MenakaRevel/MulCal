@@ -235,14 +235,16 @@ def write_ostIN_serial(
         #-----------------------------------------------------------------------------------------
         gnames, tags = read_cal_gagues(RavenDir)
         #-----------------------------------------------------------------------------------------
+        # print ('CWindv',CWindv)
         if CWindv:
+            print ('Calibrate Indvidual CW', 'w_'+'%-24s'%(str(gnames[0].split('_')[0])))
             if pm.InitCW() != -9999.0:
                 f.write('\n')
                 f.write('\n'+'## Individual Lake CW multipler')
                 lowb = min(float(pm.InitCW())*0.1,0.01)
                 upb  = max(float(pm.InitCW())*2.0,10.0)
                 f.write('\nw_'+'%-24s'%(str(gnames[0].split('_')[0]))+'random       '+'%5.2f'%(lowb)+'        '+'%5.2f'%(upb)+'          none    none    none   #'+str(gnames[0].split('_')[0]))
-
+                # print ('\nw_'+'%-24s'%(str(gnames[0].split('_')[0]))+'random       '+'%5.2f'%(lowb)+'        '+'%5.2f'%(upb)+'          none    none    none   #'+str(gnames[0].split('_')[0]))
             # if 'reservoirstage' in tags:
             #     indices = [i for i, tag in enumerate(tags) if tag == 'reservoirstage']
             #     f.write('\n')
@@ -766,6 +768,8 @@ def write_ostIN_parallel(
 # OstrichRavenDir=RavenDir #'/Volumes/MENAKA/1.Work/1.UWaterloo/1.Projects/P3.OntarioFloodPlain/OLRRP_Build_Raven/data/OstrichRaven'
 
 para=int(sys.argv[1])
+
+print (pm.CWindv(), pm.MaxIter())
 
 if para>0:
     write_ostIN_parallel('./', CWindv=pm.CWindv(), MaxIter=pm.MaxIter()) # parallel

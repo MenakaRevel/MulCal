@@ -39,6 +39,8 @@ Obs_NMs=['02KF010','02KF013']
 # dat/GaugeSpecificList.csv
 # ObsList=pd.read_csv('../dat/GaugeSpecificList.csv')
 
+tag='LOCAL2'
+
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
 ObsList = pd.read_csv(ObsList)
 # Obs_NMs = ObsList[ObsList['Obs_NM']!='Burntroot']['Obs_NM'].values
@@ -97,4 +99,4 @@ for i, Obs_NM in enumerate(Obs_NMs):
         df = pd.merge(df, df_hyd, on='date', how='outer')  # Use 'outer' to keep all data
 
 print (df)
-df.to_csv("../dat/SiteCal_merged_SE_Hydrographs_new.csv", index=False)
+df.to_csv("../dat/SiteCal_merged_SE_Hydrographs_"+tag+".csv", index=False)

@@ -19,6 +19,8 @@ warnings.filterwarnings("ignore")
 #     "NorthDepot", "Radiant", "02MB006"
 # ]
 
+tag='LOCAL2'
+
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
 ObsList = pd.read_csv(ObsList)
 # Obs_NMs = ObsList[ObsList['Obs_NM']!='Burntroot']['Obs_NM'].values
@@ -68,4 +70,4 @@ df_final = pd.concat(df_list, ignore_index=True)
 # Print or save the final DataFrame
 print(df_final)
 
-df_final.to_csv("../dat/SiteCal_merged_SE_Diagnostics_new.csv", index=False)
+df_final.to_csv("../dat/SiteCal_merged_SE_Diagnostics_"+tag+".csv", index=False)

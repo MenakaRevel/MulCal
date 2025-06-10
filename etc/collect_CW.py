@@ -35,6 +35,9 @@ CWList.rename(columns={'cal.CW':'loc.CW'},inplace=True)
 # add column glb6.CW
 ddss =pd.read_csv('/home/menaka/scratch/SEregion/MPI_SE_GLB_06/dds_status.out', sep='\s+')
 CWList['glb6.CW']=CWList['ini.CW']
+# add column glb7.CW
+ddss =pd.read_csv('/home/menaka/scratch/SEregion/MPI_SE_GLB_07/dds_status.out', sep='\s+')
+CWList['glb6.CW']=CWList['ini.CW']
 # for Obs_NM in CWList['Obs_NM'].dropna().values:
 #     print (Obs_NM, ddss['w_'+str(Obs_NM)].values[-1])
 #     CWList.loc[CWList['Obs_NM']==Obs_NM,'glb2.CW']=ddss['w_'+str(Obs_NM)].values[-1]
@@ -67,6 +70,11 @@ CWList.loc[CWList['Obs_NM'].notna(), 'glb6.CW'] = CWList['Obs_NM'].map(latest_va
 
 CWList.loc[CWList['Obs_NM'].isnull(),'glb6.CW']=CWList['ini.CW']*ddss['k_multi'].values[-1]
 
+# Update CWList efficiently using map
+CWList.loc[CWList['Obs_NM'].notna(), 'glb7.CW'] = CWList['Obs_NM'].map(latest_values)
+
+CWList.loc[CWList['Obs_NM'].isnull(),'glb7.CW']=CWList['ini.CW']*ddss['k_multi'].values[-1]
+
 print (CWList)
 
-CWList.to_csv('../dat/LakeCWCalibratedSummary_new.csv',index=False)
+CWList.to_csv('../dat/LakeCWCalibratedSummary_LOCAL2.csv',index=False)

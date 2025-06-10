@@ -19,6 +19,8 @@ warnings.filterwarnings("ignore")
 #     "NorthDepot", "Radiant", "02MB006"
 # ]
 
+tag='LOCAL2'
+
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
 ObsList = pd.read_csv(ObsList)
 # Obs_NMs = ObsList[ObsList['Obs_NM']!='Burntroot']['Obs_NM'].values
@@ -69,4 +71,4 @@ print (bestParamsDF)
 
 cols = ["Obs_NM"] + [col for col in bestParamsDF.columns if col != "Obs_NM"]
 bestParamsDF = bestParamsDF[cols]
-bestParamsDF.to_csv("../dat/SiteCal_merged_SE_parameter_new.csv", index=False)
+bestParamsDF.to_csv("../dat/SiteCal_merged_SE_parameter_"+tag+".csv", index=False)
