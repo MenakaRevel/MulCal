@@ -82,10 +82,10 @@ for Obs_NM in Obs_NMs:
     updated_script = script_content.replace("{Obs_NM}", Obs_NM)
 
     # Replace all occurrences of {CWindv} with CWindv
-    updated_script = script_content.replace("{CWindv}", CWindv)
+    updated_script = updated_script.replace("{CWindv}", CWindv)
 
     # Replace all occurrences of {BiasCorr} with BiasCorr
-    updated_script = script_content.replace("{BiasCorr}", BiasCorr)
+    updated_script = updated_script.replace("{BiasCorr}", BiasCorr)
 
     # Write the updated content to a new file
     with open(output_file, "w") as file:
