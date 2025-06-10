@@ -148,6 +148,7 @@ def write_ostIN_serial(
     progType='DDS',
     objFunc='GCOP',
     CWindv=True,
+    BiasCor=True,
     costFunc='NegMET',
     MaxIter='2',
     w1=1.0,
@@ -214,10 +215,11 @@ def write_ostIN_serial(
         # f.write('\n')
         #-----------------------------------------------------------------------------------------
         ## Bias correction
-        f.write('\n')
-        f.write('\n'+'## CORRECTION FACTORS')
-        f.write('\n'+'p_multi                   random       0.1         2.0           none    none    none   # rain correction factor for subbasin'                )
-        f.write('\n'+'r_multi                   random       0.1         2.0           none    none    none   # recharge correction factor for subbasin'            )  
+        if BiasCor:  
+            f.write('\n')
+            f.write('\n'+'## BIAS CORRECTION FACTORS')
+            f.write('\n'+'p_multi                   random       0.1         2.0           none    none    none   # rain correction factor for subbasin'                )
+            f.write('\n'+'r_multi                   random       0.1         2.0           none    none    none   # recharge correction factor for subbasin'            )  
         #-----------------------------------------------------------------------------------------
         ## Routing parameters
         f.write('\n')
@@ -471,6 +473,7 @@ def write_ostIN_parallel(
     progType='ParallelDDS',
     objFunc='GCOP',
     CWindv=True,
+    BiasCor=True,
     costFunc='NegMET',
     MaxIter='500',
     w1=1.0,
@@ -537,10 +540,11 @@ def write_ostIN_parallel(
         # f.write('\n')
         #-----------------------------------------------------------------------------------------
         ## Bias correction
-        f.write('\n')
-        f.write('\n'+'## CORRECTION FACTORS')
-        f.write('\n'+'p_multi                   random       0.1         2.0           none    none    none   # rain correction factor for subbasin'                )
-        f.write('\n'+'r_multi                   random       0.1         2.0           none    none    none   # recharge correction factor for subbasin'            )  
+        if BiasCor:
+            f.write('\n')
+            f.write('\n'+'## BIAS CORRECTION FACTORS')
+            f.write('\n'+'p_multi                   random       0.1         2.0           none    none    none   # rain correction factor for subbasin'                )
+            f.write('\n'+'r_multi                   random       0.1         2.0           none    none    none   # recharge correction factor for subbasin'            )  
         #-----------------------------------------------------------------------------------------
         ## Routing parameters
         f.write('\n')
@@ -769,9 +773,10 @@ def write_ostIN_parallel(
 
 para=int(sys.argv[1])
 
-print (pm.CWindv(), pm.MaxIter())
+print ('\tCreate ostIn.txt')
+print ('\t\t'+pm.CWindv(), pm.BiasCorrection(), pm.MaxIter())
 
 if para>0:
-    write_ostIN_parallel('./', CWindv=pm.CWindv(), MaxIter=pm.MaxIter()) # parallel
+    write_ostIN_parallel('./', CWindv=pm.CWindv(), BiasCor=pm.BiasCorrection(), MaxIter=pm.MaxIter()) # parallel
 else:
-    write_ostIN_serial('./', CWindv=pm.CWindv(), MaxIter=pm.MaxIter())   # serial
+    write_ostIN_serial('./', CWindv=pm.CWindv(), BiasCor=pm.BiasCorrection(), MaxIter=pm.MaxIter())   # serial

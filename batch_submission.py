@@ -21,7 +21,8 @@ output_file = "submit-MPI-to-server-updated_jobarray.sh"
 #     "Narrowbag", "Timberwolf"
 # ]
 targetG=int(sys.argv[1]) # max 5
-CWindiv=False #True
+CWindv=sys.argv[2] #'False' #True
+BiasCorr=sys.argv[3] #'False'
 #==========================================================
 # Read Obs_NMs
 ObsList=pd.read_csv('./dat/GaugeSpecificList.csv')
@@ -60,7 +61,7 @@ if targetG > 1:
                     paraList  = paraList0
             # print (paraList)
             # CW = paraList['w_'+str(upLake)].values[-1]
-            if CWindiv:
+            if CWindv == 'True':
                 CW_values[upLake] = paraList[f'w_{upLake}'].values[-1]  # Store last value
             else:
                 CW_values[upLake] = paraList['k_multi'].values[-1]*CWList[CWList['Obs_NM']==upLake]['ini.CW'].values[0]
@@ -79,6 +80,12 @@ with open(input_file, "r") as file:
 for Obs_NM in Obs_NMs:
     # Replace all occurrences of {Obs_NM} with Obs_NMs
     updated_script = script_content.replace("{Obs_NM}", Obs_NM)
+
+    # Replace all occurrences of {CWindv} with CWindv
+    updated_script = script_content.replace("{CWindv}", CWindv)
+
+    # Replace all occurrences of {BiasCorr} with BiasCorr
+    updated_script = script_content.replace("{BiasCorr}", BiasCorr)
 
     # Write the updated content to a new file
     with open(output_file, "w") as file:
