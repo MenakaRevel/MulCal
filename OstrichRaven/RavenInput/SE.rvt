@@ -8,6 +8,7 @@
     :VarNameNC            runoff
     :DimNamesNC           rlon rlat time      # must be in the order of (x,y,t)
     :LinearTransform      24.0     0.0        # unit conversion
+    :PeriodEndingNC
     :RedirectToFile       ./forcing/GriddedForcings.txt
 :EndGriddedForcing
  
@@ -17,6 +18,7 @@
     :VarNameNC            recharge
     :DimNamesNC           rlon rlat time      # must be in the order of (x,y,t)
     :LinearTransform      24.0     0.0        # unit conversion
+    :PeriodEndingNC
     :RedirectToFile       ./forcing/GriddedForcings.txt
 :EndGriddedForcing
  
@@ -26,6 +28,7 @@
     :VarNameNC            recharge
     :DimNamesNC           rlon rlat time      # must be in the order of (x,y,t)
     :LinearTransform      24.0     0.0        # unit conversion
+    :PeriodEndingNC
     :RedirectToFile       ./forcing/GriddedForcings.txt
 :EndGriddedForcing
  
