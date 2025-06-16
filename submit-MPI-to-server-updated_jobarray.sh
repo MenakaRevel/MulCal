@@ -32,7 +32,8 @@ Num=`printf '%02g' "${SLURM_ARRAY_TASK_ID}"`
 ObsDir='/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInput/obs'
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
 CWList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/LakeCWList.csv'
-CWindv='False' #'True'
+CWindv=True  #'False' #'True'
+BiasCorr=False # 'False'
 #==================
 if [[ "$runname" == 'Init' ]]; then
     rm -rf /home/menaka/scratch/MulCal/${expname}_${Num}
@@ -54,8 +55,8 @@ if [[ "$runname" == 'Init' ]]; then
     #========================
     # Init - intialization
     #========================
-    echo create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $CWindv
-    python create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $CWindv
+    echo create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $CWindv $BiasCorr
+    python create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $CWindv $BiasCorr
 
     #========================
     # rvt
