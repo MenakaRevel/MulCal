@@ -34,6 +34,7 @@ ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.c
 CWList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/LakeCWList.csv'
 CWindv={CWindv}  #'False' #'True'
 BiasCorr={BiasCorr} # 'False'
+calCatRoute={calCatRoute} # 'True'
 #==================
 if [[ "$runname" == 'Init' ]]; then
     rm -rf /home/menaka/scratch/MulCal/${expname}_${Num}
@@ -55,8 +56,8 @@ if [[ "$runname" == 'Init' ]]; then
     #========================
     # Init - intialization
     #========================
-    echo create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $CWindv $BiasCorr
-    python create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $CWindv $BiasCorr
+    echo create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $CWindv $BiasCorr $calCatRoute
+    python create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $CWindv $BiasCorr $calCatRoute
 
     #========================
     # rvt

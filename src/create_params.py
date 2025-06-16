@@ -78,6 +78,7 @@ ObsList=sys.argv[5]
 CWList=sys.argv[6]
 CWindv=sys.argv[7]
 BiasCorr=sys.argv[8]
+calCatRoute=sys.argv[9]
 #================================================================
 # read GaugeSpecificList.csv
 if ObsList == '':
@@ -154,4 +155,7 @@ with open('./params.py', 'w') as f:
     f.write('\n#--------------------------------------')
     f.write('\ndef BiasCorrection():')
     f.write('\n\treturn\t'+str(BiasCorr))
+    f.write('\n#--------------------------------------')
+    f.write('\ndef calCatRoute():')
+    f.write('\n\treturn\t'+str(calCatRoute))
     f.write('\n#--------------------------------------')

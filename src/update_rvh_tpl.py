@@ -41,9 +41,16 @@ with open(rvh_tpl,'a') as f:
     f.write('\n# parameters to calibrate'                                                                   )
     f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       MANNINGS_N             n_multi'      )
     f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       Q_REFERENCE            q_multi'      )
+    #================================================================
+    # Bias Correction
     if pm.BiasCorrection():
         f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       RAIN_CORR              p_multi'  )
         f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       RECHARGE_CORR          r_multi'  ) 
+    #================================================================
+    # Catchment Routing
+    if pm.calCatRoute():
+        f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       TIME_CONC              t_multi'  )
+        f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       TIME_TO_PEAK           t_multi'  )
     #================================================================
     # f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       RESERVOIR_CREST_WIDTH  k_multi'      )
     # f.write('\n:SBGroupPropertyMultiplier   Allsubbasins       MANNINGS_N             n_multi'              )

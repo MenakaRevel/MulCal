@@ -23,6 +23,7 @@ output_file = "submit-MPI-to-server-updated_jobarray.sh"
 targetG=int(sys.argv[1]) # max 5
 CWindv=sys.argv[2] #'False' #True
 BiasCorr=sys.argv[3] #'False'
+calCatRoute=sys.argv[4] #'False'
 #==========================================================
 # Read Obs_NMs
 ObsList=pd.read_csv('./dat/GaugeSpecificList.csv')
@@ -77,15 +78,19 @@ if targetG > 1:
 with open(input_file, "r") as file:
     script_content = file.read()
 
+updated_script = script_content
 for Obs_NM in Obs_NMs:
     # Replace all occurrences of {Obs_NM} with Obs_NMs
-    updated_script = script_content.replace("{Obs_NM}", Obs_NM)
+    updated_script = updated_script.replace("{Obs_NM}", Obs_NM)
 
     # Replace all occurrences of {CWindv} with CWindv
-    updated_script = script_content.replace("{CWindv}", CWindv)
+    updated_script = updated_script.replace("{CWindv}", CWindv)
 
     # Replace all occurrences of {BiasCorr} with BiasCorr
-    updated_script = script_content.replace("{BiasCorr}", BiasCorr)
+    updated_script = updated_script.replace("{BiasCorr}", BiasCorr)
+
+    # Replace all occurrences of {calCatRoute} with calCatRoute
+    updated_script = updated_script.replace("{calCatRoute}", calCatRoute)
 
     # Write the updated content to a new file
     with open(output_file, "w") as file:
