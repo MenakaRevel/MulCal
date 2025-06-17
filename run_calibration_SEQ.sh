@@ -18,7 +18,7 @@ module load scipy-stack
 #==================
 echo "start: $(date)"
 #==================
-Obs_NM="Animoosh" #"NorthDepot" #calMPI1_02KC015
+Obs_NM="02KA015" #"NorthDepot" #calMPI1_02KC015
 ModelName="SE"
 # SubId=26007677
 # ObsType="SF"
@@ -28,7 +28,9 @@ runname='Init' #'Restart' #
 ObsDir='/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInput/obs'
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
 CWList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/LakeCWList.csv'
-CWindv='True'
+CWindv='False'
+BiasCorr='True' # 'False'
+calCatRoute='True' # 'True'
 #==================
 if [[ "$runname" == 'Init' ]]; then
     mkdir -p /home/menaka/scratch/MulCal/${expname}_01
@@ -49,8 +51,8 @@ if [[ "$runname" == 'Init' ]]; then
     #========================
     # Init - intialization
     #========================
-    echo create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $CWindv
-    python create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $CWindv
+    echo create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $CWindv $BiasCorr $calCatRoute
+    python create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $CWindv $BiasCorr $calCatRoute
 
     #========================
     # rvt
@@ -80,9 +82,9 @@ else
     sed -i "/MaxIterations/c\	MaxIterations         $MaxIter" ostIn.txt
 fi
 
-# # run parallel MPI
-# echo "./Ostrich"
-# ./Ostrich
+# run parallel MPI
+echo "./Ostrich"
+./Ostrich
 
 # # run best Raven
 # echo "./run_best_Raven.sh"

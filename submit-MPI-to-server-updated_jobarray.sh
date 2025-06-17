@@ -10,7 +10,7 @@
 #SBATCH --mail-type=ALL                           # email send only in case of failure
 #SBATCH --array=1-10                              # submit as a job array 
 #SBATCH --time=0-6:00                            # time (DD-HH:MM)
-#SBATCH --job-name=Animoosh                       # jobname
+#SBATCH --job-name=02KA015                       # jobname
 ### #SBATCH --begin=now+{delay}hour
 
 # load pythons
@@ -21,7 +21,7 @@ module load scipy-stack
 #==================
 echo "start: $(date)"
 #==================
-Obs_NM="Animoosh"
+Obs_NM="02KA015"
 ModelName="SE"
 # SubId=26007677
 # ObsType="SF"
@@ -32,8 +32,29 @@ Num=`printf '%02g' "${SLURM_ARRAY_TASK_ID}"`
 ObsDir='/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInput/obs'
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
 CWList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/LakeCWList.csv'
-CWindv=True  #'False' #'True'
-BiasCorr=False # 'False'
+CWindv=False  #'False' #'True'
+BiasCorr=True # 'False'
+calCatRoute=True # 'True'
+#==================
+echo "===================================================="
+echo "start: $(date)"
+echo "===================================================="
+echo ""
+echo "Job Array ID / Job ID: $SLURM_ARRAY_JOB_ID / $SLURM_JOB_ID"
+echo "This is job $SLURM_ARRAY_TASK_ID out of $SLURM_ARRAY_TASK_COUNT jobs."
+echo ""
+echo "===================================================="
+echo "Experiment name: ${expname}_${Num} with $MaxIteration calibration budget"
+echo "===================================================="
+echo "Experimental Settings"
+echo "Experiment Name                   :"${expname}_${Num}
+echo "Run Type                          :"${runname}
+echo "Maximum Iterations                :"${MaxIteration}
+echo "Calibration Method                :"${ProgramType}
+echo "Cost Function                     :"${CostFunction}
+echo "Individual CW Calibration         :"$False
+echo "Bias Correction                   :"$True
+echo "Cost Function                     :"$True
 #==================
 if [[ "$runname" == 'Init' ]]; then
     rm -rf /home/menaka/scratch/MulCal/${expname}_${Num}
@@ -55,8 +76,8 @@ if [[ "$runname" == 'Init' ]]; then
     #========================
     # Init - intialization
     #========================
-    echo create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $CWindv $BiasCorr
-    python create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $CWindv $BiasCorr
+    echo create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $CWindv $BiasCorr $calCatRoute
+    python create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $CWindv $BiasCorr $calCatRoute
 
     #========================
     # rvt

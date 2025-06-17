@@ -149,6 +149,7 @@ def write_ostIN_serial(
     objFunc='GCOP',
     CWindv=True,
     BiasCor=True,
+    calCatRoute=True,
     costFunc='NegMET',
     MaxIter='2',
     w1=1.0,
@@ -220,6 +221,12 @@ def write_ostIN_serial(
             f.write('\n'+'## BIAS CORRECTION FACTORS')
             f.write('\n'+'p_multi                   random       0.1         2.0           none    none    none   # rain correction factor for subbasin'                )
             f.write('\n'+'r_multi                   random       0.1         2.0           none    none    none   # recharge correction factor for subbasin'            )  
+        #-----------------------------------------------------------------------------------------
+        ## Calibrate Catchment Routing
+        if calCatRoute: 
+            f.write('\n')
+            f.write('\n'+'## CATCHMENT ROUTING')
+            f.write('\n'+'t_multi                   random       0.0       100.0           none    none    none   # for ROUTE_TRI_CONVOLUTION'                          )
         #-----------------------------------------------------------------------------------------
         ## Routing parameters
         f.write('\n')
@@ -781,7 +788,7 @@ def write_ostIN_parallel(
 para=int(sys.argv[1])
 
 print ('\tCreate ostIn.txt')
-print ('\t\t'+pm.CWindv(), pm.BiasCorrection(), pm.MaxIter())
+print ('\t\t', pm.CWindv(), pm.BiasCorrection(), pm.MaxIter())
 
 if para>0:
     write_ostIN_parallel('./', CWindv=pm.CWindv(), BiasCor=pm.BiasCorrection(), calCatRoute=pm.calCatRoute(), MaxIter=pm.MaxIter()) # parallel

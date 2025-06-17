@@ -36,6 +36,26 @@ CWindv={CWindv}  #'False' #'True'
 BiasCorr={BiasCorr} # 'False'
 calCatRoute={calCatRoute} # 'True'
 #==================
+echo "===================================================="
+echo "start: $(date)"
+echo "===================================================="
+echo ""
+echo "Job Array ID / Job ID: $SLURM_ARRAY_JOB_ID / $SLURM_JOB_ID"
+echo "This is job $SLURM_ARRAY_TASK_ID out of $SLURM_ARRAY_TASK_COUNT jobs."
+echo ""
+echo "===================================================="
+echo "Experiment name: ${expname}_${Num} with $MaxIteration calibration budget"
+echo "===================================================="
+echo "Experimental Settings"
+echo "Experiment Name                   :"${expname}_${Num}
+echo "Run Type                          :"${runname}
+echo "Maximum Iterations                :"${MaxIteration}
+echo "Calibration Method                :"${ProgramType}
+echo "Cost Function                     :"${CostFunction}
+echo "Individual CW Calibration         :"${CWindv}
+echo "Bias Correction                   :"${BiasCorr}
+echo "Cost Function                     :"${calCatRoute}
+#==================
 if [[ "$runname" == 'Init' ]]; then
     rm -rf /home/menaka/scratch/MulCal/${expname}_${Num}
     mkdir -p /home/menaka/scratch/MulCal/${expname}_${Num}
