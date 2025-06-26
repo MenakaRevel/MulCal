@@ -19,15 +19,17 @@ module load python/3.12.4
 # load module
 module load scipy-stack
 #==================
-echo "start: $(date)"
+# Main Code
 #==================
 Obs_NM="{Obs_NM}"
 ModelName="SE"
 # SubId=26007677
 # ObsType="SF"
-expname=$Obs_NM
+expname="{Obs_NM}" ##$Obs_NM
 MaxIter=2000
 runname='Init' #'Restart' #
+ProgramType='ParallelDDS'
+CostFunction='negKGE'
 Num=`printf '%02g' "${SLURM_ARRAY_TASK_ID}"`
 ObsDir='/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInput/obs'
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
@@ -44,17 +46,18 @@ echo "Job Array ID / Job ID: $SLURM_ARRAY_JOB_ID / $SLURM_JOB_ID"
 echo "This is job $SLURM_ARRAY_TASK_ID out of $SLURM_ARRAY_TASK_COUNT jobs."
 echo ""
 echo "===================================================="
-echo "Experiment name: ${expname}_${Num} with $MaxIteration calibration budget"
+echo "Experiment name: ${expname}_${Num} with $MaxIter calibration budget"
 echo "===================================================="
 echo "Experimental Settings"
 echo "Experiment Name                   :"${expname}_${Num}
 echo "Run Type                          :"${runname}
-echo "Maximum Iterations                :"${MaxIteration}
+echo "Maximum Iterations                :"${MaxIter}
 echo "Calibration Method                :"${ProgramType}
 echo "Cost Function                     :"${CostFunction}
-echo "Individual CW Calibration         :"${CWindv}
-echo "Bias Correction                   :"${BiasCorr}
-echo "Cost Function                     :"${calCatRoute}
+echo "Individual CW Calibration         :"{CWindv}
+echo "Bias Correction                   :"{BiasCorr}
+echo "Calibrate Catchment Route         :"{calCatRoute}
+echo "===================================================="
 #==================
 if [[ "$runname" == 'Init' ]]; then
     rm -rf /home/menaka/scratch/MulCal/${expname}_${Num}
@@ -64,6 +67,9 @@ if [[ "$runname" == 'Init' ]]; then
 
     # copy OstrichRaven
     cp -r /home/menaka/projects/def-btolson/menaka/MulCal/OstrichRaven/* .
+
+    # copy newest Raven excutable 
+    cp -r /project/def-btolson/menaka/RavenHydroFramework/src/Raven.exe ./RavenInput/
 
     mkdir ./RavenInput/obs
 
@@ -109,18 +115,26 @@ else
     # update  ostIn.txt
     sed -i "/MaxIterations/c\	MaxIterations         $MaxIterations" ostIn.txt
 fi
-
+echo "===================================================="
+echo "===================================================="
+echo "                     Ostrich                        "
+echo "===================================================="
 # run parallel MPI
 echo "srun ./OstrichMPI"
 mpirun -np $SLURM_NTASKS ./OstrichMPI                # mpirun or mpiexec also work
 # ./Ostrich
-
+echo "===================================================="
+echo "===================================================="
+echo "                      Raven                         "
+echo "===================================================="
 # run best Raven
 echo "./run_best_Raven_MPI.sh"
 ./run_best_Raven_MPI.sh ${expname} ${Num}
 
 # # remove the forcing - softlink
 # python /home/menaka/projects/def-btolson/menaka/MulCal/etc/softlink_forcing.py
+echo "===================================================="
 echo "end: $(date)"
+echo "===================================================="
 wait
 exit 0

@@ -551,8 +551,8 @@ def write_ostIN_parallel(
         if BiasCor:
             f.write('\n')
             f.write('\n'+'## BIAS CORRECTION FACTORS')
-            f.write('\n'+'p_multi                   random       0.1         2.0           none    none    none   # rain correction factor for subbasin'                )
-            f.write('\n'+'r_multi                   random       0.1         2.0           none    none    none   # recharge correction factor for subbasin'            ) 
+            f.write('\n'+'p_multi                   random       0.7         1.3           none    none    none   # rain correction factor for subbasin'                )
+            f.write('\n'+'r_multi                   random       0.7         1.3           none    none    none   # recharge correction factor for subbasin'            ) 
         #-----------------------------------------------------------------------------------------
         ## Calibrate Catchment Routing
         if calCatRoute: 

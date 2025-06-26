@@ -78,25 +78,35 @@ if targetG > 1:
 with open(input_file, "r") as file:
     script_content = file.read()
 
-updated_script = script_content
 for Obs_NM in Obs_NMs:
+    updated_script = script_content
+    print ('+++++'*20)
+    print (Obs_NM)
+    print ('+++++'*20)
     # Replace all occurrences of {Obs_NM} with Obs_NMs
     updated_script = updated_script.replace("{Obs_NM}", Obs_NM)
+    # print (updated_script)
 
     # Replace all occurrences of {CWindv} with CWindv
     updated_script = updated_script.replace("{CWindv}", CWindv)
+    # print (updated_script)
 
     # Replace all occurrences of {BiasCorr} with BiasCorr
     updated_script = updated_script.replace("{BiasCorr}", BiasCorr)
+    # print (updated_script)
 
     # Replace all occurrences of {calCatRoute} with calCatRoute
     updated_script = updated_script.replace("{calCatRoute}", calCatRoute)
+    # print (updated_script)
 
     # Write the updated content to a new file
+    # output_file = f"submit-MPI-to-server-{Obs_NM}.sh"
     with open(output_file, "w") as file:
         file.write(updated_script)
 
     print(f"Updated script saved as {output_file} for {Obs_NM}")
+
+    print ('\tsbatch '+output_file)
 
     # run it
     os.system('sbatch '+output_file)
