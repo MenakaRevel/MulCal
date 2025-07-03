@@ -10,7 +10,7 @@
 #SBATCH --mail-type=ALL                           # email send only in case of failure
 #SBATCH --array=1-10                              # submit as a job array 
 #SBATCH --time=0-6:00                            # time (DD-HH:MM)
-#SBATCH --job-name=Animoosh                       # jobname
+#SBATCH --job-name=02KB001                       # jobname
 ### #SBATCH --begin=now+{delay}hour
 
 # load pythons
@@ -21,11 +21,11 @@ module load scipy-stack
 #==================
 # Main Code
 #==================
-Obs_NM="Animoosh"
+Obs_NM="02KB001"
 ModelName="SE"
 # SubId=26007677
 # ObsType="SF"
-expname="Animoosh" ##$Obs_NM
+expname="02KB001" ##$Obs_NM
 MaxIter=2000
 runname='Init' #'Restart' #
 ProgramType='ParallelDDS'

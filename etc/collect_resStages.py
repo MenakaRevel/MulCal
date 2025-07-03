@@ -8,6 +8,12 @@ import os
 import re
 import warnings
 warnings.filterwarnings("ignore")
+#====================================================================================================
+def mk_dir(path):
+    try:
+        os.makedirs(path)
+    except OSError as e:
+        pass
 #================================================================
 def read_subid(fname):
     """Extracts the station ID from the ObservationData line, handling variable keywords."""
@@ -39,7 +45,7 @@ Obs_NMs=['02KF010','02KF013']
 # dat/GaugeSpecificList.csv
 # ObsList=pd.read_csv('../dat/GaugeSpecificList.csv')
 
-tag='LOCAL2'
+tag='LOCAL3'
 
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
 ObsList = pd.read_csv(ObsList)
@@ -99,4 +105,5 @@ for i, Obs_NM in enumerate(Obs_NMs):
         df = pd.merge(df, df_hyd, on='date', how='outer')  # Use 'outer' to keep all data
 
 print (df)
-df.to_csv("../dat/SiteCal_merged_SE_ReservoirStages_"+tag+".csv", index=False)
+mk_dir("../dat/"+tag)
+df.to_csv("../dat/"+tag+"/SE_ReservoirStages.csv", index=False)

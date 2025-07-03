@@ -8,6 +8,12 @@ import sys
 import re
 import warnings
 warnings.filterwarnings("ignore")
+#====================================================================================================
+def mk_dir(path):
+    try:
+        os.makedirs(path)
+    except OSError as e:
+        pass
 #================================================================
 # read each SE_Diagnostics.csv
 # Obs_NMs=['02KC018','02LA027','02LB013','Cedar']
@@ -19,7 +25,7 @@ warnings.filterwarnings("ignore")
 #     "NorthDepot", "Radiant", "02MB006"
 # ]
 
-tag='LOCAL2'
+tag='LOCAL3'
 
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
 ObsList = pd.read_csv(ObsList)
@@ -70,4 +76,5 @@ df_final = pd.concat(df_list, ignore_index=True)
 # Print or save the final DataFrame
 print(df_final)
 
-df_final.to_csv("../dat/SiteCal_merged_SE_Diagnostics_"+tag+".csv", index=False)
+mk_dir("../dat/"+tag)
+df_final.to_csv("../dat/"+tag+"/SE_Diagnostics.csv", index=False)
