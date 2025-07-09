@@ -25,7 +25,7 @@ def mk_dir(path):
 #     "NorthDepot", "Radiant", "02MB006"
 # ]
 
-tag='LOCAL3'
+tag=sys.argv[1] #'LOCAL2'
 
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
 ObsList = pd.read_csv(ObsList)

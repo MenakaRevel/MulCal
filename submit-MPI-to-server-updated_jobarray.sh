@@ -10,7 +10,7 @@
 #SBATCH --mail-type=ALL                           # email send only in case of failure
 #SBATCH --array=1-10                              # submit as a job array 
 #SBATCH --time=0-6:00                            # time (DD-HH:MM)
-#SBATCH --job-name=02KB001                       # jobname
+#SBATCH --job-name=Animoosh                       # jobname
 ### #SBATCH --begin=now+{delay}hour
 
 # load pythons
@@ -21,11 +21,11 @@ module load scipy-stack
 #==================
 # Main Code
 #==================
-Obs_NM="02KB001"
+Obs_NM="Animoosh"
 ModelName="SE"
 # SubId=26007677
 # ObsType="SF"
-expname="02KB001" ##$Obs_NM
+expname="Animoosh" ##$Obs_NM
 MaxIter=2000
 runname='Init' #'Restart' #
 ProgramType='ParallelDDS'
@@ -34,8 +34,8 @@ Num=`printf '%02g' "${SLURM_ARRAY_TASK_ID}"`
 ObsDir='/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInput/obs'
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
 CWList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/LakeCWList.csv'
-CWindv=True  #'False' #'True'
-BiasCorr=False # 'False'
+CWindv=False  #'False' #'True'
+BiasCorr=True # 'False'
 calCatRoute=True # 'True'
 #==================
 echo "===================================================="
@@ -54,8 +54,8 @@ echo "Run Type                          :"${runname}
 echo "Maximum Iterations                :"${MaxIter}
 echo "Calibration Method                :"${ProgramType}
 echo "Cost Function                     :"${CostFunction}
-echo "Individual CW Calibration         :"True
-echo "Bias Correction                   :"False
+echo "Individual CW Calibration         :"False
+echo "Bias Correction                   :"True
 echo "Calibrate Catchment Route         :"True
 echo "===================================================="
 #==================

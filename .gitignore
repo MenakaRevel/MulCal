@@ -6,3 +6,5 @@ dat
 
 # slurm
 slurm-*
+
+output.log

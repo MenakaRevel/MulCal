@@ -54,8 +54,12 @@ if targetG > 1:
             for num in range(1, 10+1):
                 fname     = f"/home/menaka/scratch/MulCal/{upLake}_{num:02d}/dds_status.out"
                 paraList0 = pd.read_csv(fname, sep=r'\s+')
-                print (fname,paraList0)
-                current_obj = -paraList0['OBJ._FUNCTION'].iloc[-1]
+                try:
+                    print (fname,-paraList0['OBJ._FUNCTION'].iloc[-1]) #paraList0,
+                    current_obj = -paraList0['OBJ._FUNCTION'].iloc[-1]
+                except:
+                    print (fname, -9999.0)
+                    current_obj = -9999.0
                 if current_obj > objFun:
                     objFun    = current_obj
                     bestTrail = num

@@ -45,7 +45,7 @@ Obs_NMs=['02KF010','02KF013']
 # dat/GaugeSpecificList.csv
 # ObsList=pd.read_csv('../dat/GaugeSpecificList.csv')
 
-tag='LOCAL3'
+tag=sys.argv[1] #tag='LOCAL3'
 
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
 ObsList = pd.read_csv(ObsList)
