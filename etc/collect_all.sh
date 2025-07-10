@@ -12,6 +12,12 @@ tag="$1"
 
 echo "Running all collect scripts for tag: $tag"
 
+echo "Running remove_processor_dir.py..."
+python remove_processor_dir.py "$tag" || { echo "Failed: remove_processor_dir.py"; exit 1; }
+
+echo "Running softlink_forcing.py..."
+python softlink_forcing.py "$tag" || { echo "Failed: softlink_forcing.py"; exit 1; }
+
 echo "Running collect_all_para.py..."
 python collect_all_para.py "$tag" || { echo "Failed: collect_all_para.py"; exit 1; }
 

@@ -14,7 +14,7 @@
 #SBATCH --mail-user=menaka.revel@uwaterloo.ca
 #SBATCH --mail-type=FAIL
 
-tag='LOCAL2'
+tag='LOCAL3'
 ZSTD=$HOME/zstd_install/bin/zstd
 
 cd $SLURM_TMPDIR
