@@ -9,12 +9,12 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=16
 #SBATCH --mem-per-cpu=2G
-#SBATCH --time=1-00:00
+#SBATCH --time=0-06:00
 #SBATCH --job-name=archive-MulCal
 #SBATCH --mail-user=menaka.revel@uwaterloo.ca
 #SBATCH --mail-type=FAIL
 
-tag='LOCAL3'
+tag='LOCAL2'
 ZSTD=$HOME/zstd_install/bin/zstd
 
 cd $SLURM_TMPDIR
