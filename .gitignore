@@ -9,7 +9,7 @@ slurm-*
 
 output.log
 
-# under developing 
-make_meta_farm_yaml.py
-meta-farm.yaml
-run_batch.py
+# # # under developing 
+# # make_meta_farm_yaml.py
+# # meta-farm.yaml
+# # run_batch.py

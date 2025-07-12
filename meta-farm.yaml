@@ -1,0 +1,290 @@
+global_defaults:
+  walltime: 02:00:00
+  mem: 10G
+  cpus: 20
+  modules:
+  - python/3.10
+tasks:
+  02KA015:
+    cmd: python run_batch.py 02KA015 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02KC018:
+    cmd: python run_batch.py 02KC018 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02KC015:
+    cmd: python run_batch.py 02KC015 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02LB032:
+    cmd: python run_batch.py 02LB032 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02LB033:
+    cmd: python run_batch.py 02LB033 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02LB008:
+    cmd: python run_batch.py 02LB008 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02LB018:
+    cmd: python run_batch.py 02LB018 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02MC028:
+    cmd: python run_batch.py 02MC028 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02MC036:
+    cmd: python run_batch.py 02MC036 --targetG 2 --expName Local-0
+    deps:
+    - 02MC028
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02MC026:
+    cmd: python run_batch.py 02MC026 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02LB013:
+    cmd: python run_batch.py 02LB013 --targetG 3 --expName Local-0
+    deps:
+    - 02LB006
+    - 02LB022
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02KF015:
+    cmd: python run_batch.py 02KF015 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02LB020:
+    cmd: python run_batch.py 02LB020 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02MC001:
+    cmd: python run_batch.py 02MC001 --targetG 2 --expName Local-0
+    deps:
+    - 02MC027
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02LB022:
+    cmd: python run_batch.py 02LB022 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02MC027:
+    cmd: python run_batch.py 02MC027 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02MC030:
+    cmd: python run_batch.py 02MC030 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02LB031:
+    cmd: python run_batch.py 02LB031 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02KF010:
+    cmd: python run_batch.py 02KF010 --targetG 2 --expName Local-0
+    deps:
+    - 02KF013
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02LB007:
+    cmd: python run_batch.py 02LB007 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02LA024:
+    cmd: python run_batch.py 02LA024 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02MB010:
+    cmd: python run_batch.py 02MB010 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02MB006:
+    cmd: python run_batch.py 02MB006 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02LB006:
+    cmd: python run_batch.py 02LB006 --targetG 2 --expName Local-0
+    deps:
+    - 02LB020
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02LA007:
+    cmd: python run_batch.py 02LA007 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02KF011:
+    cmd: python run_batch.py 02KF011 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02KF018:
+    cmd: python run_batch.py 02KF018 --targetG 2 --expName Local-0
+    deps:
+    - 02KF020
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02KF017:
+    cmd: python run_batch.py 02KF017 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02KB001:
+    cmd: python run_batch.py 02KB001 --targetG 5 --expName Local-0
+    deps:
+    - Radiant
+    - Animoosh
+    - Lavieille
+    - Grand
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02KF016:
+    cmd: python run_batch.py 02KF016 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02KF013:
+    cmd: python run_batch.py 02KF013 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  02KF020:
+    cmd: python run_batch.py 02KF020 --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  NorthDepot:
+    cmd: python run_batch.py NorthDepot --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  LittleCauchon:
+    cmd: python run_batch.py LittleCauchon --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  Radiant:
+    cmd: python run_batch.py Radiant --targetG 4 --expName Local-0
+    deps:
+    - Cedar
+    - Hogan
+    - NorthDepot
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  Cedar:
+    cmd: python run_batch.py Cedar --targetG 3 --expName Local-0
+    deps:
+    - Narrowbag
+    - Loontail
+    - LittleCauchon
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  Narrowbag:
+    cmd: python run_batch.py Narrowbag --targetG 2 --expName Local-0
+    deps:
+    - Burntroot
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  Hogan:
+    cmd: python run_batch.py Hogan --targetG 2 --expName Local-0
+    deps:
+    - LaMuir
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  LaMuir:
+    cmd: python run_batch.py LaMuir --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  Burntroot:
+    cmd: python run_batch.py Burntroot --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  Loontail:
+    cmd: python run_batch.py Loontail --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  Lavieille:
+    cmd: python run_batch.py Lavieille --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  Grand:
+    cmd: python run_batch.py Grand --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
+  Animoosh:
+    cmd: python run_batch.py Animoosh --targetG 1 --expName Local-0
+    deps: null
+    walltime: 02:00:00
+    mem: 10G
+    cpus: 20
