@@ -18,7 +18,7 @@ module load scipy-stack
 #==================
 echo "start: $(date)"
 #==================
-Obs_NM="02KA015" #"NorthDepot" #calMPI1_02KC015
+Obs_NM="NorthDepot" #"02KA015" #calMPI1_02KC015
 ModelName="SE"
 # SubId=26007677
 # ObsType="SF"
@@ -28,9 +28,14 @@ runname='Init' #'Restart' #
 ObsDir='/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInput/obs'
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
 CWList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/LakeCWList.csv'
-CWindv='False'
+#==================
+# Calibration Options
 BiasCorr='True' # 'False'
+calSoil='True'   
+calRivRoute='True' # 'True'
 calCatRoute='True' # 'True'
+calLakeCW='True' # True
+CWindv='True'  #'False' #'True'
 #==================
 if [[ "$runname" == 'Init' ]]; then
     mkdir -p /home/menaka/scratch/MulCal/${expname}_01
@@ -47,12 +52,18 @@ if [[ "$runname" == 'Init' ]]; then
 
     # copy run_best_Raven.sh
     cp -r /home/menaka/projects/def-btolson/menaka/MulCal/run_best_Raven.sh .
-    
+
+    #========================
+    # Init - logger
+    #========================
+    echo logger.py ${expname}_01
+    python logger.py ${expname}_01
+
     #========================
     # Init - intialization
     #========================
-    echo create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $CWindv $BiasCorr $calCatRoute
-    python create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $CWindv $BiasCorr $calCatRoute
+    echo create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList  $BiasCorr $calSoil $calRivRoute $calCatRoute $calLakeCW $CWindv
+    python create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $BiasCorr $calSoil $calRivRoute $calCatRoute $calLakeCW $CWindv
 
     #========================
     # rvt
@@ -65,6 +76,12 @@ if [[ "$runname" == 'Init' ]]; then
     #========================
     echo update_rvh.py $CWList        # $Obs_NM  "./SE.rvh.tpl" 
     python update_rvh_tpl.py $CWList  # $Obs_NM "./SE.rvh.tpl" 
+
+    #========================
+    # rvp
+    #========================
+    echo convert_rvp_tpl.py 
+    python convert_rvp_tpl.py
 
     #========================
     # ostIn.txt

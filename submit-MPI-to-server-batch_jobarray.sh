@@ -34,9 +34,14 @@ Num=`printf '%02g' "${SLURM_ARRAY_TASK_ID}"`
 ObsDir='/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInput/obs'
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
 CWList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/LakeCWList.csv'
-CWindv={CWindv}  #'False' #'True'
+#==================
+# Calibration Options
 BiasCorr={BiasCorr} # 'False'
+calSoil={calSoil}   
+calRivRoute={calRivRoute} # 'True'
 calCatRoute={calCatRoute} # 'True'
+calLakeCW={calLakeCW} # True
+CWindv={CWindv}  #'False' #'True'
 #==================
 echo "===================================================="
 echo "start: $(date)"
@@ -54,9 +59,12 @@ echo "Run Type                          :"${runname}
 echo "Maximum Iterations                :"${MaxIter}
 echo "Calibration Method                :"${ProgramType}
 echo "Cost Function                     :"${CostFunction}
-echo "Individual CW Calibration         :"{CWindv}
 echo "Bias Correction                   :"{BiasCorr}
+echo "Calibrate Soil Parameters         :"{calSoil}
+echo "Calibrate River Route             :"{calRivRoute}
 echo "Calibrate Catchment Route         :"{calCatRoute}
+echo "Calibrate Lake Crest Widths       :"{calLakeCW}
+echo "Individual CW Calibration         :"{CWindv}
 echo "===================================================="
 #==================
 if [[ "$runname" == 'Init' ]]; then
@@ -80,10 +88,16 @@ if [[ "$runname" == 'Init' ]]; then
     cp -r /home/menaka/projects/def-btolson/menaka/MulCal/run_best_Raven_MPI.sh .
 
     #========================
+    # Init - logger
+    #========================
+    echo logger.py ${expname}_${Num}
+    python logger.py ${expname}_${Num}
+
+    #========================
     # Init - intialization
     #========================
-    echo create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $CWindv $BiasCorr $calCatRoute
-    python create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $CWindv $BiasCorr $calCatRoute
+    echo create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList  $BiasCorr $calSoil $calRivRoute $calCatRoute $calLakeCW $CWindv
+    python create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $BiasCorr $calSoil $calRivRoute $calCatRoute $calLakeCW $CWindv
 
     #========================
     # rvt
@@ -96,6 +110,12 @@ if [[ "$runname" == 'Init' ]]; then
     #========================
     echo update_rvh_tpl.py $CWList        #$Obs_NM  "./SE.rvh.tpl"
     python update_rvh_tpl.py $CWList      #$Obs_NM "./SE.rvh.tpl"
+
+    #========================
+    # rvp
+    #========================
+    echo convert_rvp_tpl.py 
+    python convert_rvp_tpl.py
 
     #========================
     # ostIn.txt

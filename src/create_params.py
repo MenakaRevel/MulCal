@@ -76,9 +76,12 @@ MaxIter=sys.argv[3]
 ObsDir=sys.argv[4]
 ObsList=sys.argv[5]
 CWList=sys.argv[6]
-CWindv=sys.argv[7]
-BiasCorr=sys.argv[8]
-calCatRoute=sys.argv[9]
+BiasCorr=sys.argv[7]
+calSoil=sys.argv[8]
+calRivRoute=sys.argv[9]
+calCatRoute=sys.argv[10]
+calLakeCW=sys.argv[11]
+CWindv=sys.argv[12]
 #================================================================
 # read GaugeSpecificList.csv
 if ObsList == '':
@@ -150,12 +153,21 @@ with open('./params.py', 'w') as f:
     f.write('\ndef MaxIter():')
     f.write('\n\treturn\t'+str(MaxIter))
     f.write('\n#--------------------------------------')
+    f.write('\ndef calLakeCW():')
+    f.write('\n\treturn\t'+str(calLakeCW))
+    f.write('\n#--------------------------------------')
     f.write('\ndef CWindv():')
     f.write('\n\treturn\t'+str(CWindv))
     f.write('\n#--------------------------------------')
     f.write('\ndef BiasCorrection():')
     f.write('\n\treturn\t'+str(BiasCorr))
     f.write('\n#--------------------------------------')
+    f.write('\ndef calSoil():')
+    f.write('\n\treturn\t'+str(calSoil))
+    f.write('\n#--------------------------------------')
     f.write('\ndef calCatRoute():')
     f.write('\n\treturn\t'+str(calCatRoute))
     f.write('\n#--------------------------------------')
+    f.write('\ndef calRivRoute():')
+    f.write('\n\treturn\t'+str(calRivRoute))
+    f.write('\n#--------------------------------------')    

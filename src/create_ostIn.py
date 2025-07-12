@@ -8,6 +8,7 @@ import os
 import sys
 import re
 import random
+from logger import log
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -147,9 +148,12 @@ def write_ostIN_serial(
     RunName='SE',
     progType='DDS',
     objFunc='GCOP',
-    CWindv=True,
     BiasCor=True,
+    calSoil=True,
+    calRivRoute=True,
     calCatRoute=True,
+    calLakeCW=True,
+    CWindv=True,
     costFunc='NegMET',
     MaxIter='2',
     w1=1.0,
@@ -178,7 +182,8 @@ def write_ostIN_serial(
         f.write('\n'+'EndExtraDirs'                                        )
         f.write('\n'+''                                                    )
         f.write('\n'+'BeginFilePairs'                                      )
-        f.write('\n'+'  '+RunName+'.rvp.tpl;                '+RunName+'.rvp')
+        if calSoil:
+            f.write('\n'+'  '+RunName+'.rvp.tpl;                '+RunName+'.rvp')
         f.write('\n'+'  '+RunName+'.rvh.tpl;                '+RunName+'.rvh')
         # if lake rvh needed to be calibrated
         # f.write('\n'+'  #crest_width_par.csv.tpl;     crest_width_par.csv' )
@@ -198,22 +203,23 @@ def write_ostIN_serial(
         f.write('\n'+'#parameter                init.        low        high         tx_in    tx_ost    tx_out    format')
         #-----------------------------------------------------------------------------------------
         ## Soil parameters
-        f.write('\n'+'## SOIL')    
-        # f.write('\n'+'%Rain_Snow_T%             random       -2         2            none    none    none')
-        # f.write('\n'+'%TOC_MUL%                 random       0          6            none    none    none')
-        # f.write('\n'+'%TTP_MUL%                 random       0          6            none    none    none')
-        # f.write('\n'+'%G_SH_MUL%                random       0          6            none    none    none')
-        # f.write('\n'+'%G_SC_MUL%                random       0          6            none    none    none')
-        # f.write('\n')
-        # f.write('\n'+'%PET_CORRECTION%          random       0.5        1.5          none    none    none')
-        f.write('\n'+'%MAX_BASEFLOW_RATE%       random       0          20           none    none    none')
-        f.write('\n'+'%BASEFLOW_N%              random       0.1        4.0          none    none    none')
-        # f.write('\n'+'%BASE_T%                  random       0.5        0.99         none    none    none')
-        # f.write('\n')
-        # f.write('\n'+'%LAKE_PET_CORR%           random       0.5        1.5          none    none    none')
-        # f.write('\n'+'%WIND_VEL_CORR%           random       0.5        1.5          none    none    none')
-        # f.write('\n'+'%RELHUM_CORR%             random       0.5        1.5          none    none    none')
-        # f.write('\n')
+        if calSoil:
+            f.write('\n'+'## SOIL')    
+            # f.write('\n'+'%Rain_Snow_T%             random       -2         2            none    none    none')
+            # f.write('\n'+'%TOC_MUL%                 random       0          6            none    none    none')
+            # f.write('\n'+'%TTP_MUL%                 random       0          6            none    none    none')
+            # f.write('\n'+'%G_SH_MUL%                random       0          6            none    none    none')
+            # f.write('\n'+'%G_SC_MUL%                random       0          6            none    none    none')
+            # f.write('\n')
+            # f.write('\n'+'%PET_CORRECTION%          random       0.5        1.5          none    none    none')
+            f.write('\n'+'%MAX_BASEFLOW_RATE%       random       0          20           none    none    none')
+            f.write('\n'+'%BASEFLOW_N%              random       0.1        4.0          none    none    none')
+            # f.write('\n'+'%BASE_T%                  random       0.5        0.99         none    none    none')
+            # f.write('\n')
+            # f.write('\n'+'%LAKE_PET_CORR%           random       0.5        1.5          none    none    none')
+            # f.write('\n'+'%WIND_VEL_CORR%           random       0.5        1.5          none    none    none')
+            # f.write('\n'+'%RELHUM_CORR%             random       0.5        1.5          none    none    none')
+            # f.write('\n')
         #-----------------------------------------------------------------------------------------
         ## Bias correction
         if BiasCor:  
@@ -229,39 +235,45 @@ def write_ostIN_serial(
             f.write('\n'+'t_multi                   random       0.0       100.0           none    none    none   # for ROUTE_TRI_CONVOLUTION'                          )
         #-----------------------------------------------------------------------------------------
         ## Routing parameters
-        f.write('\n')
-        f.write('\n'+'## ROUTING')
-        f.write('\n'+'n_multi                   random       0.1        10.0           none    none    none   # manning`s n'                )
-        f.write('\n'+'q_multi                   random       0.1        10.0           none    none    none   # Q_reference'                )
-        f.write('\n'+'k_multi                   random       0.1         2.0           none    none    none   # lake crest width multiplier')
+        if calRivRoute:
+            f.write('\n')
+            f.write('\n'+'## ROUTING')
+            f.write('\n'+'n_multi                   random       0.1        10.0           none    none    none   # manning`s n'                )
+            f.write('\n'+'q_multi                   random       0.1        10.0           none    none    none   # Q_reference'                )
         #-----------------------------------------------------------------------------------------
-        ## Routing parameters
-        # f.write('\n')
-        # f.write('\n'+'## ROUTING')
-        # f.write('\n'+'c_multi                   random       0.1        10           none    none    none   # celerity'                   )
-        # f.write('\n'+'d_multi                   random       0.1        10           none    none    none   # diffusivity'                )
-        # f.write('\n'+'k_multi                   random       0.1        10           none    none    none   # lake crest width multiplier')
-        #-----------------------------------------------------------------------------------------
-        gnames, tags = read_cal_gagues(RavenDir)
-        #-----------------------------------------------------------------------------------------
-        # print ('CWindv',CWindv)
-        if CWindv:
-            print ('Calibrate Indvidual CW', 'w_'+'%-24s'%(str(gnames[0].split('_')[0])))
-            if pm.InitCW() != -9999.0:
-                f.write('\n')
-                f.write('\n'+'## Individual Lake CW multipler')
-                lowb = min(float(pm.InitCW())*0.1,0.01)
-                upb  = max(float(pm.InitCW())*2.0,10.0)
-                f.write('\nw_'+'%-24s'%(str(gnames[0].split('_')[0]))+'random       '+'%5.2f'%(lowb)+'        '+'%5.2f'%(upb)+'          none    none    none   #'+str(gnames[0].split('_')[0]))
-                # print ('\nw_'+'%-24s'%(str(gnames[0].split('_')[0]))+'random       '+'%5.2f'%(lowb)+'        '+'%5.2f'%(upb)+'          none    none    none   #'+str(gnames[0].split('_')[0]))
-            # if 'reservoirstage' in tags:
-            #     indices = [i for i, tag in enumerate(tags) if tag == 'reservoirstage']
-            #     f.write('\n')
-            #     f.write('\n'+'## Individual Lake CW multipler')
-            #     for index in indices:
-            #         lowb = max(float(pm.InitCW())*0.1,0.1)
-            #         upb  = max(float(pm.InitCW())*2.0,10.0)
-            #         f.write('\nw_'+'%-24s'%(str(gnames[index].split('_')[0]))+'random       '+'%5.2f'%(lowb)+'        '+'%5.2f'%(upb)+'          none    none    none   #'+str(gnames[index].split('_')[0]))
+        ## Lake Crest Widths
+        if calLakeCW:
+            f.write('\n')
+            f.write('\n'+'## LAKE CW')
+            f.write('\n'+'k_multi                   random       0.1         2.0           none    none    none   # lake crest width multiplier')
+            #-----------------------------------------------------------------------------------------
+            ## Routing parameters
+            # f.write('\n')
+            # f.write('\n'+'## ROUTING')
+            # f.write('\n'+'c_multi                   random       0.1        10           none    none    none   # celerity'                   )
+            # f.write('\n'+'d_multi                   random       0.1        10           none    none    none   # diffusivity'                )
+            # f.write('\n'+'k_multi                   random       0.1        10           none    none    none   # lake crest width multiplier')
+            #-----------------------------------------------------------------------------------------
+            gnames, tags = read_cal_gagues(RavenDir)
+            #-----------------------------------------------------------------------------------------
+            # log.info('CWindv',CWindv)
+            if CWindv:
+                log.info('Calibrate Indvidual CW', 'w_'+'%-24s'%(str(gnames[0].split('_')[0])))
+                if pm.InitCW() != -9999.0:
+                    f.write('\n')
+                    f.write('\n'+'## Individual Lake CW multipler')
+                    lowb = min(float(pm.InitCW())*0.1,0.01)
+                    upb  = max(float(pm.InitCW())*2.0,10.0)
+                    f.write('\nw_'+'%-24s'%(str(gnames[0].split('_')[0]))+'random       '+'%5.2f'%(lowb)+'        '+'%5.2f'%(upb)+'          none    none    none   #'+str(gnames[0].split('_')[0]))
+                    # print ('\nw_'+'%-24s'%(str(gnames[0].split('_')[0]))+'random       '+'%5.2f'%(lowb)+'        '+'%5.2f'%(upb)+'          none    none    none   #'+str(gnames[0].split('_')[0]))
+                # if 'reservoirstage' in tags:
+                #     indices = [i for i, tag in enumerate(tags) if tag == 'reservoirstage']
+                #     f.write('\n')
+                #     f.write('\n'+'## Individual Lake CW multipler')
+                #     for index in indices:
+                #         lowb = max(float(pm.InitCW())*0.1,0.1)
+                #         upb  = max(float(pm.InitCW())*2.0,10.0)
+                #         f.write('\nw_'+'%-24s'%(str(gnames[index].split('_')[0]))+'random       '+'%5.2f'%(lowb)+'        '+'%5.2f'%(upb)+'          none    none    none   #'+str(gnames[index].split('_')[0]))
         #-----------------------------------------------------------------------------------------
         f.write('\n'+'EndParams')
         #-----------------------------------------------------------------------------------------
@@ -479,9 +491,12 @@ def write_ostIN_parallel(
     RunName='SE',
     progType='ParallelDDS',
     objFunc='GCOP',
-    CWindv=True,
     BiasCor=True,
+    calSoil=True,
+    calRivRoute=True,
     calCatRoute=True,
+    calLakeCW=True,
+    CWindv=True,
     costFunc='NegMET',
     MaxIter='500',
     w1=1.0,
@@ -511,8 +526,9 @@ def write_ostIN_parallel(
         f.write('\n'+'EndExtraDirs'                                        )
         f.write('\n'+''                                                    )
         f.write('\n'+'BeginFilePairs'                                      )
-        f.write('\n'+'  SE.rvp.tpl;                  SE.rvp'               )
-        f.write('\n'+'  SE.rvh.tpl;                  SE.rvh'               )
+        if calSoil:
+            f.write('\n'+'  '+RunName+'.rvp.tpl;                '+RunName+'.rvp')
+        f.write('\n'+'  '+RunName+'.rvh.tpl;                '+RunName+'.rvh')
         # f.write('\n'+'  #crest_width_par.csv.tpl;     crest_width_par.csv' )
         # f.write('\n'+'  #SE.rvc.tpl;                  SE.rvc'              )
         f.write('\n'+''                                                    )
@@ -530,29 +546,30 @@ def write_ostIN_parallel(
         f.write('\n'+'#parameter                init.        low        high         tx_in    tx_ost    tx_out    format')
         #-----------------------------------------------------------------------------------------
         ## Soil parameters
-        f.write('\n'+'## SOIL')    
-        # f.write('\n'+'%Rain_Snow_T%             random       -2         2            none    none    none')
-        # f.write('\n'+'%TOC_MUL%                 random       0          6            none    none    none')
-        # f.write('\n'+'%TTP_MUL%                 random       0          6            none    none    none')
-        # f.write('\n'+'%G_SH_MUL%                random       0          6            none    none    none')
-        # f.write('\n'+'%G_SC_MUL%                random       0          6            none    none    none')
-        # f.write('\n')
-        # f.write('\n'+'%PET_CORRECTION%          random       0.5        1.5          none    none    none')
-        f.write('\n'+'%MAX_BASEFLOW_RATE%       random       0          20           none    none    none')
-        f.write('\n'+'%BASEFLOW_N%              random       0.1        4.0          none    none    none')
-        # f.write('\n'+'%BASE_T%                  random       0.5        0.99         none    none    none')
-        # f.write('\n')
-        # f.write('\n'+'%LAKE_PET_CORR%           random       0.5        1.5          none    none    none')
-        # f.write('\n'+'%WIND_VEL_CORR%           random       0.5        1.5          none    none    none')
-        # f.write('\n'+'%RELHUM_CORR%             random       0.5        1.5          none    none    none')
-        # f.write('\n')
+        if calSoil:
+            f.write('\n'+'## SOIL')    
+            # f.write('\n'+'%Rain_Snow_T%             random       -2         2            none    none    none')
+            # f.write('\n'+'%TOC_MUL%                 random       0          6            none    none    none')
+            # f.write('\n'+'%TTP_MUL%                 random       0          6            none    none    none')
+            # f.write('\n'+'%G_SH_MUL%                random       0          6            none    none    none')
+            # f.write('\n'+'%G_SC_MUL%                random       0          6            none    none    none')
+            # f.write('\n')
+            # f.write('\n'+'%PET_CORRECTION%          random       0.5        1.5          none    none    none')
+            f.write('\n'+'%MAX_BASEFLOW_RATE%       random       0          20           none    none    none')
+            f.write('\n'+'%BASEFLOW_N%              random       0.1        4.0          none    none    none')
+            # f.write('\n'+'%BASE_T%                  random       0.5        0.99         none    none    none')
+            # f.write('\n')
+            # f.write('\n'+'%LAKE_PET_CORR%           random       0.5        1.5          none    none    none')
+            # f.write('\n'+'%WIND_VEL_CORR%           random       0.5        1.5          none    none    none')
+            # f.write('\n'+'%RELHUM_CORR%             random       0.5        1.5          none    none    none')
+            # f.write('\n')
         #-----------------------------------------------------------------------------------------
         ## Bias correction
-        if BiasCor:
+        if BiasCor:  
             f.write('\n')
             f.write('\n'+'## BIAS CORRECTION FACTORS')
-            f.write('\n'+'p_multi                   random       0.7         1.3           none    none    none   # rain correction factor for subbasin'                )
-            f.write('\n'+'r_multi                   random       0.7         1.3           none    none    none   # recharge correction factor for subbasin'            ) 
+            f.write('\n'+'p_multi                   random       0.1         2.0           none    none    none   # rain correction factor for subbasin'                )
+            f.write('\n'+'r_multi                   random       0.1         2.0           none    none    none   # recharge correction factor for subbasin'            )  
         #-----------------------------------------------------------------------------------------
         ## Calibrate Catchment Routing
         if calCatRoute: 
@@ -561,37 +578,45 @@ def write_ostIN_parallel(
             f.write('\n'+'t_multi                   random       0.0       100.0           none    none    none   # for ROUTE_TRI_CONVOLUTION'                          )
         #-----------------------------------------------------------------------------------------
         ## Routing parameters
-        f.write('\n')
-        f.write('\n'+'## ROUTING')
-        f.write('\n'+'n_multi                   random       0.1        10.0           none    none    none   # manning`s n'                )
-        f.write('\n'+'q_multi                   random       0.1        10.0           none    none    none   # celerity'                   )
-        f.write('\n'+'k_multi                   random       0.1         2.0           none    none    none   # lake crest width multiplier')
+        if calRivRoute:
+            f.write('\n')
+            f.write('\n'+'## ROUTING')
+            f.write('\n'+'n_multi                   random       0.1        10.0           none    none    none   # manning`s n'                )
+            f.write('\n'+'q_multi                   random       0.1        10.0           none    none    none   # Q_reference'                )
         #-----------------------------------------------------------------------------------------
-        # ## Routing parameters
-        # f.write('\n')
-        # f.write('\n'+'## ROUTING')
-        # f.write('\n'+'c_multi                   random       0.1        10           none    none    none   # celerity'                   )
-        # f.write('\n'+'d_multi                   random       0.1        10           none    none    none   # diffusivity'                )
-        # f.write('\n'+'k_multi                   random       0.1        10           none    none    none   # lake crest width multiplier')
-        #-----------------------------------------------------------------------------------------
-        gnames, tags = read_cal_gagues(RavenDir)
-        #-----------------------------------------------------------------------------------------
-        if CWindv:
-            if pm.InitCW() != -9999.0:
-                f.write('\n')
-                f.write('\n'+'## Individual Lake CW multipler')
-                lowb = min(float(pm.InitCW())*0.1,0.01)
-                upb  = max(float(pm.InitCW())*2.0,10.0)
-                f.write('\nw_'+'%-24s'%(str(gnames[0].split('_')[0]))+'random       '+'%5.2f'%(lowb)+'        '+'%5.2f'%(upb)+'          none    none    none   #'+str(gnames[0].split('_')[0]))
-
-            # if 'reservoirstage' in tags:
-            #     indices = [i for i, tag in enumerate(tags) if tag == 'reservoirstage']
-            #     f.write('\n')
-            #     f.write('\n'+'## Individual Lake CW multipler')
-            #     for index in indices:
-            #         lowb = max(float(pm.InitCW())*0.1,0.1)
-            #         upb  = max(float(pm.InitCW())*2.0,10.0)
-            #         f.write('\nw_'+'%-24s'%(str(gnames[index].split('_')[0]))+'random       '+'%5.2f'%(lowb)+'        '+'%5.2f'%(upb)+'          none    none    none   #'+str(gnames[index].split('_')[0]))
+        ## Lake Crest Widths
+        if calLakeCW:
+            f.write('\n')
+            f.write('\n'+'## LAKE CW')
+            f.write('\n'+'k_multi                   random       0.1         2.0           none    none    none   # lake crest width multiplier')
+            #-----------------------------------------------------------------------------------------
+            ## Routing parameters
+            # f.write('\n')
+            # f.write('\n'+'## ROUTING')
+            # f.write('\n'+'c_multi                   random       0.1        10           none    none    none   # celerity'                   )
+            # f.write('\n'+'d_multi                   random       0.1        10           none    none    none   # diffusivity'                )
+            # f.write('\n'+'k_multi                   random       0.1        10           none    none    none   # lake crest width multiplier')
+            #-----------------------------------------------------------------------------------------
+            gnames, tags = read_cal_gagues(RavenDir)
+            #-----------------------------------------------------------------------------------------
+            # print ('CWindv',CWindv)
+            if CWindv:
+                log.info('Calibrate Indvidual CW', 'w_'+'%-24s'%(str(gnames[0].split('_')[0])))
+                if pm.InitCW() != -9999.0:
+                    f.write('\n')
+                    f.write('\n'+'## Individual Lake CW multipler')
+                    lowb = min(float(pm.InitCW())*0.1,0.01)
+                    upb  = max(float(pm.InitCW())*2.0,10.0)
+                    f.write('\nw_'+'%-24s'%(str(gnames[0].split('_')[0]))+'random       '+'%5.2f'%(lowb)+'        '+'%5.2f'%(upb)+'          none    none    none   #'+str(gnames[0].split('_')[0]))
+                    # print ('\nw_'+'%-24s'%(str(gnames[0].split('_')[0]))+'random       '+'%5.2f'%(lowb)+'        '+'%5.2f'%(upb)+'          none    none    none   #'+str(gnames[0].split('_')[0]))
+                # if 'reservoirstage' in tags:
+                #     indices = [i for i, tag in enumerate(tags) if tag == 'reservoirstage']
+                #     f.write('\n')
+                #     f.write('\n'+'## Individual Lake CW multipler')
+                #     for index in indices:
+                #         lowb = max(float(pm.InitCW())*0.1,0.1)
+                #         upb  = max(float(pm.InitCW())*2.0,10.0)
+                #         f.write('\nw_'+'%-24s'%(str(gnames[index].split('_')[0]))+'random       '+'%5.2f'%(lowb)+'        '+'%5.2f'%(upb)+'          none    none    none   #'+str(gnames[index].split('_')[0]))
         #-----------------------------------------------------------------------------------------
         f.write('\n'+'EndParams')
         #-----------------------------------------------------------------------------------------
@@ -644,7 +669,7 @@ def write_ostIN_parallel(
             # create the name
             #----------------------
             f.write('\n%-26s./RavenInput/output/SE_Diagnostics.csv; OST_NULL%10d%10d%10s'%(gName,lineN,colN,"','"))
-            print (gName,lineN,colN)
+            log.info(gName,lineN,colN)
             lineN=lineN+1
         f.write('\n')
         f.write('\n'+'EndResponseVars')
@@ -775,22 +800,304 @@ def write_ostIN_parallel(
         f.write('\n\t'+'UseRandomParamValues')
         f.write('\n\t'+'UseOpt                 standard')
         f.write('\n'+'EndParallelDDSAlg')
+#================================================================================================
+def _write_params(f, *, BiasCor, calSoil, calRivRoute,
+                  calCatRoute, calLakeCW, CWindv, RavenDir):
+    """
+    Everything that goes between BeginParams / EndParams.
+    """
+    f.write('\n#Parameter    Specification\n')
+    f.write('BeginParams\n')
+    f.write('#parameter                init.        low        high'
+            '         tx_in    tx_ost    tx_out    format')
+    # ------------------------------------------------ Soil
+    if calSoil:
+        f.write('\n\n## SOIL')
+        f.write('\n%MAX_BASEFLOW_RATE%       random       0          20'
+                '           none    none    none')
+        f.write('\n%BASEFLOW_N%              random       0.1        4.0'
+                '          none    none    none')
+    # ------------------------------------------------ Bias‑correction
+    if BiasCor:
+        f.write('\n\n## BIAS CORRECTION FACTORS')
+        f.write('\np_multi                   random       0.1         2.0'
+                '           none    none    none')
+        f.write('\nr_multi                   random       0.1         2.0'
+                '           none    none    none')
+    # ------------------------------------------------ Catchment routing
+    if calCatRoute:
+        f.write('\n\n## CATCHMENT ROUTING')
+        f.write('\nt_multi                   random       0.0       100.0'
+                '           none    none    none')
+    # ------------------------------------------------ River routing
+    if calRivRoute:
+        f.write('\n\n## ROUTING')
+        f.write('\nn_multi                   random       0.1        10.0'
+                '           none    none    none')
+        f.write('\nq_multi                   random       0.1        10.0'
+                '           none    none    none')
+    # ------------------------------------------------ Lake CW
+    if calLakeCW:
+        f.write('\n\n## LAKE CW')
+        f.write('\nk_multi                   random       0.1         2.0'
+                '           none    none    none')
+        gnames, tags = read_cal_gagues(RavenDir)
+        if CWindv and pm.InitCW() != -9999.0:
+            f.write('\n\n## Individual Lake CW multiplier')
+            lowb = min(float(pm.InitCW()) * 0.1, 0.01)
+            upb  = max(float(pm.InitCW()) * 2.0, 10.0)
+            first_gauge = gnames[0].split('_')[0]
+            f.write(f'\nw_{first_gauge:<24}random       {lowb:5.2f}'
+                    f'        {upb:5.2f}          none    none    none'
+                    f'   #{first_gauge}')
+    f.write('\n')
+    f.write('\nEndParams')
+    f.write('\n\n')
+#================================================================================================
+def _write_response_vars_and_tied(f, *, RavenDir, costFunc,
+                                  w1, w2, w3):
+    """
+    Writes the long BeginResponseVars / BeginTiedRespVars blocks
+    (all identical in the original functions).
+    """
+    # ------------- gather evaluation info
+    Eval_list   = read_evaluation_met(RavenDir)
+    gnames, tags = read_cal_gagues(RavenDir)
+    distag = wltag = rstag = 0
+    SF, WL, RS   = [], [], []
+    lineN        = 1
 
+    f.write('\n\nBeginResponseVars')
+    f.write('\n#name                                                         '
+            'filename  keyword       line     col     token')
 
-#================================================================
-# Read the SE.rvt file and get the lists of Streamflow, River Water Level, and Reservoir Stage
-# RavenDir='/Volumes/MENAKA/1.Work/1.UWaterloo/1.Projects/P3.OntarioFloodPlain/OLRRP_Build_Raven/data/SEregion/Raven_inputs/RavenInput'
-# RavenDir='/Volumes/MENAKA/1.Work/1.UWaterloo/1.Projects/P3.OntarioFloodPlain/OLRRP_Build_Raven/data/SE_v2-0-2_02KC015'
-# RavenDir='/Volumes/MENAKA/1.Work/1.UWaterloo/1.Projects/P3.OntarioFloodPlain/OLRRP_Build_Raven/data/SE_v2-0-2_02LB018'
-# print (read_cal_gagues(RavenDir))
-# OstrichRavenDir=RavenDir #'/Volumes/MENAKA/1.Work/1.UWaterloo/1.Projects/P3.OntarioFloodPlain/OLRRP_Build_Raven/data/OstrichRaven'
+    for gau_nm, tag in zip(gnames, tags):
+        RavenMet = get_metric(tag)
+        suffix   = get_suffix(RavenMet)
+        gauge    = gau_nm.split('_')[0].replace(' ', '_')
+        colN     = Eval_list.index(RavenMet) + 3  # 1‑based + 2 leading cols
+        gName    = f'{suffix}_{gauge}'
+
+        if tag == 'discharge':
+            if not distag:
+                f.write(f'\n\n# {RavenMet} [Discharge]')
+            SF.append(gName); distag += 1
+        elif tag == 'waterlevel':
+            if not wltag:
+                f.write(f'\n\n# {RavenMet} [River Water Level]')
+            WL.append(gName); wltag += 1
+        elif tag == 'reservoirstage':
+            if not rstag:
+                f.write(f'\n\n# {RavenMet} [Reservoir Stage]')
+            RS.append(gName); rstag += 1
+
+        f.write(f'\n{gName:<26}./RavenInput/output/SE_Diagnostics.csv;'
+                f' OST_NULL{lineN:10d}{colN:10d}         \',\'')
+        lineN += 1
+    f.write('\nEndResponseVars')
+
+    # ---------- tied response vars & objective
+    f.write('\n\nBeginTiedRespVars')
+    f.write('\n\t# <name> <np> <p1 .. pn> <type> <type_data>')
+
+    write_chunks(f, SF, "NegKGE_Q")
+    write_chunks(f, WL, "NegKGD_WL")
+    write_chunks(f, RS, "NegKGD_RS")
+
+    nq, nwl, nwa = map(len, (SF, WL, RS))
+    nt           = nq + nwl + nwa
+    components   = [('NegKGE_Q', nq, w1),
+                    ('NegKGD_WL', nwl, w2),
+                    ('NegKGD_RS', nwa, w3)]
+    valid        = [(lab, wt * (cnt / nt))
+                    for lab, cnt, wt in components if cnt]
+
+    if valid:
+        labels, weights = zip(*valid)
+        nc = len(labels)
+        label_fmt  = ''.join(['%15s'] * nc)
+        weight_fmt = ''.join(['%8.3f'] * nc)
+        tmpl = f'\n\n\t%-16s%2d{label_fmt}%8s{weight_fmt}'
+        f.write(tmpl % (costFunc, nc, *labels, 'wsum', *weights))
+
+    f.write('\nEndTiedRespVars')
+    f.write('\n\n')
+#================================================================================================
+def _write_common_tail(f, *, RandomSeed, costFunc,
+                       MaxIter, is_parallel):
+    """
+    Closes Constraints / RandomSeed / GCOP and writes the
+    (Parallel)DDSAlg block.
+    """
+    f.write('\n\nBeginConstraints')
+    f.write('\n\t#name type    conv.fact  lower   upper  resp.var')
+    f.write('\nEndConstraints')
+
+    # ---------- RandomSeed
+    f.write(f'\n\nRandomSeed{RandomSeed:15d}')
+
+    # ---------- GCOP
+    f.write('\n\nBeginGCOP')
+    f.write(f'\n\tCostFunction    {costFunc:20}')
+    f.write('\n\tPenaltyFunction  APM')
+    f.write('\nEndGCOP')
+
+    # ---------- DDS algorithm
+    if is_parallel:
+        f.write('\n\nBeginParallelDDSAlg')
+        f.write('\n\tPerturbationValue      0.2')
+        f.write(f'\n\tMaxIterations{int(MaxIter):10d}')
+        f.write('\n\tUseRandomParamValues')
+        f.write('\n\tUseOpt                 standard')
+        f.write('\nEndParallelDDSAlg')
+    else:
+        f.write('\n\nBeginDDSAlg')
+        f.write('\n\tPerturbationValue   0.20')
+        f.write(f'\n\tMaxIterations{int(MaxIter):10d}')
+        f.write('\n\t# UseInitialParamValues')
+        f.write('\nEndDDSAlg')
+#================================================================================================
+def write_ostIN(
+    OstrichRavenDir,
+    ostIN_type='parallel',          # 'serial' or 'parallel'
+    filename='ostIn.txt',
+    RunName='SE',
+    progType=None,                  # choose sensible default below
+    objFunc='GCOP',
+    BiasCor=True,
+    calSoil=True,
+    calRivRoute=True,
+    calCatRoute=True,
+    calLakeCW=True,
+    CWindv=True,
+    costFunc='NegMET',
+    MaxIter='500',
+    w1=1.0,
+    w2=1.0,
+    w3=1.0
+    ):
+    """
+    Write an Ostrich ostIn file in *serial* or *MPI‑parallel* flavour.
+
+    Parameters
+    ----------
+    OstrichRavenDir : str
+        Path that contains RavenInput/ and where ostIn.txt will be written.
+    ostIN_type : {'serial', 'parallel'}, default 'parallel'
+        Select which template to emit.
+    <…all other keywords identical to previous functions…>
+    """
+    # ---------- sanity
+    ostIN_type = ostIN_type.lower()
+    if ostIN_type not in ('serial', 'parallel'):
+        raise ValueError("ostIN_type must be 'serial' or 'parallel'")
+
+    is_parallel = ostIN_type == 'parallel'
+    if progType is None:
+        progType = 'ParallelDDS' if is_parallel else 'DDS'
+
+    RandomSeed = random.randint(1_000_000, 1_000_000_000)
+    RavenDir   = os.path.join(OstrichRavenDir, 'RavenInput')
+    ostin      = os.path.join(OstrichRavenDir, filename)
+
+    # ---------- write
+    with open(ostin, 'w') as f:
+        # ----- header
+        f.write(f'ProgramType          {progType}')
+        f.write(f'\nObjectiveFunction    {objFunc}')
+        f.write('\nModelExecutable      ./Ost-Raven.sh')
+        f.write('\nPreserveBestModel    ./save_best.sh')
+        f.write('\n#OstrichWarmStart      yes\n')
+
+        if is_parallel:
+            f.write('ModelSubdir processor_\n\n')
+        else:
+            f.write('\n\n')
+
+        # ----- extra dirs / filepairs
+        f.write('BeginExtraDirs\n  \tRavenInput\n  \t#best\nEndExtraDirs\n\n')
+        f.write('\n\n')
+        f.write('BeginFilePairs')
+        if calSoil:
+            f.write(f'\n\t  {RunName}.rvp.tpl;                {RunName}.rvp')
+        f.write(f'\n\t  {RunName}.rvh.tpl;                {RunName}.rvh')
+        f.write('\n\n#can be multiple (.rvh, .rvi)\nEndFilePairs')
+        f.write('\n\n')
+
+        # ----- params, responses, tied vars (shared)
+        _write_params(f, BiasCor=BiasCor, calSoil=calSoil,
+                      calRivRoute=calRivRoute, calCatRoute=calCatRoute,
+                      calLakeCW=calLakeCW, CWindv=CWindv, RavenDir=RavenDir)
+
+        _write_response_vars_and_tied(f, RavenDir=RavenDir,
+                                      costFunc=costFunc,
+                                      w1=w1, w2=w2, w3=w3)
+
+        # ----- constraints, randomseed, GCOP, (Parallel)DDSAlg
+        _write_common_tail(f, RandomSeed=RandomSeed, costFunc=costFunc,
+                           MaxIter=MaxIter, is_parallel=is_parallel)
+
+    log.info(f'[write_ostIN] Wrote {ostIN_type} file -> {ostin}')
+#================================================================================================
+def _log_model_configuration():
+    log.info("================================================")
+    log.info("Model Configuration:")
+    log.info("  Bias Correction     :%s", pm.BiasCorrection())
+    log.info("  Calibrate Soil      :%s", pm.calSoil())
+    log.info("  Calibrate Routing   :%s", pm.calRivRoute())
+    log.info("  Calibrate CatRoute  :%s", pm.calCatRoute())
+    log.info("  Calibrate Lake CW   :%s", pm.calLakeCW())
+    log.info("  CW Individual       :%s", pm.CWindv())
+    log.info("  Max Iterations      :%s", pm.MaxIter())
+    log.info("================================================")
+#================================================================================================
+# ---------------------------------------------------------------------
+# Example usage
+# ---------------------------------------------------------------------
+# write_ostIN('/path/to/OstrichRun', ostIN_type='serial', MaxIter=2)
+# write_ostIN('/path/to/OstrichRun', ostIN_type='parallel', MaxIter=500)
 
 para=int(sys.argv[1])
 
-print ('\tCreate ostIn.txt')
-print ('\t\t', pm.CWindv(), pm.BiasCorrection(), pm.MaxIter())
+_log_model_configuration()
 
-if para>0:
-    write_ostIN_parallel('./', CWindv=pm.CWindv(), BiasCor=pm.BiasCorrection(), calCatRoute=pm.calCatRoute(), MaxIter=pm.MaxIter()) # parallel
+# print ('\tCreate ostIn.txt')
+# print("\t\tModel Configuration:")
+# print(f"\t\t  Bias Correction:     {pm.BiasCorrection()}")
+# print(f"\t\t  Calibrate Soil:      {pm.calSoil()}")
+# print(f"\t\t  Calibrate Routing:   {pm.calRivRoute()}")
+# print(f"\t\t  Calibrate CatRoute:  {pm.calCatRoute()}")
+# print(f"\t\t  Calibrate Lake CW:   {pm.calLakeCW()}")
+# print(f"\t\t  CW Individual:       {pm.CWindv()}")
+# print(f"\t\t  Max Iterations:      {pm.MaxIter()}")
+
+# if para>0:
+#     write_ostIN_parallel('./', CWindv=pm.CWindv(), BiasCor=pm.BiasCorrection(), calCatRoute=pm.calCatRoute(), MaxIter=pm.MaxIter()) # parallel
+# else:
+#     write_ostIN_serial('./', CWindv=pm.CWindv(), BiasCor=pm.BiasCorrection(), calCatRoute=pm.calCatRoute(), MaxIter=pm.MaxIter())   # serial
+
+if para > 0:
+    write_ostIN(
+        './',
+        ostIN_type='parallel',  # <‑‑ key line
+        BiasCor=pm.BiasCorrection(),
+        calSoil=pm.calSoil(),
+        calRivRoute=pm.calRivRoute(),
+        calCatRoute=pm.calCatRoute(),
+        calLakeCW=pm.calLakeCW(),
+        CWindv=pm.CWindv(),
+        MaxIter=pm.MaxIter()
+    )
 else:
-    write_ostIN_serial('./', CWindv=pm.CWindv(), BiasCor=pm.BiasCorrection(), calCatRoute=pm.calCatRoute(), MaxIter=pm.MaxIter())   # serial
+    # ‑‑‑‑ OLD: write_ostIN_serial(...)
+    write_ostIN(
+        './',
+        ostIN_type='serial',            # <‑‑ key line
+        BiasCor=pm.BiasCorrection(),
+        calSoil=pm.calSoil(),
+        calRivRoute=pm.calRivRoute(),
+        calCatRoute=pm.calCatRoute(),
+        calLakeCW=pm.calLakeCW(),
+        CWindv=pm.CWindv(),
+        MaxIter=pm.MaxIter()
+    )

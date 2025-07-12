@@ -7,6 +7,7 @@ import pandas as pd
 import numpy as np 
 import os
 import sys
+from logger import log
 import params as pm
 #================================================================
 def read_subid(fname):
@@ -38,17 +39,21 @@ with open(rvh_tpl,'a') as f:
     f.write('\n# Disable'                                                                                   )
     f.write('\n:DisableSubBasinGroup NotUpstreamOf'+Obs_NM                                                  )
     f.write('\n'                                                                                            )
-    f.write('\n# parameters to calibrate'                                                                   )
-    f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       MANNINGS_N             n_multi'      )
-    f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       Q_REFERENCE            q_multi'      )
+    # River Routing
+    if pm.calRivRoute():    
+        f.write('\n# River Routing parameters'                                                              )
+        f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       MANNINGS_N             n_multi'  )
+        f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       Q_REFERENCE            q_multi'  )
     #================================================================
     # Bias Correction
     if pm.BiasCorrection():
+        f.write('\n# Bias Correction'                                                                       )
         f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       RAIN_CORR              p_multi'  )
         f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       RECHARGE_CORR          r_multi'  ) 
     #================================================================
     # Catchment Routing
     if pm.calCatRoute():
+        f.write('\n# Catchment Routing parameters'                                                          )
         f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       TIME_CONC              t_multi'  )
         f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'       TIME_TO_PEAK           t_multi'  )
     #================================================================
@@ -58,27 +63,32 @@ with open(rvh_tpl,'a') as f:
     # f.write('\n:SBGroupPropertyMultiplier   AllLakesubbasins   RESERVOIR_CREST_WIDTH  k_multi'              )
     # if observations is a lake --> calibrate individual CW
     #================================================================
-    if ObsType == 'RS':
-        f.write('\n:SubBasinGroup   Lake_'+Obs_NM                                                            )
-        f.write('\n\t'+str(SubId)                                                                            )
-        f.write('\n:EndSubBasinGroup'                                                                        )    
-        f.write('\n:PopulateSubBasinGroup NonLake'+Obs_NM+' With UpstreamOf'+Obs_NM+' NOTWITHIN Lake_'+Obs_NM)
-        f.write('\n:SBGroupPropertyMultiplier   NonLake'+Obs_NM+'        RESERVOIR_CREST_WIDTH  k_multi'     )
-        if pm.CWindv():
-            f.write('\n:SBGroupPropertyOverride     Lake_'+Obs_NM+'          RESERVOIR_CREST_WIDTH  w_'+Obs_NM   ) 
-        # f.write('\n:SBGroupPropertyMultiplier   Lake_'+Obs_NM+'        RESERVOIR_CREST_WIDTH  k_'+Obs_NM   ) 
-    elif ObsType == 'SF' and SubId in CWList['SubBasinID'].values:
-        f.write('\n:SubBasinGroup   Lake_'+Obs_NM                                                            )
-        f.write('\n\t'+str(SubId)                                                                            )
-        f.write('\n:EndSubBasinGroup'                                                                        )    
-        f.write('\n:PopulateSubBasinGroup NonLake'+Obs_NM+' With UpstreamOf'+Obs_NM+' NOTWITHIN Lake_'+Obs_NM)
-        f.write('\n:SBGroupPropertyMultiplier   NonLake'+Obs_NM+'        RESERVOIR_CREST_WIDTH  k_multi'     )
-        if pm.CWindv():
-            f.write('\n:SBGroupPropertyOverride     Lake_'+Obs_NM+'          RESERVOIR_CREST_WIDTH  w_'+Obs_NM   ) 
-        # f.write('\n:SBGroupPropertyMultiplier   Lake_'+Obs_NM+'        RESERVOIR_CREST_WIDTH  k_'+Obs_NM   ) 
-    else:
-        f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'      RESERVOIR_CREST_WIDTH  k_multi'   )
-        # f.write('\n:SBGroupPropertyMultiplier   Allsubbasins       MANNINGS_N             n_multi'        )
+    # Calibrate Lake Crest Widths
+    if pm.calLakeCW():
+        log.info("Lake crest widths will be calibrated.")
+        if ObsType == 'RS':
+            f.write('\n:SubBasinGroup   Lake_'+Obs_NM                                                            )
+            f.write('\n\t'+str(SubId)                                                                            )
+            f.write('\n:EndSubBasinGroup'                                                                        )    
+            f.write('\n:PopulateSubBasinGroup NonLake'+Obs_NM+' With UpstreamOf'+Obs_NM+' NOTWITHIN Lake_'+Obs_NM)
+            f.write('\n:SBGroupPropertyMultiplier   NonLake'+Obs_NM+'        RESERVOIR_CREST_WIDTH  k_multi'     )
+            if pm.CWindv():
+                log.info(Obs_NM + " lake's crest width will be calibrated individually.")
+                f.write('\n:SBGroupPropertyOverride     Lake_'+Obs_NM+'          RESERVOIR_CREST_WIDTH  w_'+Obs_NM) 
+            # f.write('\n:SBGroupPropertyMultiplier   Lake_'+Obs_NM+'        RESERVOIR_CREST_WIDTH  k_'+Obs_NM   ) 
+        elif ObsType == 'SF' and SubId in CWList['SubBasinID'].values:
+            f.write('\n:SubBasinGroup   Lake_'+Obs_NM                                                            )
+            f.write('\n\t'+str(SubId)                                                                            )
+            f.write('\n:EndSubBasinGroup'                                                                        )    
+            f.write('\n:PopulateSubBasinGroup NonLake'+Obs_NM+' With UpstreamOf'+Obs_NM+' NOTWITHIN Lake_'+Obs_NM)
+            f.write('\n:SBGroupPropertyMultiplier   NonLake'+Obs_NM+'        RESERVOIR_CREST_WIDTH  k_multi'     )
+            if pm.CWindv():
+                log.info("lake upstream of "+ Obs_NM + "'s lake crest width will be calibrated individually.")
+                f.write('\n:SBGroupPropertyOverride     Lake_'+Obs_NM+'          RESERVOIR_CREST_WIDTH  w_'+Obs_NM) 
+            # f.write('\n:SBGroupPropertyMultiplier   Lake_'+Obs_NM+'        RESERVOIR_CREST_WIDTH  k_'+Obs_NM   ) 
+        else:
+            f.write('\n:SBGroupPropertyMultiplier   UpstreamOf'+Obs_NM+'      RESERVOIR_CREST_WIDTH  k_multi'   )
+            # f.write('\n:SBGroupPropertyMultiplier   Allsubbasins       MANNINGS_N             n_multi'        )
     #================================================================
     # need to do
     if BasinType == 'Intermediate':
