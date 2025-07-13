@@ -20,7 +20,7 @@ from collections import defaultdict
 # 0.  Experiment presets (edit here only)                            #
 # ------------------------------------------------------------------ #
 EXPERIMENTS = {
-    "Local-0": dict(BiasCorr=False, calSoil=False, calRivRoute=False,
+    "Local-0": dict(BiasCorr=True, calSoil=False, calRivRoute=False,
                     calCatRoute=False, calLakeCW=False, CWindv=False),
     "Local-1": dict(BiasCorr=True,  calSoil=True,  calRivRoute=True,
                     calCatRoute=True,  calLakeCW=True,  CWindv=False),

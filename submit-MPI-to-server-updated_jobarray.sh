@@ -36,11 +36,11 @@ ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.c
 CWList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/LakeCWList.csv'
 #==================
 # Calibration Options
-BiasCorr=False # 'False'
-calSoil=False   
-calRivRoute=False # 'True'
-calCatRoute=False # 'True'
-calLakeCW=False # True
+BiasCorr=True # 'False'
+calSoil=True   
+calRivRoute=True # 'True'
+calCatRoute=True # 'True'
+calLakeCW=True # True
 CWindv=False  #'False' #'True'
 #==================
 echo "===================================================="
@@ -59,11 +59,11 @@ echo "Run Type                          :"${runname}
 echo "Maximum Iterations                :"${MaxIter}
 echo "Calibration Method                :"${ProgramType}
 echo "Cost Function                     :"${CostFunction}
-echo "Bias Correction                   :"False
-echo "Calibrate Soil Parameters         :"False
-echo "Calibrate River Route             :"False
-echo "Calibrate Catchment Route         :"False
-echo "Calibrate Lake Crest Widths       :"False
+echo "Bias Correction                   :"True
+echo "Calibrate Soil Parameters         :"True
+echo "Calibrate River Route             :"True
+echo "Calibrate Catchment Route         :"True
+echo "Calibrate Lake Crest Widths       :"True
 echo "Individual CW Calibration         :"False
 echo "===================================================="
 #==================

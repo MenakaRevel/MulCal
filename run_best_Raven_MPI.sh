@@ -61,7 +61,7 @@ BEGIN {
         print ":WriteWaterLevels";
         print ":WriteMassBalanceFile";
         print ":WriteReservoirMBFile";
-        print ":EvaluationMetrics\t\tNASH_SUTCLIFFE    PCT_BIAS    KLING_GUPTA    KLING_GUPTA_DEVIATION   R2";
+        print ":EvaluationMetrics\t\tNASH_SUTCLIFFE    PCT_BIAS    KLING_GUPTA    KLING_GUPTA_DEVIATION   R2  KGE_PRIME  PCT_PDIFF  SPEARMAN  PDIFF";
         next;
     }
     if (found_metrics_section && /^:/) next; # Skip original output directives
