@@ -35,13 +35,15 @@ ObsDir='/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInpu
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
 CWList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/LakeCWList.csv'
 #==================
+tag='{tag}'
+#==================
 # Calibration Options
-BiasCorr={BiasCorr} # 'False'
-calSoil={calSoil}   
-calRivRoute={calRivRoute} # 'True'
-calCatRoute={calCatRoute} # 'True'
-calLakeCW={calLakeCW} # True
-CWindv={CWindv}  #'False' #'True'
+BiasCorr='{BiasCorr}' # 'False'
+calSoil='{calSoil} '  
+calRivRoute='{calRivRoute}' # 'True'
+calCatRoute='{calCatRoute}' # 'True'
+calLakeCW='{calLakeCW}' # True
+CWindv='{CWindv}'  #'False' #'True'
 #==================
 echo "===================================================="
 echo "start: $(date)"
@@ -68,9 +70,9 @@ echo "Individual CW Calibration         :"{CWindv}
 echo "===================================================="
 #==================
 if [[ "$runname" == 'Init' ]]; then
-    rm -rf /home/menaka/scratch/MulCal/${expname}_${Num}
-    mkdir -p /home/menaka/scratch/MulCal/${expname}_${Num}
-    cd /home/menaka/scratch/MulCal/${expname}_${Num}
+    rm -rf /home/menaka/scratch/MulCal_$tag/${expname}_${Num}
+    mkdir -p /home/menaka/scratch/MulCal_$tag/${expname}_${Num}
+    cd /home/menaka/scratch/MulCal_$tag/${expname}_${Num}
     pwd
 
     # copy OstrichRaven
@@ -123,7 +125,7 @@ if [[ "$runname" == 'Init' ]]; then
     echo create_ostIn.py $SLURM_NTASKS $MaxIter #$RandomSeed 
     python create_ostIn.py $SLURM_NTASKS $MaxIter #$RandomSeed 
 else
-    cd /home/menaka/scratch/MulCal/${expname}_${Num}
+    cd /home/menaka/scratch/MulCal_$tag/${expname}_${Num}
     pwd
     
     # add OstrichWarmStart yes to ostIn.txt

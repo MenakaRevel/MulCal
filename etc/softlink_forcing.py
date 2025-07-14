@@ -1,23 +1,53 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import os
 import shutil
+import sys
 
-# Path to the folder you want 'forcing' to link to
-target_link = '/home/menaka/projects/def-btolson/menaka/MulCal/OstrichRaven/RavenInput/forcing'  # <-- change this!
+def main():
+    # Validate input
+    if len(sys.argv) != 2:
+        print("Usage: relink_forcing.py <tag>")
+        sys.exit(1)
 
-# Walk through the current directory
-for root, dirs, files in os.walk('/home/menaka/scratch/MulCal', topdown=True):
-    if 'forcing' in dirs:
-        full_path = os.path.join(root, 'forcing')
-        print(f'Replacing: {full_path}')
+    tag = sys.argv[1]
+    ROOT = f"/home/menaka/scratch/MulCal_{tag}"
 
-        # Remove symlink or directory
-        if os.path.islink(full_path):
-            os.unlink(full_path)  # removes symlink
-            print(f'Removed existing symlink: {full_path}')
-        elif os.path.isdir(full_path):
-            shutil.rmtree(full_path)  # removes actual folder
-            print(f'Removed existing directory: {full_path}')
+    if not os.path.isdir(ROOT):
+        print(f"❌ Error: Directory '{ROOT}' does not exist.")
+        sys.exit(1)
 
-        # Create the symlink
-        os.symlink(target_link, full_path)
-        print(f'Created symlink at {full_path} -> {target_link}')
+    # Path to the real forcing directory
+    target_link = '/home/menaka/projects/def-btolson/menaka/MulCal/OstrichRaven/RavenInput/forcing'
+
+    if not os.path.isdir(target_link):
+        print(f"❌ Error: Target forcing directory '{target_link}' does not exist.")
+        sys.exit(1)
+
+    updated = 0
+    for root, dirs, _ in os.walk(ROOT, topdown=True):
+        if 'forcing' in dirs:
+            full_path = os.path.join(root, 'forcing')
+            print(f"🔁 Replacing: {full_path}")
+
+            try:
+                # Remove old symlink or folder
+                if os.path.islink(full_path):
+                    os.unlink(full_path)
+                    print(f"🧹 Removed symlink: {full_path}")
+                elif os.path.isdir(full_path):
+                    shutil.rmtree(full_path)
+                    print(f"🧹 Removed directory: {full_path}")
+
+                # Create new symlink
+                os.symlink(target_link, full_path)
+                print(f"🔗 Created symlink: {full_path} -> {target_link}")
+                updated += 1
+            except Exception as e:
+                print(f"⚠️  Failed to update {full_path}: {e}")
+
+    print(f"\n✅ Done. Replaced {updated} 'forcing' directories with symlinks under {ROOT}.")
+
+if __name__ == "__main__":
+    main()

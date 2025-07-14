@@ -8,103 +8,113 @@ import os
 import re
 import warnings
 warnings.filterwarnings("ignore")
+
 #====================================================================================================
 def mk_dir(path):
-    try:
-        os.makedirs(path)
-    except OSError as e:
-        pass
-#================================================================
-def read_subid(fname):
-    """Extracts the station ID from the ObservationData line, handling variable keywords."""
-    with open(fname, 'r') as f:
-        text=f.read()
+    os.makedirs(path, exist_ok=True)
 
+#====================================================================================================
+def read_subid(fname):
+    """Extracts the station ID from the ObservationData line."""
+    with open(fname, 'r') as f:
+        text = f.read()
     match = re.search(r'ObservationData\s+\S+\s+(\d+)', text)
     return int(match.group(1)) if match else 0
-#================================================================
-ObsDir='/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInput/obs'
-#================================================================
-suffixs = {
-    'SF':'discharge',
-    'WL':'level',
-    'RS':'level'
-}
-#================================================================
-# read each SE_Diagnostics.csv
-Obs_NMs=['02KF010','02KF013']
-# Obs_NMs = [
-#     "02KA015", "02KC015", "02KC018", "02KF010", "02KF015", 
-#     "02KF017", "02KF018", "02KF020", "02LA027", "02LB008", 
-#     "02LB009", "02LB013", "02LB018", "02LB020", "02LB032", 
-#     "02LB033", "02MC001", "02MC026", "02MC028", "02MC036", 
-#     "02MC037", "Cedar", "Charles", "Hambone", "Lilypond", 
-#     "NorthDepot", "Radiant", "02KF011"
-# ]
 
-# dat/GaugeSpecificList.csv
-# ObsList=pd.read_csv('../dat/GaugeSpecificList.csv')
+#====================================================================================================
+def read_last_obj_function(fname):
+    """Efficiently read the last line of dds_status.out to get the objective function."""
+    try:
+        with open(fname, 'rb') as f:
+            f.seek(-1024, os.SEEK_END)  # read last ~1KB block
+            lines = f.readlines()
+        last_line = lines[-1].decode('utf-8').strip()
+        obj_val = float(last_line.split()[-1])
+        return -obj_val
+    except Exception:
+        return None
 
-tag=sys.argv[1] #tag='LOCAL3'
+#====================================================================================================
+def main():
+    # Validate arguments
+    if len(sys.argv) != 2:
+        print("Usage: script.py <tag>")
+        sys.exit(1)
 
-ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
-ObsList = pd.read_csv(ObsList)
-# Obs_NMs = ObsList[ObsList['Obs_NM']!='Burntroot']['Obs_NM'].values
-# Obs_NMs = ObsList[ObsList['rivseq']<2]['Obs_NM'].values
-# Obs_NMs = ObsList[ObsList['ObsType']=='SF']['Obs_NM'].values
-Obs_NMs = ObsList['Obs_NM'].values
+    tag = sys.argv[1]
+    base_dir = f"/home/menaka/scratch/MulCal_{tag}"
+    output_dir = f"../dat/{tag}"
 
-# Obs_NMs = ObsList[(ObsList['ObsType']=='SF') & (ObsList['rivseq']<4)]['Obs_NM'].values
+    # Define paths and constants
+    obs_dir = '/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInput/obs'
+    obs_list_file = '/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
+    suffixs = {'SF': 'discharge', 'WL': 'level', 'RS': 'level'}
 
-df=pd.DataFrame()
+    # Load observation list
+    ObsList = pd.read_csv(obs_list_file)
+    Obs_NMs = ObsList['Obs_NM'].values
+    obs_type_dict = dict(zip(ObsList['Obs_NM'], ObsList['ObsType']))
 
-for i, Obs_NM in enumerate(Obs_NMs):
-    objFun    = float('-inf')
-    bestTrail = 0
-    paraList  = None
-    #=======================
-    for num in range(1, 10+1):
-        fname     = f"/home/menaka/scratch/MulCal/{Obs_NM}_{num:02d}/dds_status.out"
-        paraList0 = pd.read_csv(fname, sep=r'\s+')
-        current_obj = -paraList0['OBJ._FUNCTION'].iloc[-1]
-        if current_obj > objFun:
-            objFun    = current_obj
-            bestTrail = num
-            paraList  = paraList0
-    #=======================
-    print (Obs_NM)
-    ObsType=ObsList[ObsList['Obs_NM']==Obs_NM]['ObsType'].values[0] #read_cal_gagues("./RavenInput")[Obs_NM]
-    Obsrvt=os.path.join(ObsDir,Obs_NM+'_'+suffixs[ObsType]+'.rvt')
-    SubId=read_subid(Obsrvt)
-    # read SE_Hydrograph
-    fname=f"/home/menaka/scratch/MulCal/{Obs_NM}_{bestTrail:02d}/best_Raven/output/SE_Hydrographs.csv"
-    df_hyd=pd.read_csv(fname)
-    print (df_hyd.columns)
+    df_list = []
+    core_cols = ['time', 'date', 'hour', 'precip [mm/day]']
 
-    if f'sub{SubId} [m3/s]' not in df_hyd.columns:
-        print (f'\tsub{SubId}  not in df_hyd.columns')
-        continue
+    for Obs_NM in Obs_NMs:
+        bestTrail, objFun = 0, float('-inf')
 
-    # Select required columns
-    if df.empty:
-        # cols_to_merge = ['time','date','hour', f'sub{SubId} [m3/s]', f'sub{SubId} (observed) [m3/s]']
-        cols_to_merge = ['time','date','hour','precip [mm/day]'] + [col for col in df_hyd.columns if f'sub{SubId}' in col]
-    else:
-        # cols_to_merge = ['date',f'sub{SubId} [m3/s]', f'sub{SubId} (observed) [m3/s]']
-        cols_to_merge = ['date'] + [col for col in df_hyd.columns if f'sub{SubId}' in col]
-        
-    print (cols_to_merge)    
-    df_hyd = df_hyd.loc[:, cols_to_merge].copy()
+        # Loop over DDS outputs to find best trail
+        for num in range(1, 11):
+            fname = f"{base_dir}/{Obs_NM}_{num:02d}/dds_status.out"
+            obj = read_last_obj_function(fname)
+            if obj is not None and obj > objFun:
+                objFun = obj
+                bestTrail = num
 
-    # Merge with df
-    if df.empty:
-        print ("df is None")
-        df = df_hyd.copy()  # Initialize df with the first dataset
-    else:
-        print ("df is NOT None")
-        df = pd.merge(df, df_hyd, on='date', how='outer')  # Use 'outer' to keep all data
+        if bestTrail == 0:
+            print(f"Skipping {Obs_NM}: no valid DDS trails.")
+            continue
 
-print (df)
+        # Get SubId
+        ObsType = obs_type_dict[Obs_NM]
+        obs_file = os.path.join(obs_dir, f"{Obs_NM}_{suffixs[ObsType]}.rvt")
+        SubId = read_subid(obs_file)
 
-mk_dir("../dat/"+tag)
-df.to_csv("../dat/"+tag+"/SE_Hydrographs.csv", index=False)
+        # Read SE_Hydrograph
+        hydro_file = f"{base_dir}/{Obs_NM}_{bestTrail:02d}/best_Raven/output/SE_Hydrographs.csv"
+        try:
+            df_hyd = pd.read_csv(hydro_file)
+        except Exception as e:
+            print(f"\tFailed to read {hydro_file}: {e}")
+            continue
+
+        # Filter columns
+        sub_cols = df_hyd.filter(regex=f"sub{SubId}").columns.tolist()
+        if not sub_cols:
+            print(f"\tsub{SubId} not found in {hydro_file}")
+            continue
+
+        if not df_list:
+            cols = core_cols + sub_cols
+        else:
+            cols = ['date'] + sub_cols
+
+        df_hyd = df_hyd.loc[:, cols]
+        df_list.append(df_hyd)
+
+        print(f"Processed: {Obs_NM} (Trail {bestTrail}, SubId {SubId})")
+
+    # Merge all hydrographs on 'date'
+    if not df_list:
+        print("No hydrographs to merge.")
+        sys.exit(0)
+
+    df = df_list[0]
+    for df_next in df_list[1:]:
+        df = pd.merge(df, df_next, on='date', how='outer')
+
+    mk_dir(output_dir)
+    df.to_csv(f"{output_dir}/SE_Hydrographs.csv", index=False)
+    print(f"Saved merged hydrographs to {output_dir}/SE_Hydrographs.csv")
+
+#====================================================================================================
+if __name__ == "__main__":
+    main()

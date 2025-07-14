@@ -1,80 +1,89 @@
-#! /usr/bin/env python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import numpy as np
-import pandas as pd
 import os
 import sys
 import re
+import pandas as pd
 import warnings
+
 warnings.filterwarnings("ignore")
-#====================================================================================================
+
 def mk_dir(path):
+    os.makedirs(path, exist_ok=True)
+
+def read_obj_function(out_path):
+    """Return last negative OBJ._FUNCTION value or None if file missing/unreadable."""
+    if not os.path.isfile(out_path):
+        return None
     try:
-        os.makedirs(path)
-    except OSError as e:
-        pass
-#================================================================
-# read each SE_Diagnostics.csv
-# Obs_NMs=['02KC018','02LA027','02LB013','Cedar']
-# Obs_NMs = [
-#     "02KA015", "02KC015", "02KC018", "02KF010", "02KF011", "02KF015", "02KF017", "02KF018",
-#     "02KF020", "02LA024", "02LA026", "02LA027", "02LB006", "02LB007", "02LB008", "02LB009",
-#     "02LB013", "02LB018", "02LB020", "02LB022", "02LB031", "02LB032", "02LB033", "02MC001",
-#     "02MC026", "02MC028", "02MC036", "02MC037", "Cedar", "Charles", "Hambone", "Lilypond",
-#     "NorthDepot", "Radiant", "02MB006"
-# ]
-
-tag=sys.argv[1] #tag='LOCAL3'
-
-ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
-ObsList = pd.read_csv(ObsList)
-# Obs_NMs = ObsList[ObsList['Obs_NM']!='Burntroot']['Obs_NM'].values
-# Obs_NMs = ObsList[ObsList['rivseq']<=4]['Obs_NM'].values
-# Obs_NMs = ObsList[ObsList['ObsType']=='SF']['Obs_NM'].values
-Obs_NMs = ObsList['Obs_NM'].values
-# List to store DataFrames
-df_list = []
-
-for Obs_NM in Obs_NMs:
-    objFun    = float('-inf')
-    bestTrail = 0
-    paraList  = None
-    try:
-        fname     = f"/home/menaka/scratch/MulCal/{Obs_NM}_10/dds_status.out"
-        paraList0 = pd.read_csv(fname, sep=r'\s+')
+        df = pd.read_csv(out_path, sep=r'\s+')
+        if df.empty:
+            return None
+        return -df['OBJ._FUNCTION'].iloc[-1]
     except:
-        continue
-    #=======================
-    for num in range(1, 10+1):
-        fname     = f"/home/menaka/scratch/MulCal/{Obs_NM}_{num:02d}/dds_status.out"
-        print (num, fname)
-        paraList0   = pd.read_csv(fname, sep=r'\s+')
-        current_obj = -paraList0['OBJ._FUNCTION'].iloc[-1]
-        if current_obj > objFun:
-            objFun    = current_obj
-            bestTrail = num
-            paraList  = paraList0
-    # Read the CSV file
-    # df_new = pd.read_csv(f'/home/menaka/scratch/MulCal/{Obs_NM}/processor_0/best/RavenInput/output/SE_Diagnostics.csv')
-    df_new = pd.read_csv(f'/home/menaka/scratch/MulCal/{Obs_NM}_{bestTrail:02d}/best_Raven/output/SE_Diagnostics.csv')
-    
-    # Remove columns with "Unnamed" in the name
-    df_new = df_new.loc[:, ~df_new.columns.str.contains("Unnamed")]
+        return None
 
-    df_new = df_new.loc[df_new['filename'].str.contains(Obs_NM),:]
+def main():
+    if len(sys.argv) != 2:
+        print("Usage: extract_se_diagnostics.py <tag>")
+        sys.exit(1)
 
-    # # Optionally, add a column to track the source of the data
-    # df_new['Obs_NM'] = Obs_NM  # Add Obs_NM as an identifier if needed
-    
-    # Append to the list
-    df_list.append(df_new)
+    tag = sys.argv[1]
+    base_dir = f"/home/menaka/scratch/MulCal_{tag}"
+    output_dir = f"../dat/{tag}"
+    mk_dir(output_dir)
 
-# Concatenate all DataFrames at once
-df_final = pd.concat(df_list, ignore_index=True)
+    obs_list_path = '/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
+    ObsList = pd.read_csv(obs_list_path)
+    Obs_NMs = ObsList['Obs_NM'].values
 
-# Print or save the final DataFrame
-print(df_final)
+    df_list = []
 
-mk_dir("../dat/"+tag)
-df_final.to_csv("../dat/"+tag+"/SE_Diagnostics.csv", index=False)
+    for Obs_NM in Obs_NMs:
+        best_obj = float('-inf')
+        best_trail = 0
+
+        # Find best trail by highest OBJ._FUNCTION
+        for num in range(1, 11):
+            out_path = f"{base_dir}/{Obs_NM}_{num:02d}/dds_status.out"
+            obj_val = read_obj_function(out_path)
+            if obj_val is not None and obj_val > best_obj:
+                best_obj = obj_val
+                best_trail = num
+
+        if best_trail == 0:
+            print(f"⚠️ No valid DDS run found for {Obs_NM}, skipping.")
+            continue
+
+        diag_path = f"{base_dir}/{Obs_NM}_{best_trail:02d}/best_Raven/output/SE_Diagnostics.csv"
+        if not os.path.isfile(diag_path):
+            print(f"⚠️ Missing diagnostics file {diag_path}, skipping.")
+            continue
+
+        try:
+            df_new = pd.read_csv(diag_path)
+        except Exception as e:
+            print(f"⚠️ Could not read {diag_path}: {e}, skipping.")
+            continue
+
+        # Remove any 'Unnamed' columns
+        df_new = df_new.loc[:, ~df_new.columns.str.contains('^Unnamed')]
+
+        # Keep only rows where 'filename' contains the Obs_NM string
+        df_new = df_new[df_new['filename'].str.contains(Obs_NM, na=False)]
+
+        df_list.append(df_new)
+
+    if not df_list:
+        print("⚠️ No diagnostics data collected, exiting.")
+        sys.exit(0)
+
+    df_final = pd.concat(df_list, ignore_index=True)
+
+    out_file = os.path.join(output_dir, "SE_Diagnostics.csv")
+    df_final.to_csv(out_file, index=False)
+    print(f"\n✅ Saved merged diagnostics to {out_file}")
+
+if __name__ == "__main__":
+    main()

@@ -1,19 +1,36 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import os
 import shutil
+import sys
 
-# Root of the tree you want to clean
-ROOT = "/home/menaka/scratch/MulCal"
+def main():
+    # Validate command-line argument
+    if len(sys.argv) != 2:
+        print("Usage: clean_processors.py <tag>")
+        sys.exit(1)
 
-deleted = 0
-for current_dir, dirnames, _ in os.walk(ROOT, topdown=False):   # bottom‑up so children go first
-    for d in dirnames:
-        if d.startswith("processor_"):
-            full_path = os.path.join(current_dir, d)
-            try:
-                shutil.rmtree(full_path)
-                print(f"Removed: {full_path}")
-                deleted += 1
-            except Exception as e:
-                print(f"⚠️  Couldn’t delete {full_path}: {e}")
+    tag = sys.argv[1]
+    ROOT = f"/home/menaka/scratch/MulCal_{tag}"
 
-print(f"\nFinished. {deleted} processor_* directories removed.")
+    if not os.path.isdir(ROOT):
+        print(f"Error: Directory '{ROOT}' does not exist.")
+        sys.exit(1)
+
+    deleted = 0
+    for current_dir, dirnames, _ in os.walk(ROOT, topdown=False):  # bottom-up traversal
+        for d in dirnames:
+            if d.startswith("processor_"):
+                full_path = os.path.join(current_dir, d)
+                try:
+                    shutil.rmtree(full_path)
+                    print(f"✅ Removed: {full_path}")
+                    deleted += 1
+                except Exception as e:
+                    print(f"⚠️  Couldn’t delete {full_path}: {e}")
+
+    print(f"\n✅ Finished. {deleted} processor_* directories removed from {ROOT}.")
+
+if __name__ == "__main__":
+    main()

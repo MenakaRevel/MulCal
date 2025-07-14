@@ -1,14 +1,26 @@
 #!/bin/bash
 
+# submit with:
+#       sbatch submit-MPI-to-server.sh  
+
+#SBATCH --account=def-btolson
+#SBATCH --mem-per-cpu=10G                        # memory; default unit is megabytes
+#SBATCH --mail-user=menaka.revel@uwaterloo.ca    # email address for notifications
+#SBATCH --mail-type=FAIL                         # email send only in case of failure
+#SBATCH --time=00-01:00  
+#SBATCH --job-name=collect-all
+
 # Usage: ./run_all_collect.sh LOCAL3
 # Runs all the data collection scripts with the given tag
 
-if [ "$#" -ne 1 ]; then
-    echo "Usage: $0 <tag>"
-    exit 1
-fi
+# if [ "$#" -ne 1 ]; then
+#     echo "Usage: $0 <tag>"
+#     exit 1
+# fi
 
-tag="$1"
+source $HOME/py312/bin/activate
+
+tag="Local-1" #"$1"
 
 echo "Running all collect scripts for tag: $tag"
 
