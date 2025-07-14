@@ -40,13 +40,16 @@ def read_obj_function(out_path):
 
 # ──────────────────────────────────────────────────────────────────────────────
 def main():
-    if len(sys.argv) != 2:
-        print("Usage: extract_reservoir_stages.py <tag>")
+    if len(sys.argv) < 2:
+        print("Usage: "+sys.argv[0]+" <tag> <odir>")
         sys.exit(1)
 
-    tag = sys.argv[1]
-    base_dir = f"/home/menaka/scratch/MulCal_{tag}"
-    output_dir = f"../dat/{tag}"
+    tag  = sys.argv[1]
+    odir = sys.argv[2]
+
+    base_dir   = os.path.join(odir,tag)
+    output_dir = os.path.join("../dat/",tag)
+
     mk_dir(output_dir)
 
     obs_list_path = '/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'

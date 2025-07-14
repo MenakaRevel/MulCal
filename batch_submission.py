@@ -24,7 +24,7 @@ EXPERIMENTS = {
                     calCatRoute=False, calLakeCW=False, CWindv=False),
     "Local-1": dict(BiasCorr=True,  calSoil=True,  calRivRoute=True,
                     calCatRoute=True,  calLakeCW=True,  CWindv=False),
-    "Local-3": dict(BiasCorr=True,  calSoil=True,  calRivRoute=True,
+    "Local-2": dict(BiasCorr=True,  calSoil=True,  calRivRoute=True,
                     calCatRoute=True,  calLakeCW=True,  CWindv=True),
     "default": dict(BiasCorr=True,  calSoil=True,  calRivRoute=True,
                     calCatRoute=True,  calLakeCW=True,  CWindv=True),

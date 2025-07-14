@@ -7,12 +7,13 @@ import sys
 
 def main():
     # Validate command-line argument
-    if len(sys.argv) != 2:
-        print("Usage: clean_processors.py <tag>")
+    if len(sys.argv) < 2:
+        print("Usage: "+sys.argv[0]+" <tag> <odir>")
         sys.exit(1)
 
-    tag = sys.argv[1]
-    ROOT = f"/home/menaka/scratch/MulCal_{tag}"
+    tag  = sys.argv[1]
+    odir = sys.argv[2]
+    ROOT = os.path.join(odir,tag)
 
     if not os.path.isdir(ROOT):
         print(f"Error: Directory '{ROOT}' does not exist.")

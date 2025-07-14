@@ -32,13 +32,15 @@ def read_last_dds_obj(fname):
 
 # ──────────────────────────────────────────────────────────────────────────────
 def main():
-    if len(sys.argv) != 2:
-        print("Usage: extract_parameters.py <tag>")
+    if len(sys.argv) < 2:
+        print("Usage: "+sys.argv[0]+" <tag> <odir>")
         sys.exit(1)
 
-    tag = sys.argv[1]
-    base_dir   = f"/home/menaka/scratch/MulCal_{tag}"
-    output_dir = f"../dat/{tag}"
+    tag  = sys.argv[1]
+    odir = sys.argv[2]
+
+    base_dir   = os.path.join(odir,tag)
+    output_dir = os.path.join("../dat/",tag)
     mk_dir(output_dir)
 
     obs_list_file = '/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
@@ -69,7 +71,7 @@ def main():
             best_row["Obs_NM"] = Obs_NM
             bestParamsDF = pd.concat([bestParamsDF, best_row], ignore_index=True)
 
-    if bestParamsDF.empty():
+    if bestParamsDF.empty:
         print("No valid parameters found.")
         sys.exit(0)
 

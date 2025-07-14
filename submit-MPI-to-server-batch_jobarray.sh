@@ -70,9 +70,9 @@ echo "Individual CW Calibration         :"{CWindv}
 echo "===================================================="
 #==================
 if [[ "$runname" == 'Init' ]]; then
-    rm -rf /home/menaka/scratch/MulCal_$tag/${expname}_${Num}
-    mkdir -p /home/menaka/scratch/MulCal_$tag/${expname}_${Num}
-    cd /home/menaka/scratch/MulCal_$tag/${expname}_${Num}
+    rm -rf /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
+    mkdir -p /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
+    cd /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
     pwd
 
     # copy OstrichRaven
@@ -125,7 +125,7 @@ if [[ "$runname" == 'Init' ]]; then
     echo create_ostIn.py $SLURM_NTASKS $MaxIter #$RandomSeed 
     python create_ostIn.py $SLURM_NTASKS $MaxIter #$RandomSeed 
 else
-    cd /home/menaka/scratch/MulCal_$tag/${expname}_${Num}
+    cd /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
     pwd
     
     # add OstrichWarmStart yes to ostIn.txt
