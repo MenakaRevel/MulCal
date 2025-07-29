@@ -7,8 +7,9 @@
 #SBATCH --mem-per-cpu=10G                        # memory; default unit is megabytes
 #SBATCH --mail-user=menaka.revel@uwaterloo.ca    # email address for notifications
 #SBATCH --mail-type=ALL                          # email send only in case of failure
-#SBATCH --time=00-100:00  
-#SBATCH --job-name=02KF013
+#SBATCH --array=1-10                              # submit as a job array 
+#SBATCH --time=00-01:00  
+#SBATCH --job-name=Run-Raven
 
 # load python
 module load python/3.12.4
@@ -19,16 +20,23 @@ module load scipy-stack
 echo "start: $(date)"
 #==================
 Obs_NM=$1
+ExpName=$2
+Num=`printf '%02g' "${SLURM_ARRAY_TASK_ID}"` #`printf '%02g' "1"` #
 ModelName="SE"
 #==================
-cd /home/menaka/scratch/MulCal/$Obs_NM
+cd /home/menaka/scratch/MulCal/out/${ExpName}/${Obs_NM}_${Num}
+`pwd`
 mkdir -p best_Raven
 cd best_Raven
 `pwd`
+# # cp -r ../processor_0/best/RavenInput/* .
+# cp -r ../best/RavenInput/* .
+# cp -r ../RavenInput/forcing .
+# cp -r ../RavenInput/obs .
 # cp -r ../processor_0/best/RavenInput/* .
-cp -r ../best/RavenInput/* .
-cp -r ../RavenInput/forcing .
-cp -r ../RavenInput/obs .
+# cp -r ../RavenInput/forcing .
+# cp -r ../RavenInput/obs .
+# cp -r ../RavenInput/SubBasinProperties.rvh .
 #==================
 # change rvi
 rvi='SE.rvi'
@@ -75,7 +83,7 @@ BEGIN {
         print ":WriteWaterLevels";
         print ":WriteMassBalanceFile";
         print ":WriteReservoirMBFile";
-        print ":EvaluationMetrics\t\tNASH_SUTCLIFFE    PCT_BIAS    KLING_GUPTA    KLING_GUPTA_DEVIATION   R2";
+        print ":EvaluationMetrics\t\tNASH_SUTCLIFFE    PCT_BIAS    KLING_GUPTA    KLING_GUPTA_DEVIATION   R2  KGE_PRIME  PCT_PDIFF  SPEARMAN  PDIFF";
         next;
     }
     if (found_metrics_section && /^:/) next; # Skip original output directives
@@ -88,6 +96,13 @@ mv "$tmp" "$rvi"
 
 # echo 'after rvi'
 # cat $rvi
+
+# add to the rvh ** no need if you running fully ** added to rvh.tpl
+rvh='SE.rvh'
+echo "# Add Gagued SubBasin Group"                                >> $rvh
+echo ":GaugedSubBasinGroup                   UpstreamOf"${Obs_NM} >> $rvh
+
+# Run Raven.exe
 ./Raven.exe SE -o ./output
 
 wait

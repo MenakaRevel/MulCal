@@ -68,7 +68,7 @@ def main():
         # Loop over DDS outputs to find best trail
         for num in range(1, 11):
             fname = f"{base_dir}/{Obs_NM}_{num:02d}/dds_status.out"
-            obj = read_last_obj_function(fname)
+            obj   = read_last_obj_function(fname)
             if obj is not None and obj > objFun:
                 objFun = obj
                 bestTrail = num
@@ -78,9 +78,9 @@ def main():
             continue
 
         # Get SubId
-        ObsType = obs_type_dict[Obs_NM]
+        ObsType  = obs_type_dict[Obs_NM]
         obs_file = os.path.join(obs_dir, f"{Obs_NM}_{suffixs[ObsType]}.rvt")
-        SubId = read_subid(obs_file)
+        SubId    = read_subid(obs_file)
 
         # Read SE_Hydrograph
         hydro_file = f"{base_dir}/{Obs_NM}_{bestTrail:02d}/best_Raven/output/SE_Hydrographs.csv"

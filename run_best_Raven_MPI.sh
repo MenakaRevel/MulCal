@@ -40,7 +40,7 @@ BEGIN {
     validation_period = "# Validation Period\n:EvaluationPeriod VALIDATION 2002-10-01 2008-09-30\n";
     calibration_period = "# Calibration Period\n:EvaluationPeriod CALIBRATION 2008-10-01 2018-09-30";
     start_date_pattern = ":StartDate[[:space:]]+2007-10-01";
-    output_directives = ":WriteWaterLevels\n:WriteMassBalanceFile\n:WriteReservoirMBFile\n:EvaluationMetrics\t\tNASH_SUTCLIFFE    PCT_BIAS    KLING_GUPTA    KLING_GUPTA_DEVIATION   R2";
+    output_directives = ":WriteWaterLevels\n:WriteMassBalanceFile\n:WriteReservoirMBFile\n:EvaluationMetrics\t\tNASH_SUTCLIFFE\tPCT_BIAS\tKLING_GUPTA\tKLING_GUPTA_DEVIATION\tR2";
     found_metrics_section = 0;
     validation_inserted = 0;
 }
@@ -61,7 +61,7 @@ BEGIN {
         print ":WriteWaterLevels";
         print ":WriteMassBalanceFile";
         print ":WriteReservoirMBFile";
-        print ":EvaluationMetrics\t\tNASH_SUTCLIFFE    PCT_BIAS    KLING_GUPTA    KLING_GUPTA_DEVIATION   R2  KGE_PRIME  PCT_PDIFF  SPEARMAN  PDIFF";
+        print ":EvaluationMetrics\t\tNASH_SUTCLIFFE\tPCT_BIAS\tKLING_GUPTA\tKLING_GUPTA_DEVIATION\tR2\tKGE_PRIME\tPCT_PDIFF\tSPEARMAN\tPDIFF";
         next;
     }
     if (found_metrics_section && /^:/) next; # Skip original output directives
@@ -74,6 +74,12 @@ mv "$tmp" "$rvi"
 
 # echo 'after rvi'
 # cat $rvi
+
+# # # add to the rvh ** no need if you running fully ** added to rvh.tpl
+# # rvh='SE.rvh'
+# # echo ":GaugedSubBasinGroup                   UpstreamOf"${Obs_NM} >> $rvh
+
+# Run Raven.exe
 ./Raven.exe SE -o ./output
 
 wait

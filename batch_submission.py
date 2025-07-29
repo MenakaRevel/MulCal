@@ -71,7 +71,7 @@ if targetG > 1 and cfg["calLakeCW"]:
 
             best_obj, best_paras = float("-inf"), None
             for n in range(1, 11):
-                status = Path(f"/home/menaka/scratch/MulCal/{lake}_{n:02d}/dds_status.out")
+                status = Path(f"/home/menaka/scratch/MulCal/out/{expName}/{lake}_{n:02d}/dds_status.out")
                 try:
                     df = pd.read_csv(status, sep=r"\s+")
                     obj = -df["OBJ._FUNCTION"].iloc[-1]
@@ -111,8 +111,9 @@ replacements = {
     "{CWindv}"      : tf(cfg["CWindv"]),
 }
 
+script = TEMPLATE.replace("{tag}", expName)
 for obs in Obs_NMs:
-    script = TEMPLATE.replace("{Obs_NM}", obs)
+    script = script.replace("{Obs_NM}", obs)
     for tag, value in replacements.items():
         script = script.replace(tag, value)
 

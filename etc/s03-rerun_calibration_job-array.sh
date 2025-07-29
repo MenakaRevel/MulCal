@@ -10,7 +10,7 @@
 #SBATCH --mail-type=ALL                           # email send only in case of failure
 #SBATCH --array=1-10                              # submit as a job array 
 #SBATCH --time=0-6:00                            # time (DD-HH:MM)
-#SBATCH --job-name=02KB001                       # jobname
+#SBATCH --job-name=rerun-02KF013                    # jobname
 ### #SBATCH --begin=now+{delay}hour
 
 # load pythons
@@ -21,11 +21,12 @@ module load scipy-stack
 #==================
 # Main Code
 #==================
-Obs_NM="02KB001"
+Obs_NM="02KF013"           # get this from "outliler_lakes.csv"
+OutlierLakes="26006655"    # get this from "outliler_lakes.csv" comma seperated list
 ModelName="SE"
 # SubId=26007677
 # ObsType="SF"
-expname="02KB001" ##$Obs_NM
+expname=$Obs_NM  #"02KF013" ##$Obs_NM
 MaxIter=2000
 runname='Init' #'Restart' #
 ProgramType='ParallelDDS'
@@ -44,6 +45,9 @@ calRivRoute='True' # 'True'
 calCatRoute='True' # 'True'
 calLakeCW='True' # True
 CWindv='True'  #'False' #'True'
+#==================
+# cd into main folder
+`cd ..`
 #==================
 echo "===================================================="
 echo "start: $(date)"
@@ -69,74 +73,66 @@ echo "Calibrate Lake Crest Widths       :"True
 echo "Individual CW Calibration         :"True
 echo "===================================================="
 #==================
-if [[ "$runname" == 'Init' ]]; then
-    rm -rf /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
-    mkdir -p /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
-    cd /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
-    pwd
+# if [[ "$runname" == 'Init' ]]; then
+# rm -rf /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
+# mkdir -p /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
+cd /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
 
-    # copy OstrichRaven
-    cp -r /home/menaka/projects/def-btolson/menaka/MulCal/OstrichRaven/* .
+# # cp all 1st iteration - backup
+# mkdir -p calTrail-0
+# cp -r * calTrail-0/ 
 
-    # copy newest Raven excutable 
-    cp -r /project/def-btolson/menaka/RavenHydroFramework/src/Raven.exe ./RavenInput/
+pwd
 
-    mkdir ./RavenInput/obs
+# Step 1: Modify ostIn.txt if the current lake is an outlier
+# ----------------------------------------------------------
+# Check if pm.SubId() from params.py is in the OutlierLakes list.
+# If it is, comment out the line in ostIn.txt that starts with "w_${OBS_NM}".
 
-    # copy src files
-    cp -r /home/menaka/projects/def-btolson/menaka/MulCal/src/* .
+# Step 2: Update reservoir crest width in rvh.tpl
+# -----------------------------------------------
+# Locate the line with ":SBGroupPropertyOverride     Lake_${OBS_NM}     RESERVOIR_CREST_WIDTH"
+# and replace the existing value with 9999.0 to override the crest width for this lake.
 
-    # copy run_best_Raven.sh
-    cp -r /home/menaka/projects/def-btolson/menaka/MulCal/run_best_Raven_MPI.sh .
+OSubID=$(python3 -c "import params as pm; outliers = [int(x) for x in '''$OutlierLakes'''.split(',')]; print(pm.SubId()) if pm.SubId() in outliers else None")
 
-    #========================
-    # Init - logger
-    #========================
-    echo logger.py ${expname}_${Num}
-    python logger.py ${expname}_${Num}
+echo $OSubID
 
-    #========================
-    # Init - intialization
-    #========================
-    echo create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList  $BiasCorr $calSoil $calRivRoute $calCatRoute $calLakeCW $CWindv
-    python create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $BiasCorr $calSoil $calRivRoute $calCatRoute $calLakeCW $CWindv
+if [ -n "$OSubID" ]; then
+    echo "Individual lake CW calibred: $OSubID"
+    echo "Editing ostIn.txt"
 
-    #========================
-    # rvt
-    #========================
-    echo update_rvt.py $Obs_NM $ObsDir "./RavenInput/SE.rvt" 
-    python update_rvt.py $Obs_NM $ObsDir "./RavenInput/SE.rvt" 
+    # Comment out lines starting with 'w_${Obs_NM}'
+    sed -i.bak "/^w_${Obs_NM}\b/ s/^/#/" ostIn.txt
 
-    #========================
-    # rvh
-    #========================
-    echo update_rvh_tpl.py $CWList        #$Obs_NM  "./SE.rvh.tpl"
-    python update_rvh_tpl.py $CWList      #$Obs_NM "./SE.rvh.tpl"
+    # Replace the RESERVOIR_CREST_WIDTH value with 9999.0 for Lake_${OBS_NM}
+    sed -i "/^:SBGroupPropertyOverride[[:space:]]\+Lake_${Obs_NM}[[:space:]]\+RESERVOIR_CREST_WIDTH[[:space:]]\+[^\ ]\+/ s/[^ ]\+$/9999.0/" SE.rvh.tpl
 
-    #========================
-    # rvp
-    #========================
-    echo convert_rvp_tpl.py 
-    python convert_rvp_tpl.py
-
-    #========================
-    # ostIn.txt
-    #========================
-    echo create_ostIn.py $SLURM_NTASKS $MaxIter #$RandomSeed 
-    python create_ostIn.py $SLURM_NTASKS $MaxIter #$RandomSeed 
+    tail -2 SE.rvh.tpl
+    echo ""
 else
-    cd /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
-    pwd
-    
-    # add OstrichWarmStart yes to ostIn.txt
-    sed -i '/#OstrichWarmStart      yes/c\OstrichWarmStart      yes' ostIn.txt
-
-    # edit ModelSubdir in ostIn.txt
-    sed -i '/ModelSubdir processor_/c\ModelSubdir processor_v2_' ostIn.txt
-
-    # update  ostIn.txt
-    sed -i "/MaxIterations/c\	MaxIterations         $MaxIterations" ostIn.txt
+    echo "No individual lake CW calibred."
+    echo "No need to edit ostIn.txt"
 fi
+
+# Remove the handled SubID from the list
+GroupSubIDs=$(echo $OutlierLakes | tr ',' '\n' | grep -v "^$OSubID\$" | paste -sd' ' -)
+
+# Only add to SE.rvh.tpl if there are remaining subids
+if [ -n "$GroupSubIDs" ]; then
+    cat <<EOF >> SE.rvh.tpl
+
+:SubBasinGroup   OutlierLakes
+    $GroupSubIDs
+:EndSubBasinGroup
+:SBGroupPropertyOverride     OutlierLakes          RESERVOIR_CREST_WIDTH  9999.0
+EOF
+
+    echo "Appended OutlierLakes group and crest width override to SE.rvh.tpl"
+else
+    echo "No additional subbasins to group. Nothing added to SE.rvh.tpl"
+fi
+
 echo "===================================================="
 echo "===================================================="
 echo "                     Ostrich                        "
