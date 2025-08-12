@@ -10,7 +10,7 @@
 #SBATCH --mail-type=ALL                           # email send only in case of failure
 #SBATCH --array=1-10                              # submit as a job array 
 #SBATCH --time=0-6:00                            # time (DD-HH:MM)
-#SBATCH --job-name=02KB001                       # jobname
+#SBATCH --job-name=02KA015                       # jobname
 ### #SBATCH --begin=now+{delay}hour
 
 # load pythons
@@ -21,11 +21,11 @@ module load scipy-stack
 #==================
 # Main Code
 #==================
-Obs_NM="02KB001"
+Obs_NM="02KA015"
 ModelName="SE"
 # SubId=26007677
 # ObsType="SF"
-expname="02KB001" ##$Obs_NM
+expname="02KA015" ##$Obs_NM
 MaxIter=2000
 runname='Init' #'Restart' #
 ProgramType='ParallelDDS'
@@ -35,15 +35,15 @@ ObsDir='/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInpu
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
 CWList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/LakeCWList.csv'
 #==================
-tag='Local-2'
+tag='Local-0'
 #==================
 # Calibration Options
 BiasCorr='True' # 'False'
-calSoil='True '  
-calRivRoute='True' # 'True'
-calCatRoute='True' # 'True'
-calLakeCW='True' # True
-CWindv='True'  #'False' #'True'
+calSoil='False '  
+calRivRoute='False' # 'True'
+calCatRoute='False' # 'True'
+calLakeCW='False' # True
+CWindv='False'  #'False' #'True'
 #==================
 echo "===================================================="
 echo "start: $(date)"
@@ -62,11 +62,11 @@ echo "Maximum Iterations                :"${MaxIter}
 echo "Calibration Method                :"${ProgramType}
 echo "Cost Function                     :"${CostFunction}
 echo "Bias Correction                   :"True
-echo "Calibrate Soil Parameters         :"True
-echo "Calibrate River Route             :"True
-echo "Calibrate Catchment Route         :"True
-echo "Calibrate Lake Crest Widths       :"True
-echo "Individual CW Calibration         :"True
+echo "Calibrate Soil Parameters         :"False
+echo "Calibrate River Route             :"False
+echo "Calibrate Catchment Route         :"False
+echo "Calibrate Lake Crest Widths       :"False
+echo "Individual CW Calibration         :"False
 echo "===================================================="
 #==================
 if [[ "$runname" == 'Init' ]]; then

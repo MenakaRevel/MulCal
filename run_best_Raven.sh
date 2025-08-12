@@ -97,10 +97,10 @@ mv "$tmp" "$rvi"
 # echo 'after rvi'
 # cat $rvi
 
-# add to the rvh ** no need if you running fully ** added to rvh.tpl
-rvh='SE.rvh'
-echo "# Add Gagued SubBasin Group"                                >> $rvh
-echo ":GaugedSubBasinGroup                   UpstreamOf"${Obs_NM} >> $rvh
+# # # add to the rvh ** no need if you running fully ** added to rvh.tpl
+# # rvh='SE.rvh'
+# # echo "# Add Gagued SubBasin Group"                                >> $rvh
+# # echo ":GaugedSubBasinGroup                   UpstreamOf"${Obs_NM} >> $rvh
 
 # Run Raven.exe
 ./Raven.exe SE -o ./output

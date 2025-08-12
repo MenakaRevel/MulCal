@@ -801,6 +801,8 @@ def write_ostIN_parallel(
         f.write('\n\t'+'UseOpt                 standard')
         f.write('\n'+'EndParallelDDSAlg')
 #================================================================================================
+# NEW
+#================================================================================================
 def _write_params(f, *, BiasCor, calSoil, calRivRoute,
                   calCatRoute, calLakeCW, CWindv, RavenDir):
     """
@@ -820,9 +822,9 @@ def _write_params(f, *, BiasCor, calSoil, calRivRoute,
     # ------------------------------------------------ Bias‑correction
     if BiasCor:
         f.write('\n\n## BIAS CORRECTION FACTORS')
-        f.write('\np_multi                   random       0.1         2.0'
+        f.write('\np_multi                   random       0.7         1.3'
                 '           none    none    none')
-        f.write('\nr_multi                   random       0.1         2.0'
+        f.write('\nr_multi                   random       0.7         1.3'
                 '           none    none    none')
     # ------------------------------------------------ Catchment routing
     if calCatRoute:

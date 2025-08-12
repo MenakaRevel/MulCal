@@ -10,15 +10,15 @@ import sys
 import re
 from logger import log
 import params as pm
-
+#================================================================
 def get_cw_map(cw_df):
     """Create a dict for fast Obs_NM to CW lookup."""
     return cw_df.set_index('Obs_NM')['cal.CW'].to_dict()
-
+#================================================================
 def write_block(f, lines):
     """Writes a list of lines to file with newline separation."""
     f.write('\n' + '\n'.join(lines) + '\n')
-
+#================================================================
 def main():
     CWList = sys.argv[1] if len(sys.argv) > 1 else '/home/menaka/projects/def-btolson/menaka/MulCal/dat/LakeCWList.csv'
     cw_df = pd.read_csv(CWList)
@@ -127,7 +127,7 @@ def main():
                         ":EndSubBasinGroup",
                         f":SBGroupPropertyOverride   Lake_{uonm} RESERVOIR_CREST_WIDTH {cw}"
                     ])
-
+#================================================================
 if __name__ == "__main__":
     main()
 
