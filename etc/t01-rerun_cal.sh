@@ -20,6 +20,9 @@ module load scipy-stack
 # cd into
 cd $1
 
+# remove processor
+rm -rf processor_*
+
 echo "===================================================="
 echo "===================================================="
 echo "                     Ostrich                        "

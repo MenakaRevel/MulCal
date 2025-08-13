@@ -1,10 +1,7 @@
 #! /usr/bin/python
 #! utf+8
 '''
-post-processing lake water level 
-- Check outlier annual mean amplitude 
-- Change CW lake to large value 9999m of outliers
-- Check KGE {1. if KGE change singnifantly recalibrate}
+check_lake_dryout.py --> check the lake stage < -depth
 '''
 import pandas as pd 
 import numpy as np 
@@ -12,9 +9,11 @@ import os
 import sys
 import re
 from pathlib import Path
+import warnings
+warnings.filterwarnings("ignore")
 #===================
 expName = sys.argv[1]
-thrAmp  = float(sys.argv[2])
+thrDry  = float(sys.argv[2])
 outdir  = sys.argv[3]  # /home/menaka/scratch/MulCal/out
 #===================
 # 1. read the best calibrated trail {ModelName}_ReservoirStages.csv
@@ -31,7 +30,7 @@ lake_outlier_dict = {}
 for obs in Obs_NMs:
     best_obj, best_paras   = float("-inf"), None
     lake_outlier_dict[obs] = []
-    for n in range(1, 11):
+    for n in range(1, 10+1):
         status = Path(f"{outdir}/{expName}/{obs}_{n:02d}/dds_status.out")
         try:
             df = pd.read_csv(status, sep=r"\s+")
@@ -55,38 +54,27 @@ for obs in Obs_NMs:
     
     #
     #===================
-    # 2. Assess each lake amplitude {ModelName}_ReservoirStages.csv
+    # 2. Assess each lake dry out {ModelName}_ReservoirStages.csv
     # ------------------------------------------------------------------ #
     if lake_cols:
-        lake_yearly_amp = df_res.groupby('year')[lake_cols].agg(lambda x: x.max() - x.min())
-        lake_mean_amp   = lake_yearly_amp.mean().reset_index()
-        lake_mean_amp.columns = ['SubId', 'mean_annual_amplitude']
-        outlier_lakes   = lake_mean_amp[lake_mean_amp['mean_annual_amplitude'] > thrAmp]['SubId'].values
-        if len(outlier_lakes) > 0:
-            print (
-                f"{obs}"+
-                f"\t The mean annual amplitutde is > {thrAmp:.2f} of these lakes :"+
-                "\n\t\t".join(outlier_lakes))
-            lake_outliers += outlier_lakes.tolist()
-            lake_outlier_dict[obs] += outlier_lakes.tolist()
-    #     else:
-    #         print (f"No outlier lakes in the sub-region {obs}")
-    # else:
-    #     print (f"No lakes in the sub-region {obs}")
+        outlier_lakes = []
+        max_depth_map = CWList.set_index('SubBasinID')['MaxDepth'].to_dict()
 
-# print (
-#     f'Outlier lakes > {thrAmp:.2f} are :\n'+
-#     "\n\t".join(lake_outliers)+
-#     "\n# Outlier lakes: "+
-#     str(len(lake_outliers))
-#     )
+        for lake in lake_cols:
+            SubId = int(lake.strip().replace('sub', ''))
+            max_depth = max_depth_map.get(SubId, None)
 
-# print (lake_outlier_dict)
+            if max_depth is None:
+                max_depth = 9999.0
+                # continue  # skip if no MaxDepth for this SubId
 
-# for key, values in lake_outlier_dict.items():
-#     if values:  # checks if value is non-empty
-#         print(key)
-#         for value in values: print(value[3:])
+            n_dry = (df_res[lake] < -max_depth).sum()
+
+            if n_dry > thrDry:
+                outlier_lakes.append(SubId)
+
+        lake_outliers += outlier_lakes
+        lake_outlier_dict[obs] += outlier_lakes
 
 # Convert dictionary to a DataFrame
 df = pd.DataFrame(
@@ -95,10 +83,13 @@ df = pd.DataFrame(
 )
 
 # Replace empty strings with NaN
-df['SubId']=df['SubId'].replace('', np.nan)
+df['SubId']=df['SubId'].replace('', np.nan).astype('Int64')
 
-print (df.dropna())
+if df.dropna().empty:
+    print (f"No lakes dried out (> {thrDry:.0f} days)")
+else:
+    print (df.dropna())
+    print (f"{len(df.dropna()):d} lakes dried out (> {thrAmp:.2f} days)")
+    print ("Check the KGE of above lakes by changing the lake CW to 9999.0")
 
-print ("Check the KGE of above lakes by changing the lake CW to 9999.0")
-
-df.dropna().to_csv(f'../dat/{expName}/outliler_lakes.csv', index=False)
+df.dropna().to_csv(f'../dat/{expName}/outliler_lakes_dryout.csv', index=False)    

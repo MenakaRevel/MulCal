@@ -10,7 +10,7 @@
 #SBATCH --mail-type=ALL                           # email send only in case of failure
 #SBATCH --array=1-10                              # submit as a job array 
 #SBATCH --time=0-6:00                            # time (DD-HH:MM)
-#SBATCH --job-name=02KA015                       # jobname
+#SBATCH --job-name=Animoosh                       # jobname
 ### #SBATCH --begin=now+{delay}hour
 
 # load pythons
@@ -21,11 +21,11 @@ module load scipy-stack
 #==================
 # Main Code
 #==================
-Obs_NM="02KA015"
+Obs_NM="Animoosh"
 ModelName="SE"
 # SubId=26007677
 # ObsType="SF"
-expname="02KA015" ##$Obs_NM
+expname="Animoosh" ##$Obs_NM
 MaxIter=2000
 runname='Init' #'Restart' #
 ProgramType='ParallelDDS'
@@ -35,14 +35,14 @@ ObsDir='/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInpu
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
 CWList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/LakeCWList.csv'
 #==================
-tag='Local-0'
+tag='Local-1'
 #==================
 # Calibration Options
 BiasCorr='True' # 'False'
-calSoil='False '  
-calRivRoute='False' # 'True'
-calCatRoute='False' # 'True'
-calLakeCW='False' # True
+calSoil='True '  
+calRivRoute='True' # 'True'
+calCatRoute='True' # 'True'
+calLakeCW='True' # True
 CWindv='False'  #'False' #'True'
 #==================
 echo "===================================================="
@@ -62,15 +62,15 @@ echo "Maximum Iterations                :"${MaxIter}
 echo "Calibration Method                :"${ProgramType}
 echo "Cost Function                     :"${CostFunction}
 echo "Bias Correction                   :"True
-echo "Calibrate Soil Parameters         :"False
-echo "Calibrate River Route             :"False
-echo "Calibrate Catchment Route         :"False
-echo "Calibrate Lake Crest Widths       :"False
+echo "Calibrate Soil Parameters         :"True
+echo "Calibrate River Route             :"True
+echo "Calibrate Catchment Route         :"True
+echo "Calibrate Lake Crest Widths       :"True
 echo "Individual CW Calibration         :"False
 echo "===================================================="
 #==================
 if [[ "$runname" == 'Init' ]]; then
-    rm -rf /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
+    rm -rf -- /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
     mkdir -p /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
     cd /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
     pwd

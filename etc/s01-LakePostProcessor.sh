@@ -14,8 +14,13 @@
 
 # source $HOME/py312/bin/activate
 
-tag="Local-2" #"$1"
-thrAmp=2.0 #m
+tag="Local-0" #"$1"
+thrAmp=5.0 #m
+thrDry=0 # days
 odir="/home/menaka/scratch/MulCal/out"
 
-python post-processing_lake.py ${tag} ${thrAmp} ${odir}
+# lake amplitude
+python check_lake_amplitude.py ${tag} ${thrAmp} ${odir}
+
+# lake dry out
+python check_lake_dryout.py ${tag} ${thrDry} ${odir}

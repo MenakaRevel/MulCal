@@ -111,8 +111,8 @@ replacements = {
     "{CWindv}"      : tf(cfg["CWindv"]),
 }
 
-script = TEMPLATE.replace("{tag}", expName)
 for obs in Obs_NMs:
+    script = TEMPLATE.replace("{tag}", expName)
     script = script.replace("{Obs_NM}", obs)
     for tag, value in replacements.items():
         script = script.replace(tag, value)

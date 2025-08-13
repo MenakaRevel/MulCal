@@ -61,12 +61,12 @@ echo "Run Type                          :"${runname}
 echo "Maximum Iterations                :"${MaxIter}
 echo "Calibration Method                :"${ProgramType}
 echo "Cost Function                     :"${CostFunction}
-echo "Bias Correction                   :"${BiasCorr}
-echo "Calibrate Soil Parameters         :"${calSoil}
-echo "Calibrate River Route             :"${calRivRoute}
-echo "Calibrate Catchment Route         :"${calCatRoute}
-echo "Calibrate Lake Crest Widths       :"${calLakeCW}
-echo "Individual CW Calibration         :"${CWindv}
+echo "Bias Correction                   :"{BiasCorr}
+echo "Calibrate Soil Parameters         :"{calSoil}
+echo "Calibrate River Route             :"{calRivRoute}
+echo "Calibrate Catchment Route         :"{calCatRoute}
+echo "Calibrate Lake Crest Widths       :"{calLakeCW}
+echo "Individual CW Calibration         :"{CWindv}
 echo "===================================================="
 #==================
 if [[ "$runname" == 'Init' ]]; then

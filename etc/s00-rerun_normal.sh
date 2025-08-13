@@ -3,7 +3,7 @@
 # Set paths
 obs_file="../dat/GaugeSpecificList.csv"
 outdir="/home/menaka/scratch/MulCal/out"    # out path
-expName="Local-2"                           # experiment name
+expName="Local-0"                           # experiment name
 
 # Read Obs_NM values from CSV, skipping header
 obs_list=$(tail -n +2 "$obs_file" | cut -d',' -f1)
@@ -18,7 +18,7 @@ for obs in $obs_list; do
             # echo "  • Missing: $status_path"
             echo "${obs} ${n}"
             echo "t01-rerun_cal.sh ${outdir}/${expName}/${obs}_${n}"
-            sbatch t01-rerun_cal.sh "${outdir}/${expName}/${obs}_${n}"
+            # sbatch t01-rerun_cal.sh "${outdir}/${expName}/${obs}_${n}"
         fi
     done
 done

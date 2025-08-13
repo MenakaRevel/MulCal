@@ -20,7 +20,7 @@
 
 source $HOME/py312/bin/activate
 
-tag="Local-2" #"$1"
+tag="Local-0" #"$1"
 odir="/home/menaka/scratch/MulCal/out"
 
 echo "Running all collect scripts for tag: $tag"
