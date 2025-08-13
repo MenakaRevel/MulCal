@@ -22,7 +22,7 @@ odir="/home/menaka/scratch/MulCal/out"
 # evaluation period is hard coded ==> need to update that
 
 # lake amplitude
-# python check_lake_amplitude.py ${tag} ${thrAmp} ${odir}
+python check_lake_amplitude.py ${tag} ${thrAmp} ${odir}
 
 # lake dry out
 python check_lake_dryout.py ${tag} ${thrDry} ${odir}
