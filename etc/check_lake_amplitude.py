@@ -51,6 +51,15 @@ for obs in Obs_NMs:
     # Convert to datetime and extract year
     df_res['date'] = pd.to_datetime(df_res['date'])
     df_res['year'] = df_res['date'].dt.year
+
+    # 2002-10-01 - 2018-09-30
+    # Define date range
+    start_date = pd.Timestamp("2002-10-01")
+    end_date   = pd.Timestamp("2018-09-30")
+
+    # Filter dataframe
+    df_res = df_res[(df_res['date'] >= start_date) & (df_res['date'] <= end_date)]
+    
     # print (df_res.columns)
     # get lake subbasins *Sub_{SubID}
     lake_cols = [col for col in df_res.columns if col.startswith('sub') and 'observed' not in col]

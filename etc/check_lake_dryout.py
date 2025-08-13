@@ -48,10 +48,19 @@ for obs in Obs_NMs:
     # Convert to datetime and extract year
     df_res['date'] = pd.to_datetime(df_res['date'])
     df_res['year'] = df_res['date'].dt.year
+
+    # 2002-10-01 - 2018-09-30
+    # Define date range
+    start_date = pd.Timestamp("2002-10-01")
+    end_date   = pd.Timestamp("2018-09-30")
+
+    # Filter dataframe
+    df_res = df_res[(df_res['date'] >= start_date) & (df_res['date'] <= end_date)]
+
     # print (df_res.columns)
     # get lake subbasins *Sub_{SubID}
     lake_cols = [col for col in df_res.columns if col.startswith('sub') and 'observed' not in col]
-    
+    print (lake_cols)
     #
     #===================
     # 2. Assess each lake dry out {ModelName}_ReservoirStages.csv
@@ -68,7 +77,7 @@ for obs in Obs_NMs:
                 max_depth = 9999.0
                 # continue  # skip if no MaxDepth for this SubId
 
-            n_dry = (df_res[lake] < -max_depth).sum()
+            n_dry = (df_res[lake] <= -max_depth).sum()
 
             if n_dry > thrDry:
                 outlier_lakes.append(SubId)
