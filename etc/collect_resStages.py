@@ -37,6 +37,37 @@ def read_obj_function(out_path):
         return -df['OBJ._FUNCTION'].iloc[-1]
     except:
         return None
+#================================================================
+
+suffixs = {
+    'SF':'discharge',
+    'WL':'level',
+    'RS':'level'
+}
+#====================================================================================================
+def mk_dir(path):
+    os.makedirs(path, exist_ok=True)
+
+#====================================================================================================
+def read_subid(fname):
+    """Extracts the station ID from the ObservationData line."""
+    with open(fname, 'r') as f:
+        text = f.read()
+    match = re.search(r'ObservationData\s+\S+\s+(\d+)', text)
+    return str(match.group(1)) if match else '0'
+
+#====================================================================================================
+def read_last_obj_function(fname):
+    """Efficiently read the last line of dds_status.out to get the objective function."""
+    try:
+        with open(fname, 'rb') as f:
+            f.seek(-1024, os.SEEK_END)  # read last ~1KB block
+            lines = f.readlines()
+        last_line = lines[-1].decode('utf-8').strip()
+        obj_val = float(last_line.split()[-1])
+        return -obj_val
+    except Exception:
+        return None
 
 # ──────────────────────────────────────────────────────────────────────────────
 def main():
@@ -52,38 +83,63 @@ def main():
 
     mk_dir(output_dir)
 
-    obs_list_path = '/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
-    ObsList = pd.read_csv(obs_list_path)
-    ObsDir  = '/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInput/obs'
-    suffixs = {'SF': 'discharge', 'WL': 'level', 'RS': 'level'}
+    # obs_list_path = '/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
+    # ObsList = pd.read_csv(obs_list_path)
+    # ObsDir  = '/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInput/obs'
+    # suffixs = {'SF': 'discharge', 'WL': 'level', 'RS': 'level'}
+
+    obs_dir        = '/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInput/obs'
+    obs_list_file  = '/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
+    obs_list_subid = '/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSubIdList.csv'
+    suffixs        = {'SF': 'discharge', 'WL': 'level', 'RS': 'level'}
+
+    # Load observation list
+    ObsList = pd.read_csv(obs_list_file)
+    Obs_NMs = ObsList['Obs_NM'].values
+    obs_type_dict = dict(zip(ObsList['Obs_NM'], ObsList['ObsType']))
+
+    # Load subbasin list
+    SubList = pd.read_csv(obs_list_subid)
+    # Obs_NMs = ObsList['Obs_NM'].values
+    obs_subid_dict = dict(zip(SubList['Obs_NM'], SubList['UpSubIds'].str.split('&')))
+
+    df_list = []
+    core_cols = ['time', 'date', 'hour', 'precip [mm/day]']
 
     df = pd.DataFrame()
 
-    for Obs_NM in ObsList['Obs_NM']:
-        best_obj = float('-inf')
-        best_trail = 0
+    for Obs_NM in Obs_NMs:
+        bestTrail, objFun = 0, float('-inf')
 
+        # Loop over DDS outputs to find best trail
         for num in range(1, 11):
-            out_path = f"{base_dir}/{Obs_NM}_{num:02d}/dds_status.out"
-            obj_val = read_obj_function(out_path)
-            if obj_val is not None and obj_val > best_obj:
-                best_obj = obj_val
-                best_trail = num
+            fname = f"{base_dir}/{Obs_NM}_{num:02d}/dds_status.out"
+            obj   = read_last_obj_function(fname)
+            if obj is not None and obj > objFun:
+                objFun = obj
+                bestTrail = num
 
-        # Skip if no valid DDS outputs
-        if best_trail == 0:
-            print(f"⚠️ Skipping {Obs_NM}: no valid DDS trail")
+        if bestTrail == 0:
+            print(f"Skipping {Obs_NM}: no valid DDS trails.")
             continue
 
-        ObsType = ObsList.loc[ObsList['Obs_NM'] == Obs_NM, 'ObsType'].values[0]
-        rvt_file = os.path.join(ObsDir, f"{Obs_NM}_{suffixs[ObsType]}.rvt")
-        SubId = read_subid(rvt_file)
+        # Get SubId
+        ObsType  = obs_type_dict[Obs_NM]
+        obs_file = os.path.join(obs_dir, f"{Obs_NM}_{suffixs[ObsType]}.rvt")
+        SubId    = str(ObsList[ObsList['Obs_NM']==Obs_NM]['SubId'].values[0])      #read_subid(obs_file)
+        SubId_1  = SubList[SubList['Obs_NM']==Obs_NM]['SubId'].values[0]
+        # lSubId   = obs_subid_dict[Obs_NM]
+        UpSubIds = obs_subid_dict[Obs_NM] 
+        
+        # remove the other observation subid
+        oSubId   = [str(x) for x in ObsList[ObsList['Obs_NM'] != Obs_NM]['SubId'].values]
+        UpSubIds = list(set(set(UpSubIds) | set([SubId]) - set(oSubId)))
 
         if SubId is None:
             print(f"⚠️ Could not extract SubId for {Obs_NM}")
             continue
 
-        stage_file = f"{base_dir}/{Obs_NM}_{best_trail:02d}/best_Raven/output/SE_ReservoirStages.csv"
+        stage_file = f"{base_dir}/{Obs_NM}_{bestTrail:02d}/best_Raven/output/SE_ReservoirStages.csv"
         if not os.path.isfile(stage_file):
             print(f"⚠️ Missing file: {stage_file}")
             continue
@@ -95,15 +151,26 @@ def main():
             continue
 
         sub_key = f"sub{SubId} "
-        sub_cols = [col for col in df_stage.columns if f"sub{SubId}" in col]
+        # sub_cols = [col for col in df_stage.columns if f"sub{SubId}" in col]
+        sub_cols = df_stage.filter(regex=r"^sub.*").columns.tolist()
+        unique_sub_cols = list({re.match(r"sub\d+", col).group(0)[3::] for col in sub_cols})
+        print ('unique_sub_cols:',unique_sub_cols)
+        
+        # # Assuming lSubId and UpSubIds are lists of strings
+        sub_cols = [
+            col for col in sub_cols
+            if col.startswith('sub') and re.search(r'\d+', col).group() in UpSubIds
+        ]
 
         if not sub_cols:
             print(f"→ sub{SubId} not found in {stage_file} —> no lakes?")
             continue
 
+        unique_sub_cols = list({re.match(r"sub\d+", col).group(0) for col in sub_cols})
+
         # Select columns
         if df.empty:
-            cols_to_merge = ['time', 'date', 'hour', 'precip [mm/day]'] + sub_cols
+            cols_to_merge = core_cols + sub_cols
         else:
             cols_to_merge = ['date'] + sub_cols
 
@@ -113,6 +180,8 @@ def main():
             df = df_stage.copy()
         else:
             df = pd.merge(df, df_stage, on='date', how='outer')
+
+        print(f"Processed: {Obs_NM} (Trail {bestTrail}, SubId {SubId}, # of simulation {len(unique_sub_cols)})")
 
     if df.empty:
         print("⚠️ No valid data found.")

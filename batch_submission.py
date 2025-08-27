@@ -28,6 +28,16 @@ EXPERIMENTS = {
                     calCatRoute=True,  calLakeCW=True,  CWindv=True),
     "default": dict(BiasCorr=True,  calSoil=True,  calRivRoute=True,
                     calCatRoute=True,  calLakeCW=True,  CWindv=True),
+    "Local-0b": dict(BiasCorr=False, calSoil=True, calRivRoute=False,
+                    calCatRoute=False, calLakeCW=False, CWindv=False),
+    "Local-0c": dict(BiasCorr=False, calSoil=False, calRivRoute=True,
+                    calCatRoute=False, calLakeCW=False, CWindv=False),
+    "Local-0d": dict(BiasCorr=False, calSoil=False, calRivRoute=False,
+                    calCatRoute=True, calLakeCW=False, CWindv=False),
+    "Local-0e": dict(BiasCorr=False, calSoil=False, calRivRoute=False,
+                    calCatRoute=False, calLakeCW=True, CWindv=False),
+    "Local-0f": dict(BiasCorr=False, calSoil=False, calRivRoute=False,
+                    calCatRoute=False, calLakeCW=True, CWindv=True),
 }
 
 # ------------------------------------------------------------------ #

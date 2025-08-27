@@ -3,7 +3,7 @@
 # Set paths
 obs_file="../dat/GaugeSpecificList.csv"
 outdir="/home/menaka/scratch/MulCal/out"    # out path
-expName="Local-0"                           # experiment name
+expName="Local-2"                           # experiment name
 
 # Read Obs_NM values from CSV, skipping header
 obs_list=$(tail -n +2 "$obs_file" | cut -d',' -f1)
@@ -14,11 +14,16 @@ echo "Checking for missing dds_status.out files..."
 for obs in $obs_list; do
     for n in $(seq -w 1 10); do
         status_path="${outdir}/${expName}/${obs}_${n}/dds_status.out"
-        if [ ! -f "$status_path" ]; then
+        diagnose_path="${outdir}/${expName}/${obs}_${n}/best_Raven/output/SE_Diagnostics.csv" 
+        if [[ ! -s "$status_path" || "$(wc -l < "$status_path")" -lt 2 ]]; then
             # echo "  • Missing: $status_path"
             echo "${obs} ${n}"
             echo "t01-rerun_cal.sh ${outdir}/${expName}/${obs}_${n}"
-            # sbatch t01-rerun_cal.sh "${outdir}/${expName}/${obs}_${n}"
+            sbatch t01-rerun_cal.sh "${outdir}/${expName}/${obs}_${n}"
+        elif [[ ! -s "$diagnose_path" || "$(wc -l < "$diagnose_path")" -lt 2 ]]; then
+            echo "${obs} ${n}"
+            echo "t01-rerun_cal.sh ${outdir}/${expName}/${obs}_${n}"
+            sbatch t01-rerun_cal.sh "${outdir}/${expName}/${obs}_${n}"
         fi
     done
 done

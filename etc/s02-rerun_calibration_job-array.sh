@@ -21,8 +21,8 @@ module load scipy-stack
 #==================
 # Main Code
 #==================
-Obs_NM="02KF013"           # get this from "outliler_lakes.csv"
-OutlierLakes="26006655"    # get this from "outliler_lakes.csv" comma seperated list
+Obs_NM="02KF013"           # get this from "outliler_lakes.csv" and "outliler_lakes_dryout.csv"
+OutlierLakes="26006655"    # get this from "outliler_lakes.csv" and "outliler_lakes_dryout.csv" comma seperated list
 ModelName="SE"
 # SubId=26007677
 # ObsType="SF"
@@ -83,6 +83,9 @@ cd /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
 # cp -r * calTrail-0/ 
 
 pwd
+
+# remove processor
+rm -rf processor_*
 
 # Step 1: Modify ostIn.txt if the current lake is an outlier
 # ----------------------------------------------------------

@@ -36,14 +36,14 @@ def main():
                 # Remove old symlink or folder
                 if os.path.islink(full_path):
                     os.unlink(full_path)
-                    print(f"🧹 Removed symlink: {full_path}")
+                    # print(f"🧹 Removed symlink: {full_path}")
                 elif os.path.isdir(full_path):
                     shutil.rmtree(full_path)
-                    print(f"🧹 Removed directory: {full_path}")
+                    # print(f"🧹 Removed directory: {full_path}")
 
                 # Create new symlink
                 os.symlink(target_link, full_path)
-                print(f"🔗 Created symlink: {full_path} -> {target_link}")
+                # print(f"🔗 Created symlink: {full_path} -> {target_link}")
                 updated += 1
             except Exception as e:
                 print(f"⚠️  Failed to update {full_path}: {e}")

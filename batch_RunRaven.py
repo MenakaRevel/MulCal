@@ -55,7 +55,10 @@ except (IndexError, ValueError):
 ObsList = pd.read_csv("./dat/GaugeSpecificList.csv")
 CWList  = pd.read_csv("./dat/LakeCWList.csv")
 
-Obs_NMs = ObsList["Obs_NM"].values[1::]
+# Obs_NMs = ObsList["Obs_NM"].values[1::]
+# Obs_NMs = ObsList[ObsList['rivseq']]["Obs_NM"].values[1::]
+# Obs_NMs = ObsList.query("rivseq >= 1")["Obs_NM"].values
+Obs_NMs = ObsList[ObsList['rivseq']==1]["Obs_NM"].values
 
 for Obs_NM in Obs_NMs:
     # run best Raven

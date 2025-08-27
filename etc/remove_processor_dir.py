@@ -26,7 +26,7 @@ def main():
                 full_path = os.path.join(current_dir, d)
                 try:
                     shutil.rmtree(full_path)
-                    print(f"✅ Removed: {full_path}")
+                    # print(f"✅ Removed: {full_path}")
                     deleted += 1
                 except Exception as e:
                     print(f"⚠️  Couldn’t delete {full_path}: {e}")

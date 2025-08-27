@@ -10,7 +10,7 @@
 #SBATCH --mail-type=ALL                           # email send only in case of failure
 #SBATCH --array=1-10                              # submit as a job array 
 #SBATCH --time=0-6:00                            # time (DD-HH:MM)
-#SBATCH --job-name=Animoosh                       # jobname
+#SBATCH --job-name=02KB001                       # jobname
 ### #SBATCH --begin=now+{delay}hour
 
 # load pythons
@@ -21,11 +21,11 @@ module load scipy-stack
 #==================
 # Main Code
 #==================
-Obs_NM="Animoosh"
+Obs_NM="02KB001"
 ModelName="SE"
 # SubId=26007677
 # ObsType="SF"
-expname="Animoosh" ##$Obs_NM
+expname="02KB001" ##$Obs_NM
 MaxIter=2000
 runname='Init' #'Restart' #
 ProgramType='ParallelDDS'
@@ -35,7 +35,7 @@ ObsDir='/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInpu
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
 CWList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/LakeCWList.csv'
 #==================
-tag='Local-1'
+tag='Local-2'
 #==================
 # Calibration Options
 BiasCorr='True' # 'False'
@@ -43,7 +43,7 @@ calSoil='True '
 calRivRoute='True' # 'True'
 calCatRoute='True' # 'True'
 calLakeCW='True' # True
-CWindv='False'  #'False' #'True'
+CWindv='True'  #'False' #'True'
 #==================
 echo "===================================================="
 echo "start: $(date)"
@@ -66,7 +66,7 @@ echo "Calibrate Soil Parameters         :"True
 echo "Calibrate River Route             :"True
 echo "Calibrate Catchment Route         :"True
 echo "Calibrate Lake Crest Widths       :"True
-echo "Individual CW Calibration         :"False
+echo "Individual CW Calibration         :"True
 echo "===================================================="
 #==================
 if [[ "$runname" == 'Init' ]]; then

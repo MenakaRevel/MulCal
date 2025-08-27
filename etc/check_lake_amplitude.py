@@ -18,6 +18,8 @@ warnings.filterwarnings("ignore")
 expName = sys.argv[1]
 thrAmp  = float(sys.argv[2])
 outdir  = sys.argv[3]  # /home/menaka/scratch/MulCal/out
+start_dt= sys.argv[4]  # start date for evaluation
+end_dt  = sys.argv[5]  # end date for evaluation
 #===================
 # 1. read the best calibrated trail {ModelName}_ReservoirStages.csv
 # ------------------------------------------------------------------ #
@@ -54,8 +56,8 @@ for obs in Obs_NMs:
 
     # 2002-10-01 - 2018-09-30
     # Define date range
-    start_date = pd.Timestamp("2002-10-01")
-    end_date   = pd.Timestamp("2018-09-30")
+    start_date = pd.Timestamp(start_dt)
+    end_date   = pd.Timestamp(end_dt)
 
     # Filter dataframe
     df_res = df_res[(df_res['date'] >= start_date) & (df_res['date'] <= end_date)]

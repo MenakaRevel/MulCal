@@ -14,15 +14,17 @@
 
 # source $HOME/py312/bin/activate
 
-tag="Local-0" #"$1"
+tag="Local-2" #"$1"
 thrAmp=5.0 #m
 thrDry=0 # days
 odir="/home/menaka/scratch/MulCal/out"
 
 # evaluation period is hard coded ==> need to update that
+start_dt="2002-10-01"
+end_dt="2018-09-30"
 
 # lake amplitude
-python check_lake_amplitude.py ${tag} ${thrAmp} ${odir}
+python check_lake_amplitude.py ${tag} ${thrAmp} ${odir} ${start_dt} ${end_dt}
 
 # lake dry out
-python check_lake_dryout.py ${tag} ${thrDry} ${odir}
+python check_lake_dryout.py ${tag} ${thrDry} ${odir} ${start_dt} ${end_dt}

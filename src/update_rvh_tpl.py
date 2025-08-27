@@ -42,22 +42,26 @@ def main():
             f":DisableSubBasinGroup NotUpstreamOf{Obs_NM}"
         ]
 
-        if BasinType == 'Intermediate':
-            up_obs_nms = pm.UpObsNMList()
-            up_sub_ids = pm.UpSubIds()
-            lines.append("")
-            lines.append("# Define subbasins bounded by upstream and downstream gauges")
-            for uonm, usid in zip(up_obs_nms, up_sub_ids):
-                lines.append(f":PopulateSubBasinGroup Exclude_{uonm} With SUBBASINS UPSTREAM_OF {usid}")
-            lines.append("")
-            lines.append(f":MergeSubBasinGroups Excluded_All From {' '.join(['Exclude_' + u for u in up_obs_nms])}")
-            lines.append("")
-            lines.append(f":IntersectSubBasinGroups GaugedSubbasinGroup From UpstreamOf{Obs_NM} And NOTWITHIN Excluded_All")
-            lines.append("")
-            lines.append(":GaugedSubBasinGroup   GaugedSubbasinGroup")
-        else:
-            lines.append("")
-            lines.append(":GaugedSubBasinGroup   UpstreamOf" + Obs_NM)
+        # if BasinType == 'Intermediate':
+        #     up_obs_nms = pm.UpObsNMList()
+        #     up_sub_ids = pm.UpSubIds()
+        #     lines.append("")
+        #     lines.append("# Define subbasins bounded by upstream and downstream gauges")
+        #     for uonm, usid in zip(up_obs_nms, up_sub_ids):
+        #         lines.append(f":PopulateSubBasinGroup Exclude_{uonm} With SUBBASINS UPSTREAM_OF {usid}")
+        #     lines.append("")
+        #     lines.append(f":MergeSubBasinGroups Excluded_All From {' '.join(['Exclude_' + u for u in up_obs_nms])}")
+        #     lines.append("")
+        #     # lines.append(f":IntersectSubBasinGroups GaugedSubbasinGroup From UpstreamOf{Obs_NM} And NOTWITHIN Excluded_All")
+        #     lines.append(f":PopulateSubBasinGroup GaugedSubbasinGroup With SUBBASINS NOTWITHIN Excluded_All")
+        #     lines.append("# Gagued SubBasin Group")
+        #     lines.append(":GaugedSubBasinGroup   GaugedSubbasinGroup")
+        # else:
+        #     lines.append("# Gagued SubBasin Group")
+        #     lines.append(":GaugedSubBasinGroup   UpstreamOf" + Obs_NM)
+        
+        lines.append("# Gagued SubBasin Group")
+        lines.append(":GaugedSubBasinGroup   UpstreamOf" + Obs_NM)
 
         # Routing and bias correction options
         if pm.calRivRoute():
@@ -176,18 +180,18 @@ with open(rvh_tpl,'a') as f:
         f.write('\n# Define subbasins upstream of each of the excluded downstream points'                   )
         for uonm, usid  in zip(pm.UpObsNMList(),pm.UpSubIds()):
             f.write('\n:PopulateSubBasinGroup Exclude_'+uonm+' With SUBBASINS UPSTREAM_OF '+str(usid)       )
-        f.write('\n'                                                                                        )
         f.write('\n# Merge all exclusions into one group'                                                   )
         f.write('\n:MergeSubBasinGroups Excluded_All From '+' '.join(['Exclude_'+uonm for uonm in pm.UpObsNMList()]))
-        f.write('\n'                                                                                        )
         f.write('\n# Get subbasins that are in Upstream_'+Obs_NM+' but NOT in Excluded_All'                 )
-        f.write('\n:IntersectSubBasinGroups GaugedSubbasinGroup From UpstreamOf'+Obs_NM+' And NOTWITHIN Excluded_All')
-        f.write('\n'                                                                                        )
+        f.write('\n#:IntersectSubBasinGroups GaugedSubbasinGroup From UpstreamOf'+Obs_NM+' And NOTWITHIN Excluded_All')
+        f.write('\n:PopulateSubBasinGroup GaugedSubbasinGroup With SUBBASINS NOTWITHIN Excluded_All'        )
         f.write('\n# Gagued SubBasin Group'                                                                 )
         f.write('\n:GaugedSubBasinGroup   GaugedSubbasinGroup'                                              )
     else:
         f.write('\n'                                                                                        )
         f.write('\n# Gagued SubBasin Group'                                                                 )
+
+    #================================================================
     # River Routing
     if pm.calRivRoute():    
         f.write('\n# River Routing parameters'                                                              )
