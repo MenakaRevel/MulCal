@@ -10,7 +10,7 @@
 #SBATCH --mail-type=ALL                           # email send only in case of failure
 #SBATCH --array=1-10                              # submit as a job array 
 #SBATCH --time=0-6:00                            # time (DD-HH:MM)
-#SBATCH --job-name=rerun-02KF013                    # jobname
+#SBATCH --job-name=rerun-02KB001                    # jobname
 ### #SBATCH --begin=now+{delay}hour
 
 # load pythons
@@ -21,8 +21,8 @@ module load scipy-stack
 #==================
 # Main Code
 #==================
-Obs_NM="02KF013"           # get this from "outliler_lakes.csv" and "outliler_lakes_dryout.csv"
-OutlierLakes="26006655"    # get this from "outliler_lakes.csv" and "outliler_lakes_dryout.csv" comma seperated list
+Obs_NM="02KB001"           # get this from "outliler_lakes.csv" and "outliler_lakes_dryout.csv"
+OutlierLakes="26007397"    # get this from "outliler_lakes.csv" and "outliler_lakes_dryout.csv" comma seperated list
 ModelName="SE"
 # SubId=26007677
 # ObsType="SF"
@@ -36,13 +36,13 @@ ObsDir='/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInpu
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
 CWList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/LakeCWList.csv'
 #==================
-tag='Local-2'
+tag='Local-0f'
 #==================
 # Calibration Options
-BiasCorr='True' # 'False'
-calSoil='True '  
-calRivRoute='True' # 'True'
-calCatRoute='True' # 'True'
+BiasCorr='False' # 'False'
+calSoil='False '  
+calRivRoute='False' # 'True'
+calCatRoute='False' # 'True'
 calLakeCW='True' # True
 CWindv='True'  #'False' #'True'
 #==================

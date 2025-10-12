@@ -9,8 +9,8 @@
 ##SBATCH --mail-user=menaka.revel@uwaterloo.ca     # email address for notifications
 #SBATCH --mail-type=ALL                           # email send only in case of failure
 #SBATCH --array=1-10                              # submit as a job array 
-#SBATCH --time=0-6:00                            # time (DD-HH:MM)
-#SBATCH --job-name={Obs_NM}                       # jobname
+#SBATCH --time=0-2:00                            # time (DD-HH:MM)
+#SBATCH --job-name={tag}|{Obs_NM}                       # jobname
 ### #SBATCH --begin=now+{delay}hour
 
 # load pythons

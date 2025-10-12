@@ -20,7 +20,7 @@ if not pm.calSoil():
     updated_content = content.replace("%MAX_BASEFLOW_RATE%", "10.0").replace("%BASEFLOW_N%", "2.0")
 
     # Save to file
-    rvp_path = './'+pm.ModelName()+'.rvp'
+    rvp_path = './'+pm.ModelName()+'.rvp.tpl'
     with open(rvp_path, "w") as f:
         f.write(updated_content)
 else:

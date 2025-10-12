@@ -14,7 +14,7 @@
 
 # source $HOME/py312/bin/activate
 
-tag="Local-2" #"$1"
+tag="$1" #"Local-0b" #"$1"
 thrAmp=5.0 #m
 thrDry=0 # days
 odir="/home/menaka/scratch/MulCal/out"

@@ -9,8 +9,8 @@
 ##SBATCH --mail-user=menaka.revel@uwaterloo.ca     # email address for notifications
 #SBATCH --mail-type=ALL                           # email send only in case of failure
 #SBATCH --array=1-10                              # submit as a job array 
-#SBATCH --time=0-2:00                            # time (DD-HH:MM)
-#SBATCH --job-name=Local-0f|02KB001                       # jobname
+#SBATCH --time=0-6:00                            # time (DD-HH:MM)
+#SBATCH --job-name=UptLake-Burntroot #02KF013 #02KF016 #02KB001                    # jobname
 ### #SBATCH --begin=now+{delay}hour
 
 # load pythons
@@ -21,11 +21,11 @@ module load scipy-stack
 #==================
 # Main Code
 #==================
-Obs_NM="02KB001"
+Obs_NM="Burntroot" #"02KF013" #"02KF016" #"02KB001"
 ModelName="SE"
 # SubId=26007677
 # ObsType="SF"
-expname="02KB001" ##$Obs_NM
+expname=$Obs_NM  #"02KF013" ##$Obs_NM
 MaxIter=2000
 runname='Init' #'Restart' #
 ProgramType='ParallelDDS'
@@ -35,15 +35,19 @@ ObsDir='/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInpu
 ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
 CWList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/LakeCWList.csv'
 #==================
-tag='Local-0f'
+intag='Local-2'
+tag='LakeUpdate'
 #==================
 # Calibration Options
-BiasCorr='False' # 'False'
-calSoil='False '  
-calRivRoute='False' # 'True'
-calCatRoute='False' # 'True'
+BiasCorr='True' # 'False'
+calSoil='True '  
+calRivRoute='True' # 'True'
+calCatRoute='True' # 'True'
 calLakeCW='True' # True
 CWindv='True'  #'False' #'True'
+#==================
+# cd into main folder
+`cd ..`
 #==================
 echo "===================================================="
 echo "start: $(date)"
@@ -61,82 +65,31 @@ echo "Run Type                          :"${runname}
 echo "Maximum Iterations                :"${MaxIter}
 echo "Calibration Method                :"${ProgramType}
 echo "Cost Function                     :"${CostFunction}
-echo "Bias Correction                   :"False
-echo "Calibrate Soil Parameters         :"False
-echo "Calibrate River Route             :"False
-echo "Calibrate Catchment Route         :"False
+echo "Bias Correction                   :"True
+echo "Calibrate Soil Parameters         :"True
+echo "Calibrate River Route             :"True
+echo "Calibrate Catchment Route         :"True
 echo "Calibrate Lake Crest Widths       :"True
 echo "Individual CW Calibration         :"True
 echo "===================================================="
 #==================
-if [[ "$runname" == 'Init' ]]; then
-    rm -rf -- /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
-    mkdir -p /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
-    cd /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
-    pwd
+# if [[ "$runname" == 'Init' ]]; then
+# rm -rf /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
 
-    # copy OstrichRaven
-    cp -r /home/menaka/projects/def-btolson/menaka/MulCal/OstrichRaven/* .
+# make new folder and step into it.
+mkdir -p /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
+cd /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
 
-    # copy newest Raven excutable 
-    cp -r /project/def-btolson/menaka/RavenHydroFramework/src/Raven.exe ./RavenInput/
+cp -rf /home/menaka/scratch/MulCal/out/$intag/${expname}_${Num}/* .
 
-    mkdir ./RavenInput/obs
+pwd
 
-    # copy src files
-    cp -r /home/menaka/projects/def-btolson/menaka/MulCal/src/* .
+# remove processor
+rm -rf processor_*
 
-    # copy run_best_Raven.sh
-    cp -r /home/menaka/projects/def-btolson/menaka/MulCal/run_best_Raven_MPI.sh .
+# copy new Lakes.rvh
+cp -rf /home/menaka/projects/def-btolson/menaka/MulCal/OstrichRaven/RavenInput/Lakes.rvh.upd  ./RavenInput/Lakes.rvh
 
-    #========================
-    # Init - logger
-    #========================
-    echo logger.py ${expname}_${Num}
-    python logger.py ${expname}_${Num}
-
-    #========================
-    # Init - intialization
-    #========================
-    echo create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList  $BiasCorr $calSoil $calRivRoute $calCatRoute $calLakeCW $CWindv
-    python create_params.py $Obs_NM $ModelName $MaxIter $ObsDir $ObsList $CWList $BiasCorr $calSoil $calRivRoute $calCatRoute $calLakeCW $CWindv
-
-    #========================
-    # rvt
-    #========================
-    echo update_rvt.py $Obs_NM $ObsDir "./RavenInput/SE.rvt" 
-    python update_rvt.py $Obs_NM $ObsDir "./RavenInput/SE.rvt" 
-
-    #========================
-    # rvh
-    #========================
-    echo update_rvh_tpl.py $CWList        #$Obs_NM  "./SE.rvh.tpl"
-    python update_rvh_tpl.py $CWList      #$Obs_NM "./SE.rvh.tpl"
-
-    #========================
-    # rvp
-    #========================
-    echo convert_rvp_tpl.py 
-    python convert_rvp_tpl.py
-
-    #========================
-    # ostIn.txt
-    #========================
-    echo create_ostIn.py $SLURM_NTASKS $MaxIter #$RandomSeed 
-    python create_ostIn.py $SLURM_NTASKS $MaxIter #$RandomSeed 
-else
-    cd /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
-    pwd
-    
-    # add OstrichWarmStart yes to ostIn.txt
-    sed -i '/#OstrichWarmStart      yes/c\OstrichWarmStart      yes' ostIn.txt
-
-    # edit ModelSubdir in ostIn.txt
-    sed -i '/ModelSubdir processor_/c\ModelSubdir processor_v2_' ostIn.txt
-
-    # update  ostIn.txt
-    sed -i "/MaxIterations/c\	MaxIterations         $MaxIterations" ostIn.txt
-fi
 echo "===================================================="
 echo "===================================================="
 echo "                     Ostrich                        "

@@ -3,12 +3,18 @@
 # Set paths
 obs_file="../dat/GaugeSpecificList.csv"
 outdir="/home/menaka/scratch/MulCal/out"    # out path
-expName="Local-2"                           # experiment name
+expName=$1 #"Local-2"                           # experiment name
+rivseq=$2  # river segment sequence number
 
 # Read Obs_NM values from CSV, skipping header
-obs_list=$(tail -n +2 "$obs_file" | cut -d',' -f1)
+# obs_list=$(tail -n +2 "$obs_file" | cut -d',' -f1)
 
-echo "Checking for missing dds_status.out files..."
+# obs_list=$(awk -F',' 'NR>1 && $6=='${rivseq}' {print $1}' "$obs_file")
+obs_list=$(awk -F',' -v r="$rivseq" 'NR>1 && $6==r {print $1}' "$obs_file")
+
+echo $obs_list
+
+echo "Checking for missing dds_status.out files in "${expName}" ..."
 
 # Loop through each Obs_NM
 for obs in $obs_list; do

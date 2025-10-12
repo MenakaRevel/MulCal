@@ -348,15 +348,6 @@ if len(upSF) > 0:
     # need to update the rvt file as well
     for upObs_NM in upSF:
         #=============================================
-        # write :OverrideStreamflow  {SubID}
-        override_statment = (
-            '\n:OverrideStreamflow    '+
-            str(SubId_dict[upObs_NM])
-        )
-
-        WriteStringToFile(
-            override_statment+'\n',Model_rvt_file_path,"a")
-        #=============================================
         # write observation file
         obs_rvt_file_path = (
             "\n"
@@ -370,6 +361,16 @@ if len(upSF) > 0:
 
         WriteStringToFile(
             obs_rvt_file_path+'\n \n',Model_rvt_file_path,"a")
+        #=============================================
+        # ** Order is important
+        # write :OverrideStreamflow  {SubID}
+        override_statment = (
+            '\n:OverrideStreamflow    '+
+            str(SubId_dict[upObs_NM])
+        )
+
+        WriteStringToFile(
+            override_statment+'\n',Model_rvt_file_path,"a")
         #=============================================
         # copy the file
         os.system(

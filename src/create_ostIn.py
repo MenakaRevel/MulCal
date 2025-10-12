@@ -1020,8 +1020,8 @@ def write_ostIN(
         f.write('BeginExtraDirs\n  \tRavenInput\n  \t#best\nEndExtraDirs\n\n')
         f.write('\n\n')
         f.write('BeginFilePairs')
-        if calSoil:
-            f.write(f'\n\t  {RunName}.rvp.tpl;                {RunName}.rvp')
+        # if calSoil:
+        f.write(f'\n\t  {RunName}.rvp.tpl;                {RunName}.rvp')
         f.write(f'\n\t  {RunName}.rvh.tpl;                {RunName}.rvh')
         f.write('\n\n#can be multiple (.rvh, .rvi)\nEndFilePairs')
         f.write('\n\n')
