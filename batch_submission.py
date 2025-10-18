@@ -44,8 +44,9 @@ EXPERIMENTS = {
 # 1.  CLI args                                                       #
 # ------------------------------------------------------------------ #
 try:
-    targetG = int(sys.argv[1])               # 1‒5
-    expName = sys.argv[2]
+    region  = sys.argv[1]
+    targetG = int(sys.argv[2])               # 1‒5
+    expName = sys.argv[3]
 except (IndexError, ValueError):
     sys.exit("Usage: run_batch.py <targetG:int> <expName>")
 
@@ -55,6 +56,7 @@ if expName not in EXPERIMENTS:
 cfg = EXPERIMENTS[expName]                   # dict of booleans
 tf  = lambda b: "True" if b else "False"     # to string for template
 
+print(f"► Region        : {region}")
 print(f"► Gauge group   : {targetG}")
 print(f"► Experiment    : {expName}")
 print("► Switches      :", ", ".join(f"{k}={tf(v)}" for k, v in cfg.items()))
@@ -62,9 +64,10 @@ print("► Switches      :", ", ".join(f"{k}={tf(v)}" for k, v in cfg.items()))
 # ------------------------------------------------------------------ #
 # 2.  Read data tables                                               #
 # ------------------------------------------------------------------ #
-ObsList = pd.read_csv("./dat/GaugeSpecificList.csv")
-CWList  = pd.read_csv("./dat/LakeCWList.csv")
+ObsList = pd.read_csv(f"./dat/{region}/GaugeSpecificList.csv")
+CWList  = pd.read_csv(f"./dat/{region}/LakeCWList.csv")
 
+ObsList = ObsList[ObsList['ObsType']=='SF']
 Obs_NMs = ObsList.query("rivseq == @targetG")["Obs_NM"].values
 
 # ------------------------------------------------------------------ #
@@ -103,7 +106,7 @@ if targetG > 1 and cfg["calLakeCW"]:
     if CW_values:
         CWList.loc[CWList["Obs_NM"].isin(CW_values), "cal.CW"] = \
             CWList["Obs_NM"].map(CW_values)
-        CWList.to_csv("./dat/LakeCWList.csv", index=False)
+        CWList.to_csv(f"./dat/{region}/LakeCWList.csv", index=False)
         print("► Lake CW updated for", ", ".join(CW_values))
 
 # ------------------------------------------------------------------ #
@@ -123,6 +126,7 @@ replacements = {
 
 for obs in Obs_NMs:
     script = TEMPLATE.replace("{tag}", expName)
+    script = script.replace("{reg}", region)
     script = script.replace("{Obs_NM}", obs)
     for tag, value in replacements.items():
         script = script.replace(tag, value)

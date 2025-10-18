@@ -11,8 +11,10 @@ def main():
         print("Usage: "+sys.argv[0]+" <tag> <odir>")
         sys.exit(1)
 
-    tag  = sys.argv[1]
-    odir = sys.argv[2]
+    reg  = sys.argv[1]
+    tag  = sys.argv[2]
+    odir = sys.argv[3]
+
     ROOT = os.path.join(odir,tag)
 
     if not os.path.isdir(ROOT):
@@ -20,7 +22,7 @@ def main():
         sys.exit(1)
 
     # Path to the real forcing directory
-    target_link = '/home/menaka/projects/def-btolson/menaka/MulCal/OstrichRaven/RavenInput/forcing'
+    target_link = f'/project/def-btolson/menaka/{reg}_OstrichRaven/RavenInput/forcing'
 
     if not os.path.isdir(target_link):
         print(f"❌ Error: Target forcing directory '{target_link}' does not exist.")

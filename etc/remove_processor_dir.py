@@ -11,8 +11,10 @@ def main():
         print("Usage: "+sys.argv[0]+" <tag> <odir>")
         sys.exit(1)
 
-    tag  = sys.argv[1]
-    odir = sys.argv[2]
+    reg  = sys.argv[1]
+    tag  = sys.argv[2]
+    odir = sys.argv[3]
+    
     ROOT = os.path.join(odir,tag)
 
     if not os.path.isdir(ROOT):

@@ -170,4 +170,7 @@ with open('./params.py', 'w') as f:
     f.write('\n#--------------------------------------')
     f.write('\ndef calRivRoute():')
     f.write('\n\treturn\t'+str(calRivRoute))
-    f.write('\n#--------------------------------------')    
+    f.write('\n#--------------------------------------')
+    f.write('\ndef ObsDir():')
+    f.write('\n\treturn\t"'+str(ObsDir)+'"')
+    f.write('\n#--------------------------------------')

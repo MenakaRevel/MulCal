@@ -22,7 +22,7 @@ module load scipy-stack
 # Main Code
 #==================
 Obs_NM="{Obs_NM}"
-ModelName="SE"
+ModelName="{reg}"
 # SubId=26007677
 # ObsType="SF"
 expname="{Obs_NM}" ##$Obs_NM
@@ -31,9 +31,9 @@ runname='Init' #'Restart' #
 ProgramType='ParallelDDS'
 CostFunction='negKGE'
 Num=`printf '%02g' "${SLURM_ARRAY_TASK_ID}"`
-ObsDir='/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInput/obs'
-ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
-CWList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/LakeCWList.csv'
+ObsDir='/home/menaka/projects/def-btolson/menaka/{reg}region/OstrichRaven/RavenInput/obs'
+ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/{reg}/GaugeSpecificList.csv'
+CWList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/{reg}/LakeCWList.csv'
 #==================
 tag='{tag}'
 #==================
@@ -70,13 +70,13 @@ echo "Individual CW Calibration         :"{CWindv}
 echo "===================================================="
 #==================
 if [[ "$runname" == 'Init' ]]; then
-    rm -rf -- /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
+    rm -rf /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
     mkdir -p /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
     cd /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
     pwd
 
     # copy OstrichRaven
-    cp -r /home/menaka/projects/def-btolson/menaka/MulCal/OstrichRaven/* .
+    cp -r /home/menaka/projects/def-btolson/menaka/{reg}_OstrichRaven/* .
 
     # copy newest Raven excutable 
     cp -r /project/def-btolson/menaka/RavenHydroFramework/src/Raven.exe ./RavenInput/
@@ -151,10 +151,18 @@ echo "                      Raven                         "
 echo "===================================================="
 # run best Raven
 echo "./run_best_Raven_MPI.sh"
-./run_best_Raven_MPI.sh ${expname} ${Num}
+./run_best_Raven_MPI.sh ${expname} ${Num} ${ModelName}
 
 # # remove the forcing - softlink
 # python /home/menaka/projects/def-btolson/menaka/MulCal/etc/softlink_forcing.py
+rm -rf ./RavenInput/forcing
+rm -rf ./processor_*
+
+# Ost txt files
+rm -rf ./OstErrors*.txt
+rm -rf ./OstModel*.txt
+rm -rf ./OstOutput*.txt
+
 echo "===================================================="
 echo "end: $(date)"
 echo "===================================================="

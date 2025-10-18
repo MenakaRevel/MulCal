@@ -47,18 +47,19 @@ def main():
         print("Usage: "+sys.argv[0]+" <tag> <odir>")
         sys.exit(1)
 
-    tag  = sys.argv[1]
-    odir = sys.argv[2]
+    reg  = sys.argv[1]
+    tag  = sys.argv[2]
+    odir = sys.argv[3]
 
     base_dir   = os.path.join(odir,tag)
-    output_dir = os.path.join("../dat/",tag)
+    output_dir = os.path.join("../dat", reg, tag)
 
     mk_dir(output_dir)
 
     # Define paths and constants
-    obs_dir        = '/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInput/obs'
-    obs_list_file  = '/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
-    obs_list_subid = '/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSubIdList.csv'
+    obs_dir        = f'/home/menaka/projects/def-btolson/menaka/{reg}region/OstrichRaven/RavenInput/obs'
+    obs_list_file  = f'/home/menaka/projects/def-btolson/menaka/MulCal/dat/{reg}/GaugeSpecificList.csv'
+    obs_list_subid = f'/home/menaka/projects/def-btolson/menaka/MulCal/dat/{reg}/GaugeSubIdList.csv'
     suffixs = {'SF': 'discharge', 'WL': 'level', 'RS': 'level'}
 
     # Load observation list
@@ -114,7 +115,7 @@ def main():
         #     UpSubIds    = [read_subid(os.path.join(obs_dir,UpObs_NM+'_'+suffixs[ObsType]+'.rvt')) for UpObs_NM, ObsType in zip(UpObsNMList.split('&'),UpObsTypes)]
 
         # Read SE_Hydrograph
-        hydro_file = f"{base_dir}/{Obs_NM}_{bestTrail:02d}/best_Raven/output/SE_Hydrographs.csv"
+        hydro_file = f"{base_dir}/{Obs_NM}_{bestTrail:02d}/best_Raven/output/{reg}_Hydrographs.csv"
         try:
             df_hyd = pd.read_csv(hydro_file)
         except Exception as e:
@@ -167,8 +168,8 @@ def main():
         df = pd.merge(df, df_next, on='date', how='outer', suffixes=('_1', '_2'))
 
     mk_dir(output_dir)
-    df.to_csv(f"{output_dir}/SE_Hydrographs.csv", index=False)
-    print(f"Saved merged hydrographs to {output_dir}/SE_Hydrographs.csv")
+    df.to_csv(f"{output_dir}/{reg}_Hydrographs.csv", index=False)
+    print(f"Saved merged hydrographs to {output_dir}/{reg}_Hydrographs.csv")
 
 #====================================================================================================
 if __name__ == "__main__":

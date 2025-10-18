@@ -254,8 +254,8 @@ suffixs={
     'RS':'level'
 }
 #=================================================================================================
-Obs_NM=sys.argv[1] # provided as a input
-ObsDir=sys.argv[2]
+Obs_NM=pm.Obs_NM() #sys.argv[1] # provided as a input
+ObsDir=pm.ObsDir() #sys.argv[2]
 GauType=pm.ObsType() # SF | WL | RS # provided as a input
 # Create dictionary with values as keys and list of keys as values
 UpObsDict = {}
@@ -280,7 +280,7 @@ fileName=[
     './forcing/GEM-HYDRO_aggregated_recharge.nc',
 ])
 
-Model_rvt_file_path = os.path.join(RavenFolder, "SE.rvt")
+Model_rvt_file_path = os.path.join(RavenFolder, f"{pm.ModelName()}.rvt")
 
 WriteStringToFile(
     Model_rvt_string+'\n \n',Model_rvt_file_path,"w")

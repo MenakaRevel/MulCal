@@ -75,11 +75,12 @@ def main():
         print("Usage: "+sys.argv[0]+" <tag> <odir>")
         sys.exit(1)
 
-    tag  = sys.argv[1]
-    odir = sys.argv[2]
+    reg  = sys.argv[1]
+    tag  = sys.argv[2]
+    odir = sys.argv[3]
 
     base_dir   = os.path.join(odir,tag)
-    output_dir = os.path.join("../dat/",tag)
+    output_dir = os.path.join("../dat", reg, tag)
 
     mk_dir(output_dir)
 
@@ -88,9 +89,9 @@ def main():
     # ObsDir  = '/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInput/obs'
     # suffixs = {'SF': 'discharge', 'WL': 'level', 'RS': 'level'}
 
-    obs_dir        = '/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInput/obs'
-    obs_list_file  = '/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
-    obs_list_subid = '/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSubIdList.csv'
+    obs_dir        = f'/home/menaka/projects/def-btolson/menaka/{reg}region/OstrichRaven/RavenInput/obs'
+    obs_list_file  = f'/home/menaka/projects/def-btolson/menaka/MulCal/dat/{reg}/GaugeSpecificList.csv'
+    obs_list_subid = f'/home/menaka/projects/def-btolson/menaka/MulCal/dat/{reg}/GaugeSubIdList.csv'
     suffixs        = {'SF': 'discharge', 'WL': 'level', 'RS': 'level'}
 
     # Load observation list
@@ -139,7 +140,7 @@ def main():
             print(f"⚠️ Could not extract SubId for {Obs_NM}")
             continue
 
-        stage_file = f"{base_dir}/{Obs_NM}_{bestTrail:02d}/best_Raven/output/SE_ReservoirStages.csv"
+        stage_file = f"{base_dir}/{Obs_NM}_{bestTrail:02d}/best_Raven/output/{reg}_ReservoirStages.csv"
         if not os.path.isfile(stage_file):
             print(f"⚠️ Missing file: {stage_file}")
             continue
@@ -187,7 +188,7 @@ def main():
         print("⚠️ No valid data found.")
         sys.exit(0)
 
-    out_path = os.path.join(output_dir, "SE_ReservoirStages.csv")
+    out_path = os.path.join(output_dir, f"{reg}_ReservoirStages.csv")
     df.to_csv(out_path, index=False)
     print(f"\n✅ Saved merged data to: {out_path}")
 

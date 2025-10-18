@@ -29,15 +29,16 @@ def main():
         print("Usage: "+sys.argv[0]+" <tag> <odir>")
         sys.exit(1)
 
-    tag  = sys.argv[1]
-    odir = sys.argv[2]
+    reg  = sys.argv[1]
+    tag  = sys.argv[2]
+    odir = sys.argv[3]
 
     base_dir   = os.path.join(odir,tag)
     output_dir = os.path.join("../dat/",tag)
 
     mk_dir(output_dir)
 
-    obs_list_path = '/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
+    obs_list_path = f'/home/menaka/projects/def-btolson/menaka/MulCal/dat/{reg}/GaugeSpecificList.csv'
     ObsList = pd.read_csv(obs_list_path)
     Obs_NMs = ObsList['Obs_NM'].values
 

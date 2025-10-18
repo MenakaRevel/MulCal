@@ -20,9 +20,9 @@ echo "start: $(date)"
 #==================
 Obs_NM=$1
 Num=`printf '%02g' "$2"`
-ModelName="SE"
+ModelName=$3
 #==================
-cd /home/menaka/scratch/MulCal/${Obs_NM}_${Num}
+# cd /home/menaka/scratch/MulCal/out/${Obs_NM}_${Num}
 mkdir -p best_Raven
 cd best_Raven
 `pwd`
@@ -32,7 +32,7 @@ cp -r ../RavenInput/obs .
 cp -r ../RavenInput/SubBasinProperties.rvh .
 #==================
 # change rvi
-rvi='SE.rvi'
+rvi=${ModelName}'.rvi'
 tmp='tmp.rvi'
 echo "update rvi: $rvi"
 awk '
@@ -80,7 +80,9 @@ mv "$tmp" "$rvi"
 # # echo ":GaugedSubBasinGroup                   UpstreamOf"${Obs_NM} >> $rvh
 
 # Run Raven.exe
-./Raven.exe SE -o ./output
+./Raven.exe ${ModelName} -o ./output
 
 wait
+
+cd ..
 exit 0

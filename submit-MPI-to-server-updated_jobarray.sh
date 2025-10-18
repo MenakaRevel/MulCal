@@ -10,7 +10,7 @@
 #SBATCH --mail-type=ALL                           # email send only in case of failure
 #SBATCH --array=1-10                              # submit as a job array 
 #SBATCH --time=0-2:00                            # time (DD-HH:MM)
-#SBATCH --job-name=Local-0f|02KB001                       # jobname
+#SBATCH --job-name=Local-2|02HE004                       # jobname
 ### #SBATCH --begin=now+{delay}hour
 
 # load pythons
@@ -21,27 +21,27 @@ module load scipy-stack
 #==================
 # Main Code
 #==================
-Obs_NM="02KB001"
-ModelName="SE"
+Obs_NM="02HE004"
+ModelName="SW"
 # SubId=26007677
 # ObsType="SF"
-expname="02KB001" ##$Obs_NM
+expname="02HE004" ##$Obs_NM
 MaxIter=2000
 runname='Init' #'Restart' #
 ProgramType='ParallelDDS'
 CostFunction='negKGE'
 Num=`printf '%02g' "${SLURM_ARRAY_TASK_ID}"`
-ObsDir='/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInput/obs'
-ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
-CWList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/LakeCWList.csv'
+ObsDir='/home/menaka/projects/def-btolson/menaka/SWregion/OstrichRaven/RavenInput/obs'
+ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/SW/GaugeSpecificList.csv'
+CWList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/SW/LakeCWList.csv'
 #==================
-tag='Local-0f'
+tag='Local-2'
 #==================
 # Calibration Options
-BiasCorr='False' # 'False'
-calSoil='False '  
-calRivRoute='False' # 'True'
-calCatRoute='False' # 'True'
+BiasCorr='True' # 'False'
+calSoil='True '  
+calRivRoute='True' # 'True'
+calCatRoute='True' # 'True'
 calLakeCW='True' # True
 CWindv='True'  #'False' #'True'
 #==================
@@ -61,22 +61,22 @@ echo "Run Type                          :"${runname}
 echo "Maximum Iterations                :"${MaxIter}
 echo "Calibration Method                :"${ProgramType}
 echo "Cost Function                     :"${CostFunction}
-echo "Bias Correction                   :"False
-echo "Calibrate Soil Parameters         :"False
-echo "Calibrate River Route             :"False
-echo "Calibrate Catchment Route         :"False
+echo "Bias Correction                   :"True
+echo "Calibrate Soil Parameters         :"True
+echo "Calibrate River Route             :"True
+echo "Calibrate Catchment Route         :"True
 echo "Calibrate Lake Crest Widths       :"True
 echo "Individual CW Calibration         :"True
 echo "===================================================="
 #==================
 if [[ "$runname" == 'Init' ]]; then
-    rm -rf -- /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
+    rm -rf /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
     mkdir -p /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
     cd /home/menaka/scratch/MulCal/out/$tag/${expname}_${Num}
     pwd
 
     # copy OstrichRaven
-    cp -r /home/menaka/projects/def-btolson/menaka/MulCal/OstrichRaven/* .
+    cp -r /home/menaka/projects/def-btolson/menaka/SW_OstrichRaven/* .
 
     # copy newest Raven excutable 
     cp -r /project/def-btolson/menaka/RavenHydroFramework/src/Raven.exe ./RavenInput/
@@ -151,10 +151,18 @@ echo "                      Raven                         "
 echo "===================================================="
 # run best Raven
 echo "./run_best_Raven_MPI.sh"
-./run_best_Raven_MPI.sh ${expname} ${Num}
+./run_best_Raven_MPI.sh ${expname} ${Num} ${ModelName}
 
 # # remove the forcing - softlink
 # python /home/menaka/projects/def-btolson/menaka/MulCal/etc/softlink_forcing.py
+rm -rf ./RavenInput/forcing
+rm -rf ./processor_*
+
+# Ost txt files
+rm -rf ./OstErrors*.txt
+rm -rf ./OstModel*.txt
+rm -rf ./OstOutput*.txt
+
 echo "===================================================="
 echo "end: $(date)"
 echo "===================================================="

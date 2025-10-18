@@ -20,16 +20,21 @@
 
 source $HOME/py312/bin/activate
 
-tag=$1 #"Local-0" #
-odir="/home/menaka/scratch/MulCal/out"
+reg=$1
+tag=$2 #"Local-0" #
+# odir="/home/menaka/scratch/MulCal/out"
+odir="/home/menaka/scratch/MulCal/SE.out"
 
-echo "Running all clean scripts for tag: $tag"
+echo "Running all clean scripts for tag: $tag"  "$reg"
 
 echo "Running remove_processor_dir.py..."
-python remove_processor_dir.py "$tag" "$odir" || { echo "Failed: remove_processor_dir.py"; exit 1; }
+python remove_processor_dir.py "$reg" "$tag" "$odir" || { echo "Failed: remove_processor_dir.py"; exit 1; }
+
+echo "Running remove_Ost_files.py..."
+python remove_Ost_files.py "$reg" "$tag" "$odir" || { echo "Failed: remove_Ost_files.py"; exit 1; }
 
 echo "Running softlink_forcing.py..."
-python softlink_forcing.py "$tag" "$odir" || { echo "Failed: softlink_forcing.py"; exit 1; }
+python softlink_forcing.py "$reg" "$tag" "$odir" || { echo "Failed: softlink_forcing.py"; exit 1; }
 
 
 echo "✅ All cleaned sucessfully for tag: $tag"

@@ -1,7 +1,0 @@
-# ----------------------------------------------
-# Raven Input file
-# GEM-Hydro SE region
-# ----------------------------------------------
-
-:UniformInitialConditions SOIL[0] 600            # Initial conditions for the groundwater storage, in mm. DEFAULT 150 mm.
-#:InitialReservoirStage    4732    380.0

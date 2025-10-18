@@ -1,10 +1,11 @@
 #!/bin/bash
 
 # Set paths
-obs_file="../dat/GaugeSpecificList.csv"
+obs_file="../dat/"${reg}"/GaugeSpecificList.csv"
 outdir="/home/menaka/scratch/MulCal/out"    # out path
-expName=$1 #"Local-2"                           # experiment name
-rivseq=$2  # river segment sequence number
+reg=$1     # region name
+expName=$2 # "Local-2"                           # experiment name
+rivseq=$3  # river segment sequence number
 
 # Read Obs_NM values from CSV, skipping header
 # obs_list=$(tail -n +2 "$obs_file" | cut -d',' -f1)

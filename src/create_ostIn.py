@@ -254,7 +254,7 @@ def write_ostIN_serial(
             # f.write('\n'+'d_multi                   random       0.1        10           none    none    none   # diffusivity'                )
             # f.write('\n'+'k_multi                   random       0.1        10           none    none    none   # lake crest width multiplier')
             #-----------------------------------------------------------------------------------------
-            gnames, tags = read_cal_gagues(RavenDir)
+            gnames, tags = read_cal_gagues(RavenDir, filename=f"{RunName}.rvt")
             #-----------------------------------------------------------------------------------------
             # log.info('CWindv',CWindv)
             if CWindv:
@@ -597,7 +597,7 @@ def write_ostIN_parallel(
             # f.write('\n'+'d_multi                   random       0.1        10           none    none    none   # diffusivity'                )
             # f.write('\n'+'k_multi                   random       0.1        10           none    none    none   # lake crest width multiplier')
             #-----------------------------------------------------------------------------------------
-            gnames, tags = read_cal_gagues(RavenDir)
+            gnames, tags = read_cal_gagues(RavenDir, filename=f"{RunName}.rvt")
             #-----------------------------------------------------------------------------------------
             # print ('CWindv',CWindv)
             if CWindv:
@@ -804,7 +804,7 @@ def write_ostIN_parallel(
 # NEW
 #================================================================================================
 def _write_params(f, *, BiasCor, calSoil, calRivRoute,
-                  calCatRoute, calLakeCW, CWindv, RavenDir):
+                  calCatRoute, calLakeCW, CWindv, RavenDir, RunName):
     """
     Everything that goes between BeginParams / EndParams.
     """
@@ -843,7 +843,7 @@ def _write_params(f, *, BiasCor, calSoil, calRivRoute,
         f.write('\n\n## LAKE CW')
         f.write('\nk_multi                   random       0.1         2.0'
                 '           none    none    none')
-        gnames, tags = read_cal_gagues(RavenDir)
+        gnames, tags = read_cal_gagues(RavenDir, filename=f"{RunName}.rvt")
         if CWindv and pm.InitCW() != -9999.0:
             f.write('\n\n## Individual Lake CW multiplier')
             lowb = min(float(pm.InitCW()) * 0.1, 0.01)
@@ -856,15 +856,15 @@ def _write_params(f, *, BiasCor, calSoil, calRivRoute,
     f.write('\nEndParams')
     f.write('\n\n')
 #================================================================================================
-def _write_response_vars_and_tied(f, *, RavenDir, costFunc,
+def _write_response_vars_and_tied(f, *, RunName, RavenDir, costFunc,
                                   w1, w2, w3):
     """
     Writes the long BeginResponseVars / BeginTiedRespVars blocks
     (all identical in the original functions).
     """
     # ------------- gather evaluation info
-    Eval_list   = read_evaluation_met(RavenDir)
-    gnames, tags = read_cal_gagues(RavenDir)
+    Eval_list    = read_evaluation_met(RavenDir, filename=f"{RunName}.rvi")
+    gnames, tags = read_cal_gagues(RavenDir, filename=f"{RunName}.rvt")
     distag = wltag = rstag = 0
     SF, WL, RS   = [], [], []
     lineN        = 1
@@ -893,7 +893,7 @@ def _write_response_vars_and_tied(f, *, RavenDir, costFunc,
                 f.write(f'\n\n# {RavenMet} [Reservoir Stage]')
             RS.append(gName); rstag += 1
 
-        f.write(f'\n{gName:<26}./RavenInput/output/SE_Diagnostics.csv;'
+        f.write(f'\n{gName:<26}./RavenInput/output/{RunName}_Diagnostics.csv;'
                 f' OST_NULL{lineN:10d}{colN:10d}         \',\'')
         lineN += 1
     f.write('\nEndResponseVars')
@@ -1029,9 +1029,10 @@ def write_ostIN(
         # ----- params, responses, tied vars (shared)
         _write_params(f, BiasCor=BiasCor, calSoil=calSoil,
                       calRivRoute=calRivRoute, calCatRoute=calCatRoute,
-                      calLakeCW=calLakeCW, CWindv=CWindv, RavenDir=RavenDir)
+                      calLakeCW=calLakeCW, CWindv=CWindv, RavenDir=RavenDir,
+                      RunName=RunName)
 
-        _write_response_vars_and_tied(f, RavenDir=RavenDir,
+        _write_response_vars_and_tied(f, RunName=RunName, RavenDir=RavenDir,
                                       costFunc=costFunc,
                                       w1=w1, w2=w2, w3=w3)
 
@@ -1082,6 +1083,7 @@ if para > 0:
     write_ostIN(
         './',
         ostIN_type='parallel',  # <‑‑ key line
+        RunName=pm.ModelName(),
         BiasCor=pm.BiasCorrection(),
         calSoil=pm.calSoil(),
         calRivRoute=pm.calRivRoute(),
@@ -1095,6 +1097,7 @@ else:
     write_ostIN(
         './',
         ostIN_type='serial',            # <‑‑ key line
+        RunName=pm.ModelName(),
         BiasCor=pm.BiasCorrection(),
         calSoil=pm.calSoil(),
         calRivRoute=pm.calRivRoute(),

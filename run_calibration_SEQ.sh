@@ -18,16 +18,16 @@ module load scipy-stack
 #==================
 echo "start: $(date)"
 #==================
-Obs_NM="NorthDepot" #"02KA015" #calMPI1_02KC015
-ModelName="SE"
+Obs_NM="02EA010" #"02KA015" #calMPI1_02KC015
+ModelName="SW"
 # SubId=26007677
 # ObsType="SF"
 expname=$Obs_NM
 MaxIter=2
 runname='Init' #'Restart' #
-ObsDir='/home/menaka/projects/def-btolson/menaka/SEregion/OstrichRaven/RavenInput/obs'
-ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
-CWList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/LakeCWList.csv'
+ObsDir='/home/menaka/projects/def-btolson/menaka/'${ModelName}'region/OstrichRaven/RavenInput/obs'
+ObsList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/'${ModelName}'/GaugeSpecificList.csv'
+CWList='/home/menaka/projects/def-btolson/menaka/MulCal/dat/'${ModelName}'/LakeCWList.csv'
 #==================
 # Calibration Options
 BiasCorr='True' # 'False'
@@ -38,12 +38,12 @@ calLakeCW='True' # True
 CWindv='True'  #'False' #'True'
 #==================
 if [[ "$runname" == 'Init' ]]; then
-    mkdir -p /home/menaka/scratch/MulCal/${expname}_01
-    cd /home/menaka/scratch/MulCal/${expname}_01
+    mkdir -p /home/menaka/scratch/MulCal/out/test/${expname}_01
+    cd /home/menaka/scratch/MulCal/out/test/${expname}_01
     pwd
 
     # copy OstrichRaven
-    cp -r /home/menaka/projects/def-btolson/menaka/MulCal/OstrichRaven/* .
+    cp -r /home/menaka/projects/def-btolson/menaka/${ModelName}_OstrichRaven/* .
 
     mkdir -p ./RavenInput/obs
 
@@ -68,8 +68,8 @@ if [[ "$runname" == 'Init' ]]; then
     #========================
     # rvt
     #========================
-    echo update_rvt.py $Obs_NM $ObsDir "./RavenInput/SE.rvt" 
-    python update_rvt.py $Obs_NM $ObsDir "./RavenInput/SE.rvt" 
+    echo update_rvt.py $Obs_NM $ObsDir "./RavenInput/${ModelName}.rvt" 
+    python update_rvt.py $Obs_NM $ObsDir "./RavenInput/${ModelName}.rvt" 
 
     #========================
     # rvh

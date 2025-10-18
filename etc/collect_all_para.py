@@ -35,15 +35,16 @@ def main():
     if len(sys.argv) < 2:
         print("Usage: "+sys.argv[0]+" <tag> <odir>")
         sys.exit(1)
-
-    tag  = sys.argv[1]
-    odir = sys.argv[2]
+   
+    reg  = sys.argv[1]
+    tag  = sys.argv[2]
+    odir = sys.argv[3]
 
     base_dir   = os.path.join(odir,tag)
-    output_dir = os.path.join("../dat/",tag)
+    output_dir = os.path.join("../dat", reg, tag)
     mk_dir(output_dir)
 
-    obs_list_file = '/home/menaka/projects/def-btolson/menaka/MulCal/dat/GaugeSpecificList.csv'
+    obs_list_file = f'/home/menaka/projects/def-btolson/menaka/MulCal/dat/{reg}/GaugeSpecificList.csv'
     ObsList  = pd.read_csv(obs_list_file)
     Obs_NMs  = ObsList['Obs_NM'].values
 
@@ -78,7 +79,7 @@ def main():
     cols = ["Obs_NM"] + [c for c in bestParamsDF.columns if c != "Obs_NM"]
     bestParamsDF = bestParamsDF[cols]
 
-    out_file = os.path.join(output_dir, "SE_parameters.csv")
+    out_file = os.path.join(output_dir, f"{reg}_parameters.csv")
     bestParamsDF.to_csv(out_file, index=False)
     print(f"\n✅ Saved best parameters to {out_file}")
 

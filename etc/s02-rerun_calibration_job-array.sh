@@ -23,7 +23,7 @@ module load scipy-stack
 #==================
 Obs_NM="02KB001"           # get this from "outliler_lakes.csv" and "outliler_lakes_dryout.csv"
 OutlierLakes="26007397"    # get this from "outliler_lakes.csv" and "outliler_lakes_dryout.csv" comma seperated list
-ModelName="SE"
+ModelName="SW" # "SW" or "SF"
 # SubId=26007677
 # ObsType="SF"
 expname=$Obs_NM  #"02KF013" ##$Obs_NM
