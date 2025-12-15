@@ -8,7 +8,7 @@
 #SBATCH --mem-per-cpu=10G                         # memory; default unit is megabytes
 ##SBATCH --mail-user=menaka.revel@uwaterloo.ca     # email address for notifications
 #SBATCH --mail-type=ALL                           # email send only in case of failure
-#SBATCH --time=0-6:00                              # time (DD-HH:MM)
+#SBATCH --time=0-2:00                              # time (DD-HH:MM)
 #SBATCH --job-name=rerun-cal                        # jobname
 
 # load pythons
@@ -22,6 +22,9 @@ cd $1
 
 # remove processor
 rm -rf processor_*
+
+# link forcing
+# ln -sf /home/menaka/projects/def-btolson/menaka/SW_OstrichRaven/RavenInput/forcing  ./RavenInput/forcing
 
 echo "===================================================="
 echo "===================================================="
@@ -39,8 +42,22 @@ echo "===================================================="
 echo "./run_best_Raven_MPI.sh"
 ./run_best_Raven_MPI.sh ${expname} ${Num}
 
-# # remove the forcing - softlink
-# python /home/menaka/projects/def-btolson/menaka/MulCal/etc/softlink_forcing.py
+
+echo "===================================================="
+echo "===================================================="
+echo "                 Remove Files                       "
+echo "===================================================="
+# Forcing and processor dirs
+echo " Removing forcing and processor directories..."
+# rm -rf ./RavenInput/forcing
+rm -rf ./processor_*
+
+# Ost txt files
+echo " Removing Ostrich output text files..."
+rm -rf ./OstErrors*.txt
+rm -rf ./OstModel*.txt
+rm -rf ./OstOutput*.txt
+
 echo "===================================================="
 echo "end: $(date)"
 echo "===================================================="

@@ -153,12 +153,19 @@ echo "===================================================="
 echo "./run_best_Raven_MPI.sh"
 ./run_best_Raven_MPI.sh ${expname} ${Num} ${ModelName}
 
-# # remove the forcing - softlink
-# python /home/menaka/projects/def-btolson/menaka/MulCal/etc/softlink_forcing.py
+echo "===================================================="
+echo "===================================================="
+echo "                 Remove Files                       "
+echo "===================================================="
+# Forcing and processor dirs
+echo " Removing forcing and processor directories..."
 rm -rf ./RavenInput/forcing
+# link for fututre use
+ln -sf /home/menaka/projects/def-btolson/menaka/{reg}_OstrichRaven/RavenInput/forcing  ./RavenInput/forcing
 rm -rf ./processor_*
 
 # Ost txt files
+echo " Removing Ostrich output text files..."
 rm -rf ./OstErrors*.txt
 rm -rf ./OstModel*.txt
 rm -rf ./OstOutput*.txt

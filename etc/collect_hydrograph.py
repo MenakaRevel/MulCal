@@ -142,11 +142,25 @@ def main():
             col for col in sub_cols
             if col.startswith('sub') and re.search(r'\d+', col).group() in UpSubIds
         ]
+
+        # Check if any column contains the Obs_NM string
+        Obs_NM_columns = [col for col in df_hyd.columns if Obs_NM in col]
+
+        if not Obs_NM_columns:
+            print(f"\tNo columns found for Obs_NM {Obs_NM} in {hydro_file}")
+            continue
+
+        # add those columns to sub_cols
+        sub_cols.extend(Obs_NM_columns)
+
         if not sub_cols:
             print(f"\tsub{SubId} not found in {hydro_file}")
             continue
 
-        unique_sub_cols = list({re.match(r"sub\d+", col).group(0) for col in sub_cols})
+        sub_like_cols = [col for col in df_hyd.columns if col.lower().startswith('sub')]
+        unique_sub_cols = list({m.group(0) for col in sub_like_cols if (m := re.match(r"sub\d+", col.lower()))})
+        unique_sub_cols += Obs_NM_columns if Obs_NM_columns else []
+
 
         if not df_list:
             cols = core_cols + sub_cols

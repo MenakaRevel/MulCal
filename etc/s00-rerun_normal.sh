@@ -1,11 +1,12 @@
 #!/bin/bash
 
-# Set paths
-obs_file="../dat/"${reg}"/GaugeSpecificList.csv"
-outdir="/home/menaka/scratch/MulCal/out"    # out path
 reg=$1     # region name
 expName=$2 # "Local-2"                           # experiment name
 rivseq=$3  # river segment sequence number
+
+# Set paths
+obs_file="../dat/"${reg}"/GaugeSpecificList.csv"
+outdir="/home/menaka/scratch/MulCal/out"    # out path
 
 # Read Obs_NM values from CSV, skipping header
 # obs_list=$(tail -n +2 "$obs_file" | cut -d',' -f1)
@@ -21,7 +22,7 @@ echo "Checking for missing dds_status.out files in "${expName}" ..."
 for obs in $obs_list; do
     for n in $(seq -w 1 10); do
         status_path="${outdir}/${expName}/${obs}_${n}/dds_status.out"
-        diagnose_path="${outdir}/${expName}/${obs}_${n}/best_Raven/output/SE_Diagnostics.csv" 
+        diagnose_path="${outdir}/${expName}/${obs}_${n}/best_Raven/output/${reg}_Diagnostics.csv" 
         if [[ ! -s "$status_path" || "$(wc -l < "$status_path")" -lt 2 ]]; then
             # echo "  • Missing: $status_path"
             echo "${obs} ${n}"

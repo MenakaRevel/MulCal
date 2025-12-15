@@ -34,7 +34,7 @@ def main():
     odir = sys.argv[3]
 
     base_dir   = os.path.join(odir,tag)
-    output_dir = os.path.join("../dat/",tag)
+    output_dir = os.path.join("../dat/", reg, tag)
 
     mk_dir(output_dir)
 
@@ -60,7 +60,7 @@ def main():
             print(f"⚠️ No valid DDS run found for {Obs_NM}, skipping.")
             continue
 
-        diag_path = f"{base_dir}/{Obs_NM}_{best_trail:02d}/best_Raven/output/SE_Diagnostics.csv"
+        diag_path = f"{base_dir}/{Obs_NM}_{best_trail:02d}/best_Raven/output/{reg}_Diagnostics.csv"
         if not os.path.isfile(diag_path):
             print(f"⚠️ Missing diagnostics file {diag_path}, skipping.")
             continue
@@ -85,7 +85,7 @@ def main():
 
     df_final = pd.concat(df_list, ignore_index=True)
 
-    out_file = os.path.join(output_dir, "SE_Diagnostics.csv")
+    out_file = os.path.join(output_dir, f"{reg}_Diagnostics.csv")
     df_final.to_csv(out_file, index=False)
     print(f"\n✅ Saved merged diagnostics to {out_file}")
 
